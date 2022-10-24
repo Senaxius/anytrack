@@ -174,17 +174,31 @@ def showImg(data):
         _, frame = cap.read()
         hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
         
-        start_color = np.array([data[0], data[1], data[2]])
-        end_color = np.array([data[3], data[4], data[5]])
+        start_colo = np.array([data[0], data[1], data[2]])
+        end_colo = np.array([data[3], data[4], data[5]])
+
+        start_color = np.array([5,0,0])
+        end_color = np.array([100, 255, 255])
 
         print(start_color, end_color)
         
         mask = cv2.inRange(hsv, start_color, end_color)
-        res = cv2.bitwise_and(frame,frame, mask= mask)
+        white = cv2.inRange(hsv, np.array([140, 0, 255]), np.array([255, 255, 255]))
+        res = cv2.bitwise_and(frame, frame, mask= mask)
+        white_bgr = cv2.bitwise_or(frame, frame, mask= white)
+        res = cv2.add(res, white_bgr)
+        hsv2 = cv2.cvtColor(res, cv2.COLOR_BGR2HSV)
+
+        ball = cv2.inRange(hsv2, np.array([0, 0, 100]), np.array([255, 255, 255]))
+        # ball = cv2.inRange(hsv2, start_colo, end_colo)
+        
+
 
         # cv2.imshow('frame',frame)
-        # cv2.imshow('mask',mask)
-        cv2.imshow('res',res)
+        # cv2.imshow('mask', mask)
+        # cv2.imshow('white', white)
+        # cv2.imshow('res',res)
+        cv2.imshow('ball',ball)
         
         cv2.waitKey(1) 
 
