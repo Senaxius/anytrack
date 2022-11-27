@@ -1,0 +1,3 @@
+[console_scripts]
+py_node = test_py_pkg.test_node:main
+

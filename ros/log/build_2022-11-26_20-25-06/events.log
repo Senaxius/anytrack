@@ -1,0 +1,155 @@
+[0.000000] (-) TimerEvent: {}
+[0.003392] (test_cpp_pkg) JobQueued: {'identifier': 'test_cpp_pkg', 'dependencies': OrderedDict()}
+[0.003797] (test_py_pkg) JobQueued: {'identifier': 'test_py_pkg', 'dependencies': OrderedDict()}
+[0.003990] (test_cpp_pkg) JobStarted: {'identifier': 'test_cpp_pkg'}
+[0.047647] (test_py_pkg) JobStarted: {'identifier': 'test_py_pkg'}
+[0.098356] (-) TimerEvent: {}
+[0.100038] (test_cpp_pkg) JobProgress: {'identifier': 'test_cpp_pkg', 'progress': 'cmake'}
+[0.101098] (test_cpp_pkg) Command: {'cmd': ['/usr/bin/cmake', '/home/ALEX/3dev/ros/src/test_cpp_pkg', '-DCMAKE_INSTALL_PREFIX=/home/ALEX/3dev/ros/install/test_cpp_pkg'], 'cwd': '/home/ALEX/3dev/ros/build/test_cpp_pkg', 'env': OrderedDict([('USER', 'senaex'), ('SSH_CLIENT', '192.168.178.10 33986 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/extensions/git/dist/askpass.sh'), ('FZF_CTRL_T_COMMAND', 'fd --type f --hidden'), ('SHLVL', '2'), ('BROWSER', '/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/bin/helpers/browser.sh'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/senaex'), ('OLDPWD', '/home/ALEX/3dev/ros/src'), ('LESS', '-R'), ('TERM_PROGRAM_VERSION', '1.73.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1001/vscode-ipc-18f6c911-5c28-4cb4-b54f-ae377b23f1f0.sock'), ('ZSH', '/usr/local/zsh/oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/extensions/git/dist/askpass-main.js'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus'), ('VISUAL', 'vim'), ('COLORTERM', 'truecolor'), ('STM', '/home/ALEX/STM32/etc/gcc-arm-none-eabi/bin'), ('ALEX', '/home/ALEX'), ('FZF_CTRL_T_OPTS', "--preview 'bat --color=always --line-range :50 {}'"), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/ALEX/3dev/ros/install'), ('LOGNAME', 'senaex'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USER_ZDOTDIR', '/home/senaex'), ('ROS_VERSION', '2'), ('XDG_SESSION_ID', '3'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('FZF_ALT_C_COMMAND', 'fd --type d . --hidden'), ('PATH', '/home/senaex/conda/bin:/opt/ros/humble/bin:/home/senaex/conda/bin:/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/senaex/.fzf/bin'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', 'localhost:10.0'), ('LANG', 'en_US.UTF-8'), ('VSCODE_INJECTION', '1'), ('TERM_PROGRAM', 'vscode'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1001/vscode-git-5f827483ad.sock'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('FZF_ALT_C_OPTS', "--preview 'tree -C {} | head -50'"), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ALEX/3dev/ros/build/test_cpp_pkg'), ('LC_ALL', 'en_US.UTF-8'), ('FZF_DEFAULT_COMMAND', 'fd --type f --hidden'), ('SSH_CONNECTION', '192.168.178.10 33986 192.168.178.72 22'), ('ZDOTDIR', '/home/senaex'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('EDITOR', 'vim'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.198589] (-) TimerEvent: {}
+[0.299513] (-) TimerEvent: {}
+[0.400369] (-) TimerEvent: {}
+[0.403999] (test_cpp_pkg) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.3.0\n'}
+[0.500580] (-) TimerEvent: {}
+[0.602520] (-) TimerEvent: {}
+[0.694791] (test_cpp_pkg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.3.0\n'}
+[0.702687] (-) TimerEvent: {}
+[0.729092] (test_cpp_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.803589] (-) TimerEvent: {}
+[0.904306] (-) TimerEvent: {}
+[1.005436] (-) TimerEvent: {}
+[1.099641] (test_cpp_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.105586] (-) TimerEvent: {}
+[1.130637] (test_cpp_pkg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.131694] (test_cpp_pkg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.133420] (test_cpp_pkg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.147530] (test_cpp_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.205771] (-) TimerEvent: {}
+[1.306570] (-) TimerEvent: {}
+[1.407319] (-) TimerEvent: {}
+[1.508230] (-) TimerEvent: {}
+[1.554738] (test_cpp_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.594565] (test_cpp_pkg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.597654] (test_cpp_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.601049] (test_cpp_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.609208] (-) TimerEvent: {}
+[1.613826] (test_cpp_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.709425] (-) TimerEvent: {}
+[1.810358] (-) TimerEvent: {}
+[1.911708] (-) TimerEvent: {}
+[2.012910] (-) TimerEvent: {}
+[2.113740] (-) TimerEvent: {}
+[2.214581] (-) TimerEvent: {}
+[2.315326] (-) TimerEvent: {}
+[2.416192] (-) TimerEvent: {}
+[2.517273] (-) TimerEvent: {}
+[2.557257] (test_cpp_pkg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter \n'}
+[2.617458] (-) TimerEvent: {}
+[2.718188] (-) TimerEvent: {}
+[2.818974] (-) TimerEvent: {}
+[2.919767] (-) TimerEvent: {}
+[3.020544] (-) TimerEvent: {}
+[3.104432] (test_cpp_pkg) StdoutLine: {'line': b'-- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[3.120746] (-) TimerEvent: {}
+[3.221617] (-) TimerEvent: {}
+[3.322619] (-) TimerEvent: {}
+[3.423884] (-) TimerEvent: {}
+[3.490917] (test_cpp_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[3.527216] (-) TimerEvent: {}
+[3.538779] (test_cpp_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[3.582822] (test_py_pkg) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/test_py_pkg', 'build', '--build-base', '/home/ALEX/3dev/ros/build/test_py_pkg/build', 'install', '--record', '/home/ALEX/3dev/ros/build/test_py_pkg/install.log', '--single-version-externally-managed'], 'cwd': '/home/ALEX/3dev/ros/src/test_py_pkg', 'env': {'USER': 'senaex', 'SSH_CLIENT': '192.168.178.10 33986 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/extensions/git/dist/askpass.sh', 'FZF_CTRL_T_COMMAND': 'fd --type f --hidden', 'SHLVL': '2', 'BROWSER': '/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/bin/helpers/browser.sh', 'LD_LIBRARY_PATH': '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/senaex', 'OLDPWD': '/home/ALEX/3dev/ros/src', 'LESS': '-R', 'TERM_PROGRAM_VERSION': '1.73.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1001/vscode-ipc-18f6c911-5c28-4cb4-b54f-ae377b23f1f0.sock', 'ZSH': '/usr/local/zsh/oh-my-zsh', 'LSCOLORS': 'Gxfxcxdxbxegedabagacad', 'VSCODE_GIT_ASKPASS_MAIN': '/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/extensions/git/dist/askpass-main.js', 'PAGER': 'less', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_NODE': '/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1001/bus', 'VISUAL': 'vim', 'COLORTERM': 'truecolor', 'STM': '/home/ALEX/STM32/etc/gcc-arm-none-eabi/bin', 'ALEX': '/home/ALEX', 'FZF_CTRL_T_OPTS': "--preview 'bat --color=always --line-range :50 {}'", 'ROS_DISTRO': 'humble', 'COLCON_PREFIX_PATH': '/home/ALEX/3dev/ros/install', 'LOGNAME': 'senaex', '_': '/usr/bin/colcon', 'XDG_SESSION_CLASS': 'user', 'USER_ZDOTDIR': '/home/senaex', 'ROS_VERSION': '2', 'XDG_SESSION_ID': '3', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'FZF_ALT_C_COMMAND': 'fd --type d . --hidden', 'PATH': '/home/senaex/conda/bin:/opt/ros/humble/bin:/home/senaex/conda/bin:/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/senaex/.fzf/bin', 'XDG_RUNTIME_DIR': '/run/user/1001', 'DISPLAY': 'localhost:10.0', 'LANG': 'en_US.UTF-8', 'VSCODE_INJECTION': '1', 'TERM_PROGRAM': 'vscode', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1001/vscode-git-5f827483ad.sock', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/usr/bin/zsh', 'FZF_ALT_C_OPTS': "--preview 'tree -C {} | head -50'", 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ALEX/3dev/ros/build/test_py_pkg', 'LC_ALL': 'en_US.UTF-8', 'FZF_DEFAULT_COMMAND': 'fd --type f --hidden', 'SSH_CONNECTION': '192.168.178.10 33986 192.168.178.72 22', 'ZDOTDIR': '/home/senaex', 'PYTHONPATH': '/home/ALEX/3dev/ros/build/test_py_pkg/prefix_override:/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'EDITOR': 'vim'}, 'shell': False}
+[3.605647] (test_cpp_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[3.627390] (-) TimerEvent: {}
+[3.716098] (test_cpp_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.727586] (-) TimerEvent: {}
+[3.828672] (-) TimerEvent: {}
+[3.840871] (test_cpp_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.928961] (-) TimerEvent: {}
+[4.032875] (-) TimerEvent: {}
+[4.135114] (-) TimerEvent: {}
+[4.237410] (-) TimerEvent: {}
+[4.245921] (test_cpp_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[4.265881] (test_cpp_pkg) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[4.337605] (-) TimerEvent: {}
+[4.440433] (-) TimerEvent: {}
+[4.542632] (-) TimerEvent: {}
+[4.643668] (-) TimerEvent: {}
+[4.744502] (-) TimerEvent: {}
+[4.809320] (test_cpp_pkg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[4.844694] (-) TimerEvent: {}
+[4.890372] (test_py_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[4.893417] (test_py_pkg) StdoutLine: {'line': b'writing ../../build/test_py_pkg/test_py_pkg.egg-info/PKG-INFO\n'}
+[4.897130] (test_py_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/test_py_pkg/test_py_pkg.egg-info/dependency_links.txt\n'}
+[4.901633] (test_py_pkg) StdoutLine: {'line': b'writing entry points to ../../build/test_py_pkg/test_py_pkg.egg-info/entry_points.txt\n'}
+[4.902182] (test_py_pkg) StdoutLine: {'line': b'writing requirements to ../../build/test_py_pkg/test_py_pkg.egg-info/requires.txt\n'}
+[4.902680] (test_py_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/test_py_pkg/test_py_pkg.egg-info/top_level.txt\n'}
+[4.907265] (test_py_pkg) StdoutLine: {'line': b"reading manifest file '../../build/test_py_pkg/test_py_pkg.egg-info/SOURCES.txt'\n"}
+[4.912895] (test_py_pkg) StdoutLine: {'line': b"writing manifest file '../../build/test_py_pkg/test_py_pkg.egg-info/SOURCES.txt'\n"}
+[4.913581] (test_py_pkg) StdoutLine: {'line': b'running build\n'}
+[4.914259] (test_py_pkg) StdoutLine: {'line': b'running build_py\n'}
+[4.914807] (test_py_pkg) StdoutLine: {'line': b'running install\n'}
+[4.915766] (test_py_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[4.921410] (test_py_pkg) StdoutLine: {'line': b'running install_data\n'}
+[4.924306] (test_py_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.931685] (test_py_pkg) StdoutLine: {'line': b"removing '/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[4.933898] (test_py_pkg) StdoutLine: {'line': b'Copying ../../build/test_py_pkg/test_py_pkg.egg-info to /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg-0.0.0-py3.10.egg-info\n'}
+[4.941044] (test_py_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[4.944916] (-) TimerEvent: {}
+[4.973034] (test_cpp_pkg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[5.030514] (test_py_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/ALEX/3dev/ros/build/test_py_pkg/install.log'\n"}
+[5.048920] (-) TimerEvent: {}
+[5.152870] (-) TimerEvent: {}
+[5.162147] (test_py_pkg) CommandEnded: {'returncode': 0}
+[5.231341] (test_py_pkg) JobEnded: {'identifier': 'test_py_pkg', 'rc': 0}
+[5.253089] (-) TimerEvent: {}
+[5.274982] (test_cpp_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[5.353273] (-) TimerEvent: {}
+[5.454036] (-) TimerEvent: {}
+[5.554884] (-) TimerEvent: {}
+[5.655873] (-) TimerEvent: {}
+[5.756617] (-) TimerEvent: {}
+[5.857395] (-) TimerEvent: {}
+[5.958136] (-) TimerEvent: {}
+[6.034416] (test_cpp_pkg) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[6.058309] (-) TimerEvent: {}
+[6.159163] (-) TimerEvent: {}
+[6.259887] (-) TimerEvent: {}
+[6.360653] (-) TimerEvent: {}
+[6.461378] (-) TimerEvent: {}
+[6.471346] (test_cpp_pkg) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[6.479926] (test_cpp_pkg) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[6.487496] (test_cpp_pkg) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.529069] (test_cpp_pkg) StdoutLine: {'line': b'-- Generating done\n'}
+[6.536384] (test_cpp_pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/ALEX/3dev/ros/build/test_cpp_pkg\n'}
+[6.561564] (-) TimerEvent: {}
+[6.566076] (test_cpp_pkg) CommandEnded: {'returncode': 0}
+[6.568387] (test_cpp_pkg) JobProgress: {'identifier': 'test_cpp_pkg', 'progress': 'build'}
+[6.574117] (test_cpp_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ALEX/3dev/ros/build/test_cpp_pkg', '--', '-j4', '-l4'], 'cwd': '/home/ALEX/3dev/ros/build/test_cpp_pkg', 'env': OrderedDict([('USER', 'senaex'), ('SSH_CLIENT', '192.168.178.10 33986 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/extensions/git/dist/askpass.sh'), ('FZF_CTRL_T_COMMAND', 'fd --type f --hidden'), ('SHLVL', '2'), ('BROWSER', '/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/bin/helpers/browser.sh'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/senaex'), ('OLDPWD', '/home/ALEX/3dev/ros/src'), ('LESS', '-R'), ('TERM_PROGRAM_VERSION', '1.73.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1001/vscode-ipc-18f6c911-5c28-4cb4-b54f-ae377b23f1f0.sock'), ('ZSH', '/usr/local/zsh/oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/extensions/git/dist/askpass-main.js'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus'), ('VISUAL', 'vim'), ('COLORTERM', 'truecolor'), ('STM', '/home/ALEX/STM32/etc/gcc-arm-none-eabi/bin'), ('ALEX', '/home/ALEX'), ('FZF_CTRL_T_OPTS', "--preview 'bat --color=always --line-range :50 {}'"), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/ALEX/3dev/ros/install'), ('LOGNAME', 'senaex'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USER_ZDOTDIR', '/home/senaex'), ('ROS_VERSION', '2'), ('XDG_SESSION_ID', '3'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('FZF_ALT_C_COMMAND', 'fd --type d . --hidden'), ('PATH', '/home/senaex/conda/bin:/opt/ros/humble/bin:/home/senaex/conda/bin:/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/senaex/.fzf/bin'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', 'localhost:10.0'), ('LANG', 'en_US.UTF-8'), ('VSCODE_INJECTION', '1'), ('TERM_PROGRAM', 'vscode'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1001/vscode-git-5f827483ad.sock'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('FZF_ALT_C_OPTS', "--preview 'tree -C {} | head -50'"), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ALEX/3dev/ros/build/test_cpp_pkg'), ('LC_ALL', 'en_US.UTF-8'), ('FZF_DEFAULT_COMMAND', 'fd --type f --hidden'), ('SSH_CONNECTION', '192.168.178.10 33986 192.168.178.72 22'), ('ZDOTDIR', '/home/senaex'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('EDITOR', 'vim'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[6.661779] (-) TimerEvent: {}
+[6.749500] (test_cpp_pkg) CommandEnded: {'returncode': 0}
+[6.761966] (-) TimerEvent: {}
+[6.862839] (-) TimerEvent: {}
+[6.879168] (test_cpp_pkg) JobProgress: {'identifier': 'test_cpp_pkg', 'progress': 'install'}
+[6.915245] (test_cpp_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ALEX/3dev/ros/build/test_cpp_pkg'], 'cwd': '/home/ALEX/3dev/ros/build/test_cpp_pkg', 'env': OrderedDict([('USER', 'senaex'), ('SSH_CLIENT', '192.168.178.10 33986 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/extensions/git/dist/askpass.sh'), ('FZF_CTRL_T_COMMAND', 'fd --type f --hidden'), ('SHLVL', '2'), ('BROWSER', '/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/bin/helpers/browser.sh'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/senaex'), ('OLDPWD', '/home/ALEX/3dev/ros/src'), ('LESS', '-R'), ('TERM_PROGRAM_VERSION', '1.73.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1001/vscode-ipc-18f6c911-5c28-4cb4-b54f-ae377b23f1f0.sock'), ('ZSH', '/usr/local/zsh/oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/extensions/git/dist/askpass-main.js'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus'), ('VISUAL', 'vim'), ('COLORTERM', 'truecolor'), ('STM', '/home/ALEX/STM32/etc/gcc-arm-none-eabi/bin'), ('ALEX', '/home/ALEX'), ('FZF_CTRL_T_OPTS', "--preview 'bat --color=always --line-range :50 {}'"), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/ALEX/3dev/ros/install'), ('LOGNAME', 'senaex'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USER_ZDOTDIR', '/home/senaex'), ('ROS_VERSION', '2'), ('XDG_SESSION_ID', '3'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('FZF_ALT_C_COMMAND', 'fd --type d . --hidden'), ('PATH', '/home/senaex/conda/bin:/opt/ros/humble/bin:/home/senaex/conda/bin:/home/senaex/.vscode-server/bin/6261075646f055b99068d3688932416f2346dd3b/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/senaex/.fzf/bin'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', 'localhost:10.0'), ('LANG', 'en_US.UTF-8'), ('VSCODE_INJECTION', '1'), ('TERM_PROGRAM', 'vscode'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1001/vscode-git-5f827483ad.sock'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('FZF_ALT_C_OPTS', "--preview 'tree -C {} | head -50'"), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ALEX/3dev/ros/build/test_cpp_pkg'), ('LC_ALL', 'en_US.UTF-8'), ('FZF_DEFAULT_COMMAND', 'fd --type f --hidden'), ('SSH_CONNECTION', '192.168.178.10 33986 192.168.178.72 22'), ('ZDOTDIR', '/home/senaex'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('EDITOR', 'vim'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[6.950141] (test_cpp_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.951325] (test_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/ament_index/resource_index/package_run_dependencies/test_cpp_pkg\n'}
+[6.953617] (test_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/ament_index/resource_index/parent_prefix_path/test_cpp_pkg\n'}
+[6.955507] (test_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/ament_prefix_path.sh\n'}
+[6.956807] (test_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/ament_prefix_path.dsv\n'}
+[6.958281] (test_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/path.sh\n'}
+[6.959487] (test_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/path.dsv\n'}
+[6.960714] (test_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.bash\n'}
+[6.962099] (test_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.sh\n'}
+[6.962930] (-) TimerEvent: {}
+[6.963560] (test_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.zsh\n'}
+[6.965104] (test_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.dsv\n'}
+[6.966521] (test_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.dsv\n'}
+[6.968258] (test_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/ament_index/resource_index/packages/test_cpp_pkg\n'}
+[6.970032] (test_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/cmake/test_cpp_pkgConfig.cmake\n'}
+[6.971275] (test_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/cmake/test_cpp_pkgConfig-version.cmake\n'}
+[6.972662] (test_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.xml\n'}
+[6.978821] (test_cpp_pkg) CommandEnded: {'returncode': 0}
+[7.063181] (-) TimerEvent: {}
+[7.166446] (-) TimerEvent: {}
+[7.211757] (test_cpp_pkg) JobEnded: {'identifier': 'test_cpp_pkg', 'rc': 0}
+[7.215409] (-) EventReactorShutdown: {}
