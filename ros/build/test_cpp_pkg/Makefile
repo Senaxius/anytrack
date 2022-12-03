@@ -198,24 +198,74 @@ test_cpp_pkg_uninstall/fast:
 .PHONY : test_cpp_pkg_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named cpp_node
+# Target rules for targets named test_node
 
 # Build rule for target.
-cpp_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpp_node
-.PHONY : cpp_node
+test_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_node
+.PHONY : test_node
 
 # fast build rule for target.
-cpp_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_node.dir/build.make CMakeFiles/cpp_node.dir/build
-.PHONY : cpp_node/fast
+test_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/build
+.PHONY : test_node/fast
+
+#=============================================================================
+# Target rules for targets named test_publisher
+
+# Build rule for target.
+test_publisher: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_publisher
+.PHONY : test_publisher
+
+# fast build rule for target.
+test_publisher/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_publisher.dir/build.make CMakeFiles/test_publisher.dir/build
+.PHONY : test_publisher/fast
+
+#=============================================================================
+# Target rules for targets named test_listener
+
+# Build rule for target.
+test_listener: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_listener
+.PHONY : test_listener
+
+# fast build rule for target.
+test_listener/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_listener.dir/build.make CMakeFiles/test_listener.dir/build
+.PHONY : test_listener/fast
+
+src/test_listener.o: src/test_listener.cpp.o
+.PHONY : src/test_listener.o
+
+# target to build an object file
+src/test_listener.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_listener.dir/build.make CMakeFiles/test_listener.dir/src/test_listener.cpp.o
+.PHONY : src/test_listener.cpp.o
+
+src/test_listener.i: src/test_listener.cpp.i
+.PHONY : src/test_listener.i
+
+# target to preprocess a source file
+src/test_listener.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_listener.dir/build.make CMakeFiles/test_listener.dir/src/test_listener.cpp.i
+.PHONY : src/test_listener.cpp.i
+
+src/test_listener.s: src/test_listener.cpp.s
+.PHONY : src/test_listener.s
+
+# target to generate assembly for a file
+src/test_listener.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_listener.dir/build.make CMakeFiles/test_listener.dir/src/test_listener.cpp.s
+.PHONY : src/test_listener.cpp.s
 
 src/test_node.o: src/test_node.cpp.o
 .PHONY : src/test_node.o
 
 # target to build an object file
 src/test_node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_node.dir/build.make CMakeFiles/cpp_node.dir/src/test_node.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/test_node.cpp.o
 .PHONY : src/test_node.cpp.o
 
 src/test_node.i: src/test_node.cpp.i
@@ -223,7 +273,7 @@ src/test_node.i: src/test_node.cpp.i
 
 # target to preprocess a source file
 src/test_node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_node.dir/build.make CMakeFiles/cpp_node.dir/src/test_node.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/test_node.cpp.i
 .PHONY : src/test_node.cpp.i
 
 src/test_node.s: src/test_node.cpp.s
@@ -231,8 +281,32 @@ src/test_node.s: src/test_node.cpp.s
 
 # target to generate assembly for a file
 src/test_node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_node.dir/build.make CMakeFiles/cpp_node.dir/src/test_node.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/test_node.cpp.s
 .PHONY : src/test_node.cpp.s
+
+src/test_publisher.o: src/test_publisher.cpp.o
+.PHONY : src/test_publisher.o
+
+# target to build an object file
+src/test_publisher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_publisher.dir/build.make CMakeFiles/test_publisher.dir/src/test_publisher.cpp.o
+.PHONY : src/test_publisher.cpp.o
+
+src/test_publisher.i: src/test_publisher.cpp.i
+.PHONY : src/test_publisher.i
+
+# target to preprocess a source file
+src/test_publisher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_publisher.dir/build.make CMakeFiles/test_publisher.dir/src/test_publisher.cpp.i
+.PHONY : src/test_publisher.cpp.i
+
+src/test_publisher.s: src/test_publisher.cpp.s
+.PHONY : src/test_publisher.s
+
+# target to generate assembly for a file
+src/test_publisher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_publisher.dir/build.make CMakeFiles/test_publisher.dir/src/test_publisher.cpp.s
+.PHONY : src/test_publisher.cpp.s
 
 # Help Target
 help:
@@ -249,10 +323,18 @@ help:
 	@echo "... test"
 	@echo "... test_cpp_pkg_uninstall"
 	@echo "... uninstall"
-	@echo "... cpp_node"
+	@echo "... test_listener"
+	@echo "... test_node"
+	@echo "... test_publisher"
+	@echo "... src/test_listener.o"
+	@echo "... src/test_listener.i"
+	@echo "... src/test_listener.s"
 	@echo "... src/test_node.o"
 	@echo "... src/test_node.i"
 	@echo "... src/test_node.s"
+	@echo "... src/test_publisher.o"
+	@echo "... src/test_publisher.i"
+	@echo "... src/test_publisher.s"
 .PHONY : help
 
 

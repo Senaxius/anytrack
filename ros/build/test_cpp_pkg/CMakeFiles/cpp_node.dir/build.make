@@ -144,7 +144,7 @@ cpp_node: /opt/ros/humble/lib/librosidl_typesupport_c.so
 cpp_node: /opt/ros/humble/lib/librcpputils.so
 cpp_node: /opt/ros/humble/lib/librosidl_runtime_c.so
 cpp_node: /opt/ros/humble/lib/librcutils.so
-cpp_node: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+cpp_node: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 cpp_node: /opt/ros/humble/lib/libtracetools.so
 cpp_node: CMakeFiles/cpp_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ALEX/3dev/ros/build/test_cpp_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable cpp_node"

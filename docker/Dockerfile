@@ -1,6 +1,7 @@
 FROM osrf/ros:humble-desktop-full
 
-RUN apt-get update && apt-get install -y --no-install-recommends zsh net-tools vim git
+RUN apt-get update && apt-get install -y --no-install-recommends python3-pip ros-humble-turtlesim zsh net-tools vim git
+RUN pip3 install setuptools==58.2.0
 
 ARG SSH_PRIVATE_KEY
 RUN mkdir /root/.ssh/
@@ -14,4 +15,6 @@ RUN cd ~ && git clone git@github.com:Senaxius/dotfiles.git
 RUN cd ~/dotfiles && ./install.sh
 RUN cd ~/dotfiles && ./vim-install.sh
 RUN cd ~/dotfiles && ./git-config.sh
+RUN ln -s ~/.rc-temp/ros-setup.sh ~/.rc/ 
 
+RUN mkdir /home/ALEX

@@ -8,12 +8,19 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(example_interfaces REQUIRED)
 
-add_executable(cpp_node src/test_node.cpp)
-ament_target_dependencies(cpp_node rclcpp)
+add_executable(test_node src/test_node.cpp)
+add_executable(test_publisher src/test_publisher.cpp)
+add_executable(test_listener src/test_listener.cpp)
+ament_target_dependencies(test_node rclcpp)
+ament_target_dependencies(test_publisher rclcpp example_interfaces)
+ament_target_dependencies(test_listener rclcpp example_interfaces)
 
 install(TARGETS
-  cpp_node
+  test_node
+  test_publisher
+  test_listener
   DESTINATION lib/${PROJECT_NAME}
 )
 

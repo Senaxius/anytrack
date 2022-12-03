@@ -9,7 +9,7 @@ if [ $1 = "build" ]; then
     echo "Building docker image.."
     key="$(cat ~/.ssh/id_rsa)"
     docker build --build-arg SSH_PRIVATE_KEY="$key" -t rosco-image . 
-    docker run -it --name rosco --net=host --device /dev/dri/ -e DISPLAY=$DISPLAY -v /home/ALEX/3dev:/root/3dev -v $HOME/.Xauthority:/root/.Xauthority:ro rosco-image /bin/zsh 
+    docker run -it --name rosco --net=host --device /dev/dri/ -e "TERM=xterm-256color" -e DISPLAY=$DISPLAY -v /home/ALEX/3dev:/home/ALEX/3dev -v $HOME/.Xauthority:/root/.Xauthority:ro rosco-image /bin/zsh 
     echo "--------------------done--------------------"
 elif [ $1 = "start" ]; then
     echo "starting docker image.."
