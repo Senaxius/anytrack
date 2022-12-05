@@ -23,6 +23,7 @@ setup(
             "test_node = test_py_pkg.test_node:main",
             "test_publisher = test_py_pkg.test_publisher:main",
             "test_listener = test_py_pkg.test_listener:main",
+            "counter_publist = test_py_pkg.counter_publist:main",
         ],
     },
 )

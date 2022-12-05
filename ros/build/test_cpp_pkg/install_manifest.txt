@@ -1,6 +1,7 @@
 /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_node
 /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_publisher
 /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_listener
+/home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/number_publisher
 /home/ALEX/3dev/ros/install/test_cpp_pkg/share/ament_index/resource_index/package_run_dependencies/test_cpp_pkg
 /home/ALEX/3dev/ros/install/test_cpp_pkg/share/ament_index/resource_index/parent_prefix_path/test_cpp_pkg
 /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/ament_prefix_path.sh
