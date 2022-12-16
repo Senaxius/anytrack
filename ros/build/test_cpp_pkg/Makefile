@@ -237,6 +237,45 @@ test_listener/fast:
 .PHONY : test_listener/fast
 
 #=============================================================================
+# Target rules for targets named test_server
+
+# Build rule for target.
+test_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_server
+.PHONY : test_server
+
+# fast build rule for target.
+test_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/build
+.PHONY : test_server/fast
+
+#=============================================================================
+# Target rules for targets named test_client_nop
+
+# Build rule for target.
+test_client_nop: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_client_nop
+.PHONY : test_client_nop
+
+# fast build rule for target.
+test_client_nop/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_client_nop.dir/build.make CMakeFiles/test_client_nop.dir/build
+.PHONY : test_client_nop/fast
+
+#=============================================================================
+# Target rules for targets named test_client_op
+
+# Build rule for target.
+test_client_op: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_client_op
+.PHONY : test_client_op
+
+# fast build rule for target.
+test_client_op/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_client_op.dir/build.make CMakeFiles/test_client_op.dir/build
+.PHONY : test_client_op/fast
+
+#=============================================================================
 # Target rules for targets named number_publisher
 
 # Build rule for target.
@@ -272,6 +311,54 @@ src/number_publisher.s: src/number_publisher.cpp.s
 src/number_publisher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/number_publisher.dir/build.make CMakeFiles/number_publisher.dir/src/number_publisher.cpp.s
 .PHONY : src/number_publisher.cpp.s
+
+src/test_client_nop.o: src/test_client_nop.cpp.o
+.PHONY : src/test_client_nop.o
+
+# target to build an object file
+src/test_client_nop.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_client_nop.dir/build.make CMakeFiles/test_client_nop.dir/src/test_client_nop.cpp.o
+.PHONY : src/test_client_nop.cpp.o
+
+src/test_client_nop.i: src/test_client_nop.cpp.i
+.PHONY : src/test_client_nop.i
+
+# target to preprocess a source file
+src/test_client_nop.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_client_nop.dir/build.make CMakeFiles/test_client_nop.dir/src/test_client_nop.cpp.i
+.PHONY : src/test_client_nop.cpp.i
+
+src/test_client_nop.s: src/test_client_nop.cpp.s
+.PHONY : src/test_client_nop.s
+
+# target to generate assembly for a file
+src/test_client_nop.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_client_nop.dir/build.make CMakeFiles/test_client_nop.dir/src/test_client_nop.cpp.s
+.PHONY : src/test_client_nop.cpp.s
+
+src/test_client_op.o: src/test_client_op.cpp.o
+.PHONY : src/test_client_op.o
+
+# target to build an object file
+src/test_client_op.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_client_op.dir/build.make CMakeFiles/test_client_op.dir/src/test_client_op.cpp.o
+.PHONY : src/test_client_op.cpp.o
+
+src/test_client_op.i: src/test_client_op.cpp.i
+.PHONY : src/test_client_op.i
+
+# target to preprocess a source file
+src/test_client_op.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_client_op.dir/build.make CMakeFiles/test_client_op.dir/src/test_client_op.cpp.i
+.PHONY : src/test_client_op.cpp.i
+
+src/test_client_op.s: src/test_client_op.cpp.s
+.PHONY : src/test_client_op.s
+
+# target to generate assembly for a file
+src/test_client_op.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_client_op.dir/build.make CMakeFiles/test_client_op.dir/src/test_client_op.cpp.s
+.PHONY : src/test_client_op.cpp.s
 
 src/test_listener.o: src/test_listener.cpp.o
 .PHONY : src/test_listener.o
@@ -345,6 +432,30 @@ src/test_publisher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_publisher.dir/build.make CMakeFiles/test_publisher.dir/src/test_publisher.cpp.s
 .PHONY : src/test_publisher.cpp.s
 
+src/test_server.o: src/test_server.cpp.o
+.PHONY : src/test_server.o
+
+# target to build an object file
+src/test_server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/test_server.cpp.o
+.PHONY : src/test_server.cpp.o
+
+src/test_server.i: src/test_server.cpp.i
+.PHONY : src/test_server.i
+
+# target to preprocess a source file
+src/test_server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/test_server.cpp.i
+.PHONY : src/test_server.cpp.i
+
+src/test_server.s: src/test_server.cpp.s
+.PHONY : src/test_server.s
+
+# target to generate assembly for a file
+src/test_server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/test_server.cpp.s
+.PHONY : src/test_server.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -361,12 +472,21 @@ help:
 	@echo "... test_cpp_pkg_uninstall"
 	@echo "... uninstall"
 	@echo "... number_publisher"
+	@echo "... test_client_nop"
+	@echo "... test_client_op"
 	@echo "... test_listener"
 	@echo "... test_node"
 	@echo "... test_publisher"
+	@echo "... test_server"
 	@echo "... src/number_publisher.o"
 	@echo "... src/number_publisher.i"
 	@echo "... src/number_publisher.s"
+	@echo "... src/test_client_nop.o"
+	@echo "... src/test_client_nop.i"
+	@echo "... src/test_client_nop.s"
+	@echo "... src/test_client_op.o"
+	@echo "... src/test_client_op.i"
+	@echo "... src/test_client_op.s"
 	@echo "... src/test_listener.o"
 	@echo "... src/test_listener.i"
 	@echo "... src/test_listener.s"
@@ -376,6 +496,9 @@ help:
 	@echo "... src/test_publisher.o"
 	@echo "... src/test_publisher.i"
 	@echo "... src/test_publisher.s"
+	@echo "... src/test_server.o"
+	@echo "... src/test_server.i"
+	@echo "... src/test_server.s"
 .PHONY : help
 
 

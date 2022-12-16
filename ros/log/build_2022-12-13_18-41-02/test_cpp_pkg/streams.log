@@ -1,0 +1,88 @@
+[0.015s] Invoking command in '/home/ALEX/3dev/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/test_cpp_pkg -- -j12 -l12
+[0.047s] [35m[1mConsolidate compiler generated dependencies of target test_client_op[0m
+[0.060s] [ 21%] Built target number_publisher
+[0.060s] [ 42%] Built target test_publisher
+[0.060s] [ 42%] Built target test_server
+[0.061s] [ 57%] [32mBuilding CXX object CMakeFiles/test_client_nop.dir/src/test_client_nop.cpp.o[0m
+[0.061s] [ 64%] Built target test_node
+[0.061s] [ 78%] Built target test_listener
+[0.065s] [ 85%] [32mBuilding CXX object CMakeFiles/test_client_op.dir/src/test_client_op.cpp.o[0m
+[2.298s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.298s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.298s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:23[m[K,
+[2.298s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.298s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.298s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.298s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.298s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.299s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.299s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.299s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.299s]                  from [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_op.cpp:1[m[K:
+[2.299s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_op.cpp:[m[K In member function ‘[01m[Kvoid test_client_op::callService(int, int)[m[K’:
+[2.299s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_op.cpp:26:45:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 5 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[2.299s]    26 |             RCLCPP_INFO(this->get_logger(), [01;35m[K"%ld + %ld = %ld"[m[K, [32m[Ka[m[K,b, response->sum);
+[2.299s]       |                                             [01;35m[K^~~~~~~~~~~~~~~~~[m[K  [32m[K~[m[K
+[2.299s]       |                                                                [32m[K|[m[K
+[2.299s]       |                                                                [32m[Kint[m[K
+[2.300s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_op.cpp:26:48:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[2.300s]    26 |             RCLCPP_INFO(this->get_logger(), "[01;36m[K%ld[m[K + %ld = %ld", a,b, response->sum);
+[2.300s]       |                                              [01;36m[K~~^[m[K
+[2.300s]       |                                                [01;36m[K|[m[K
+[2.300s]       |                                                [01;36m[Klong int[m[K
+[2.300s]       |                                              [32m[K%d[m[K
+[2.300s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.300s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.300s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:23[m[K,
+[2.300s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.300s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.301s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.301s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.301s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.301s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.301s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.301s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.301s]                  from [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_op.cpp:1[m[K:
+[2.301s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_op.cpp:26:45:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 6 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[2.301s]    26 |             RCLCPP_INFO(this->get_logger(), [01;35m[K"%ld + %ld = %ld"[m[K, a,[32m[Kb[m[K, response->sum);
+[2.301s]       |                                             [01;35m[K^~~~~~~~~~~~~~~~~[m[K    [32m[K~[m[K
+[2.301s]       |                                                                  [32m[K|[m[K
+[2.302s]       |                                                                  [32m[Kint[m[K
+[2.302s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_op.cpp:26:54:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[2.302s]    26 |             RCLCPP_INFO(this->get_logger(), "%ld + [01;36m[K%ld[m[K = %ld", a,b, response->sum);
+[2.302s]       |                                                    [01;36m[K~~^[m[K
+[2.302s]       |                                                      [01;36m[K|[m[K
+[2.302s]       |                                                      [01;36m[Klong int[m[K
+[2.302s]       |                                                    [32m[K%d[m[K
+[2.910s] [ 92%] [32m[1mLinking CXX executable test_client_op[0m
+[3.021s] [ 92%] Built target test_client_op
+[3.225s] [100%] [32m[1mLinking CXX executable test_client_nop[0m
+[3.367s] [100%] Built target test_client_nop
+[3.400s] Invoked command in '/home/ALEX/3dev/ros/build/test_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/test_cpp_pkg -- -j12 -l12
+[3.434s] Invoking command in '/home/ALEX/3dev/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/test_cpp_pkg
+[3.441s] -- Install configuration: ""
+[3.441s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_client_nop
+[3.442s] -- Set runtime path of "/home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_client_nop" to ""
+[3.442s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_client_op
+[3.442s] -- Set runtime path of "/home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_client_op" to ""
+[3.443s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_node
+[3.443s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_publisher
+[3.443s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_listener
+[3.443s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_server
+[3.444s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/number_publisher
+[3.444s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/ament_index/resource_index/package_run_dependencies/test_cpp_pkg
+[3.444s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/ament_index/resource_index/parent_prefix_path/test_cpp_pkg
+[3.444s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/ament_prefix_path.sh
+[3.444s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/ament_prefix_path.dsv
+[3.444s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/path.sh
+[3.444s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/path.dsv
+[3.444s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.bash
+[3.444s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.sh
+[3.445s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.zsh
+[3.445s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.dsv
+[3.445s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.dsv
+[3.445s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/ament_index/resource_index/packages/test_cpp_pkg
+[3.445s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/cmake/test_cpp_pkgConfig.cmake
+[3.445s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/cmake/test_cpp_pkgConfig-version.cmake
+[3.445s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.xml
+[3.446s] Invoked command in '/home/ALEX/3dev/ros/build/test_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/test_cpp_pkg

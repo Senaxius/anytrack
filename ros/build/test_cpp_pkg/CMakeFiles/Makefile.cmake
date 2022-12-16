@@ -671,5 +671,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_node.dir/DependInfo.cmake"
   "CMakeFiles/test_publisher.dir/DependInfo.cmake"
   "CMakeFiles/test_listener.dir/DependInfo.cmake"
+  "CMakeFiles/test_server.dir/DependInfo.cmake"
+  "CMakeFiles/test_client_nop.dir/DependInfo.cmake"
+  "CMakeFiles/test_client_op.dir/DependInfo.cmake"
   "CMakeFiles/number_publisher.dir/DependInfo.cmake"
   )

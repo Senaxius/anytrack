@@ -3,6 +3,9 @@
 /home/ALEX/3dev/ros/build/test_cpp_pkg/CMakeFiles/test_node.dir
 /home/ALEX/3dev/ros/build/test_cpp_pkg/CMakeFiles/test_publisher.dir
 /home/ALEX/3dev/ros/build/test_cpp_pkg/CMakeFiles/test_listener.dir
+/home/ALEX/3dev/ros/build/test_cpp_pkg/CMakeFiles/test_server.dir
+/home/ALEX/3dev/ros/build/test_cpp_pkg/CMakeFiles/test_client_nop.dir
+/home/ALEX/3dev/ros/build/test_cpp_pkg/CMakeFiles/test_client_op.dir
 /home/ALEX/3dev/ros/build/test_cpp_pkg/CMakeFiles/number_publisher.dir
 /home/ALEX/3dev/ros/build/test_cpp_pkg/CMakeFiles/test.dir
 /home/ALEX/3dev/ros/build/test_cpp_pkg/CMakeFiles/edit_cache.dir

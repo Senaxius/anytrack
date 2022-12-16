@@ -1,0 +1,8 @@
+[35m[1mConsolidate compiler generated dependencies of target test_client_op[0m
+[ 14%] Built target test_client_nop
+[ 42%] Built target test_node
+[ 42%] Built target number_publisher
+[ 71%] Built target test_listener
+[ 71%] Built target test_publisher
+[ 85%] Built target test_server
+[ 92%] [32mBuilding CXX object CMakeFiles/test_client_op.dir/src/test_client_op.cpp.o[0m

@@ -1,0 +1,17 @@
+[0.579s] Invoking command in '/home/ALEX/3dev/ros/build/scanner': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scanner
+[0.825s] running develop
+[0.960s] running egg_info
+[0.960s] writing scanner.egg-info/PKG-INFO
+[0.960s] writing dependency_links to scanner.egg-info/dependency_links.txt
+[0.960s] writing entry points to scanner.egg-info/entry_points.txt
+[0.960s] writing requirements to scanner.egg-info/requires.txt
+[0.960s] writing top-level names to scanner.egg-info/top_level.txt
+[0.962s] reading manifest file 'scanner.egg-info/SOURCES.txt'
+[0.962s] writing manifest file 'scanner.egg-info/SOURCES.txt'
+[0.963s] running build_ext
+[0.964s] Creating /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner.egg-link (link to .)
+[0.964s] Installing test_vec_publisher script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[0.964s] 
+[0.964s] Installed /home/ALEX/3dev/ros/build/scanner
+[0.964s] running install_data
+[0.990s] Invoked command in '/home/ALEX/3dev/ros/build/scanner' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scanner

@@ -13,16 +13,25 @@ find_package(example_interfaces REQUIRED)
 add_executable(test_node src/test_node.cpp)
 add_executable(test_publisher src/test_publisher.cpp)
 add_executable(test_listener src/test_listener.cpp)
+add_executable(test_server src/test_server.cpp)
+add_executable(test_client_nop src/test_client_nop.cpp)
+add_executable(test_client_op src/test_client_op.cpp)
 add_executable(number_publisher src/number_publisher.cpp)
 ament_target_dependencies(test_node rclcpp)
 ament_target_dependencies(test_publisher rclcpp example_interfaces)
 ament_target_dependencies(number_publisher rclcpp example_interfaces)
 ament_target_dependencies(test_listener rclcpp example_interfaces)
+ament_target_dependencies(test_server rclcpp example_interfaces)
+ament_target_dependencies(test_client_nop rclcpp example_interfaces)
+ament_target_dependencies(test_client_op rclcpp example_interfaces)
 
 install(TARGETS
+  test_client_nop
+  test_client_op
   test_node
   test_publisher
   test_listener
+  test_server
   number_publisher
   DESTINATION lib/${PROJECT_NAME}
 )

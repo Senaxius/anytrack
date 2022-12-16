@@ -1,0 +1,39 @@
+[0.015s] Invoking command in '/home/ALEX/3dev/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/test_cpp_pkg -- -j12 -l12
+[0.049s] [35m[1mConsolidate compiler generated dependencies of target test_client_nop[0m
+[0.050s] [35m[1mConsolidate compiler generated dependencies of target test_client_op[0m
+[0.060s] [ 14%] Built target test_node
+[0.060s] [ 28%] Built target number_publisher
+[0.062s] [ 42%] Built target test_publisher
+[0.063s] [ 57%] Built target test_server
+[0.063s] [ 71%] Built target test_listener
+[0.068s] [ 92%] [32mBuilding CXX object CMakeFiles/test_client_op.dir/src/test_client_op.cpp.o[0m
+[0.068s] [ 92%] Built target test_client_nop
+[2.851s] [100%] [32m[1mLinking CXX executable test_client_op[0m
+[2.953s] [100%] Built target test_client_op
+[2.962s] Invoked command in '/home/ALEX/3dev/ros/build/test_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/test_cpp_pkg -- -j12 -l12
+[2.995s] Invoking command in '/home/ALEX/3dev/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/test_cpp_pkg
+[3.002s] -- Install configuration: ""
+[3.002s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_client_nop
+[3.002s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_client_op
+[3.003s] -- Set runtime path of "/home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_client_op" to ""
+[3.003s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_node
+[3.003s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_publisher
+[3.004s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_listener
+[3.004s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/test_server
+[3.004s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/number_publisher
+[3.004s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/ament_index/resource_index/package_run_dependencies/test_cpp_pkg
+[3.004s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/ament_index/resource_index/parent_prefix_path/test_cpp_pkg
+[3.005s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/ament_prefix_path.sh
+[3.005s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/ament_prefix_path.dsv
+[3.005s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/path.sh
+[3.005s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/path.dsv
+[3.005s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.bash
+[3.005s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.sh
+[3.005s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.zsh
+[3.005s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.dsv
+[3.005s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.dsv
+[3.005s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/ament_index/resource_index/packages/test_cpp_pkg
+[3.006s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/cmake/test_cpp_pkgConfig.cmake
+[3.006s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/cmake/test_cpp_pkgConfig-version.cmake
+[3.006s] -- Up-to-date: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.xml
+[3.007s] Invoked command in '/home/ALEX/3dev/ros/build/test_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/test_cpp_pkg

@@ -1,0 +1,22 @@
+[0.546s] Invoking command in '/home/ALEX/3dev/ros/build/test_py_pkg': PYTHONPATH=/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/test_py_pkg --editable --build-directory /home/ALEX/3dev/ros/build/test_py_pkg/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/test_py_pkg
+[0.776s] running develop
+[0.899s] running egg_info
+[0.899s] writing test_py_pkg.egg-info/PKG-INFO
+[0.899s] writing dependency_links to test_py_pkg.egg-info/dependency_links.txt
+[0.899s] writing entry points to test_py_pkg.egg-info/entry_points.txt
+[0.899s] writing requirements to test_py_pkg.egg-info/requires.txt
+[0.899s] writing top-level names to test_py_pkg.egg-info/top_level.txt
+[0.901s] reading manifest file 'test_py_pkg.egg-info/SOURCES.txt'
+[0.902s] writing manifest file 'test_py_pkg.egg-info/SOURCES.txt'
+[0.903s] running build_ext
+[0.903s] Creating /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test-py-pkg.egg-link (link to .)
+[0.904s] Installing counter_publist script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
+[0.904s] Installing test_client_nop script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
+[0.904s] Installing test_listener script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
+[0.904s] Installing test_node script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
+[0.904s] Installing test_publisher script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
+[0.905s] Installing test_server script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
+[0.905s] 
+[0.905s] Installed /home/ALEX/3dev/ros/build/test_py_pkg
+[0.905s] running install_data
+[0.932s] Invoked command in '/home/ALEX/3dev/ros/build/test_py_pkg' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/test_py_pkg --editable --build-directory /home/ALEX/3dev/ros/build/test_py_pkg/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/test_py_pkg

@@ -1,0 +1,3 @@
+[console_scripts]
+test_vec_publisher = scanner.test_vec_publisher:main
+
