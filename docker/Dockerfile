@@ -15,6 +15,7 @@ RUN cd ~ && git clone git@github.com:Senaxius/dotfiles.git
 RUN cd ~/dotfiles && ./install.sh
 RUN cd ~/dotfiles && ./vim-install.sh
 RUN cd ~/dotfiles && ./git-config.sh
+RUN chsh -s /bin/zsh
 RUN ln -s ~/.rc-temp/ros-setup.sh ~/.rc/ 
 
 RUN mkdir /home/ALEX
