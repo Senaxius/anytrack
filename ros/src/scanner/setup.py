@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             "test_vec_publisher = scanner.test_vec_publisher:main",
             "tf_broadcaster = scanner.tf_broadcaster:main",
+            "ball_scanner = scanner.ball_scanner:main",
         ],
     },
 )

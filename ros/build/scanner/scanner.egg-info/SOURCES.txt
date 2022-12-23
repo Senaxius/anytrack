@@ -11,6 +11,7 @@ setup.py
 resource/scanner
 scanner/__init__.py
 scanner/ball_scanner.py
+scanner/ball_scanner_template.py
 scanner/test_vec_publisher.py
 scanner/tf_broadcaster.py
 scanner.egg-info/PKG-INFO

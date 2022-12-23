@@ -1,7 +1,7 @@
 FROM osrf/ros:humble-desktop-full
 
-RUN apt-get update && apt-get install -y --no-install-recommends python3-pip ros-humble-turtlesim zsh net-tools vim git
-RUN pip3 install setuptools==58.2.0
+RUN apt-get update && apt-get install -y --no-install-recommends python3-pip ros-humble-turtlesim zsh net-tools ros-humble-rosbridge-suite vim git
+RUN pip3 install imutils opencv-python setuptools==58.2.0
 
 ARG SSH_PRIVATE_KEY
 RUN mkdir /root/.ssh/

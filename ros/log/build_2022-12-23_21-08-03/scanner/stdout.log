@@ -1,0 +1,36 @@
+running develop
+Removing /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner.egg-link (link to .)
+running egg_info
+writing ../../build/scanner/scanner.egg-info/PKG-INFO
+writing dependency_links to ../../build/scanner/scanner.egg-info/dependency_links.txt
+writing entry points to ../../build/scanner/scanner.egg-info/entry_points.txt
+writing requirements to ../../build/scanner/scanner.egg-info/requires.txt
+writing top-level names to ../../build/scanner/scanner.egg-info/top_level.txt
+reading manifest file '../../build/scanner/scanner.egg-info/SOURCES.txt'
+writing manifest file '../../build/scanner/scanner.egg-info/SOURCES.txt'
+running build
+running build_py
+copying scanner/tf_broadcaster.py -> /home/ALEX/3dev/ros/build/scanner/build/lib/scanner
+copying scanner/test_vec_publisher.py -> /home/ALEX/3dev/ros/build/scanner/build/lib/scanner
+copying scanner/ball_scanner_template.py -> /home/ALEX/3dev/ros/build/scanner/build/lib/scanner
+copying scanner/ball_scanner.py -> /home/ALEX/3dev/ros/build/scanner/build/lib/scanner
+running install
+running install_lib
+creating /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner
+copying /home/ALEX/3dev/ros/build/scanner/build/lib/scanner/tf_broadcaster.py -> /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner
+copying /home/ALEX/3dev/ros/build/scanner/build/lib/scanner/__init__.py -> /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner
+copying /home/ALEX/3dev/ros/build/scanner/build/lib/scanner/test_vec_publisher.py -> /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner
+copying /home/ALEX/3dev/ros/build/scanner/build/lib/scanner/ball_scanner_template.py -> /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner
+copying /home/ALEX/3dev/ros/build/scanner/build/lib/scanner/ball_scanner.py -> /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner
+byte-compiling /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner/tf_broadcaster.py to tf_broadcaster.cpython-310.pyc
+byte-compiling /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner/test_vec_publisher.py to test_vec_publisher.cpython-310.pyc
+byte-compiling /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner/ball_scanner_template.py to ball_scanner_template.cpython-310.pyc
+byte-compiling /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner/ball_scanner.py to ball_scanner.cpython-310.pyc
+running install_data
+running install_egg_info
+Copying ../../build/scanner/scanner.egg-info to /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner-0.0.0-py3.10.egg-info
+running install_scripts
+Installing test_vec_publisher script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+Installing tf_broadcaster script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+writing list of installed files to '/home/ALEX/3dev/ros/build/scanner/install.log'
