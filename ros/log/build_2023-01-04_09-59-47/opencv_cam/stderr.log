@@ -1,0 +1,10 @@
+In file included from [01m[K/home/ALEX/3dev/ros/src/opencv_cam/include/opencv_cam/opencv_cam_node.hpp:10[m[K,
+                 from [01m[K/home/ALEX/3dev/ros/src/opencv_cam/src/opencv_cam_node.cpp:1[m[K:
+[01m[K/home/ALEX/3dev/ros/src/opencv_cam/include/opencv_cam/camera_context.hpp:7:10:[m[K [01;31m[Kfatal error: [m[Kros2_shared/context_macros.hpp: No such file or directory
+    7 | #include [01;31m[K"ros2_shared/context_macros.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/opencv_cam_node.dir/build.make:76: CMakeFiles/opencv_cam_node.dir/src/opencv_cam_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/opencv_cam_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

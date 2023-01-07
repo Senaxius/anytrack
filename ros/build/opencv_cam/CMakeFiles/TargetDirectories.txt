@@ -1,0 +1,13 @@
+/home/ALEX/3dev/ros/build/opencv_cam/CMakeFiles/uninstall.dir
+/home/ALEX/3dev/ros/build/opencv_cam/CMakeFiles/opencv_cam_uninstall.dir
+/home/ALEX/3dev/ros/build/opencv_cam/CMakeFiles/opencv_cam_node.dir
+/home/ALEX/3dev/ros/build/opencv_cam/CMakeFiles/subscriber_node.dir
+/home/ALEX/3dev/ros/build/opencv_cam/CMakeFiles/opencv_cam_main.dir
+/home/ALEX/3dev/ros/build/opencv_cam/CMakeFiles/ipc_test_main.dir
+/home/ALEX/3dev/ros/build/opencv_cam/CMakeFiles/test.dir
+/home/ALEX/3dev/ros/build/opencv_cam/CMakeFiles/edit_cache.dir
+/home/ALEX/3dev/ros/build/opencv_cam/CMakeFiles/rebuild_cache.dir
+/home/ALEX/3dev/ros/build/opencv_cam/CMakeFiles/list_install_components.dir
+/home/ALEX/3dev/ros/build/opencv_cam/CMakeFiles/install.dir
+/home/ALEX/3dev/ros/build/opencv_cam/CMakeFiles/install/local.dir
+/home/ALEX/3dev/ros/build/opencv_cam/CMakeFiles/install/strip.dir

@@ -1,0 +1,1 @@
+Invoking command in '/home/ALEX/3dev/ros/build/scanner': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --uninstall --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build

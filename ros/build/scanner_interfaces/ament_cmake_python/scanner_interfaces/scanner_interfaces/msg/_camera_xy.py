@@ -63,16 +63,16 @@ class CameraXY(metaclass=Metaclass_CameraXY):
     ]
 
     _fields_and_field_types = {
-        'x': 'int64',
-        'y': 'int64',
+        'x': 'double',
+        'y': 'double',
         'x_max': 'int64',
         'y_max': 'int64',
         'found': 'boolean',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
@@ -82,8 +82,8 @@ class CameraXY(metaclass=Metaclass_CameraXY):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.x = kwargs.get('x', int())
-        self.y = kwargs.get('y', int())
+        self.x = kwargs.get('x', float())
+        self.y = kwargs.get('y', float())
         self.x_max = kwargs.get('x_max', int())
         self.y_max = kwargs.get('y_max', int())
         self.found = kwargs.get('found', bool())
@@ -143,10 +143,10 @@ class CameraXY(metaclass=Metaclass_CameraXY):
     def x(self, value):
         if __debug__:
             assert \
-                isinstance(value, int), \
-                "The 'x' field must be of type 'int'"
-            assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'x' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+                isinstance(value, float), \
+                "The 'x' field must be of type 'float'"
+            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
+                "The 'x' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._x = value
 
     @builtins.property
@@ -158,10 +158,10 @@ class CameraXY(metaclass=Metaclass_CameraXY):
     def y(self, value):
         if __debug__:
             assert \
-                isinstance(value, int), \
-                "The 'y' field must be of type 'int'"
-            assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'y' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+                isinstance(value, float), \
+                "The 'y' field must be of type 'float'"
+            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
+                "The 'y' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._y = value
 
     @builtins.property

@@ -1,5 +1,7 @@
 [console_scripts]
 ball_scanner = scanner.ball_scanner:main
+camera_info_publisher = scanner.camera_info_publisher:main
+camera_publisher = scanner.camera_publisher:main
 test_vec_publisher = scanner.test_vec_publisher:main
 tf_broadcaster = scanner.tf_broadcaster:main
 

@@ -1,0 +1,30 @@
+[0.871s] Invoking command in '/home/ALEX/3dev/ros/build/test_py_pkg': PYTHONPATH=/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/test_py_pkg --uninstall --editable --build-directory /home/ALEX/3dev/ros/build/test_py_pkg/build
+[1.111s] running develop
+[1.290s] Invoked command in '/home/ALEX/3dev/ros/build/test_py_pkg' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/test_py_pkg --uninstall --editable --build-directory /home/ALEX/3dev/ros/build/test_py_pkg/build
+[1.292s] Invoking command in '/home/ALEX/3dev/ros/src/test_py_pkg': PYTHONPATH=/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_py_pkg build --build-base /home/ALEX/3dev/ros/build/test_py_pkg/build install --prefix /home/ALEX/3dev/ros/install/test_py_pkg --record /home/ALEX/3dev/ros/build/test_py_pkg/install.log --single-version-externally-managed
+[1.517s] running egg_info
+[1.517s] writing ../../build/test_py_pkg/test_py_pkg.egg-info/PKG-INFO
+[1.518s] writing dependency_links to ../../build/test_py_pkg/test_py_pkg.egg-info/dependency_links.txt
+[1.518s] writing entry points to ../../build/test_py_pkg/test_py_pkg.egg-info/entry_points.txt
+[1.518s] writing requirements to ../../build/test_py_pkg/test_py_pkg.egg-info/requires.txt
+[1.518s] writing top-level names to ../../build/test_py_pkg/test_py_pkg.egg-info/top_level.txt
+[1.520s] reading manifest file '../../build/test_py_pkg/test_py_pkg.egg-info/SOURCES.txt'
+[1.521s] writing manifest file '../../build/test_py_pkg/test_py_pkg.egg-info/SOURCES.txt'
+[1.521s] running build
+[1.521s] running build_py
+[1.522s] running install
+[1.522s] running install_lib
+[1.524s] running install_data
+[1.524s] running install_egg_info
+[1.525s] removing '/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[1.526s] Copying ../../build/test_py_pkg/test_py_pkg.egg-info to /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg-0.0.0-py3.10.egg-info
+[1.526s] running install_scripts
+[1.544s] Installing counter_publist script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
+[1.544s] Installing test_client_nop script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
+[1.544s] Installing test_client_op script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
+[1.544s] Installing test_listener script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
+[1.545s] Installing test_node script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
+[1.545s] Installing test_publisher script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
+[1.545s] Installing test_server script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
+[1.545s] writing list of installed files to '/home/ALEX/3dev/ros/build/test_py_pkg/install.log'
+[1.572s] Invoked command in '/home/ALEX/3dev/ros/src/test_py_pkg' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_py_pkg build --build-base /home/ALEX/3dev/ros/build/test_py_pkg/build install --prefix /home/ALEX/3dev/ros/install/test_py_pkg --record /home/ALEX/3dev/ros/build/test_py_pkg/install.log --single-version-externally-managed

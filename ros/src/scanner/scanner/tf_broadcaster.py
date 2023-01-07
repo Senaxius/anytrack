@@ -48,18 +48,20 @@ class FramePublisher(Node):
     def scanner_coordinates_callback(self, msg):
         # self.get_logger().info("Received: x: " + str(msg.x) + " y: " + str(msg.y) + " x_max: " + str(msg.x_max) + " y_max: " + str(msg.y_max) + " found: " + str(msg.found))
         # self.broadcaster(-10.0, 32.0, 10.0)
+        fov = 62.0
         if (msg.found == False):
             depth = 0.0
             x = 0.0
             y = 0.0
         else:
-            depth = 10.0
+            depth = 50.0
+            divide = (msg.x_max / (depth * math.tan(fov)))
             x = msg.x - (msg.x_max / 2)
-            x /= 50
+            x /= 6
             x *= -1 
 
             y = msg.y - (msg.y_max / 2)
-            y /= 50
+            y /= 6
 
         self.broadcaster(depth, x, y, 0.0)
 

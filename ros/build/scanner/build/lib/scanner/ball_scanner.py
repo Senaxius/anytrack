@@ -9,7 +9,6 @@ from rclpy.node import Node
 
 from scanner_interfaces.msg import CameraXY
 
-
 class Scanner(Node):  # MODIFY NAME
     def __init__(self):
         super().__init__("Scanner")  # MODIFY NAME
@@ -22,12 +21,13 @@ class Scanner(Node):  # MODIFY NAME
         self.get_logger().info("Starting camera loop...")
         self.camera_loop()
 
-    def publish_topic(self, x, y, x_max, y_max):
+    def publish_topic(self, x, y, x_max, y_max, found):
         msg = CameraXY()
         msg.x = x
         msg.y = y
         msg.x_max = x_max
         msg.y_max = y_max
+        msg.found = found
         self.publisher_.publish(msg)
 
     def camera_loop(self):
@@ -86,9 +86,11 @@ class Scanner(Node):  # MODIFY NAME
                     cv2.circle(frame, (int(x), int(y)), int(radius),
                                 (0, 255, 255), 2)
                     cv2.circle(frame, center, 5, (0, 0, 255), -1)
-
-                self.publish_topic(x, y, frame.shape[1], frame.shape[0])
-                # print(x, y, frame.shape)
+                
+                # publish on topic
+                self.publish_topic(x, (frame.shape[0] - y), frame.shape[1], frame.shape[0], True)
+            else:
+                self.publish_topic(0.0, 0.0, frame.shape[1], frame.shape[0], False)
 
             # update the points queue
             buffer_pts.appendleft(center)

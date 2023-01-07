@@ -1,0 +1,67 @@
+-- Found OpenCV version 4.5.4
+-- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found camera_calibration_parsers: 3.1.5 (/opt/ros/humble/share/camera_calibration_parsers/cmake)
+-- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found class_loader: 2.2.0 (/opt/ros/humble/share/class_loader/cmake)
+-- Found rclcpp_components: 16.0.1 (/opt/ros/humble/share/rclcpp_components/cmake)
+-- Found ros2_shared: 0.1.0 (/home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ALEX/3dev/ros/build/opencv_cam
+[35m[1mConsolidate compiler generated dependencies of target subscriber_node[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/opencv_cam_node.dir/src/opencv_cam_node.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/subscriber_node.dir/src/subscriber_node.cpp.o[0m
+[ 37%] [32m[1mLinking CXX shared library libopencv_cam_node.so[0m
+[ 37%] Built target opencv_cam_node
+[ 50%] [32mBuilding CXX object CMakeFiles/opencv_cam_main.dir/src/opencv_cam_main.cpp.o[0m
+[ 62%] [32m[1mLinking CXX shared library libsubscriber_node.so[0m
+[ 62%] Built target subscriber_node
+[ 75%] [32mBuilding CXX object CMakeFiles/ipc_test_main.dir/src/ipc_test_main.cpp.o[0m
+[ 87%] [32m[1mLinking CXX executable opencv_cam_main[0m
+[ 87%] Built target opencv_cam_main
+[100%] [32m[1mLinking CXX executable ipc_test_main[0m
+[100%] Built target ipc_test_main
+-- Install configuration: ""
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/environment/library_path.sh
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/environment/library_path.dsv
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/ament_index/resource_index/package_run_dependencies/opencv_cam
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/ament_index/resource_index/parent_prefix_path/opencv_cam
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/environment/ament_prefix_path.sh
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/environment/ament_prefix_path.dsv
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/environment/path.sh
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/environment/path.dsv
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/local_setup.bash
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/local_setup.sh
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/local_setup.zsh
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/local_setup.dsv
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/package.dsv
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/ament_index/resource_index/packages/opencv_cam
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/ament_index/resource_index/rclcpp_components/opencv_cam
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/cmake/export_opencv_cam_nodeExport.cmake
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/cmake/export_opencv_cam_nodeExport-noconfig.cmake
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/cmake/export_subscriber_nodeExport.cmake
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/cmake/export_subscriber_nodeExport-noconfig.cmake
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/cmake/opencv_camConfig.cmake
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/cmake/opencv_camConfig-version.cmake
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/package.xml
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/lib/libopencv_cam_node.so
+-- Set runtime path of "/home/ALEX/3dev/ros/install/opencv_cam/lib/libopencv_cam_node.so" to ""
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/lib/libsubscriber_node.so
+-- Set runtime path of "/home/ALEX/3dev/ros/install/opencv_cam/lib/libsubscriber_node.so" to ""
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/lib/opencv_cam/opencv_cam_main
+-- Set runtime path of "/home/ALEX/3dev/ros/install/opencv_cam/lib/opencv_cam/opencv_cam_main" to ""
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/lib/opencv_cam/ipc_test_main
+-- Set runtime path of "/home/ALEX/3dev/ros/install/opencv_cam/lib/opencv_cam/ipc_test_main" to ""
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/launch
+-- Installing: /home/ALEX/3dev/ros/install/opencv_cam/share/opencv_cam/launch/composition_launch.py

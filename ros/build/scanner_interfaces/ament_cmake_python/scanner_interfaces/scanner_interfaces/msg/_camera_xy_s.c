@@ -55,8 +55,8 @@ bool scanner_interfaces__msg__camera_xy__convert_from_py(PyObject * _pymsg, void
     if (!field) {
       return false;
     }
-    assert(PyLong_Check(field));
-    ros_message->x = PyLong_AsLongLong(field);
+    assert(PyFloat_Check(field));
+    ros_message->x = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // y
@@ -64,8 +64,8 @@ bool scanner_interfaces__msg__camera_xy__convert_from_py(PyObject * _pymsg, void
     if (!field) {
       return false;
     }
-    assert(PyLong_Check(field));
-    ros_message->y = PyLong_AsLongLong(field);
+    assert(PyFloat_Check(field));
+    ros_message->y = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // x_max
@@ -119,7 +119,7 @@ PyObject * scanner_interfaces__msg__camera_xy__convert_to_py(void * raw_ros_mess
   scanner_interfaces__msg__CameraXY * ros_message = (scanner_interfaces__msg__CameraXY *)raw_ros_message;
   {  // x
     PyObject * field = NULL;
-    field = PyLong_FromLongLong(ros_message->x);
+    field = PyFloat_FromDouble(ros_message->x);
     {
       int rc = PyObject_SetAttrString(_pymessage, "x", field);
       Py_DECREF(field);
@@ -130,7 +130,7 @@ PyObject * scanner_interfaces__msg__camera_xy__convert_to_py(void * raw_ros_mess
   }
   {  // y
     PyObject * field = NULL;
-    field = PyLong_FromLongLong(ros_message->y);
+    field = PyFloat_FromDouble(ros_message->y);
     {
       int rc = PyObject_SetAttrString(_pymessage, "y", field);
       Py_DECREF(field);

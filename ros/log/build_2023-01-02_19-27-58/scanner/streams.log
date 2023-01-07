@@ -1,0 +1,21 @@
+[0.584s] Invoking command in '/home/ALEX/3dev/ros/build/scanner': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scanner
+[0.832s] running develop
+[0.975s] running egg_info
+[0.975s] writing scanner.egg-info/PKG-INFO
+[0.975s] writing dependency_links to scanner.egg-info/dependency_links.txt
+[0.975s] writing entry points to scanner.egg-info/entry_points.txt
+[0.975s] writing requirements to scanner.egg-info/requires.txt
+[0.975s] writing top-level names to scanner.egg-info/top_level.txt
+[0.976s] reading manifest file 'scanner.egg-info/SOURCES.txt'
+[0.977s] writing manifest file 'scanner.egg-info/SOURCES.txt'
+[0.978s] running build_ext
+[0.978s] Creating /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner.egg-link (link to .)
+[0.979s] Installing ball_scanner script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[0.979s] Installing camera_info_publisher script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[0.979s] Installing camera_publisher script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[0.979s] Installing test_vec_publisher script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[0.979s] Installing tf_broadcaster script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[0.980s] 
+[0.980s] Installed /home/ALEX/3dev/ros/build/scanner
+[0.980s] running install_data
+[1.006s] Invoked command in '/home/ALEX/3dev/ros/build/scanner' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scanner

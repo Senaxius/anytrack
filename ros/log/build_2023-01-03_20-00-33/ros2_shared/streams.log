@@ -1,0 +1,28 @@
+[0.040s] Invoking command in '/home/ALEX/3dev/ros/build/ros2_shared': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/ros2_shared -- -j12 -l12
+[0.593s] Invoked command in '/home/ALEX/3dev/ros/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/ros2_shared -- -j12 -l12
+[0.618s] Invoking command in '/home/ALEX/3dev/ros/build/ros2_shared': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/ros2_shared
+[0.624s] -- Install configuration: ""
+[0.625s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/include
+[0.625s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/include/ros2_shared
+[0.625s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/include/ros2_shared/param_macros.hpp
+[0.625s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/include/ros2_shared/context_macros.hpp
+[0.625s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/include/ros2_shared/string_printf.hpp
+[0.626s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ament_index/resource_index/package_run_dependencies/ros2_shared
+[0.626s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ament_index/resource_index/parent_prefix_path/ros2_shared
+[0.626s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.sh
+[0.626s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.dsv
+[0.626s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/environment/path.sh
+[0.627s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/environment/path.dsv
+[0.628s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/local_setup.bash
+[0.629s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/local_setup.sh
+[0.629s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/local_setup.zsh
+[0.629s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/local_setup.dsv
+[0.629s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/package.dsv
+[0.629s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ament_index/resource_index/packages/ros2_shared
+[0.629s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/cmake/ros2_shared_targetsExport.cmake
+[0.630s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/cmake/ament_cmake_export_targets-extras.cmake
+[0.630s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.630s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig.cmake
+[0.630s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig-version.cmake
+[0.631s] -- Up-to-date: /home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/package.xml
+[0.631s] Invoked command in '/home/ALEX/3dev/ros/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/ros2_shared

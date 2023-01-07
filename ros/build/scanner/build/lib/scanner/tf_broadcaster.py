@@ -7,6 +7,8 @@ from tf2_ros import TransformBroadcaster
 from turtlesim.msg import Pose
 import time
 
+from scanner_interfaces.msg import CameraXY
+
 def quaternion_from_euler(ai, aj, ak):
     ai /= 2.0
     aj /= 2.0
@@ -37,18 +39,34 @@ class FramePublisher(Node):
         self.get_logger().info("Initialize the transform broadcaster...")
         self.tf_broadcaster = TransformBroadcaster(self)
         self.get_logger().info("done!")
-        # self.broadcaster(-10.0, 32.0, 10.0)
+        # self.broadcaster(10.0, -5.0, 5.0, 0.0)
 
-        # self.get_logger().info("Initialize the scanner listener...")
-        # self.subscriber_ = self.create_subscription(msg_type=scanner_coordinates_msg topic="scanner_coordinates", callback=self.scanner_coordinates_callback, qos_profile=10)
-        # self.get_logger().info("done!")
+        self.get_logger().info("Initialize the scanner listener...")
+        self.subscriber_ = self.create_subscription(msg_type=CameraXY, topic="scanner_coordinates", callback=self.scanner_coordinates_callback, qos_profile=10)
+        self.get_logger().info("done!")
     
     def scanner_coordinates_callback(self, msg):
-        self.get_logger().info("Received: x: " + str(msg.x) + " y: " + str(msg.y) + " max_x: " + str(msg.max_x) + " max_y: " + str(msg.max_y))
-        self.broadcaster(-10.0, 32.0, 10.0)
+        # self.get_logger().info("Received: x: " + str(msg.x) + " y: " + str(msg.y) + " x_max: " + str(msg.x_max) + " y_max: " + str(msg.y_max) + " found: " + str(msg.found))
+        # self.broadcaster(-10.0, 32.0, 10.0)
+        fov = 62.0
+        if (msg.found == False):
+            depth = 0.0
+            x = 0.0
+            y = 0.0
+        else:
+            depth = 50.0
+            divide = (msg.x_max / (depth * math.tan(fov)))
+            x = msg.x - (msg.x_max / 2)
+            x /= 6
+            x *= -1 
+
+            y = msg.y - (msg.y_max / 2)
+            y /= 6
+
+        self.broadcaster(depth, x, y, 0.0)
 
 
-    def broadcaster(self, x, y, a):
+    def broadcaster(self, x, y, z, a):
         t = TransformStamped()
 
         # Read message content and assign it to
@@ -61,7 +79,7 @@ class FramePublisher(Node):
         # coordinates from the message and set the z coordinate to 0
         t.transform.translation.x = x
         t.transform.translation.y = y
-        t.transform.translation.z = 0.0
+        t.transform.translation.z = z
 
         # For the same reason, turtle can only rotate around one axis
         # and this why we set rotation in x and y to 0 and obtain
