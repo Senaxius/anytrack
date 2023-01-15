@@ -1,6 +1,6 @@
 FROM osrf/ros:humble-desktop-full
 
-RUN apt-get update && apt-get install -y --no-install-recommends python3-pip ros-humble-turtlesim zsh net-tools ros-humble-rosbridge-suite vim git ros-humble-camera-calibration ros-humble-camera-calibration-parsers ros-humble-camera-info-manager 
+RUN apt-get update && apt-get install -y --no-install-recommends v4l-utils python3-pip ros-humble-turtlesim zsh net-tools ros-humble-rosbridge-suite vim git ros-humble-camera-calibration ros-humble-camera-calibration-parsers ros-humble-camera-info-manager 
 RUN pip3 install imutils opencv-python setuptools==58.2.0
 
 ARG SSH_PRIVATE_KEY

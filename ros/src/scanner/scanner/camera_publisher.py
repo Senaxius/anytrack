@@ -22,6 +22,7 @@ class camera_publisher(Node):
 
     def publish_topic(self, image):
         msg = self.bridge.cv2_to_imgmsg(np.array(image), "bgr8")
+        msg.header.frame_id = "cam1"
         self.publisher_.publish(msg)
 
     def camera_capture(self):

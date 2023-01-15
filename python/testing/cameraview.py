@@ -2,6 +2,7 @@ import cv2
 
 cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
 cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
+# cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('Y', 'U', 'Y', 'V'))
 width = 1920
 height = 1080
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
@@ -21,3 +22,13 @@ while(True):
   
 cap.release()
 cv2.destroyAllWindows()
+
+# x1: 776 x2: 1015 = 239
+# X                = 25
+# Z                = 156.05
+# fx = 1195.478
+
+# y1: 788 y2: 547  = 241
+# Y                = 25
+# Z                = 156.05
+# fy = 1205.482

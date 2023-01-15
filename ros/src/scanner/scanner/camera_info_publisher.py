@@ -4,7 +4,6 @@ import yaml
 
 from sensor_msgs.msg import CameraInfo
 
-
 def yaml_to_CameraInfo(yaml_fname):
     # Load data from file
     with open(yaml_fname, "r") as file_handle:
@@ -23,7 +22,7 @@ def yaml_to_CameraInfo(yaml_fname):
 
 class camera_info_publisher(Node):
     def __init__(self):
-        super().__init__("camera_info_publisher")  # MODIFY NAME
+        super().__init__("camera_info_publisher") 
 
         self.get_logger().info("Initialize the camera_info_publisher...")
         self.publisher_ = self.create_publisher(
@@ -40,10 +39,10 @@ class camera_info_publisher(Node):
                 "file").get_parameter_value().string_value
             self.read_yaml(filename)
             self.convert_yaml_to_msg()
+        self.convert_yaml_to_msg()
         self.get_logger().info("done!")
 
         self.get_logger().info("Publishing camera info on topic 'camera_info'")
-        print(self.msg)
         self.publisher_.publish(self.msg)
         self.get_logger().info("done!")
 
@@ -56,15 +55,11 @@ class camera_info_publisher(Node):
         self.msg.width = self.data["image_width"]
         self.msg.height = self.data["image_height"]
         self.msg.k = self.data["camera_matrix"]["data"]
-        # self.msg.d = self.data["distortion_coefficients"]["data"]
-        # self.msg.r = self.data["rectification_matrix"]["data"]
+        self.msg.d = self.data["distortion_coefficients"]["data"]
+        self.msg.r = self.data["rectification_matrix"]["data"]
         self.msg.p = self.data["projection_matrix"]["data"]
         self.msg.distortion_model = self.data["distortion_model"]
-        self.msg.header.frame_id = "help"
-        # print(self.msg)
-        print("hohoho")
-
-
+        self.msg.header.frame_id = "cam1"
 
 def main(args=None):
     rclpy.init(args=args)
@@ -75,22 +70,3 @@ def main(args=None):
 
 if __name__ == "__main__":
     main()
-    # # Get fname from command line (cmd line input required)
-    # import argparse
-    # arg_parser = argparse.ArgumentParser()
-    # arg_parser.add_argument("filename", help="Path to yaml file containing " +\
-    #                                          "camera calibration data")
-    # args = arg_parser.parse_args()
-    # filename = args.filename
-
-    # # Parse yaml file
-    # camera_info_msg = yaml_to_CameraInfo(filename)
-
-    # # Initialize publisher node
-    # rospy.init_node("camera_info_publisher", anonymous=True)
-    # publisher = rospy.Publisher("camera_info", CameraInfo, queue_size=10)
-    # rate = rospy.Rate(10)
-
-    # # Run publisher
-    # while not rospy.is_shutdown():
-    #     publisher.publish
