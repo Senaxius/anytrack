@@ -22,6 +22,7 @@ scanner_interfaces__msg__CameraXY__init(scanner_interfaces__msg__CameraXY * msg)
   // x_max
   // y_max
   // found
+  // fps
   return true;
 }
 
@@ -36,6 +37,7 @@ scanner_interfaces__msg__CameraXY__fini(scanner_interfaces__msg__CameraXY * msg)
   // x_max
   // y_max
   // found
+  // fps
 }
 
 bool
@@ -64,6 +66,10 @@ scanner_interfaces__msg__CameraXY__are_equal(const scanner_interfaces__msg__Came
   if (lhs->found != rhs->found) {
     return false;
   }
+  // fps
+  if (lhs->fps != rhs->fps) {
+    return false;
+  }
   return true;
 }
 
@@ -85,6 +91,8 @@ scanner_interfaces__msg__CameraXY__copy(
   output->y_max = input->y_max;
   // found
   output->found = input->found;
+  // fps
+  output->fps = input->fps;
   return true;
 }
 

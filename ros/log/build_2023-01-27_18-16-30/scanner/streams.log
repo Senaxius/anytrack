@@ -1,0 +1,20 @@
+[0.562s] Invoking command in '/home/ALEX/3dev/ros/build/scanner': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scanner
+[0.803s] running develop
+[0.943s] running egg_info
+[0.943s] writing scanner.egg-info/PKG-INFO
+[0.943s] writing dependency_links to scanner.egg-info/dependency_links.txt
+[0.943s] writing entry points to scanner.egg-info/entry_points.txt
+[0.944s] writing requirements to scanner.egg-info/requires.txt
+[0.944s] writing top-level names to scanner.egg-info/top_level.txt
+[0.945s] reading manifest file 'scanner.egg-info/SOURCES.txt'
+[0.946s] writing manifest file 'scanner.egg-info/SOURCES.txt'
+[0.947s] running build_ext
+[0.947s] Creating /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner.egg-link (link to .)
+[0.948s] Installing camera_info script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[0.948s] Installing scanner script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[0.948s] Installing test script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[0.948s] Installing tracker script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[0.948s] 
+[0.948s] Installed /home/ALEX/3dev/ros/build/scanner
+[0.948s] running install_data
+[0.974s] Invoked command in '/home/ALEX/3dev/ros/build/scanner' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scanner

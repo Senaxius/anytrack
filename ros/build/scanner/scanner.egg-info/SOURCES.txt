@@ -10,12 +10,11 @@ setup.py
 ../../build/scanner/scanner.egg-info/zip-safe
 resource/scanner
 scanner/__init__.py
-scanner/ball_scanner.py
-scanner/ball_scanner_template.py
-scanner/camera_info_publisher.py
-scanner/camera_publisher.py
-scanner/test_vec_publisher.py
-scanner/tf_broadcaster.py
+scanner/camera_info.py
+scanner/camera_position.py
+scanner/camera_tracker.py
+scanner/scanner.py
+scanner/test.py
 scanner.egg-info/PKG-INFO
 scanner.egg-info/SOURCES.txt
 scanner.egg-info/dependency_links.txt

@@ -47,15 +47,19 @@ class scan_manager(Node): # MODIFY NAME
             if dev not in self.active_cams:
                 self.get_logger().info("Found new camera with index: " + str(dev))
                 self.active_cams.append(dev)
+                self.activate_cam(dev)
 
         for cam in self.active_cams:
             if cam not in self.devices:
                 self.get_logger().info("Camera with index " + str(cam) + " stopped working!")
                 self.active_cams.remove(cam)
+                self.deactivate_cam(dev)
     
     def activate_cam(self, index):
         pass
 
+    def deactivate_cam(self, index):
+        pass
         
 
  

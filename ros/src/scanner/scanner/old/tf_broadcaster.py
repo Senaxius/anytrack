@@ -39,11 +39,11 @@ class FramePublisher(Node):
         self.get_logger().info("Initialize the transform broadcaster...")
         self.tf_broadcaster = TransformBroadcaster(self)
         self.get_logger().info("done!")
-        # self.broadcaster(10.0, -5.0, 5.0, 0.0)
+        self.broadcaster(10.0, -5.0, 5.0, 0.0)
 
-        self.get_logger().info("Initialize the scanner listener...")
-        self.subscriber_ = self.create_subscription(msg_type=CameraXY, topic="scanner_coordinates", callback=self.scanner_coordinates_callback, qos_profile=10)
-        self.get_logger().info("done!")
+        # self.get_logger().info("Initialize the scanner listener...")
+        # self.subscriber_ = self.create_subscription(msg_type=CameraXY, topic="scanner_coordinates", callback=self.scanner_coordinates_callback, qos_profile=10)
+        # self.get_logger().info("done!")
     
     def scanner_coordinates_callback(self, msg):
         # self.get_logger().info("Received: x: " + str(msg.x) + " y: " + str(msg.y) + " x_max: " + str(msg.x_max) + " y_max: " + str(msg.y_max) + " found: " + str(msg.found))
@@ -73,7 +73,7 @@ class FramePublisher(Node):
         # corresponding tf variables
         t.header.stamp = self.get_clock().now().to_msg()
         t.header.frame_id = 'world'
-        t.child_frame_id = 'test'
+        t.child_frame_id = 'tracker'
 
         # Turtle only exists in 2D, thus we get x and y translation
         # coordinates from the message and set the z coordinate to 0

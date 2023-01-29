@@ -31,7 +31,7 @@ void scanner_interfaces__msg__CameraXY__rosidl_typesupport_introspection_c__Came
   scanner_interfaces__msg__CameraXY__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember scanner_interfaces__msg__CameraXY__rosidl_typesupport_introspection_c__CameraXY_message_member_array[5] = {
+static rosidl_typesupport_introspection_c__MessageMember scanner_interfaces__msg__CameraXY__rosidl_typesupport_introspection_c__CameraXY_message_member_array[6] = {
   {
     "x",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
@@ -116,13 +116,30 @@ static rosidl_typesupport_introspection_c__MessageMember scanner_interfaces__msg
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "fps",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(scanner_interfaces__msg__CameraXY, fps),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers scanner_interfaces__msg__CameraXY__rosidl_typesupport_introspection_c__CameraXY_message_members = {
   "scanner_interfaces__msg",  // message namespace
   "CameraXY",  // message name
-  5,  // number of fields
+  6,  // number of fields
   sizeof(scanner_interfaces__msg__CameraXY),
   scanner_interfaces__msg__CameraXY__rosidl_typesupport_introspection_c__CameraXY_message_member_array,  // message members
   scanner_interfaces__msg__CameraXY__rosidl_typesupport_introspection_c__CameraXY_init_function,  // function to initialize message memory (memory has to be allocated)

@@ -25,6 +25,7 @@ typedef struct scanner_interfaces__msg__CameraXY
   int64_t x_max;
   int64_t y_max;
   bool found;
+  int64_t fps;
 } scanner_interfaces__msg__CameraXY;
 
 // Struct for a sequence of scanner_interfaces__msg__CameraXY.

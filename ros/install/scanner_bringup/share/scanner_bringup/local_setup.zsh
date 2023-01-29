@@ -1,0 +1,1 @@
+/home/ALEX/3dev/ros/build/scanner_bringup/ament_cmake_environment_hooks/local_setup.zsh

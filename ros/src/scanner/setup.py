@@ -20,11 +20,12 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "test_vec_publisher = scanner.test_vec_publisher:main",
+            "test = scanner.test:main",
+            "scanner = scanner.scanner:main",
+            "camera_tracker = scanner.camera_tracker:main",
+            "camera_info = scanner.camera_info:main",
+            "camera_position = scanner.camera_position:main",
             "tf_broadcaster = scanner.tf_broadcaster:main",
-            "ball_scanner = scanner.ball_scanner:main",
-            "camera_publisher = scanner.camera_publisher:main",
-            "camera_info_publisher = scanner.camera_info_publisher:main",
         ],
     },
 )

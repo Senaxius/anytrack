@@ -21,16 +21,32 @@ namespace msg
 namespace builder
 {
 
+class Init_CameraXY_fps
+{
+public:
+  explicit Init_CameraXY_fps(::scanner_interfaces::msg::CameraXY & msg)
+  : msg_(msg)
+  {}
+  ::scanner_interfaces::msg::CameraXY fps(::scanner_interfaces::msg::CameraXY::_fps_type arg)
+  {
+    msg_.fps = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::scanner_interfaces::msg::CameraXY msg_;
+};
+
 class Init_CameraXY_found
 {
 public:
   explicit Init_CameraXY_found(::scanner_interfaces::msg::CameraXY & msg)
   : msg_(msg)
   {}
-  ::scanner_interfaces::msg::CameraXY found(::scanner_interfaces::msg::CameraXY::_found_type arg)
+  Init_CameraXY_fps found(::scanner_interfaces::msg::CameraXY::_found_type arg)
   {
     msg_.found = std::move(arg);
-    return std::move(msg_);
+    return Init_CameraXY_fps(msg_);
   }
 
 private:

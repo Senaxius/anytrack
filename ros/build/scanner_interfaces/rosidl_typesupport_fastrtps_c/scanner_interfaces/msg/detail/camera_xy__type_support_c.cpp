@@ -74,6 +74,11 @@ static bool _CameraXY__cdr_serialize(
     cdr << (ros_message->found ? true : false);
   }
 
+  // Field name: fps
+  {
+    cdr << ros_message->fps;
+  }
+
   return true;
 }
 
@@ -111,6 +116,11 @@ static bool _CameraXY__cdr_deserialize(
     uint8_t tmp;
     cdr >> tmp;
     ros_message->found = tmp ? true : false;
+  }
+
+  // Field name: fps
+  {
+    cdr >> ros_message->fps;
   }
 
   return true;
@@ -157,6 +167,12 @@ size_t get_serialized_size_scanner_interfaces__msg__CameraXY(
   // field.name found
   {
     size_t item_size = sizeof(ros_message->found);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name fps
+  {
+    size_t item_size = sizeof(ros_message->fps);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -220,6 +236,13 @@ size_t max_serialized_size_scanner_interfaces__msg__CameraXY(
     size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint8_t);
+  }
+  // member: fps
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   return current_alignment - initial_alignment;

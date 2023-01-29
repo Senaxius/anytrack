@@ -43,6 +43,7 @@ struct CameraXY_
       this->x_max = 0ll;
       this->y_max = 0ll;
       this->found = false;
+      this->fps = 0ll;
     }
   }
 
@@ -57,6 +58,7 @@ struct CameraXY_
       this->x_max = 0ll;
       this->y_max = 0ll;
       this->found = false;
+      this->fps = 0ll;
     }
   }
 
@@ -76,6 +78,9 @@ struct CameraXY_
   using _found_type =
     bool;
   _found_type found;
+  using _fps_type =
+    int64_t;
+  _fps_type fps;
 
   // setters for named parameter idiom
   Type & set__x(
@@ -106,6 +111,12 @@ struct CameraXY_
     const bool & _arg)
   {
     this->found = _arg;
+    return *this;
+  }
+  Type & set__fps(
+    const int64_t & _arg)
+  {
+    this->fps = _arg;
     return *this;
   }
 
@@ -164,6 +175,9 @@ struct CameraXY_
       return false;
     }
     if (this->found != other.found) {
+      return false;
+    }
+    if (this->fps != other.fps) {
       return false;
     }
     return true;

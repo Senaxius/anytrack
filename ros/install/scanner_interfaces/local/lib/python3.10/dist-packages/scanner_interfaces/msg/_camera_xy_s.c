@@ -95,6 +95,15 @@ bool scanner_interfaces__msg__camera_xy__convert_from_py(PyObject * _pymsg, void
     ros_message->found = (Py_True == field);
     Py_DECREF(field);
   }
+  {  // fps
+    PyObject * field = PyObject_GetAttrString(_pymsg, "fps");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->fps = PyLong_AsLongLong(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -166,6 +175,17 @@ PyObject * scanner_interfaces__msg__camera_xy__convert_to_py(void * raw_ros_mess
     field = PyBool_FromLong(ros_message->found ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "found", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // fps
+    PyObject * field = NULL;
+    field = PyLong_FromLongLong(ros_message->fps);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "fps", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

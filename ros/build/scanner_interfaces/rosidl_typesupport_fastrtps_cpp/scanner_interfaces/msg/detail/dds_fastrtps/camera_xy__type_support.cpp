@@ -42,6 +42,8 @@ cdr_serialize(
   cdr << ros_message.y_max;
   // Member: found
   cdr << (ros_message.found ? true : false);
+  // Member: fps
+  cdr << ros_message.fps;
   return true;
 }
 
@@ -69,6 +71,9 @@ cdr_deserialize(
     cdr >> tmp;
     ros_message.found = tmp ? true : false;
   }
+
+  // Member: fps
+  cdr >> ros_message.fps;
 
   return true;
 }
@@ -113,6 +118,12 @@ get_serialized_size(
   // Member: found
   {
     size_t item_size = sizeof(ros_message.found);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: fps
+  {
+    size_t item_size = sizeof(ros_message.fps);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -175,6 +186,14 @@ max_serialized_size_CameraXY(
     size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: fps
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   return current_alignment - initial_alignment;

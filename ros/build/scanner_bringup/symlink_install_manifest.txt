@@ -1,0 +1,16 @@
+/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/launch/scanner.launch.py
+/home/ALEX/3dev/ros/install/scanner_bringup/share/ament_index/resource_index/package_run_dependencies/scanner_bringup
+/home/ALEX/3dev/ros/install/scanner_bringup/share/ament_index/resource_index/parent_prefix_path/scanner_bringup
+/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/environment/ament_prefix_path.sh
+/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/environment/ament_prefix_path.dsv
+/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/environment/path.sh
+/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/environment/path.dsv
+/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/local_setup.bash
+/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/local_setup.sh
+/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/local_setup.zsh
+/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/local_setup.dsv
+/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/package.dsv
+/home/ALEX/3dev/ros/install/scanner_bringup/share/ament_index/resource_index/packages/scanner_bringup
+/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/cmake/scanner_bringupConfig.cmake
+/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/cmake/scanner_bringupConfig-version.cmake
+/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/package.xml

@@ -37,7 +37,7 @@ void CameraXY_fini_function(void * message_memory)
   typed_message->~CameraXY();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember CameraXY_message_member_array[5] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember CameraXY_message_member_array[6] = {
   {
     "x",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
@@ -122,13 +122,30 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember CameraXY_mess
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "fps",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(scanner_interfaces::msg::CameraXY, fps),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers CameraXY_message_members = {
   "scanner_interfaces::msg",  // message namespace
   "CameraXY",  // message name
-  5,  // number of fields
+  6,  // number of fields
   sizeof(scanner_interfaces::msg::CameraXY),
   CameraXY_message_member_array,  // message members
   CameraXY_init_function,  // function to initialize message memory (memory has to be allocated)
