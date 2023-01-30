@@ -14,6 +14,10 @@ class scan_manager(Node): # MODIFY NAME
         self.get_logger().info("Searching for devices...")
         devices = self.search_devices()
 
+        if not devices:
+            self.get_logger().warning("No cameras were detected!")
+            exit()
+
         ls = LaunchService()
         ls.include_launch_description(self.generate_launch_description(devices))
         ls.run()
@@ -44,29 +48,22 @@ class scan_manager(Node): # MODIFY NAME
     def generate_launch_description(self, devices):
         ld = LaunchDescription()
 
-        position_manager = Action(
-            package="scanner",
-            executable="position_manager",
-            parameters=[
-                {"devices": [0, 1, 2]}
-                # {"devices": [
-                #     {'device': 0},
-                #     {'name': 1},
-                #     {'position': 4}
-                # ]}
-            ]
-        )
-        ld.add_action(position_manager)
-
         for cam in devices:
+            position_manager = Action(
+                package="scanner",
+                executable="camera_position",
+                parameters=[
+                    {"index": cam}
+                ]
+            )
             camX_tracker = Action(
                 package="scanner",
-                executable="tracker",
+                executable="camera_tracker",
                 namespace= ('cam' + str(cam)),
                 name=('tracker'),
                 parameters=[
                     {"index": cam},
-                    {"track": 0}
+                    {"track": 1}
                 ]
             )
             camX_camera_info = Action(
@@ -78,9 +75,20 @@ class scan_manager(Node): # MODIFY NAME
                     {"index": cam}
                 ]
             )
+            camX_vector = Action(
+                package="scanner",
+                executable="camera_vector",
+                namespace= ('cam' + str(cam)),
+                name=('vector'),
+                parameters=[
+                    {"index": cam}
+                ]
+            )
 
-            # ld.add_action(camX_tracker)
-            # ld.add_action(camX_camera_info)
+            ld.add_action(position_manager)
+            ld.add_action(camX_tracker)
+            ld.add_action(camX_camera_info)
+            ld.add_action(camX_vector)
         return ld
 
 def main(args=None):

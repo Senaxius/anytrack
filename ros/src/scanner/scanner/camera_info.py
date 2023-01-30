@@ -15,7 +15,7 @@ class Camera_info(Node):
         self.index = self.get_parameter("index").value
         
         # debug only
-        self.index = 2
+        # self.index = 2
 
         # check if Parameters is set
         if (self.index == -1):
@@ -58,11 +58,11 @@ class Camera_info(Node):
         msg = CameraInfo()
         msg.width = data["image_width"]
         msg.height = data["image_height"]
-        msg.k = data["camera_matrix"]["data"]
-        msg.d = data["distortion_coefficients"]["data"]
+        # msg.k = data["camera_matrix"]["data"]
+        # msg.d = data["distortion_coefficients"]["data"]
         msg.r = data["rectification_matrix"]["data"]
         msg.p = data["projection_matrix"]["data"]
-        msg.distortion_model = data["distortion_model"]
+        # msg.distortion_model = data["distortion_model"]
         ################ TODO: adaptive frame id
         msg.header.frame_id = ('cam' +  str(self.index) + '_position')
         return msg

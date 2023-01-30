@@ -1,0 +1,23 @@
+[0.602s] Invoking command in '/home/ALEX/3dev/ros/build/scanner': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scanner
+[0.858s] running develop
+[0.999s] running egg_info
+[0.999s] writing scanner.egg-info/PKG-INFO
+[0.999s] writing dependency_links to scanner.egg-info/dependency_links.txt
+[0.999s] writing entry points to scanner.egg-info/entry_points.txt
+[1.000s] writing requirements to scanner.egg-info/requires.txt
+[1.000s] writing top-level names to scanner.egg-info/top_level.txt
+[1.001s] reading manifest file 'scanner.egg-info/SOURCES.txt'
+[1.002s] writing manifest file 'scanner.egg-info/SOURCES.txt'
+[1.003s] running build_ext
+[1.003s] Creating /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner.egg-link (link to .)
+[1.004s] Installing camera_info script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[1.004s] Installing camera_position script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[1.004s] Installing camera_tracker script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[1.004s] Installing camera_vector script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[1.004s] Installing scanner script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[1.005s] Installing test script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[1.005s] Installing tf_broadcaster script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[1.005s] 
+[1.005s] Installed /home/ALEX/3dev/ros/build/scanner
+[1.005s] running install_data
+[1.033s] Invoked command in '/home/ALEX/3dev/ros/build/scanner' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scanner

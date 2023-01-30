@@ -13,6 +13,8 @@ scanner/__init__.py
 scanner/camera_info.py
 scanner/camera_position.py
 scanner/camera_tracker.py
+scanner/camera_vector.py
+scanner/foxglove_camera.py
 scanner/scanner.py
 scanner/test.py
 scanner.egg-info/PKG-INFO

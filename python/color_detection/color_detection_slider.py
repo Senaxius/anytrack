@@ -170,7 +170,7 @@ def run_slider():
     root.mainloop()
 def showImg(data):
     # cap = cv2.VideoCapture(0)
-    cap = cv2.VideoCapture(42, cv2.CAP_V4L2)
+    cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
     cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
     width = 1270
     height = 720

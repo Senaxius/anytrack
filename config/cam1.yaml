@@ -1,17 +1,7 @@
 image_width: 600
 image_height: 450
 camera_name: HD_Web_Camera
-camera_matrix:
-  rows: 3
-  cols: 3
-  data: [693.38138,   0.     , 293.37545,
-           0.     , 694.33573, 238.46851,
-           0.     ,   0.     ,   1.     ]
 distortion_model: plumb_bob
-distortion_coefficients:
-  rows: 1
-  cols: 5
-  data: [-0.002465, -0.042112, 0.004726, 0.000966, 0.000000]
 rectification_matrix:
   rows: 3
   cols: 3
@@ -21,6 +11,6 @@ rectification_matrix:
 projection_matrix:
   rows: 3
   cols: 4
-  data: [691.67041,   0.     , 293.24292,   0.     ,
-           0.     , 692.09949, 239.0814 ,   0.     ,
+  data: [600.,   0.     , 270.,   0.     ,
+           0.     , 600., 225.,   0.     ,
            0.     ,   0.     ,   1.     ,   0.     ]

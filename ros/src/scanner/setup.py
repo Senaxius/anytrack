@@ -25,7 +25,8 @@ setup(
             "camera_tracker = scanner.camera_tracker:main",
             "camera_info = scanner.camera_info:main",
             "camera_position = scanner.camera_position:main",
-            "tf_broadcaster = scanner.tf_broadcaster:main",
+            "camera_vector = scanner.camera_vector:main",
+            "foxglove_camera = scanner.foxglove_camera:main",
         ],
     },
 )

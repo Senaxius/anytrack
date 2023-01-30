@@ -58,8 +58,7 @@ class Tracker(Node):
 
     def publish_image(self, image):
         msg = self.bridge.cv2_to_imgmsg(np.array(image), "bgr8")
-        msg.header.frame_id = "tracker"
-        # msg.header.frame_id = ("cam" + str(self.index) + "_position")
+        msg.header.frame_id = ('cam' +  str(self.index) + '_position')
         self.image_publisher_.publish(msg)
 
     def camera_loop(self):
@@ -109,18 +108,22 @@ class Tracker(Node):
                     # centroid
                     c = max(cnts, key=cv2.contourArea)
                     ((x, y), radius) = cv2.minEnclosingCircle(c)
+                    # x = 330.
+                    # y = 225.
                     M = cv2.moments(c)
                     center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
+                    # center = (330, 225)
                     # only proceed if the radius meets a minimum size
                     if radius > 10:
                         # draw the circle and centroid on the frame,
                         # then update the list of tracked points
+                        # cv2.circle(frame, (int(x), int(y)), int(radius),
                         cv2.circle(frame, (int(x), int(y)), int(radius),
                                     (0, 255, 255), 2)
                         cv2.circle(frame, center, 5, (0, 0, 255), -1)
                     
                     # publish on topic
-                    self.publish_coordinates(x, (frame.shape[0] - y), frame.shape[1], frame.shape[0], True, fps)
+                    self.publish_coordinates(x, y, frame.shape[1], frame.shape[0], True, fps)
                 else:
                     self.publish_coordinates(0.0, 0.0, frame.shape[1], frame.shape[0], False, fps)
 

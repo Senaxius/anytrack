@@ -5,6 +5,7 @@ import os
 import math
 import time
 import numpy as np
+import math
 
 from geometry_msgs.msg import TransformStamped
 from tf2_ros import TransformBroadcaster
@@ -36,11 +37,13 @@ class position_manager(Node):
     def __init__(self):
         super().__init__("position_manager") 
 
+        self.x, self.y, self.z, self.ax, self.ay, self.az = 0, 0, 0, 0 ,0 ,0
+
         self.declare_parameter("index", -1)
-        self.cams = self.get_parameter("index").value
+        self.index = self.get_parameter("index").value
         
         # debug only
-        self.index = 2
+        # self.index = 2
 
         # check if Parameters is set
         if (self.index == -1):
@@ -53,9 +56,13 @@ class position_manager(Node):
         if "HD Web Camera" in output:
             self.config = 1
             self.get_logger().info("Found camera with known start location: cam" + str(self.config))
+            self.ay=math.pi
         elif "CameraA" in output:
             self.config = 2
             self.get_logger().info("Found camera with known start location: cam" + str(self.config))
+            self.z=-2.3
+            self.x=-2.6
+            self.ay=math.pi/2
         else:
             self.get_logger().warning("Found device but no known start location")
             exit()
@@ -63,8 +70,9 @@ class position_manager(Node):
         # create publisher
         self.position_broadcaster = TransformBroadcaster(self)
 
+
         while(1):
-            self.publish_position("world", ('cam' + str(self.index) + '_position'), 0, 0, 0, 0, 0, 0)
+            self.publish_position("world", ('cam' + str(self.index) + '_position'), self.x, self.y, self.z, self.ax, self.ay, self.az)
             time.sleep(0.5)
 
     def publish_position(self, origin, child, x, y, z, ax, ay, az):
