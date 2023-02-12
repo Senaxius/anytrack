@@ -85,10 +85,10 @@ class scan_manager(Node): # MODIFY NAME
                 ]
             )
 
-            ld.add_action(position_manager)
+            # ld.add_action(position_manager)
             ld.add_action(camX_tracker)
-            ld.add_action(camX_camera_info)
-            ld.add_action(camX_vector)
+            # ld.add_action(camX_camera_info)
+            # ld.add_action(camX_vector)
         return ld
 
 def main(args=None):

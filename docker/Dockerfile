@@ -11,11 +11,12 @@ RUN chmod 600 ~/.ssh/id_rsa
 RUN touch /root/.ssh/known_hosts
 RUN ssh-keyscan github.com >> /root/.ssh/known_hosts
 
-RUN cd ~ && git clone git@github.com:Senaxius/dotfiles.git
-RUN cd ~/dotfiles && ./auto-install.sh
-RUN cd ~/dotfiles && ./vim-install.sh
-RUN cd ~/dotfiles && ./git-config.sh
+RUN mkdir /home/ALEX
+
+RUN cd /home/ALEX && git clone git@github.com:Senaxius/dotfiles.git
+RUN cd /home/ALEX/dotfiles && ./install.sh -z 1 -v 1 -f 1 -g 1 -o 0 -k 0
+
 RUN chsh -s /bin/zsh
 RUN ln -s ~/.rc-temp/ros-setup.sh ~/.rc/ 
+RUN rm -rf ~/.zsh_history && cp /home/ALEX/dotfiles/config/.zsh_history ~ && chown root:root ~/.zsh_history
 
-RUN mkdir /home/ALEX

@@ -40,6 +40,7 @@ class Tracker(Node):
         # self.get_logger().info("done!")
 
         self.image_publisher_ = self.create_publisher(msg_type=Image, topic="image_raw", qos_profile=10)
+        # self.image_publisher_ = self.create_publisher(msg_type=Image, topic=('cam' + str(self.index) + '/image_raw'), qos_profile=10)
 
         self.bridge = CvBridge()
         # self.get_logger().info("done!")
@@ -77,8 +78,11 @@ class Tracker(Node):
         new_frame_time = 0
         fps = 0
 
+        rate = 30
+
         # main loop
         while True:
+            start = time.time()
             # grab the current frame
             frame = cap.read()
             # resize the frame for faster tracking
@@ -150,10 +154,12 @@ class Tracker(Node):
             prev_frame_time = new_frame_time
             fps = int(fps)
 
-            key = cv2.waitKey(1) & 0xFF
-            # if the 'q' key is pressed, stop the loop
-            if key == ord("q"):
-                break
+            time.sleep(max((1 / rate) - (time.time() - start), 0))
+
+            # key = cv2.waitKey(1) & 0xFF
+            # # if the 'q' key is pressed, stop the loop
+            # if key == ord("q"):
+            #     break
 
 
         cap.release()
