@@ -38,45 +38,45 @@ def read_yaml(filename):
     with open(filename, "r") as file_handle:
         return yaml.load(file_handle, Loader=yaml.FullLoader)
 
-# def convert_yaml_to_msg(self, data):
-#     msg = CameraInfo()
-#     msg.width = data["image_width"]
-#     msg.height = data["image_height"]
-#     # msg.k = data["camera_matrix"]["data"]
-#     # msg.d = data["distortion_coefficients"]["data"]
-#     msg.r = data["rectification_matrix"]["data"]
-#     msg.p = data["projection_matrix"]["data"]
-#     # msg.distortion_model = data["distortion_model"]
-#     ################ TODO: adaptive frame id
-#     msg.header.frame_id = ('cam' +  str(self.index) + '_position')
-#     return msg
-
-class FramePublisher(Node):
+class visualisation_vector(Node):
     def __init__(self):
-        super().__init__('tf_broadcaster')
+        super().__init__('visualisation_vector')
 
         # declare Parameters
         self.declare_parameter("index", -1)
-    
+        self.declare_parameter("device", -1)
+
+        # import parameters
         self.index = self.get_parameter("index").value
+        self.device = self.get_parameter("device").value
 
         # debug only
         # self.index = 2
+        # self.device = 2
 
-        if (self.index == -1):
-            self.get_logger().warning("no device index was set")
+        # check if Parameters is set
+        if (self.device == -1 or self.index == -1):
+            self.get_logger().warning("no index was set")
             exit()
-        command = "v4l2-ctl -d /dev/video" + str(self.index) + " -D"
+
+        self.get_logger().info("Starting visualisation vector with index " + str(self.index) + " on device: video" + str(self.device))
+
+        command = "v4l2-ctl -d /dev/video" + str(self.device) + " -D"
         stream = os.popen(command)
         output = stream.read()
         if "HD Web Camera" in output:
-            self.config = 1
-            self.get_logger().info("Found camera with known configuration-index: " + str(self.config))
-            self.file = "/home/ALEX/3dev/config/cam1.yaml"
+            self.config = 0
+            # self.get_logger().info("Detected camera with know device type: HD Web Camera")
+            self.file = "/home/ALEX/3dev/config/HD_WEB_Camera.yaml"
         elif "CameraA" in output:
+            self.config = 1
+            # self.get_logger().info("Detected camera with know device type: CameraA")
+            self.file = "/home/ALEX/3dev/config/CameraA.yaml"
+        elif "WEB CAMERA M9 Pro" in output:
             self.config = 2
-            self.get_logger().info("Found camera with known configuration-index: " + str(self.config))
-            self.file = "/home/ALEX/3dev/config/cam2.yaml"
+            # self.get_logger().info("Detected camera with know device type: WEB CAMERA M9 Pro")
+            # self.file = "/home/ALEX/3dev/config/M9_Pro.yaml"
+            self.file = "/home/ALEX/3dev/config/CameraA.yaml"
         else:
             self.get_logger().warning("Found device but no known configuration")
             exit()
@@ -99,7 +99,6 @@ class FramePublisher(Node):
         # self.get_logger().info(str(self.cy))
 
         # Initialize the transform broadcaster
-        self.get_logger().info("Starting the vector visualisation on device: video" + str(self.index))
         self.tf_broadcaster = TransformBroadcaster(self)
 
         # self.get_logger().info("Initialize the scanner listener...")
@@ -152,10 +151,6 @@ class FramePublisher(Node):
 
 def main():
     rclpy.init()
-    node = FramePublisher()
-    try:
-        rclpy.spin(node)
-    except KeyboardInterrupt:
-        pass
-
+    node = visualisation_vector()
+    rclpy.spin(node)
     rclpy.shutdown()

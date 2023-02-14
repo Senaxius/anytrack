@@ -12,39 +12,40 @@ from rclpy.node import Node
 from scanner_interfaces.msg import CameraXY
 from sensor_msgs.msg import Image
 
-class Tracker(Node):  
+class tracker(Node):  
     def __init__(self):
-        super().__init__("Tracker")  
+        super().__init__("tracker")  
 
         # declare Parameters
         self.declare_parameter("index", -1)
+        self.declare_parameter("device", -1)
         self.declare_parameter("track", 0)
-        # check if Parameters is set
-    
+
+        # import parameters
         self.index = self.get_parameter("index").value
+        self.device = self.get_parameter("device").value
         self.track = self.get_parameter("track").value
 
         # debug only
         # self.index = 2
+        # self.device = 2
         # self.track = 0
 
-        if (self.index == -1):
-            self.get_logger().warning("no device index was set")
+        # check if Parameters is set
+        if (self.device == -1 or self.index == -1):
+            self.get_logger().warning("no index was set")
             exit()
-        else:
-            # read Value of Parameter
-            self.get_logger().info("Starting camera tracker on device: video" + str(self.index))
+
+        self.get_logger().info("Starting camera tracker with index " + str(self.index) + " on device: video" + str(self.device))
 
         self.coordinate_publisher_ = self.create_publisher(
             msg_type=CameraXY, topic="coordinates", qos_profile=10)
-        # self.get_logger().info("done!")
 
         self.image_publisher_ = self.create_publisher(msg_type=Image, topic="image_raw", qos_profile=10)
         # self.image_publisher_ = self.create_publisher(msg_type=Image, topic=('cam' + str(self.index) + '/image_raw'), qos_profile=10)
 
+        # starting main camera Loop
         self.bridge = CvBridge()
-        # self.get_logger().info("done!")
-
         self.camera_loop()
 
     def publish_coordinates(self, x, y, x_max, y_max, found, fps):
@@ -72,7 +73,7 @@ class Tracker(Node):
         # create line buffer
         buffer_pts = deque(maxlen=buffer_size)
         # create camera capture
-        cap = VideoStream(src=self.index).start()
+        cap = VideoStream(src=self.device).start()
 
         prev_frame_time = 0
         new_frame_time = 0
@@ -145,7 +146,6 @@ class Tracker(Node):
                     cv2.line(frame, buffer_pts[i - 1],
                             buffer_pts[i], (0, 0, 255), thickness)
 
-            # show the frame to our screen
             # cv2.imshow("Frame", frame)
             self.publish_image(frame)
 
@@ -154,13 +154,8 @@ class Tracker(Node):
             prev_frame_time = new_frame_time
             fps = int(fps)
 
+            # sleeping to maintain framerate
             time.sleep(max((1 / rate) - (time.time() - start), 0))
-
-            # key = cv2.waitKey(1) & 0xFF
-            # # if the 'q' key is pressed, stop the loop
-            # if key == ord("q"):
-            #     break
-
 
         cap.release()
         cv2.destroyAllWindows()
@@ -168,7 +163,7 @@ class Tracker(Node):
  
 def main(args=None):
     rclpy.init(args=args)
-    node = Tracker() # MODIFY NAME
+    node = tracker() # MODIFY NAME
     rclpy.spin(node)
     rclpy.shutdown()
  

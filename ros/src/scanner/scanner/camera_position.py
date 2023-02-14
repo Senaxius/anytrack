@@ -33,39 +33,49 @@ def quaternion_from_euler(ai, aj, ak):
 
     return q
 
-class position_manager(Node):
+class position(Node):
     def __init__(self):
-        super().__init__("position_manager") 
+        super().__init__("position") 
 
         self.x, self.y, self.z, self.ax, self.ay, self.az = 0, 0, 0, 0 ,0 ,0
 
+        # declare Parameters
         self.declare_parameter("index", -1)
+        self.declare_parameter("device", -1)
+
+        # import parameters
         self.index = self.get_parameter("index").value
-        
+        self.device = self.get_parameter("device").value
+
         # debug only
         # self.index = 2
+        # self.device = 2
+        # self.track = 0
 
         # check if Parameters is set
-        if (self.index == -1):
-            self.get_logger().warning("no device index was set!")
+        if (self.device == -1 or self.index == -1):
+            self.get_logger().warning("no index was set")
             exit()
 
-        command = "v4l2-ctl -d /dev/video" + str(self.index) + " -D"
-        stream = os.popen(command)
-        output = stream.read()
-        if "HD Web Camera" in output:
-            self.config = 1
-            self.get_logger().info("Found camera with known start location: cam" + str(self.config))
-            self.ay=math.pi
-        elif "CameraA" in output:
-            self.config = 2
-            self.get_logger().info("Found camera with known start location: cam" + str(self.config))
-            self.z=-2.3
-            self.x=-2.6
-            self.ay=math.pi/2
-        else:
-            self.get_logger().warning("Found device but no known start location")
-            exit()
+        self.get_logger().info("Starting camera position manager with index " + str(self.index) + " on device: video" + str(self.device))
+
+        self.x = self.index 
+        # command = "v4l2-ctl -d /dev/video" + str(self.index) + " -D"
+        # stream = os.popen(command)
+        # output = stream.read()
+        # if "HD Web Camera" in output:
+        #     self.config = 1
+        #     self.get_logger().info("Found camera with known start location: cam" + str(self.config))
+        #     self.ay=math.pi
+        # elif "CameraA" in output:
+        #     self.config = 2
+        #     self.get_logger().info("Found camera with known start location: cam" + str(self.config))
+        #     self.z=-2.3
+        #     self.x=-2.6
+        #     self.ay=math.pi/2
+        # else:
+        #     self.get_logger().warning("Found device but no known start location")
+        #     exit()
 
         # create publisher
         self.position_broadcaster = TransformBroadcaster(self)
@@ -97,7 +107,7 @@ class position_manager(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = position_manager()  
+    node = position()  
     rclpy.spin(node)
     rclpy.shutdown()
 
