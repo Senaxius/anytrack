@@ -45,8 +45,7 @@ class camera_info(Node):
         elif "WEB CAMERA M9 Pro" in output:
             self.config = 2
             self.get_logger().info("Detected camera with know device type: WEB CAMERA M9 Pro")
-            # self.file = "/home/ALEX/3dev/config/M9_Pro.yaml"
-            self.file = "/home/ALEX/3dev/config/CameraA.yaml"
+            self.file = "/home/ALEX/3dev/config/M9_Pro.yaml"
         else:
             self.get_logger().warning("Found device but no known configuration")
             exit()
