@@ -73,7 +73,7 @@ class scan_manager(Node): # MODIFY NAME
                 parameters=[
                     {"index": index},
                     {"device": device},
-                    {"track": 0}
+                    {"track": 1}
                 ]
             )
             camX_camera_info = Action(
@@ -97,10 +97,10 @@ class scan_manager(Node): # MODIFY NAME
                 ]
             )
 
-            #ld.add_action(camX_position)
+            ld.add_action(camX_position)
             ld.add_action(camX_tracker)
-            #ld.add_action(camX_camera_info)
-            #ld.add_action(visualisation_vector)
+            ld.add_action(camX_camera_info)
+            ld.add_action(visualisation_vector)
         return ld
 
 def main(args=None):

@@ -27,9 +27,9 @@ class tracker(Node):
         self.track = self.get_parameter("track").value
 
         # debug only
-        # self.index = 2
-        # self.device = 2
-        # self.track = 0
+        # self.index = 0
+        # self.device = 0
+        # self.track = 1
 
         # check if Parameters is set
         if (self.device == -1 or self.index == -1):
@@ -73,8 +73,7 @@ class tracker(Node):
         # create line buffer
         buffer_pts = deque(maxlen=buffer_size)
         # create camera capture
-        cap = VideoStream(src=self.device).start()
-
+        cap = VideoStream(src=self.device,).start() # type: ignore
         prev_frame_time = 0
         new_frame_time = 0
         fps = 0
@@ -95,15 +94,14 @@ class tracker(Node):
                 hsv = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
                 # mask for selected color
                 mask = cv2.inRange(hsv, start_color, end_color)
+                # self.publish_image(mask)
                 # remove any small blobs
                 mask = cv2.erode(mask, None, iterations=2)
                 mask = cv2.dilate(mask, None, iterations=2)
 
                 # find contours in the mask and initialize the current
                 # (x, y) center of the ball
-                cnts = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL,
-
-                                        cv2.CHAIN_APPROX_SIMPLE)
+                cnts = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
                 cnts = imutils.grab_contours(cnts)
                 center = None
                 # only proceed if at least one contour was found
@@ -157,10 +155,6 @@ class tracker(Node):
             # sleeping to maintain framerate
             time.sleep(max((1 / rate) - (time.time() - start), 0))
 
-        cap.release()
-        cv2.destroyAllWindows()
-
- 
 def main(args=None):
     rclpy.init(args=args)
     node = tracker() # MODIFY NAME
