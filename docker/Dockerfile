@@ -20,3 +20,4 @@ RUN chsh -s /bin/zsh
 RUN ln -s ~/.rc-temp/ros-setup.sh ~/.rc/ 
 RUN rm -rf ~/.zsh_history && cp /home/ALEX/dotfiles/config/.zsh_history ~ && chown root:root ~/.zsh_history
 
+RUN git config --global --add safe.directory /home/ALEX/3dev 
