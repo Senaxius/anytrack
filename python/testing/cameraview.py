@@ -4,18 +4,21 @@ from imutils.video import VideoStream
 from imutils.video import WebcamVideoStream
 from imutils.video import FPS
 
-vs = VideoStream(src=0).start()
-# cam_capture = cv2.VideoCapture(0)  # create camera object outside while-loop
+# vs = VideoStream(src=0).start()
+vs = cv2.VideoCapture(0)  # create camera object outside while-loop
+ret = vs.set(cv2.CAP_PROP_FPS, 60)
+print(ret)
 
-# vs.stream.set(3, 640)
-# vs.stream.set(4, 480)
+# vs.set(3, 1920)
+# vs.set(4, 1080)
 
 prev_frame_time = 0
 new_frame_time = 0
 fps = 0
 
 while(True):
-    frame = vs.read()
+    # frame = vs.read()
+    ret, frame = vs.read()
     cv2.imshow('frame', frame)
 
     # frame = vs.read()
@@ -23,11 +26,11 @@ while(True):
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-    # new_frame_time = time.time()
-    # fps = 1/(new_frame_time-prev_frame_time)
-    # prev_frame_time = new_frame_time
-    # fps = int(fps)
+    new_frame_time = time.time()
+    fps = 1/(new_frame_time-prev_frame_time)
+    prev_frame_time = new_frame_time
+    fps = int(fps)
 
-    # print(fps)
+    print(fps)
 cv2.destroyAllWindows()
 vs.stop()

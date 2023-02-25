@@ -190,10 +190,12 @@ def showImg(data):
         print(start_color, end_color)
         
         color_mask = cv2.inRange(hsv, start_color, end_color)
-        white_mask = cv2.inRange(hsv, np.array([140, 0, 255]), np.array([255, 255, 255]))
+        color_mask = cv2.erode(color_mask, None, iterations=3)
+        color_mask = cv2.dilate(color_mask, None, iterations=3)
+        # white_mask = cv2.inRange(hsv, np.array([140, 0, 255]), np.array([255, 255, 255]))
 
         res = cv2.bitwise_and(frame, frame, mask= color_mask)
-        white_bgr = cv2.bitwise_or(frame, frame, mask= white_mask)
+        # white_bgr = cv2.bitwise_or(frame, frame, mask= white_mask)
         # res = cv2.add(res, white_bgr)
 
         # hsv2 = cv2.cvtColor(res, cv2.COLOR_BGR2HSV)
