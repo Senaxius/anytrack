@@ -3,8 +3,10 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "../rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_introspection_c.c"
   "../rosidl_generator_py/scanner_interfaces/msg/__init__.py"
-  "../rosidl_generator_py/scanner_interfaces/msg/_camera_xy.py"
-  "../rosidl_generator_py/scanner_interfaces/msg/_camera_xy_s.c"
+  "../rosidl_generator_py/scanner_interfaces/msg/_object.py"
+  "../rosidl_generator_py/scanner_interfaces/msg/_object_s.c"
+  "../rosidl_generator_py/scanner_interfaces/msg/_tracks.py"
+  "../rosidl_generator_py/scanner_interfaces/msg/_tracks_s.c"
   "CMakeFiles/scanner_interfaces__py"
 )
 

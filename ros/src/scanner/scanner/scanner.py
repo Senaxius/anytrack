@@ -55,16 +55,6 @@ class scan_manager(Node): # MODIFY NAME
             index = count
             count += 1
 
-            camX_position = Action(
-                package="scanner",
-                executable="camera_position",
-                name=('position'),
-                namespace= ('cam' + str(index)),
-                parameters=[
-                    {"index": index},
-                    {"device": device}
-                ]
-            )
             camX_tracker = Action(
                 package="scanner",
                 executable="camera_tracker",
@@ -73,7 +63,23 @@ class scan_manager(Node): # MODIFY NAME
                 parameters=[
                     {"index": index},
                     {"device": device},
-                    {"track": 1}
+                    {"track": 1},
+                    {"visualize": 1},
+                    {"limit": 35},
+                    {"debug": 0},
+                    {"framerate": 60},
+                    {"width": 1920},
+                    {"height": 1080},
+                ]
+            )
+            camX_position = Action(
+                package="scanner",
+                executable="camera_position",
+                name=('position'),
+                namespace= ('cam' + str(index)),
+                parameters=[
+                    {"index": index},
+                    {"device": device}
                 ]
             )
             camX_camera_info = Action(
@@ -97,10 +103,10 @@ class scan_manager(Node): # MODIFY NAME
                 ]
             )
 
-            ld.add_action(camX_position)
             ld.add_action(camX_tracker)
-            ld.add_action(camX_camera_info)
-            ld.add_action(visualisation_vector)
+            # ld.add_action(camX_position)
+            # ld.add_action(camX_camera_info)
+            # ld.add_action(visualisation_vector)
         return ld
 
 def main(args=None):

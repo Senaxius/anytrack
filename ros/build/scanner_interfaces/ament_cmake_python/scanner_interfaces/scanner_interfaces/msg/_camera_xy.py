@@ -60,6 +60,7 @@ class CameraXY(metaclass=Metaclass_CameraXY):
         '_x_max',
         '_y_max',
         '_found',
+        '_fps',
     ]
 
     _fields_and_field_types = {
@@ -68,6 +69,7 @@ class CameraXY(metaclass=Metaclass_CameraXY):
         'x_max': 'int64',
         'y_max': 'int64',
         'found': 'boolean',
+        'fps': 'int64',
     }
 
     SLOT_TYPES = (
@@ -76,6 +78,7 @@ class CameraXY(metaclass=Metaclass_CameraXY):
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -87,6 +90,7 @@ class CameraXY(metaclass=Metaclass_CameraXY):
         self.x_max = kwargs.get('x_max', int())
         self.y_max = kwargs.get('y_max', int())
         self.found = kwargs.get('found', bool())
+        self.fps = kwargs.get('fps', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -126,6 +130,8 @@ class CameraXY(metaclass=Metaclass_CameraXY):
         if self.y_max != other.y_max:
             return False
         if self.found != other.found:
+            return False
+        if self.fps != other.fps:
             return False
         return True
 
@@ -206,3 +212,18 @@ class CameraXY(metaclass=Metaclass_CameraXY):
                 isinstance(value, bool), \
                 "The 'found' field must be of type 'bool'"
         self._found = value
+
+    @builtins.property
+    def fps(self):
+        """Message field 'fps'."""
+        return self._fps
+
+    @fps.setter
+    def fps(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'fps' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'fps' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._fps = value

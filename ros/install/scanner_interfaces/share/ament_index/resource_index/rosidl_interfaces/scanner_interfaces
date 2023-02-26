@@ -1,2 +1,4 @@
-msg/CameraXY.idl
-msg/CameraXY.msg
+msg/Object.idl
+msg/Object.msg
+msg/Tracks.idl
+msg/Tracks.msg

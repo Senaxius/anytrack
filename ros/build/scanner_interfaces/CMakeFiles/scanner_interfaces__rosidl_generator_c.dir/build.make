@@ -69,62 +69,94 @@ include CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/flags.make
 
-rosidl_generator_c/scanner_interfaces/msg/camera_xy.h: /opt/ros/humble/lib/rosidl_generator_c/rosidl_generator_c
-rosidl_generator_c/scanner_interfaces/msg/camera_xy.h: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_c/__init__.py
-rosidl_generator_c/scanner_interfaces/msg/camera_xy.h: /opt/ros/humble/share/rosidl_generator_c/resource/action__type_support.h.em
-rosidl_generator_c/scanner_interfaces/msg/camera_xy.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl.h.em
-rosidl_generator_c/scanner_interfaces/msg/camera_xy.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__functions.c.em
-rosidl_generator_c/scanner_interfaces/msg/camera_xy.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__functions.h.em
-rosidl_generator_c/scanner_interfaces/msg/camera_xy.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__struct.h.em
-rosidl_generator_c/scanner_interfaces/msg/camera_xy.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__type_support.h.em
-rosidl_generator_c/scanner_interfaces/msg/camera_xy.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__functions.c.em
-rosidl_generator_c/scanner_interfaces/msg/camera_xy.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__functions.h.em
-rosidl_generator_c/scanner_interfaces/msg/camera_xy.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__struct.h.em
-rosidl_generator_c/scanner_interfaces/msg/camera_xy.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__type_support.h.em
-rosidl_generator_c/scanner_interfaces/msg/camera_xy.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
-rosidl_generator_c/scanner_interfaces/msg/camera_xy.h: rosidl_adapter/scanner_interfaces/msg/CameraXY.idl
+rosidl_generator_c/scanner_interfaces/msg/object.h: /opt/ros/humble/lib/rosidl_generator_c/rosidl_generator_c
+rosidl_generator_c/scanner_interfaces/msg/object.h: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_c/__init__.py
+rosidl_generator_c/scanner_interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/action__type_support.h.em
+rosidl_generator_c/scanner_interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl.h.em
+rosidl_generator_c/scanner_interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__functions.c.em
+rosidl_generator_c/scanner_interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__functions.h.em
+rosidl_generator_c/scanner_interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__struct.h.em
+rosidl_generator_c/scanner_interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__type_support.h.em
+rosidl_generator_c/scanner_interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__functions.c.em
+rosidl_generator_c/scanner_interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__functions.h.em
+rosidl_generator_c/scanner_interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__struct.h.em
+rosidl_generator_c/scanner_interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__type_support.h.em
+rosidl_generator_c/scanner_interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
+rosidl_generator_c/scanner_interfaces/msg/object.h: rosidl_adapter/scanner_interfaces/msg/Object.idl
+rosidl_generator_c/scanner_interfaces/msg/object.h: rosidl_adapter/scanner_interfaces/msg/Tracks.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ALEX/3dev/ros/build/scanner_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c__arguments.json
 
-rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.h: rosidl_generator_c/scanner_interfaces/msg/camera_xy.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.h
+rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.h: rosidl_generator_c/scanner_interfaces/msg/object.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.h
 
-rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__struct.h: rosidl_generator_c/scanner_interfaces/msg/camera_xy.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__struct.h
+rosidl_generator_c/scanner_interfaces/msg/detail/object__struct.h: rosidl_generator_c/scanner_interfaces/msg/object.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/scanner_interfaces/msg/detail/object__struct.h
 
-rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__type_support.h: rosidl_generator_c/scanner_interfaces/msg/camera_xy.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__type_support.h
+rosidl_generator_c/scanner_interfaces/msg/detail/object__type_support.h: rosidl_generator_c/scanner_interfaces/msg/object.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/scanner_interfaces/msg/detail/object__type_support.h
 
-rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c: rosidl_generator_c/scanner_interfaces/msg/camera_xy.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c
+rosidl_generator_c/scanner_interfaces/msg/tracks.h: rosidl_generator_c/scanner_interfaces/msg/object.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/scanner_interfaces/msg/tracks.h
 
-CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c.o: CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/flags.make
-CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c.o: rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c
-CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c.o: CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ALEX/3dev/ros/build/scanner_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c.o -MF CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c.o.d -o CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c.o -c /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c
+rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.h: rosidl_generator_c/scanner_interfaces/msg/object.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.h
 
-CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c > CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c.i
+rosidl_generator_c/scanner_interfaces/msg/detail/tracks__struct.h: rosidl_generator_c/scanner_interfaces/msg/object.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/scanner_interfaces/msg/detail/tracks__struct.h
 
-CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c -o CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c.s
+rosidl_generator_c/scanner_interfaces/msg/detail/tracks__type_support.h: rosidl_generator_c/scanner_interfaces/msg/object.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/scanner_interfaces/msg/detail/tracks__type_support.h
+
+rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c: rosidl_generator_c/scanner_interfaces/msg/object.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c
+
+rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c: rosidl_generator_c/scanner_interfaces/msg/object.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c
+
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c.o: CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c.o: rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c.o: CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ALEX/3dev/ros/build/scanner_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c.o -MF CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c.o.d -o CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c.o -c /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c
+
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c > CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c.i
+
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c -o CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c.s
+
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c.o: CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c.o: rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c.o: CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ALEX/3dev/ros/build/scanner_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c.o -MF CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c.o.d -o CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c.o -c /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c
+
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c > CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c.i
+
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c -o CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c.s
 
 # Object files for target scanner_interfaces__rosidl_generator_c
 scanner_interfaces__rosidl_generator_c_OBJECTS = \
-"CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c.o"
+"CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c.o" \
+"CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c.o"
 
 # External object files for target scanner_interfaces__rosidl_generator_c
 scanner_interfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
 
-libscanner_interfaces__rosidl_generator_c.so: CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c.o
+libscanner_interfaces__rosidl_generator_c.so: CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c.o
+libscanner_interfaces__rosidl_generator_c.so: CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c.o
 libscanner_interfaces__rosidl_generator_c.so: CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/build.make
 libscanner_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libscanner_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libscanner_interfaces__rosidl_generator_c.so: CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ALEX/3dev/ros/build/scanner_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library libscanner_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ALEX/3dev/ros/build/scanner_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libscanner_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -135,11 +167,16 @@ CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/clean
 
-CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/scanner_interfaces/msg/camera_xy.h
-CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.c
-CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.h
-CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__struct.h
-CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__type_support.h
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.c
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.h
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/scanner_interfaces/msg/detail/object__struct.h
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/scanner_interfaces/msg/detail/object__type_support.h
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.c
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.h
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/scanner_interfaces/msg/detail/tracks__struct.h
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/scanner_interfaces/msg/detail/tracks__type_support.h
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/scanner_interfaces/msg/object.h
+CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/scanner_interfaces/msg/tracks.h
 	cd /home/ALEX/3dev/ros/build/scanner_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ALEX/3dev/ros/src/scanner_interfaces /home/ALEX/3dev/ros/src/scanner_interfaces /home/ALEX/3dev/ros/build/scanner_interfaces /home/ALEX/3dev/ros/build/scanner_interfaces /home/ALEX/3dev/ros/build/scanner_interfaces/CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/scanner_interfaces__rosidl_generator_c.dir/depend
 

@@ -1,6 +1,7 @@
 {
   "package_name": "scanner_interfaces",
   "non_idl_tuples": [
-    "/home/ALEX/3dev/ros/src/scanner_interfaces:msg/CameraXY.msg"
+    "/home/ALEX/3dev/ros/src/scanner_interfaces:msg/Object.msg",
+    "/home/ALEX/3dev/ros/src/scanner_interfaces:msg/Tracks.msg"
   ]
 }

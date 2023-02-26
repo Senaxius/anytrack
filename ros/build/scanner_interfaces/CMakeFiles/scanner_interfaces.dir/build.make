@@ -66,7 +66,8 @@ include CMakeFiles/scanner_interfaces.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/scanner_interfaces.dir/progress.make
 
-CMakeFiles/scanner_interfaces: /home/ALEX/3dev/ros/src/scanner_interfaces/msg/CameraXY.msg
+CMakeFiles/scanner_interfaces: /home/ALEX/3dev/ros/src/scanner_interfaces/msg/Object.msg
+CMakeFiles/scanner_interfaces: /home/ALEX/3dev/ros/src/scanner_interfaces/msg/Tracks.msg
 
 scanner_interfaces: CMakeFiles/scanner_interfaces
 scanner_interfaces: CMakeFiles/scanner_interfaces.dir/build.make

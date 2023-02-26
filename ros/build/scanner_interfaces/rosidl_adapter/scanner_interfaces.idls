@@ -1,1 +1,2 @@
-/home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces:msg/CameraXY.idl
+/home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces:msg/Object.idl
+/home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces:msg/Tracks.idl

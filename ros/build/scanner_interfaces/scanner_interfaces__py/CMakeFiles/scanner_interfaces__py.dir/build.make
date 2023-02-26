@@ -69,9 +69,11 @@ include scanner_interfaces__py/CMakeFiles/scanner_interfaces__py.dir/progress.ma
 scanner_interfaces__py/CMakeFiles/scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 scanner_interfaces__py/CMakeFiles/scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 scanner_interfaces__py/CMakeFiles/scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_c.c
-scanner_interfaces__py/CMakeFiles/scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/msg/_camera_xy.py
+scanner_interfaces__py/CMakeFiles/scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/msg/_object.py
+scanner_interfaces__py/CMakeFiles/scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/msg/_tracks.py
 scanner_interfaces__py/CMakeFiles/scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/msg/__init__.py
-scanner_interfaces__py/CMakeFiles/scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/msg/_camera_xy_s.c
+scanner_interfaces__py/CMakeFiles/scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/msg/_object_s.c
+scanner_interfaces__py/CMakeFiles/scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/msg/_tracks_s.c
 
 rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -86,7 +88,8 @@ rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesuppo
 rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_msg.py.em
 rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
-rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/scanner_interfaces/msg/CameraXY.idl
+rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/scanner_interfaces/msg/Object.idl
+rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/scanner_interfaces/msg/Tracks.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ALEX/3dev/ros/build/scanner_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /home/ALEX/3dev/ros/build/scanner_interfaces/scanner_interfaces__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
@@ -96,21 +99,29 @@ rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesuppo
 rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_c.c: rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_c.c
 
-rosidl_generator_py/scanner_interfaces/msg/_camera_xy.py: rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/scanner_interfaces/msg/_camera_xy.py
+rosidl_generator_py/scanner_interfaces/msg/_object.py: rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/scanner_interfaces/msg/_object.py
+
+rosidl_generator_py/scanner_interfaces/msg/_tracks.py: rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/scanner_interfaces/msg/_tracks.py
 
 rosidl_generator_py/scanner_interfaces/msg/__init__.py: rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/scanner_interfaces/msg/__init__.py
 
-rosidl_generator_py/scanner_interfaces/msg/_camera_xy_s.c: rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/scanner_interfaces/msg/_camera_xy_s.c
+rosidl_generator_py/scanner_interfaces/msg/_object_s.c: rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/scanner_interfaces/msg/_object_s.c
+
+rosidl_generator_py/scanner_interfaces/msg/_tracks_s.c: rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/scanner_interfaces/msg/_tracks_s.c
 
 scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_c.c
 scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/msg/__init__.py
-scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/msg/_camera_xy.py
-scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/msg/_camera_xy_s.c
+scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/msg/_object.py
+scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/msg/_object_s.c
+scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/msg/_tracks.py
+scanner_interfaces__py: rosidl_generator_py/scanner_interfaces/msg/_tracks_s.c
 scanner_interfaces__py: scanner_interfaces__py/CMakeFiles/scanner_interfaces__py
 scanner_interfaces__py: scanner_interfaces__py/CMakeFiles/scanner_interfaces__py.dir/build.make
 .PHONY : scanner_interfaces__py
