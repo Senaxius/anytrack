@@ -1,0 +1,4 @@
+[console_scripts]
+manager = scannerV2.manager:main
+tracker2D = scannerV2.tracker2D:main
+

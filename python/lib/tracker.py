@@ -78,7 +78,8 @@ def ball_scanner(frame, colors=[], min_radius=10, prev_objects=[]):
         mask = cv2.inRange(hsv, color.start_color, color.end_color)
         mask = cv2.erode(mask, None, iterations=3)
         mask = cv2.dilate(mask, None, iterations=3)
-        # cv2.imshow("mask", mask)
+
+        # cv2.imshow("mask", cv2.resize(mask, (960, 540)))
         # find contours in the mask and initialize the current
         # (x, y) center of the ball
         contours = cv2.findContours(

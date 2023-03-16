@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+resource/scannerV2
+scannerV2/__init__.py
+scannerV2/manager.py
+scannerV2/tracker2D.py
+scannerV2.egg-info/PKG-INFO
+scannerV2.egg-info/SOURCES.txt
+scannerV2.egg-info/dependency_links.txt
+scannerV2.egg-info/entry_points.txt
+scannerV2.egg-info/requires.txt
+scannerV2.egg-info/top_level.txt
+scannerV2.egg-info/zip-safe

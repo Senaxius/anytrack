@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'scanner'
+package_name = 'scannerV2'
 
 setup(
     name=package_name,
@@ -20,14 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "test = scanner.test:main",
-            "scanner = scanner.scanner:main",
-            "camera_tracker = scanner.camera_tracker:main",
-            "camera_info = scanner.camera_info:main",
-            "camera_position = scanner.camera_position:main",
-            "visualisation_vector = scanner.visualisation_vector:main",
-            "foxglove_camera = scanner.foxglove_camera:main",
-            "calibrater = scanner.calibrater:main",
+            "manager = scannerV2.manager:main",
+            "tracker2D = scannerV2.tracker2D:main",
         ],
     },
 )
