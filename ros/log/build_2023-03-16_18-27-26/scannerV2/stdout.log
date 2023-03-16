@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing scannerV2.egg-info/PKG-INFO
+writing dependency_links to scannerV2.egg-info/dependency_links.txt
+writing entry points to scannerV2.egg-info/entry_points.txt
+writing requirements to scannerV2.egg-info/requires.txt
+writing top-level names to scannerV2.egg-info/top_level.txt
+reading manifest file 'scannerV2.egg-info/SOURCES.txt'
+writing manifest file 'scannerV2.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ALEX/3dev/ros/install/scannerV2/lib/python3.10/site-packages/scannerV2.egg-link (link to .)
+Installing camera_info script to /home/ALEX/3dev/ros/install/scannerV2/lib/scannerV2
+Installing manager script to /home/ALEX/3dev/ros/install/scannerV2/lib/scannerV2
+Installing tracker2D script to /home/ALEX/3dev/ros/install/scannerV2/lib/scannerV2
+Installing tracker3D script to /home/ALEX/3dev/ros/install/scannerV2/lib/scannerV2
+
+Installed /home/ALEX/3dev/ros/build/scannerV2
+running install_data

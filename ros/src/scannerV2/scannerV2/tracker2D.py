@@ -14,9 +14,9 @@ from sensor_msgs.msg import Image
 sys.path.append('/home/ALEX/3dev/python/lib')
 import tracker as trk
 
-class tracker(Node):  
+class tracker2D(Node):  
     def __init__(self):
-        super().__init__("tracker")  
+        super().__init__("tracker2D")  
 
         # declare Parameters
         self.declare_parameter("index", -1)
@@ -41,15 +41,15 @@ class tracker(Node):
         self.height = self.get_parameter("height").value
 
         # debug only
-        self.index = 0
-        self.device = 0
-        self.track = 1
-        self.visualize = 1
-        self.limit = 0
-        self.debug = 0
-        self.framerate = 60
-        self.width = 1920
-        self.height = 1080
+        # self.index = 0
+        # self.device = 0
+        # self.track = 1
+        # self.visualize = 1
+        # self.limit = 0
+        # self.debug = 1
+        # self.framerate = 60
+        # self.width = 1280
+        # self.height = 720
 
         # check if Parameters is set
         if (self.device == -1 or self.index == -1):
@@ -150,7 +150,7 @@ class tracker(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = tracker() # MODIFY NAME
+    node = tracker2D() # MODIFY NAME
     rclpy.spin(node)
     rclpy.shutdown()
  

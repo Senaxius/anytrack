@@ -10,6 +10,7 @@ setup.py
 ../../build/scanner/scanner.egg-info/zip-safe
 resource/scanner
 scanner/__init__.py
+scanner/calibrater.py
 scanner/camera_info.py
 scanner/camera_position.py
 scanner/camera_tracker.py

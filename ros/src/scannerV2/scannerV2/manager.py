@@ -21,7 +21,6 @@ class manager(Node):
         ls.include_launch_description(self.generate_launch_description(devices))
         ls.run()
 
-
     def search_devices(self):
         buffer = []
         stream = os.popen('ls /dev/ | grep video')
@@ -68,50 +67,50 @@ class manager(Node):
                     {"limit": 35},
                     {"debug": 0},
                     {"framerate": 60},
-                    {"width": 1920},
-                    {"height": 1080},
+                    {"width": 1280},
+                    {"height": 720},
                 ]
             )
-            # camX_position = Action(
-            #     package="scanner",
-            #     executable="camera_position",
-            #     name=('position'),
-            #     namespace= ('cam' + str(index)),
-            #     parameters=[
-            #         {"index": index},
-            #         {"device": device}
-            #     ]
-            # )
-            # camX_camera_info = Action(
-            #     package="scanner",
-            #     executable="camera_info",
-            #     name=('camera_info'),
-            #     namespace= ('cam' + str(index)),
-            #     parameters=[
-            #         {"index": index},
-            #         {"device": device}
-            #     ]
-            # )
-            # visualisation_vector = Action(
-            #     package="scanner",
-            #     executable="visualisation_vector",
-            #     name=('vector'),
-            #     namespace= ('cam' + str(index)),
-            #     parameters=[
-            #         {"index": index},
-            #         {"device": device}
-            #     ]
-            # )
+            camX_camera_info = Action(
+                package="scannerV2",
+                executable="camera_info",
+                name=('camera_info'),
+                namespace= ('cam' + str(index)),
+                parameters=[
+                    {"index": index},
+                    {"device": device}
+                ]
+            )
+            camX_vector= Action(
+                package="scannerV2",
+                executable="camera_vector",
+                name=('vector'),
+                namespace= ('cam' + str(index)),
+                parameters=[
+                    {"index": index},
+                    {"debug": 0},
+                ]
+            )
 
             ld.add_action(camX_tracker2D)
-            # ld.add_action(camX_position)
-            # ld.add_action(camX_camera_info)
-            # ld.add_action(visualisation_vector)
+            ld.add_action(camX_camera_info)
+            # ld.add_action(camX_vector)
+
+        position_manager = Action(
+            package="scannerV2",
+            executable="position_manager",
+            name=('position_manager'),
+            parameters=[
+                {"device_count": length},
+                {"config_path": '/home/ALEX/3dev/config/camera_positions.json'}
+            ]
+        )
+        ld.add_action(position_manager)
         return ld
 
 def main(args=None):
     rclpy.init(args=args)
-    node = manager() # MODIFY NAME
+    node = manager()
     rclpy.spin(node)
     rclpy.shutdown()
  

@@ -1,0 +1,24 @@
+[0.597s] Invoking command in '/home/ALEX/3dev/ros/build/scanner': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scanner
+[0.844s] running develop
+[0.990s] running egg_info
+[0.990s] writing scanner.egg-info/PKG-INFO
+[0.990s] writing dependency_links to scanner.egg-info/dependency_links.txt
+[0.990s] writing entry points to scanner.egg-info/entry_points.txt
+[0.990s] writing requirements to scanner.egg-info/requires.txt
+[0.990s] writing top-level names to scanner.egg-info/top_level.txt
+[0.992s] reading manifest file 'scanner.egg-info/SOURCES.txt'
+[0.999s] writing manifest file 'scanner.egg-info/SOURCES.txt'
+[1.000s] running build_ext
+[1.000s] Creating /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner.egg-link (link to .)
+[1.001s] Installing calibrater script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[1.001s] Installing camera_info script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[1.001s] Installing camera_position script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[1.001s] Installing camera_tracker script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[1.001s] Installing foxglove_camera script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[1.001s] Installing scanner script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[1.001s] Installing test script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[1.001s] Installing visualisation_vector script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[1.002s] 
+[1.002s] Installed /home/ALEX/3dev/ros/build/scanner
+[1.002s] running install_data
+[1.030s] Invoked command in '/home/ALEX/3dev/ros/build/scanner' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scanner

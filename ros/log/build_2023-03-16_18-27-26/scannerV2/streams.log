@@ -1,0 +1,20 @@
+[0.627s] Invoking command in '/home/ALEX/3dev/ros/build/scannerV2': PYTHONPATH=/home/ALEX/3dev/ros/install/scannerV2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scannerV2 --editable --build-directory /home/ALEX/3dev/ros/build/scannerV2/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scannerV2
+[0.877s] running develop
+[1.018s] running egg_info
+[1.018s] writing scannerV2.egg-info/PKG-INFO
+[1.018s] writing dependency_links to scannerV2.egg-info/dependency_links.txt
+[1.018s] writing entry points to scannerV2.egg-info/entry_points.txt
+[1.018s] writing requirements to scannerV2.egg-info/requires.txt
+[1.018s] writing top-level names to scannerV2.egg-info/top_level.txt
+[1.020s] reading manifest file 'scannerV2.egg-info/SOURCES.txt'
+[1.026s] writing manifest file 'scannerV2.egg-info/SOURCES.txt'
+[1.028s] running build_ext
+[1.028s] Creating /home/ALEX/3dev/ros/install/scannerV2/lib/python3.10/site-packages/scannerV2.egg-link (link to .)
+[1.029s] Installing camera_info script to /home/ALEX/3dev/ros/install/scannerV2/lib/scannerV2
+[1.029s] Installing manager script to /home/ALEX/3dev/ros/install/scannerV2/lib/scannerV2
+[1.029s] Installing tracker2D script to /home/ALEX/3dev/ros/install/scannerV2/lib/scannerV2
+[1.029s] Installing tracker3D script to /home/ALEX/3dev/ros/install/scannerV2/lib/scannerV2
+[1.029s] 
+[1.029s] Installed /home/ALEX/3dev/ros/build/scannerV2
+[1.030s] running install_data
+[1.058s] Invoked command in '/home/ALEX/3dev/ros/build/scannerV2' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/scannerV2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scannerV2 --editable --build-directory /home/ALEX/3dev/ros/build/scannerV2/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scannerV2

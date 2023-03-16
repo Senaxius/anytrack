@@ -22,6 +22,10 @@ setup(
         'console_scripts': [
             "manager = scannerV2.manager:main",
             "tracker2D = scannerV2.tracker2D:main",
+            "camera_info = scannerV2.camera_info:main",
+            "camera_vector = scannerV2.camera_vector:main",
+            "position_manager = scannerV2.position_manager:main",
+            "test = scannerV2.test:main",
         ],
     },
 )

@@ -3,7 +3,11 @@ setup.cfg
 setup.py
 resource/scannerV2
 scannerV2/__init__.py
+scannerV2/camera_info.py
+scannerV2/camera_vector.py
 scannerV2/manager.py
+scannerV2/position_manager.py
+scannerV2/test.py
 scannerV2/tracker2D.py
 scannerV2.egg-info/PKG-INFO
 scannerV2.egg-info/SOURCES.txt
