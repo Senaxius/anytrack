@@ -16,6 +16,7 @@ class manager(Node):
         if not devices:
             self.get_logger().warning("No cameras were detected!")
             exit()
+        self.get_logger().info("Found Number of Devices: " + str(len(devices)))
 
         ls = LaunchService()
         ls.include_launch_description(self.generate_launch_description(devices))
@@ -49,6 +50,9 @@ class manager(Node):
         count = 0
         length = len(devices)
 
+        width = 1280
+        height = 720
+
         for cam in devices:
             device = cam
             index = count
@@ -67,8 +71,8 @@ class manager(Node):
                     {"limit": 35},
                     {"debug": 0},
                     {"framerate": 60},
-                    {"width": 1280},
-                    {"height": 720},
+                    {"width": width},
+                    {"height": height},
                 ]
             )
             camX_camera_info = Action(
@@ -88,13 +92,16 @@ class manager(Node):
                 namespace= ('cam' + str(index)),
                 parameters=[
                     {"index": index},
-                    {"debug": 0},
+                    {"device": device},
+                    {"multiplier": 2},
+                    {"width": width},
+                    {"height": height},
                 ]
             )
 
             ld.add_action(camX_tracker2D)
             ld.add_action(camX_camera_info)
-            # ld.add_action(camX_vector)
+            ld.add_action(camX_vector)
 
         position_manager = Action(
             package="scannerV2",

@@ -17,14 +17,23 @@ class camera_vector(Node):
         # declare Parameters
         self.declare_parameter("index", -1)
         self.declare_parameter("device", -1)
+        self.declare_parameter("multiplier", -1)
+        self.declare_parameter("width", -1)
+        self.declare_parameter("height", -1)
 
         # import parameters
         self.index = self.get_parameter("index").value
         self.device = self.get_parameter("device").value
+        self.multiplier = self.get_parameter("multiplier").value
+        self.width = self.get_parameter("width").value
+        self.height = self.get_parameter("height").value
 
         # debug only
-        self.index = 0
-        self.device = 0
+        # self.index = 0
+        # self.device = 0
+        # self.multiplier = 2
+        # self.width = 1280
+        # self.height = 720
 
         # check if Parameters is set
         if (self.device == -1 or self.index == -1):
@@ -55,15 +64,20 @@ class camera_vector(Node):
         # create msg from .yaml file
         self.data = self.read_yaml(self.file)
 
-        self.fx = self.data["projection_matrix"]["data"][0]
-        self.fy = self.data["projection_matrix"]["data"][5]
-        self.cx = self.data["projection_matrix"]["data"][2]
-        self.cy = self.data["projection_matrix"]["data"][6]
+        self.fx = (self.data["projection_matrix"]["data"][0] * (self.width / self.data["image_width"]))
+        self.fy = (self.data["projection_matrix"]["data"][5] * (self.height / self.data["image_height"]))
+        self.cx = (self.data["projection_matrix"]["data"][2] * (self.width / self.data["image_width"]))
+        self.cy = (self.data["projection_matrix"]["data"][6] * (self.height / self.data["image_height"]))
 
-        self.subscriber = self.create_subscription(msg_type=Tracks, topic=('cam' + str(self.index) + '/tracks'), callback=self.tracks_callback, qos_profile=10)
+        color_1 = (237, 255, 0)
+        color_2 = (0, 255, 255)
+        color_3 = (255, 0, 255)
+        color_4 = (0, 255, 0)
+        self.colors = [color_1, color_2, color_3, color_4]
+
+        self.subscriber = self.create_subscription(msg_type=Tracks, topic=('/cam' + str(self.index) + '/tracks'), callback=self.tracks_callback, qos_profile=10)
         self.publisher = self.create_publisher(msg_type=MarkerArray, topic="vector", qos_profile=10)
 
-        self.create_marker(('cam' + str(self.index) + "/markers"), 4)
 
         # main loop
         # while(1):
@@ -76,61 +90,45 @@ class camera_vector(Node):
         with open(filename, "r") as file_handle:
             return yaml.load(file_handle, Loader=yaml.FullLoader)
 
-    def create_marker(self, ns, number):
-        markerarray = MarkerArray()
-        for i in range(number):
-            marker = Marker()
-            marker.ns = ns
-            marker.id = i
-            marker.type = marker.ARROW
-            marker.action = marker.ADD
-            marker.scale.x = 0.01
-            marker.scale.y = 0.0
-            marker.scale.z = 0.0
-            start = Point()
-            start.x = 0.0
-            start.y = 0.0
-            start.z = 0.0
-            end = Point()
-            end.x = 0.0
-            end.y = 0.0
-            end.z = 0.0
-            marker.points = [start, end]
-            markerarray.markers.append(marker)
-        self.publisher.publish(markerarray)
-    
     def tracks_callback(self, msg):
         markerarray = MarkerArray()
         for object in msg.tracks:
-            z = 1.0
-            # x = (float(object.x) - self.cx) / self.fx
-            # y = (float(object.y) - self.cy) / self.fy
-            # x = (float(object.x) - self.cx) 
-            # y = (float(object.y) - self.cy) 
-            marker = Marker()
-            marker.header.frame_id = ('cam' + str(self.index) + '_position')
-            marker.header.stamp = self.get_clock().now().to_msg()
-            marker.id = object.id
-            marker.ns = ('cam' + str(self.index) + '/markers')
-            marker.action = marker.ADD
-            marker.scale.x = 0.01
-            marker.scale.y = 0.0
-            marker.scale.z = 0.0
-            marker.color.a = 1.0
-            marker.color.r = 255.0
-            marker.color.g = 0.0
-            marker.color.b = 0.0
-            start = Point()
-            start.x = 0.0
-            start.y = 0.0
-            start.z = 0.0
-            end = Point()
-            end.x = 1.0
-            end.y = 1.0
-            end.z = z
-            marker.points = [start, end]
+            marker = self.create_marker(object.x, object.y, object.id)
             markerarray.markers.append(marker)
         self.publisher.publish(markerarray)
+    
+    def create_marker(self, x, y, id):
+        x = (float(x) - self.cx) / self.fx
+        y = (float(y) - self.cy) / self.fy
+        marker = Marker()
+        marker.header.frame_id = ('cam' + str(self.index) + '_position')
+        marker.header.stamp = self.get_clock().now().to_msg()
+        marker.id = id
+        marker.ns = ('cam' + str(self.index) + '/markers')
+        marker.action = marker.ADD
+        marker.lifetime.sec = 0
+        marker.lifetime.nanosec = 100000000
+        
+        marker.scale.x = 0.01
+        marker.scale.y = 0.0
+        marker.scale.z = 0.0
+
+        marker.color.a = 1.0
+        if id < 4:
+            marker.color.r = float(self.colors[id][2])
+            marker.color.g = float(self.colors[id][1])
+            marker.color.b = float(self.colors[id][0])
+        start = Point()
+        start.x = 0.0
+        start.y = 0.0
+        start.z = 0.0
+        end = Point()
+        end.x = x    * self.multiplier
+        end.y = y  * self.multiplier
+        end.z = 1.0  * self.multiplier
+        marker.points = [start, end]
+        return marker
+
 
 
 def main(args=None):
