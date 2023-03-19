@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/scanner_interfaces__rosidl_generator_py.dir/rosidl_generator_py/scanner_interfaces/msg/_camera_locations_s.c.o"
+  "CMakeFiles/scanner_interfaces__rosidl_generator_py.dir/rosidl_generator_py/scanner_interfaces/msg/_camera_locations_s.c.o.d"
+  "CMakeFiles/scanner_interfaces__rosidl_generator_py.dir/rosidl_generator_py/scanner_interfaces/msg/_location_s.c.o"
+  "CMakeFiles/scanner_interfaces__rosidl_generator_py.dir/rosidl_generator_py/scanner_interfaces/msg/_location_s.c.o.d"
   "CMakeFiles/scanner_interfaces__rosidl_generator_py.dir/rosidl_generator_py/scanner_interfaces/msg/_object_s.c.o"
   "CMakeFiles/scanner_interfaces__rosidl_generator_py.dir/rosidl_generator_py/scanner_interfaces/msg/_object_s.c.o.d"
   "CMakeFiles/scanner_interfaces__rosidl_generator_py.dir/rosidl_generator_py/scanner_interfaces/msg/_tracks_s.c.o"

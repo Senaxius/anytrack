@@ -26,6 +26,7 @@ setup(
             "camera_vector = scannerV2.camera_vector:main",
             "position_manager = scannerV2.position_manager:main",
             "test = scannerV2.test:main",
+            "calibrator = scannerV2.calibrator:main",
         ],
     },
 )

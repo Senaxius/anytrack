@@ -100,9 +100,8 @@ class tracker2D(Node):
             line_buffer.append(deque(maxlen=buffer_size))
         # create TrackingObject
         green_ball = trk.ColorObject()
-        green_ball.start_color = (24, 64, 85)
-        green_ball.end_color = (78, 255, 255)
-
+        green_ball.start_color = (43, 222, 116)
+        green_ball.end_color = (63, 255, 255)
         
         if self.debug:
             frame = cap.read()

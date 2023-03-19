@@ -3,6 +3,7 @@ setup.cfg
 setup.py
 resource/scannerV2
 scannerV2/__init__.py
+scannerV2/calibrator.py
 scannerV2/camera_info.py
 scannerV2/camera_vector.py
 scannerV2/manager.py

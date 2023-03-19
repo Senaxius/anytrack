@@ -78,14 +78,6 @@ class camera_vector(Node):
         self.subscriber = self.create_subscription(msg_type=Tracks, topic=('/cam' + str(self.index) + '/tracks'), callback=self.tracks_callback, qos_profile=10)
         self.publisher = self.create_publisher(msg_type=MarkerArray, topic="vector", qos_profile=10)
 
-
-        # main loop
-        # while(1):
-        #     # self.publish()
-        #     # for each device
-
-        #     time.sleep(1)
-    
     def read_yaml(self, filename):
         with open(filename, "r") as file_handle:
             return yaml.load(file_handle, Loader=yaml.FullLoader)

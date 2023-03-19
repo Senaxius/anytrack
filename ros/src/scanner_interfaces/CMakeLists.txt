@@ -12,6 +12,8 @@ find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Object.msg"
   "msg/Tracks.msg"
+  "msg/Location.msg"
+  "msg/CameraLocations.msg"
 )
 
 ament_package()

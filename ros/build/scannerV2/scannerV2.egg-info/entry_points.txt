@@ -1,4 +1,5 @@
 [console_scripts]
+calibrator = scannerV2.calibrator:main
 camera_info = scannerV2.camera_info:main
 camera_vector = scannerV2.camera_vector:main
 manager = scannerV2.manager:main

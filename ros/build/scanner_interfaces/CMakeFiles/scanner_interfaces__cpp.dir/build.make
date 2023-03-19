@@ -74,6 +74,14 @@ CMakeFiles/scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/
 CMakeFiles/scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/tracks__builder.hpp
 CMakeFiles/scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/tracks__struct.hpp
 CMakeFiles/scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/tracks__traits.hpp
+CMakeFiles/scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/location.hpp
+CMakeFiles/scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/location__builder.hpp
+CMakeFiles/scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/location__struct.hpp
+CMakeFiles/scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/location__traits.hpp
+CMakeFiles/scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/camera_locations.hpp
+CMakeFiles/scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/camera_locations__builder.hpp
+CMakeFiles/scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/camera_locations__struct.hpp
+CMakeFiles/scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/camera_locations__traits.hpp
 
 rosidl_generator_cpp/scanner_interfaces/msg/object.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
 rosidl_generator_cpp/scanner_interfaces/msg/object.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
@@ -92,6 +100,8 @@ rosidl_generator_cpp/scanner_interfaces/msg/object.hpp: /opt/ros/humble/share/ro
 rosidl_generator_cpp/scanner_interfaces/msg/object.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/scanner_interfaces/msg/object.hpp: rosidl_adapter/scanner_interfaces/msg/Object.idl
 rosidl_generator_cpp/scanner_interfaces/msg/object.hpp: rosidl_adapter/scanner_interfaces/msg/Tracks.idl
+rosidl_generator_cpp/scanner_interfaces/msg/object.hpp: rosidl_adapter/scanner_interfaces/msg/Location.idl
+rosidl_generator_cpp/scanner_interfaces/msg/object.hpp: rosidl_adapter/scanner_interfaces/msg/CameraLocations.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ALEX/3dev/ros/build/scanner_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_cpp__arguments.json
 
@@ -116,13 +126,45 @@ rosidl_generator_cpp/scanner_interfaces/msg/detail/tracks__struct.hpp: rosidl_ge
 rosidl_generator_cpp/scanner_interfaces/msg/detail/tracks__traits.hpp: rosidl_generator_cpp/scanner_interfaces/msg/object.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/scanner_interfaces/msg/detail/tracks__traits.hpp
 
+rosidl_generator_cpp/scanner_interfaces/msg/location.hpp: rosidl_generator_cpp/scanner_interfaces/msg/object.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/scanner_interfaces/msg/location.hpp
+
+rosidl_generator_cpp/scanner_interfaces/msg/detail/location__builder.hpp: rosidl_generator_cpp/scanner_interfaces/msg/object.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/scanner_interfaces/msg/detail/location__builder.hpp
+
+rosidl_generator_cpp/scanner_interfaces/msg/detail/location__struct.hpp: rosidl_generator_cpp/scanner_interfaces/msg/object.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/scanner_interfaces/msg/detail/location__struct.hpp
+
+rosidl_generator_cpp/scanner_interfaces/msg/detail/location__traits.hpp: rosidl_generator_cpp/scanner_interfaces/msg/object.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/scanner_interfaces/msg/detail/location__traits.hpp
+
+rosidl_generator_cpp/scanner_interfaces/msg/camera_locations.hpp: rosidl_generator_cpp/scanner_interfaces/msg/object.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/scanner_interfaces/msg/camera_locations.hpp
+
+rosidl_generator_cpp/scanner_interfaces/msg/detail/camera_locations__builder.hpp: rosidl_generator_cpp/scanner_interfaces/msg/object.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/scanner_interfaces/msg/detail/camera_locations__builder.hpp
+
+rosidl_generator_cpp/scanner_interfaces/msg/detail/camera_locations__struct.hpp: rosidl_generator_cpp/scanner_interfaces/msg/object.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/scanner_interfaces/msg/detail/camera_locations__struct.hpp
+
+rosidl_generator_cpp/scanner_interfaces/msg/detail/camera_locations__traits.hpp: rosidl_generator_cpp/scanner_interfaces/msg/object.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/scanner_interfaces/msg/detail/camera_locations__traits.hpp
+
 scanner_interfaces__cpp: CMakeFiles/scanner_interfaces__cpp
+scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/camera_locations.hpp
+scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/camera_locations__builder.hpp
+scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/camera_locations__struct.hpp
+scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/camera_locations__traits.hpp
+scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/location__builder.hpp
+scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/location__struct.hpp
+scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/location__traits.hpp
 scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/object__builder.hpp
 scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/object__struct.hpp
 scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/object__traits.hpp
 scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/tracks__builder.hpp
 scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/tracks__struct.hpp
 scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/detail/tracks__traits.hpp
+scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/location.hpp
 scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/object.hpp
 scanner_interfaces__cpp: rosidl_generator_cpp/scanner_interfaces/msg/tracks.hpp
 scanner_interfaces__cpp: CMakeFiles/scanner_interfaces__cpp.dir/build.make

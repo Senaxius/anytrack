@@ -364,11 +364,27 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scanner_interfaces/msg" TYPE FILE FILES "/home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces/msg/Location.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scanner_interfaces/msg" TYPE FILE FILES "/home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces/msg/CameraLocations.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scanner_interfaces/msg" TYPE FILE FILES "/home/ALEX/3dev/ros/src/scanner_interfaces/msg/Object.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scanner_interfaces/msg" TYPE FILE FILES "/home/ALEX/3dev/ros/src/scanner_interfaces/msg/Tracks.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scanner_interfaces/msg" TYPE FILE FILES "/home/ALEX/3dev/ros/src/scanner_interfaces/msg/Location.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scanner_interfaces/msg" TYPE FILE FILES "/home/ALEX/3dev/ros/src/scanner_interfaces/msg/CameraLocations.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

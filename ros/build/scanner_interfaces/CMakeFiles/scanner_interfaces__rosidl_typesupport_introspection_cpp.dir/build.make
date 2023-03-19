@@ -79,17 +79,31 @@ rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__rosid
 rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp: /opt/ros/humble/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em
 rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/scanner_interfaces/msg/Object.idl
 rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/scanner_interfaces/msg/Tracks.idl
+rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/scanner_interfaces/msg/Location.idl
+rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/scanner_interfaces/msg/CameraLocations.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ALEX/3dev/ros/build/scanner_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ introspection for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp --generator-arguments-file /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_typesupport_introspection_cpp__arguments.json
 
 rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/tracks__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/tracks__rosidl_typesupport_introspection_cpp.hpp
 
+rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__rosidl_typesupport_introspection_cpp.hpp
+
+rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__rosidl_typesupport_introspection_cpp.hpp
+
 rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__type_support.cpp: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__type_support.cpp
 
 rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/tracks__type_support.cpp: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/tracks__type_support.cpp
+
+rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp
+
+rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp
 
 CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__type_support.cpp.o: CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/flags.make
 CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__type_support.cpp.o: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__type_support.cpp
@@ -119,23 +133,55 @@ CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_t
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/tracks__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/tracks__type_support.cpp -o CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/tracks__type_support.cpp.s
 
+CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp.o: CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/flags.make
+CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp.o: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp
+CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp.o: CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ALEX/3dev/ros/build/scanner_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp.o -MF CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp.o.d -o CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp.o -c /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp
+
+CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp > CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp.i
+
+CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp -o CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp.s
+
+CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp.o: CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/flags.make
+CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp.o: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp
+CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp.o: CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ALEX/3dev/ros/build/scanner_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp.o -MF CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp.o.d -o CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp.o -c /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp
+
+CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp > CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp.i
+
+CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp -o CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp.s
+
 # Object files for target scanner_interfaces__rosidl_typesupport_introspection_cpp
 scanner_interfaces__rosidl_typesupport_introspection_cpp_OBJECTS = \
 "CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__type_support.cpp.o" \
-"CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/tracks__type_support.cpp.o"
+"CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/tracks__type_support.cpp.o" \
+"CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp.o" \
+"CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp.o"
 
 # External object files for target scanner_interfaces__rosidl_typesupport_introspection_cpp
 scanner_interfaces__rosidl_typesupport_introspection_cpp_EXTERNAL_OBJECTS =
 
 libscanner_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__type_support.cpp.o
 libscanner_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/tracks__type_support.cpp.o
+libscanner_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp.o
+libscanner_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp.o
 libscanner_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make
 libscanner_interfaces__rosidl_typesupport_introspection_cpp.so: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
 libscanner_interfaces__rosidl_typesupport_introspection_cpp.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libscanner_interfaces__rosidl_typesupport_introspection_cpp.so: /opt/ros/humble/lib/librcutils.so
 libscanner_interfaces__rosidl_typesupport_introspection_cpp.so: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
 libscanner_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ALEX/3dev/ros/build/scanner_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libscanner_interfaces__rosidl_typesupport_introspection_cpp.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ALEX/3dev/ros/build/scanner_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libscanner_interfaces__rosidl_typesupport_introspection_cpp.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -146,6 +192,10 @@ CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/clean
 
+CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__rosidl_typesupport_introspection_cpp.hpp
+CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/camera_locations__type_support.cpp
+CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__rosidl_typesupport_introspection_cpp.hpp
+CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/location__type_support.cpp
 CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp
 CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/object__type_support.cpp
 CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/scanner_interfaces/msg/detail/tracks__rosidl_typesupport_introspection_cpp.hpp

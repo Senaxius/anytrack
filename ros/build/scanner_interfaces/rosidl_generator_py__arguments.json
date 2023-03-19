@@ -4,7 +4,9 @@
   "template_dir": "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource",
   "idl_tuples": [
     "/home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces:msg/Object.idl",
-    "/home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces:msg/Tracks.idl"
+    "/home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces:msg/Tracks.idl",
+    "/home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces:msg/Location.idl",
+    "/home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces:msg/CameraLocations.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py",
@@ -21,6 +23,8 @@
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
     "/home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces/msg/Object.idl",
-    "/home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces/msg/Tracks.idl"
+    "/home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces/msg/Tracks.idl",
+    "/home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces/msg/Location.idl",
+    "/home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces/msg/CameraLocations.idl"
   ]
 }

@@ -207,4 +207,10 @@ CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_c__pyext.dir/ros
  /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.h \
  /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__type_support.h \
  /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__struct.h \
- /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.h
+ /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.h \
+ /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/location__type_support.h \
+ /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/location__struct.h \
+ /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/location__functions.h \
+ /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/camera_locations__type_support.h \
+ /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/camera_locations__struct.h \
+ /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_generator_c/scanner_interfaces/msg/detail/camera_locations__functions.h

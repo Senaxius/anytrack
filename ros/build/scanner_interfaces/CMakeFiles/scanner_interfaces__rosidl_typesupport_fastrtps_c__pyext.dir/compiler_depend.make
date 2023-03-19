@@ -242,11 +242,16 @@ CMakeFiles/scanner_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_g
   /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h \
-  rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__type_support.h \
+  rosidl_generator_c/scanner_interfaces/msg/detail/object__type_support.h \
   rosidl_generator_c/scanner_interfaces/msg/rosidl_generator_c__visibility_control.h \
-  rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__struct.h \
-  rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.h
+  rosidl_generator_c/scanner_interfaces/msg/detail/object__struct.h \
+  rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.h \
+  rosidl_generator_c/scanner_interfaces/msg/detail/tracks__type_support.h \
+  rosidl_generator_c/scanner_interfaces/msg/detail/tracks__struct.h \
+  rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.h
 
+
+rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.h:
 
 rosidl_generator_c/scanner_interfaces/msg/rosidl_generator_c__visibility_control.h:
 
@@ -304,6 +309,8 @@ rosidl_generator_c/scanner_interfaces/msg/rosidl_generator_c__visibility_control
 
 /usr/include/python3.10/cpython/initconfig.h:
 
+rosidl_generator_c/scanner_interfaces/msg/detail/object__struct.h:
+
 /usr/include/python3.10/traceback.h:
 
 /usr/include/python3.10/cpython/picklebufobject.h:
@@ -349,8 +356,6 @@ rosidl_generator_c/scanner_interfaces/msg/rosidl_generator_c__visibility_control
 /usr/include/python3.10/listobject.h:
 
 /usr/include/ctype.h:
-
-rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__type_support.h:
 
 /usr/include/python3.10/unicodeobject.h:
 
@@ -454,6 +459,8 @@ rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__type_support.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
+rosidl_generator_c/scanner_interfaces/msg/detail/tracks__struct.h:
+
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h:
 
 /usr/include/asm-generic/int-ll64.h:
@@ -486,6 +493,8 @@ rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__type_support.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
+rosidl_generator_c/scanner_interfaces/msg/detail/tracks__type_support.h:
+
 /usr/include/python3.10/patchlevel.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
@@ -496,6 +505,8 @@ rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__type_support.h:
 
 /usr/include/python3.10/pymacconfig.h:
 
+rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.h:
+
 rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c:
 
 /usr/include/x86_64-linux-gnu/sys/time.h:
@@ -505,8 +516,6 @@ rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesuppo
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__struct.h:
 
 /usr/include/python3.10/cpython/traceback.h:
 
@@ -600,8 +609,6 @@ rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
-rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.h:
-
 /usr/include/python3.10/cpython/pythonrun.h:
 
 /usr/include/python3.10/cpython/objimpl.h:
@@ -625,6 +632,8 @@ rosidl_generator_c/scanner_interfaces/msg/detail/camera_xy__functions.h:
 /usr/include/python3.10/cpython/methodobject.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+rosidl_generator_c/scanner_interfaces/msg/detail/object__type_support.h:
 
 /usr/include/python3.10/cpython/unicodeobject.h:
 

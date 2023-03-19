@@ -1,3 +1,7 @@
+msg/CameraLocations.idl
+msg/CameraLocations.msg
+msg/Location.idl
+msg/Location.msg
 msg/Object.idl
 msg/Object.msg
 msg/Tracks.idl
