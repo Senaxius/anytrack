@@ -68,7 +68,7 @@ class manager(Node):
                     {"device": device},
                     {"track": 1},
                     {"visualize": 1},
-                    {"limit": 35},
+                    {"limit": 2},
                     {"debug": 0},
                     {"framerate": 60},
                     {"width": width},

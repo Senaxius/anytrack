@@ -105,6 +105,8 @@ class camera_vector(Node):
         marker.scale.y = 0.0
         marker.scale.z = 0.0
 
+        self.get_logger().info(str(self.index) + "  (" + str(round(x, 2)) + ", " + str(round(y, 2)) + ", 1)")
+
         marker.color.a = 1.0
         if id < 4:
             marker.color.r = float(self.colors[id][2])

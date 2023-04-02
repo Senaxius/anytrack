@@ -4,12 +4,21 @@ from rclpy.node import Node
 import json
 import math
 import numpy as np
-import time
+import random
 
 from geometry_msgs.msg import TransformStamped
 from tf2_ros import TransformBroadcaster
 from scanner_interfaces.msg import Location
 from scanner_interfaces.msg import CameraLocations
+
+def dotproduct(v1, v2):
+  return sum((a*b) for a, b in zip(v1, v2))
+
+def length(v):
+  return math.sqrt(dotproduct(v, v))
+
+def angle(v1, v2):
+  return math.acos(dotproduct(v1, v2) / (length(v1) * length(v2)))
 
 class position_manager(Node):  
     def __init__(self):
@@ -44,11 +53,24 @@ class position_manager(Node):
         # reading config file
         file = open(self.config_path)
         self.config = json.load(file)
+        for i in range(self.device_count):
+            data = self.config[str(i)]
+            if (self.debug == 1):
+                print(i)
+                print(self.config[str(i)])
+            # publish camera_position
+            data = self.config[str(i)]
+            x = data["x"]
+            y = data["y"]
+            z = data["z"]
+            ax = data["ax"] / 180 * math.pi
+            ay = data["ay"] / 180 * math.pi
+            az = data["az"] / 180 * math.pi
+
+            self.publish_position("world", ("cam" + str(i) + "_position"), x, y, z, ax, ay, az)
 
         # main loop
-        self.loop = self.create_timer(2, self.loop_callback)
-
-            
+        self.loop = self.create_timer(3, self.loop_callback)
 
     def loop_callback(self):
             # for each device
@@ -66,6 +88,54 @@ class position_manager(Node):
                 az = data["az"] / 180 * math.pi
 
                 self.publish_position("world", ("cam" + str(i) + "_position"), x, y, z, ax, ay, az)
+
+    # def loop_callback(self):
+    #         # generate test data for BOGU
+    #         c = random.randrange(1500, 3000) / 1000
+    #         px = random.randrange(-600, 600) / 1000
+    #         py = random.randrange(-600, 600) / 1000
+    #         pz = random.randrange(int(c * 1000) - 600, int(c * 1000) + 600) / 1000
+    #         for i in range(self.device_count):
+    #             data = self.config[str(i)]
+    #             d = ((px - data["x"]))
+    #             self.get_logger().info("ID: " + str(i) + " " + str(d))
+
+
+
+            # for each device
+            # for i in range(self.device_count):
+            #     if (self.debug == 1):
+            #         print(i)
+            #         print(self.config[str(i)])
+            #     # publish camera_position
+            #     data = self.config[str(i)]
+            #     x = random.randrange(-2000, 2000) / 1000
+            #     y = random.randrange(-200, 200) / 1000
+            #     z = random.randrange(0, 4000) / 1000
+            #     c = random.randrange(1500, 3000) / 1000
+            #     ax = random.randrange(-1000, 1000) / 100 / 180 * math.pi
+            #     az = random.randrange(-1000, 1000) / 100 / 180 * math.pi
+            #     ay = angle((0-x,0-y,c-z), (0, 0, 1)) 
+            #     if (x > 0):
+            #         ay *= -1
+            #     px = random.randrange(-600, 600) / 1000
+            #     py = random.randrange(-600, 600) / 1000
+            #     pz = random.randrange(int(c * 1000) - 600, int(c * 1000) + 600) / 1000
+            #     cx = px - x
+            #     cy = py - y
+            #     cz = pz - z
+
+            #     if (i == 0):
+            #         x = data["x"]
+            #         y = data["y"]
+            #         z = data["z"]
+            #         ax = data["ax"] / 180 * math.pi
+            #         ay = data["ay"] / 180 * math.pi
+            #         az = data["az"] / 180 * math.pi
+
+            #     # self.publish_position("world", ("cam" + str(i) + "_position"), x, y, z, ax, ay, az)
+            #     self.publish_position("world", "p", px, py, pz, 0, 0, 0)
+            #     self.publish_position("cam1_position", "c", cx, cy, cz, 0, 0, 0)
     
     def calibration_callback(self, msg):
         self.get_logger().warning("Received new position data!")
