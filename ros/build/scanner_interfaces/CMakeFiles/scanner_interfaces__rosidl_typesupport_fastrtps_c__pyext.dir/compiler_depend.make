@@ -248,8 +248,24 @@ CMakeFiles/scanner_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_g
   rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.h \
   rosidl_generator_c/scanner_interfaces/msg/detail/tracks__type_support.h \
   rosidl_generator_c/scanner_interfaces/msg/detail/tracks__struct.h \
-  rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.h
+  rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.h \
+  rosidl_generator_c/scanner_interfaces/msg/detail/location__type_support.h \
+  rosidl_generator_c/scanner_interfaces/msg/detail/location__struct.h \
+  rosidl_generator_c/scanner_interfaces/msg/detail/location__functions.h \
+  rosidl_generator_c/scanner_interfaces/msg/detail/camera_locations__type_support.h \
+  rosidl_generator_c/scanner_interfaces/msg/detail/camera_locations__struct.h \
+  rosidl_generator_c/scanner_interfaces/msg/detail/camera_locations__functions.h
 
+
+rosidl_generator_c/scanner_interfaces/msg/detail/camera_locations__functions.h:
+
+rosidl_generator_c/scanner_interfaces/msg/detail/camera_locations__struct.h:
+
+rosidl_generator_c/scanner_interfaces/msg/detail/camera_locations__type_support.h:
+
+rosidl_generator_c/scanner_interfaces/msg/detail/location__functions.h:
+
+rosidl_generator_c/scanner_interfaces/msg/detail/location__struct.h:
 
 rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.h:
 
@@ -580,6 +596,8 @@ rosidl_generator_py/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesuppo
 /usr/include/python3.10/Python.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
+rosidl_generator_c/scanner_interfaces/msg/detail/location__type_support.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 

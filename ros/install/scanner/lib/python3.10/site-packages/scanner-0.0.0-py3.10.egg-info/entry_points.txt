@@ -1,0 +1,10 @@
+[console_scripts]
+calibrater = scanner.calibrater:main
+camera_info = scanner.camera_info:main
+camera_position = scanner.camera_position:main
+camera_tracker = scanner.camera_tracker:main
+foxglove_camera = scanner.foxglove_camera:main
+scanner = scanner.scanner:main
+test = scanner.test:main
+visualisation_vector = scanner.visualisation_vector:main
+

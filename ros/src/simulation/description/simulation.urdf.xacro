@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
+    <xacro:include filename="include.xacro" />
+
+    <link name="world"></link>
+
+    <joint name="cam0_joint" type="fixed">
+        <origin xyz="0 0 1" rpy="0 0 0"/>
+        <parent link="world"/>
+        <child link="cam0_link"/>
+    </joint>
+
+    <link name="cam0_link">
+        <visual>
+            <origin xyz="-0.03 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.06 0.15 0.15" />
+            </geometry>
+        </visual>
+        <visual>
+            <origin xyz="0.03 0 0" rpy="0 ${pi/2} 0"/>
+            <geometry>
+                <cylinder length="0.06" radius="0.04" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.12 0.15 0.15" />
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.1" x="0.12" y="0.15" z="0.15">
+            <origin xyz="0.0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <!-- <joint name="cam1_joint" type="fixed">
+        <origin xyz="2 1 1" rpy="1.3 0 0"/>
+        <parent link="world"/>
+        <child link="cam1_link"/>
+    </joint>
+
+    <link name="cam1_link">
+        <visual>
+            <origin xyz="-0.03 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.06 0.15 0.15" />
+            </geometry>
+        </visual>
+        <visual>
+            <origin xyz="0.03 0 0" rpy="0 ${pi/2} 0"/>
+            <geometry>
+                <cylinder length="0.06" radius="0.04" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.12 0.15 0.15" />
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.1" x="0.12" y="0.15" z="0.15">
+            <origin xyz="0.0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link> -->
+
+    <!-- <gazebo reference="cam0_link">
+        <material>Gazebo/Green</material>
+    </gazebo> -->
+
+    <!-- <gazebo reference="cam1_link">
+        <material>Gazebo/Red</material>
+    </gazebo> -->
+
+    <!-- <joint name="cam0_optical_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="-1.571 0 -1.571" />
+        <parent link="cam0_link" />
+        <child link="cam0_link_optical" />
+    </joint>
+
+    <link name="cam0_link_optical"></link>
+
+    <gazebo reference="cam0_link">
+        <sensor type="camera" name="cam0">
+            <update_rate>30</update_rate>
+            <visualize>true</visualize>
+            <camera name="cam0">
+                <horizontal_fov>655.67987</horizontal_fov>
+                <image>
+                    <width>1280</width>
+                    <height>720</height>
+                    <format>R8B8G8</format>
+                </image>
+                <clip>
+                    <near>0.02</near>
+                    <far>300</far>
+                </clip>
+            </camera>
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <frame_name>camera_link_optical</frame_name>
+                <min_depth>0.1</min_depth>
+                <max_depth>500</max_depth>
+            </plugin>
+        </sensor>
+    </gazebo> -->
+
+    <!-- <joint name="cam1_optical_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="-1.571 0 -1.571" />
+        <parent link="cam1_link" />
+        <child link="cam1_link_optical" />
+    </joint>
+
+    <link name="cam1_link_optical"></link>
+
+    <gazebo reference="cam1_link">
+        <sensor type="camera" name="cam1">
+            <update_rate>30</update_rate>
+            <visualize>true</visualize>
+            <camera name="cam1">
+                <horizontal_fov>655.67987</horizontal_fov>
+                <image>
+                    <width>1280</width>
+                    <height>720</height>
+                    <format>R8B8G8</format>
+                </image>
+                <clip>
+                    <near>0.02</near>
+                    <far>300</far>
+                </clip>
+            </camera>
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <frame_name>camera_link_optical</frame_name>
+                <min_depth>0.1</min_depth>
+                <max_depth>500</max_depth>
+            </plugin>
+        </sensor>
+    </gazebo> -->
+
+    <xacro:include filename="gazebo.xacro" />
+
+</robot>

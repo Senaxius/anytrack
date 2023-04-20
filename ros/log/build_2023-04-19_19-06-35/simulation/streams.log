@@ -1,0 +1,25 @@
+[0.015s] Invoking command in '/home/ALEX/3dev/ros/build/simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scannerV2:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/simulation -- -j12 -l12
+[0.048s] Invoked command in '/home/ALEX/3dev/ros/build/simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scannerV2:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/simulation -- -j12 -l12
+[0.072s] Invoking command in '/home/ALEX/3dev/ros/build/simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scannerV2:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/simulation
+[0.078s] -- Install configuration: ""
+[0.078s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/simulation/description
+[0.078s] -- Installing: /home/ALEX/3dev/ros/install/simulation/share/simulation/description/scene.urdf.xacro
+[0.079s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/simulation/launch
+[0.079s] -- Installing: /home/ALEX/3dev/ros/install/simulation/share/simulation/launch/simulation.launch.py
+[0.079s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/simulation/worlds
+[0.079s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/ament_index/resource_index/package_run_dependencies/simulation
+[0.079s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/ament_index/resource_index/parent_prefix_path/simulation
+[0.079s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/simulation/environment/ament_prefix_path.sh
+[0.079s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/simulation/environment/ament_prefix_path.dsv
+[0.079s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/simulation/environment/path.sh
+[0.079s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/simulation/environment/path.dsv
+[0.079s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/simulation/local_setup.bash
+[0.079s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/simulation/local_setup.sh
+[0.079s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/simulation/local_setup.zsh
+[0.079s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/simulation/local_setup.dsv
+[0.080s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/simulation/package.dsv
+[0.080s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/ament_index/resource_index/packages/simulation
+[0.080s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/simulation/cmake/simulationConfig.cmake
+[0.080s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/simulation/cmake/simulationConfig-version.cmake
+[0.080s] -- Up-to-date: /home/ALEX/3dev/ros/install/simulation/share/simulation/package.xml
+[0.081s] Invoked command in '/home/ALEX/3dev/ros/build/simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scannerV2:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/simulation
