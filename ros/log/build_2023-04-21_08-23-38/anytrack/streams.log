@@ -1,0 +1,21 @@
+[0.608s] Invoking command in '/home/ALEX/3dev/ros/build/anytrack': PYTHONPATH=/home/ALEX/3dev/ros/build/anytrack/prefix_override:/home/ALEX/3dev/ros/install/anytrack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ALEX/3dev/ros/build/anytrack/build --no-deps install_data
+[0.851s] running develop
+[0.990s] running egg_info
+[0.990s] writing anytrack.egg-info/PKG-INFO
+[0.990s] writing dependency_links to anytrack.egg-info/dependency_links.txt
+[0.991s] writing entry points to anytrack.egg-info/entry_points.txt
+[0.991s] writing requirements to anytrack.egg-info/requires.txt
+[0.991s] writing top-level names to anytrack.egg-info/top_level.txt
+[0.992s] reading manifest file 'anytrack.egg-info/SOURCES.txt'
+[0.993s] writing manifest file 'anytrack.egg-info/SOURCES.txt'
+[0.994s] running build_ext
+[0.994s] Creating /home/ALEX/3dev/ros/install/anytrack/lib/python3.10/site-packages/anytrack.egg-link (link to .)
+[0.995s] Installing camera_driver = anytrack.camera_driver:maincamera_info script to /home/ALEX/3dev/ros/install/anytrack/lib/anytrack
+[0.995s] Installing camera_vector script to /home/ALEX/3dev/ros/install/anytrack/lib/anytrack
+[0.995s] Installing manager script to /home/ALEX/3dev/ros/install/anytrack/lib/anytrack
+[0.995s] Installing position_manager script to /home/ALEX/3dev/ros/install/anytrack/lib/anytrack
+[0.995s] Installing tracker2D script to /home/ALEX/3dev/ros/install/anytrack/lib/anytrack
+[0.995s] 
+[0.995s] Installed /home/ALEX/3dev/ros/build/anytrack
+[0.995s] running install_data
+[1.022s] Invoked command in '/home/ALEX/3dev/ros/build/anytrack' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/build/anytrack/prefix_override:/home/ALEX/3dev/ros/install/anytrack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ALEX/3dev/ros/build/anytrack/build --no-deps install_data
