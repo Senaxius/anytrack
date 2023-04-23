@@ -1,0 +1,23 @@
+[0.584s] Invoking command in '/home/ALEX/anytrack/ros/build/anytrack': PYTHONPATH=/home/ALEX/anytrack/ros/build/anytrack/prefix_override:/home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ALEX/anytrack/ros/build/anytrack/build --no-deps install_data
+[0.839s] running develop
+[0.978s] running egg_info
+[0.978s] writing anytrack.egg-info/PKG-INFO
+[0.979s] writing dependency_links to anytrack.egg-info/dependency_links.txt
+[0.979s] writing entry points to anytrack.egg-info/entry_points.txt
+[0.979s] writing requirements to anytrack.egg-info/requires.txt
+[0.979s] writing top-level names to anytrack.egg-info/top_level.txt
+[0.980s] reading manifest file 'anytrack.egg-info/SOURCES.txt'
+[0.981s] writing manifest file 'anytrack.egg-info/SOURCES.txt'
+[0.982s] running build_ext
+[0.982s] Creating /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack.egg-link (link to .)
+[0.983s] Installing calibration´ script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[0.983s] Installing camera_detector script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[0.983s] Installing camera_driver script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[0.983s] Installing camera_info script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[0.983s] Installing camera_vector script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[0.983s] Installing manager script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[0.984s] Installing position_manager script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[0.984s] 
+[0.984s] Installed /home/ALEX/anytrack/ros/build/anytrack
+[0.984s] running install_data
+[1.010s] Invoked command in '/home/ALEX/anytrack/ros/build/anytrack' returned '0': PYTHONPATH=/home/ALEX/anytrack/ros/build/anytrack/prefix_override:/home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ALEX/anytrack/ros/build/anytrack/build --no-deps install_data

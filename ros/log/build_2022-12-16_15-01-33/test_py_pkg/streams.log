@@ -1,8 +1,8 @@
-[0.821s] Invoking command in '/home/ALEX/3dev/ros/build/test_py_pkg': PYTHONPATH=/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/test_py_pkg --uninstall --editable --build-directory /home/ALEX/3dev/ros/build/test_py_pkg/build
+[0.821s] Invoking command in '/home/ALEX/anytrack/ros/build/test_py_pkg': PYTHONPATH=/home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/anytrack/ros/install/test_py_pkg --uninstall --editable --build-directory /home/ALEX/anytrack/ros/build/test_py_pkg/build
 [1.059s] running develop
-[1.218s] Removing /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test-py-pkg.egg-link (link to .)
-[1.243s] Invoked command in '/home/ALEX/3dev/ros/build/test_py_pkg' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/test_py_pkg --uninstall --editable --build-directory /home/ALEX/3dev/ros/build/test_py_pkg/build
-[1.244s] Invoking command in '/home/ALEX/3dev/ros/src/test_py_pkg': PYTHONPATH=/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_py_pkg build --build-base /home/ALEX/3dev/ros/build/test_py_pkg/build install --prefix /home/ALEX/3dev/ros/install/test_py_pkg --record /home/ALEX/3dev/ros/build/test_py_pkg/install.log --single-version-externally-managed
+[1.218s] Removing /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test-py-pkg.egg-link (link to .)
+[1.243s] Invoked command in '/home/ALEX/anytrack/ros/build/test_py_pkg' returned '0': PYTHONPATH=/home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/anytrack/ros/install/test_py_pkg --uninstall --editable --build-directory /home/ALEX/anytrack/ros/build/test_py_pkg/build
+[1.244s] Invoking command in '/home/ALEX/anytrack/ros/src/test_py_pkg': PYTHONPATH=/home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_py_pkg build --build-base /home/ALEX/anytrack/ros/build/test_py_pkg/build install --prefix /home/ALEX/anytrack/ros/install/test_py_pkg --record /home/ALEX/anytrack/ros/build/test_py_pkg/install.log --single-version-externally-managed
 [1.467s] running egg_info
 [1.467s] writing ../../build/test_py_pkg/test_py_pkg.egg-info/PKG-INFO
 [1.467s] writing dependency_links to ../../build/test_py_pkg/test_py_pkg.egg-info/dependency_links.txt
@@ -13,41 +13,41 @@
 [1.476s] writing manifest file '../../build/test_py_pkg/test_py_pkg.egg-info/SOURCES.txt'
 [1.476s] running build
 [1.476s] running build_py
-[1.476s] copying test_py_pkg/test_client_nop.py -> /home/ALEX/3dev/ros/build/test_py_pkg/build/lib/test_py_pkg
-[1.476s] copying test_py_pkg/test_client_op.py -> /home/ALEX/3dev/ros/build/test_py_pkg/build/lib/test_py_pkg
-[1.477s] copying test_py_pkg/test_server.py -> /home/ALEX/3dev/ros/build/test_py_pkg/build/lib/test_py_pkg
-[1.477s] copying test_py_pkg/counter_publist.py -> /home/ALEX/3dev/ros/build/test_py_pkg/build/lib/test_py_pkg
+[1.476s] copying test_py_pkg/test_client_nop.py -> /home/ALEX/anytrack/ros/build/test_py_pkg/build/lib/test_py_pkg
+[1.476s] copying test_py_pkg/test_client_op.py -> /home/ALEX/anytrack/ros/build/test_py_pkg/build/lib/test_py_pkg
+[1.477s] copying test_py_pkg/test_server.py -> /home/ALEX/anytrack/ros/build/test_py_pkg/build/lib/test_py_pkg
+[1.477s] copying test_py_pkg/counter_publist.py -> /home/ALEX/anytrack/ros/build/test_py_pkg/build/lib/test_py_pkg
 [1.478s] running install
 [1.478s] running install_lib
-[1.478s] creating /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
-[1.479s] copying /home/ALEX/3dev/ros/build/test_py_pkg/build/lib/test_py_pkg/test_client_nop.py -> /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
-[1.479s] copying /home/ALEX/3dev/ros/build/test_py_pkg/build/lib/test_py_pkg/__init__.py -> /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
-[1.479s] copying /home/ALEX/3dev/ros/build/test_py_pkg/build/lib/test_py_pkg/test_client_op.py -> /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
-[1.479s] copying /home/ALEX/3dev/ros/build/test_py_pkg/build/lib/test_py_pkg/test_publisher.py -> /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
-[1.479s] copying /home/ALEX/3dev/ros/build/test_py_pkg/build/lib/test_py_pkg/test_server.py -> /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
-[1.479s] copying /home/ALEX/3dev/ros/build/test_py_pkg/build/lib/test_py_pkg/counter_publist.py -> /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
-[1.479s] copying /home/ALEX/3dev/ros/build/test_py_pkg/build/lib/test_py_pkg/test_listener.py -> /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
-[1.479s] copying /home/ALEX/3dev/ros/build/test_py_pkg/build/lib/test_py_pkg/test_node.py -> /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
-[1.480s] copying /home/ALEX/3dev/ros/build/test_py_pkg/build/lib/test_py_pkg/template.py -> /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
-[1.480s] byte-compiling /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/test_client_nop.py to test_client_nop.cpython-310.pyc
-[1.480s] byte-compiling /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/__init__.py to __init__.cpython-310.pyc
-[1.481s] byte-compiling /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/test_client_op.py to test_client_op.cpython-310.pyc
-[1.481s] byte-compiling /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/test_publisher.py to test_publisher.cpython-310.pyc
-[1.481s] byte-compiling /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/test_server.py to test_server.cpython-310.pyc
-[1.481s] byte-compiling /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/counter_publist.py to counter_publist.cpython-310.pyc
-[1.482s] byte-compiling /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/test_listener.py to test_listener.cpython-310.pyc
-[1.482s] byte-compiling /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/test_node.py to test_node.cpython-310.pyc
-[1.482s] byte-compiling /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/template.py to template.cpython-310.pyc
+[1.478s] creating /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
+[1.479s] copying /home/ALEX/anytrack/ros/build/test_py_pkg/build/lib/test_py_pkg/test_client_nop.py -> /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
+[1.479s] copying /home/ALEX/anytrack/ros/build/test_py_pkg/build/lib/test_py_pkg/__init__.py -> /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
+[1.479s] copying /home/ALEX/anytrack/ros/build/test_py_pkg/build/lib/test_py_pkg/test_client_op.py -> /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
+[1.479s] copying /home/ALEX/anytrack/ros/build/test_py_pkg/build/lib/test_py_pkg/test_publisher.py -> /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
+[1.479s] copying /home/ALEX/anytrack/ros/build/test_py_pkg/build/lib/test_py_pkg/test_server.py -> /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
+[1.479s] copying /home/ALEX/anytrack/ros/build/test_py_pkg/build/lib/test_py_pkg/counter_publist.py -> /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
+[1.479s] copying /home/ALEX/anytrack/ros/build/test_py_pkg/build/lib/test_py_pkg/test_listener.py -> /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
+[1.479s] copying /home/ALEX/anytrack/ros/build/test_py_pkg/build/lib/test_py_pkg/test_node.py -> /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
+[1.480s] copying /home/ALEX/anytrack/ros/build/test_py_pkg/build/lib/test_py_pkg/template.py -> /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
+[1.480s] byte-compiling /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/test_client_nop.py to test_client_nop.cpython-310.pyc
+[1.480s] byte-compiling /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/__init__.py to __init__.cpython-310.pyc
+[1.481s] byte-compiling /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/test_client_op.py to test_client_op.cpython-310.pyc
+[1.481s] byte-compiling /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/test_publisher.py to test_publisher.cpython-310.pyc
+[1.481s] byte-compiling /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/test_server.py to test_server.cpython-310.pyc
+[1.481s] byte-compiling /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/counter_publist.py to counter_publist.cpython-310.pyc
+[1.482s] byte-compiling /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/test_listener.py to test_listener.cpython-310.pyc
+[1.482s] byte-compiling /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/test_node.py to test_node.cpython-310.pyc
+[1.482s] byte-compiling /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/template.py to template.cpython-310.pyc
 [1.483s] running install_data
 [1.483s] running install_egg_info
-[1.484s] Copying ../../build/test_py_pkg/test_py_pkg.egg-info to /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg-0.0.0-py3.10.egg-info
+[1.484s] Copying ../../build/test_py_pkg/test_py_pkg.egg-info to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg-0.0.0-py3.10.egg-info
 [1.485s] running install_scripts
-[1.503s] Installing counter_publist script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
-[1.503s] Installing test_client_nop script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
-[1.503s] Installing test_client_op script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
-[1.504s] Installing test_listener script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
-[1.504s] Installing test_node script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
-[1.504s] Installing test_publisher script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
-[1.504s] Installing test_server script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
-[1.504s] writing list of installed files to '/home/ALEX/3dev/ros/build/test_py_pkg/install.log'
-[1.527s] Invoked command in '/home/ALEX/3dev/ros/src/test_py_pkg' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_py_pkg build --build-base /home/ALEX/3dev/ros/build/test_py_pkg/build install --prefix /home/ALEX/3dev/ros/install/test_py_pkg --record /home/ALEX/3dev/ros/build/test_py_pkg/install.log --single-version-externally-managed
+[1.503s] Installing counter_publist script to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/test_py_pkg
+[1.503s] Installing test_client_nop script to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/test_py_pkg
+[1.503s] Installing test_client_op script to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/test_py_pkg
+[1.504s] Installing test_listener script to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/test_py_pkg
+[1.504s] Installing test_node script to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/test_py_pkg
+[1.504s] Installing test_publisher script to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/test_py_pkg
+[1.504s] Installing test_server script to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/test_py_pkg
+[1.504s] writing list of installed files to '/home/ALEX/anytrack/ros/build/test_py_pkg/install.log'
+[1.527s] Invoked command in '/home/ALEX/anytrack/ros/src/test_py_pkg' returned '0': PYTHONPATH=/home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_py_pkg build --build-base /home/ALEX/anytrack/ros/build/test_py_pkg/build install --prefix /home/ALEX/anytrack/ros/install/test_py_pkg --record /home/ALEX/anytrack/ros/build/test_py_pkg/install.log --single-version-externally-managed

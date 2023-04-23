@@ -7,6 +7,8 @@
 
 import builtins  # noqa: E402, I100
 
+import math  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -172,7 +174,7 @@ class Location(metaclass=Metaclass_Location):
             assert \
                 isinstance(value, float), \
                 "The 'x' field must be of type 'float'"
-            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
                 "The 'x' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._x = value
 
@@ -187,7 +189,7 @@ class Location(metaclass=Metaclass_Location):
             assert \
                 isinstance(value, float), \
                 "The 'y' field must be of type 'float'"
-            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
                 "The 'y' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._y = value
 
@@ -202,7 +204,7 @@ class Location(metaclass=Metaclass_Location):
             assert \
                 isinstance(value, float), \
                 "The 'z' field must be of type 'float'"
-            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
                 "The 'z' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._z = value
 
@@ -217,7 +219,7 @@ class Location(metaclass=Metaclass_Location):
             assert \
                 isinstance(value, float), \
                 "The 'ax' field must be of type 'float'"
-            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
                 "The 'ax' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._ax = value
 
@@ -232,7 +234,7 @@ class Location(metaclass=Metaclass_Location):
             assert \
                 isinstance(value, float), \
                 "The 'ay' field must be of type 'float'"
-            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
                 "The 'ay' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._ay = value
 
@@ -247,6 +249,6 @@ class Location(metaclass=Metaclass_Location):
             assert \
                 isinstance(value, float), \
                 "The 'az' field must be of type 'float'"
-            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
                 "The 'az' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._az = value

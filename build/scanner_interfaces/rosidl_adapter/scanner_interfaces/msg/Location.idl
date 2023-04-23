@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from scanner_interfaces/msg/Location.msg
+// generated code does not contain a copyright notice
+
+
+module scanner_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "characteristics of a camera")
+    struct Location {
+      int8 id;
+
+      double x;
+
+      double y;
+
+      double z;
+
+      double ax;
+
+      double ay;
+
+      double az;
+    };
+  };
+};

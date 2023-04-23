@@ -8,7 +8,7 @@
 [0.210s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
 [0.210s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
 [0.211s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
-[0.211s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ALEX/3dev/ros'
+[0.211s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ALEX/anytrack/ros'
 [0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
 [0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
 [0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
@@ -125,44 +125,44 @@
 [0.260s] Level 5:colcon.colcon_core.verb:set package 'scanner' build argument 'ament_cmake_args' from command line to 'None'
 [0.260s] Level 5:colcon.colcon_core.verb:set package 'scanner' build argument 'catkin_cmake_args' from command line to 'None'
 [0.260s] Level 5:colcon.colcon_core.verb:set package 'scanner' build argument 'catkin_skip_building_tests' from command line to 'False'
-[0.260s] DEBUG:colcon.colcon_core.verb:Building package 'scanner' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ALEX/3dev/ros/build/scanner', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ALEX/3dev/ros/install/scanner', 'merge_install': False, 'path': '/home/ALEX/3dev/ros/src/scanner', 'symlink_install': True, 'test_result_base': None}
+[0.260s] DEBUG:colcon.colcon_core.verb:Building package 'scanner' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ALEX/anytrack/ros/build/scanner', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ALEX/anytrack/ros/install/scanner', 'merge_install': False, 'path': '/home/ALEX/anytrack/ros/src/scanner', 'symlink_install': True, 'test_result_base': None}
 [0.261s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
 [0.265s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
-[0.265s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ALEX/3dev/ros/src/scanner' with build type 'ament_python'
+[0.265s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ALEX/anytrack/ros/src/scanner' with build type 'ament_python'
 [0.265s] Level 1:colcon.colcon_core.shell:create_environment_hook('scanner', 'ament_prefix_path')
 [0.270s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
-[0.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/scanner/share/scanner/hook/ament_prefix_path.ps1'
-[0.271s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/3dev/ros/install/scanner/share/scanner/hook/ament_prefix_path.dsv'
-[0.272s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/scanner/share/scanner/hook/ament_prefix_path.sh'
+[0.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/scanner/share/scanner/hook/ament_prefix_path.ps1'
+[0.271s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/anytrack/ros/install/scanner/share/scanner/hook/ament_prefix_path.dsv'
+[0.272s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/scanner/share/scanner/hook/ament_prefix_path.sh'
 [0.273s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
 [0.273s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
-[0.518s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ALEX/3dev/ros/src/scanner'
+[0.518s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ALEX/anytrack/ros/src/scanner'
 [0.520s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
 [0.520s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
-[0.847s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/3dev/ros/build/scanner': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scanner
+[0.847s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/anytrack/ros/build/scanner': PYTHONPATH=/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/anytrack/ros/install/scanner --editable --build-directory /home/ALEX/anytrack/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/anytrack/ros/install/scanner
 [1.259s] Level 1:colcon.colcon_core.shell:create_environment_hook('scanner', 'pythonpath_develop')
-[1.260s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/build/scanner/share/scanner/hook/pythonpath_develop.ps1'
-[1.260s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/3dev/ros/build/scanner' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scanner
-[1.261s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/3dev/ros/build/scanner/share/scanner/hook/pythonpath_develop.dsv'
-[1.261s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/build/scanner/share/scanner/hook/pythonpath_develop.sh'
-[1.267s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner' for CMake module files
-[1.267s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner' for CMake config files
-[1.268s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner/lib'
-[1.268s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner/bin'
-[1.268s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner/lib/pkgconfig/scanner.pc'
-[1.268s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages'
+[1.260s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/build/scanner/share/scanner/hook/pythonpath_develop.ps1'
+[1.260s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/anytrack/ros/build/scanner' returned '0': PYTHONPATH=/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/anytrack/ros/install/scanner --editable --build-directory /home/ALEX/anytrack/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/anytrack/ros/install/scanner
+[1.261s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/anytrack/ros/build/scanner/share/scanner/hook/pythonpath_develop.dsv'
+[1.261s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/build/scanner/share/scanner/hook/pythonpath_develop.sh'
+[1.267s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner' for CMake module files
+[1.267s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner' for CMake config files
+[1.268s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner/lib'
+[1.268s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner/bin'
+[1.268s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner/lib/pkgconfig/scanner.pc'
+[1.268s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages'
 [1.268s] Level 1:colcon.colcon_core.shell:create_environment_hook('scanner', 'pythonpath')
-[1.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/scanner/share/scanner/hook/pythonpath.ps1'
-[1.270s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/3dev/ros/install/scanner/share/scanner/hook/pythonpath.dsv'
-[1.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/scanner/share/scanner/hook/pythonpath.sh'
-[1.271s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner/bin'
+[1.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/scanner/share/scanner/hook/pythonpath.ps1'
+[1.270s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/anytrack/ros/install/scanner/share/scanner/hook/pythonpath.dsv'
+[1.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/scanner/share/scanner/hook/pythonpath.sh'
+[1.271s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner/bin'
 [1.271s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scanner)
-[1.272s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner/share/scanner/package.ps1'
-[1.273s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ALEX/3dev/ros/install/scanner/share/scanner/package.dsv'
-[1.274s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner/share/scanner/package.sh'
-[1.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner/share/scanner/package.bash'
-[1.276s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner/share/scanner/package.zsh'
-[1.277s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ALEX/3dev/ros/install/scanner/share/colcon-core/packages/scanner)
+[1.272s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner/share/scanner/package.ps1'
+[1.273s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ALEX/anytrack/ros/install/scanner/share/scanner/package.dsv'
+[1.274s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner/share/scanner/package.sh'
+[1.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner/share/scanner/package.bash'
+[1.276s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner/share/scanner/package.zsh'
+[1.277s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ALEX/anytrack/ros/install/scanner/share/colcon-core/packages/scanner)
 [1.277s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
 [1.277s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
 [1.278s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
@@ -173,13 +173,13 @@
 [1.288s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
 [1.291s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
 [1.292s] DEBUG:colcon.colcon_core.event_reactor:joined thread
-[1.293s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.ps1'
-[1.294s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/3dev/ros/install/_local_setup_util_ps1.py'
-[1.296s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.ps1'
-[1.297s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.sh'
-[1.298s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/3dev/ros/install/_local_setup_util_sh.py'
-[1.298s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.sh'
-[1.300s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.bash'
-[1.300s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.bash'
-[1.302s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.zsh'
-[1.302s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.zsh'
+[1.293s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.ps1'
+[1.294s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/anytrack/ros/install/_local_setup_util_ps1.py'
+[1.296s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.ps1'
+[1.297s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.sh'
+[1.298s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/anytrack/ros/install/_local_setup_util_sh.py'
+[1.298s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.sh'
+[1.300s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.bash'
+[1.300s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.bash'
+[1.302s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.zsh'
+[1.302s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.zsh'

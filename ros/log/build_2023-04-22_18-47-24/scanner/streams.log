@@ -1,0 +1,28 @@
+[1.505s] Invoking command in '/home/ALEX/anytrack/ros/src/scanner': PYTHONPATH=/home/ALEX/anytrack/ros/build/scanner/prefix_override:/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/scanner build --build-base /home/ALEX/anytrack/ros/build/scanner/build install --record /home/ALEX/anytrack/ros/build/scanner/install.log --single-version-externally-managed
+[1.774s] running egg_info
+[1.775s] writing ../../build/scanner/scanner.egg-info/PKG-INFO
+[1.775s] writing dependency_links to ../../build/scanner/scanner.egg-info/dependency_links.txt
+[1.776s] writing entry points to ../../build/scanner/scanner.egg-info/entry_points.txt
+[1.776s] writing requirements to ../../build/scanner/scanner.egg-info/requires.txt
+[1.776s] writing top-level names to ../../build/scanner/scanner.egg-info/top_level.txt
+[1.779s] reading manifest file '../../build/scanner/scanner.egg-info/SOURCES.txt'
+[1.781s] writing manifest file '../../build/scanner/scanner.egg-info/SOURCES.txt'
+[1.781s] running build
+[1.781s] running build_py
+[1.781s] running install
+[1.782s] running install_lib
+[1.784s] running install_data
+[1.785s] running install_egg_info
+[1.787s] removing '/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner-0.0.0-py3.10.egg-info' (and everything under it)
+[1.788s] Copying ../../build/scanner/scanner.egg-info to /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner-0.0.0-py3.10.egg-info
+[1.790s] running install_scripts
+[1.819s] Installing calibrater script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.820s] Installing camera_info script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.820s] Installing camera_position script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.820s] Installing camera_tracker script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.821s] Installing foxglove_camera script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.821s] Installing scanner script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.821s] Installing test script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.821s] Installing visualisation_vector script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.822s] writing list of installed files to '/home/ALEX/anytrack/ros/build/scanner/install.log'
+[1.888s] Invoked command in '/home/ALEX/anytrack/ros/src/scanner' returned '0': PYTHONPATH=/home/ALEX/anytrack/ros/build/scanner/prefix_override:/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/scanner build --build-base /home/ALEX/anytrack/ros/build/scanner/build install --record /home/ALEX/anytrack/ros/build/scanner/install.log --single-version-externally-managed

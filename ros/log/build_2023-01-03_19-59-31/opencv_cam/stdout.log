@@ -11,10 +11,10 @@
 -- Using RMW implementation 'rmw_fastrtps_cpp' as default
 -- Found class_loader: 2.2.0 (/opt/ros/humble/share/class_loader/cmake)
 -- Found rclcpp_components: 16.0.1 (/opt/ros/humble/share/rclcpp_components/cmake)
--- Found ros2_shared: 0.1.0 (/home/ALEX/3dev/ros/install/ros2_shared/share/ros2_shared/cmake)
+-- Found ros2_shared: 0.1.0 (/home/ALEX/anytrack/ros/install/ros2_shared/share/ros2_shared/cmake)
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/ALEX/3dev/ros/build/opencv_cam
+-- Build files have been written to: /home/ALEX/anytrack/ros/build/opencv_cam
 [ 12%] [32mBuilding CXX object CMakeFiles/subscriber_node.dir/src/subscriber_node.cpp.o[0m
 [ 25%] [32mBuilding CXX object CMakeFiles/opencv_cam_node.dir/src/opencv_cam_node.cpp.o[0m
 [ 37%] [32m[1mLinking CXX shared library libsubscriber_node.so[0m

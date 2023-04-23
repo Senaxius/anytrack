@@ -13,12 +13,12 @@ running install
 running install_lib
 running install_data
 running install_egg_info
-removing '/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner-0.0.0-py3.10.egg-info' (and everything under it)
-Copying ../../build/scanner/scanner.egg-info to /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner-0.0.0-py3.10.egg-info
+removing '/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/scanner/scanner.egg-info to /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner-0.0.0-py3.10.egg-info
 running install_scripts
-Installing ball_scanner script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
-Installing camera_info_publisher script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
-Installing camera_publisher script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
-Installing test_vec_publisher script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
-Installing tf_broadcaster script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
-writing list of installed files to '/home/ALEX/3dev/ros/build/scanner/install.log'
+Installing ball_scanner script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+Installing camera_info_publisher script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+Installing camera_publisher script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+Installing test_vec_publisher script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+Installing tf_broadcaster script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+writing list of installed files to '/home/ALEX/anytrack/ros/build/scanner/install.log'

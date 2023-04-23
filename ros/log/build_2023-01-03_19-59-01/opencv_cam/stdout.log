@@ -27,4 +27,4 @@
 -- Found class_loader: 2.2.0 (/opt/ros/humble/share/class_loader/cmake)
 -- Found rclcpp_components: 16.0.1 (/opt/ros/humble/share/rclcpp_components/cmake)
 -- Configuring incomplete, errors occurred!
-See also "/home/ALEX/3dev/ros/build/opencv_cam/CMakeFiles/CMakeOutput.log".
+See also "/home/ALEX/anytrack/ros/build/opencv_cam/CMakeFiles/CMakeOutput.log".

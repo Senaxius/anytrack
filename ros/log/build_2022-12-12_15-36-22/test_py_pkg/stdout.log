@@ -8,14 +8,14 @@ writing top-level names to test_py_pkg.egg-info/top_level.txt
 reading manifest file 'test_py_pkg.egg-info/SOURCES.txt'
 writing manifest file 'test_py_pkg.egg-info/SOURCES.txt'
 running build_ext
-Creating /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test-py-pkg.egg-link (link to .)
-Installing counter_publist script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
-Installing test_client_nop script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
-Installing test_client_op script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
-Installing test_listener script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
-Installing test_node script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
-Installing test_publisher script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
-Installing test_server script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
+Creating /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test-py-pkg.egg-link (link to .)
+Installing counter_publist script to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/test_py_pkg
+Installing test_client_nop script to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/test_py_pkg
+Installing test_client_op script to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/test_py_pkg
+Installing test_listener script to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/test_py_pkg
+Installing test_node script to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/test_py_pkg
+Installing test_publisher script to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/test_py_pkg
+Installing test_server script to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/test_py_pkg
 
-Installed /home/ALEX/3dev/ros/build/test_py_pkg
+Installed /home/ALEX/anytrack/ros/build/test_py_pkg
 running install_data

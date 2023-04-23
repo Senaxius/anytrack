@@ -1,9 +1,9 @@
 {
   "package_name": "scanner_interfaces",
   "non_idl_tuples": [
-    "/home/ALEX/3dev/ros/src/scanner_interfaces:msg/Object.msg",
-    "/home/ALEX/3dev/ros/src/scanner_interfaces:msg/Tracks.msg",
-    "/home/ALEX/3dev/ros/src/scanner_interfaces:msg/Location.msg",
-    "/home/ALEX/3dev/ros/src/scanner_interfaces:msg/CameraLocations.msg"
+    "/home/ALEX/anytrack/ros/src/scanner_interfaces:msg/Object.msg",
+    "/home/ALEX/anytrack/ros/src/scanner_interfaces:msg/Tracks.msg",
+    "/home/ALEX/anytrack/ros/src/scanner_interfaces:msg/Location.msg",
+    "/home/ALEX/anytrack/ros/src/scanner_interfaces:msg/CameraLocations.msg"
   ]
 }

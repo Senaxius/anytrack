@@ -8,7 +8,7 @@
 [0.182s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
 [0.182s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
 [0.182s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
-[0.182s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ALEX/3dev/ros'
+[0.182s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ALEX/anytrack/ros'
 [0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
 [0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
 [0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
@@ -125,62 +125,62 @@
 [0.226s] Level 5:colcon.colcon_core.verb:set package 'scanner_interfaces' build argument 'ament_cmake_args' from command line to 'None'
 [0.226s] Level 5:colcon.colcon_core.verb:set package 'scanner_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
 [0.226s] Level 5:colcon.colcon_core.verb:set package 'scanner_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
-[0.226s] DEBUG:colcon.colcon_core.verb:Building package 'scanner_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ALEX/3dev/ros/build/scanner_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ALEX/3dev/ros/install/scanner_interfaces', 'merge_install': False, 'path': '/home/ALEX/3dev/ros/src/scanner_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.226s] DEBUG:colcon.colcon_core.verb:Building package 'scanner_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ALEX/anytrack/ros/build/scanner_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ALEX/anytrack/ros/install/scanner_interfaces', 'merge_install': False, 'path': '/home/ALEX/anytrack/ros/src/scanner_interfaces', 'symlink_install': False, 'test_result_base': None}
 [0.226s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
 [0.231s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
-[0.231s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ALEX/3dev/ros/src/scanner_interfaces' with build type 'ament_cmake'
-[0.231s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ALEX/3dev/ros/src/scanner_interfaces'
+[0.231s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ALEX/anytrack/ros/src/scanner_interfaces' with build type 'ament_cmake'
+[0.231s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ALEX/anytrack/ros/src/scanner_interfaces'
 [0.236s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
 [0.236s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
 [0.236s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
-[0.247s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/3dev/ros/build/scanner_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/scanner_interfaces -- -j12 -l12
-[3.207s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/3dev/ros/build/scanner_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/scanner_interfaces -- -j12 -l12
-[3.268s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/3dev/ros/build/scanner_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/scanner_interfaces
+[0.247s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/anytrack/ros/build/scanner_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/scanner_interfaces -- -j12 -l12
+[3.207s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/anytrack/ros/build/scanner_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/scanner_interfaces -- -j12 -l12
+[3.268s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/anytrack/ros/build/scanner_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/anytrack/ros/build/scanner_interfaces
 [3.332s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scanner_interfaces)
-[3.333s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/3dev/ros/build/scanner_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/scanner_interfaces
-[3.338s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_interfaces' for CMake module files
-[3.339s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_interfaces' for CMake config files
+[3.333s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/anytrack/ros/build/scanner_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/anytrack/ros/build/scanner_interfaces
+[3.338s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_interfaces' for CMake module files
+[3.339s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_interfaces' for CMake config files
 [3.339s] Level 1:colcon.colcon_core.shell:create_environment_hook('scanner_interfaces', 'cmake_prefix_path')
-[3.341s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/hook/cmake_prefix_path.ps1'
-[3.342s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/hook/cmake_prefix_path.dsv'
-[3.342s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/hook/cmake_prefix_path.sh'
-[3.343s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_interfaces/lib'
+[3.341s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/hook/cmake_prefix_path.ps1'
+[3.342s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/hook/cmake_prefix_path.dsv'
+[3.342s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/hook/cmake_prefix_path.sh'
+[3.343s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_interfaces/lib'
 [3.343s] Level 1:colcon.colcon_core.shell:create_environment_hook('scanner_interfaces', 'ld_library_path_lib')
-[3.344s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/hook/ld_library_path_lib.ps1'
-[3.344s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/hook/ld_library_path_lib.dsv'
-[3.345s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/hook/ld_library_path_lib.sh'
-[3.345s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_interfaces/bin'
-[3.345s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_interfaces/lib/pkgconfig/scanner_interfaces.pc'
-[3.346s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_interfaces/lib/python3.10/site-packages'
-[3.346s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_interfaces/bin'
-[3.348s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/package.ps1'
-[3.349s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/package.dsv'
-[3.349s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/package.sh'
-[3.350s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/package.bash'
-[3.350s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/package.zsh'
-[3.351s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ALEX/3dev/ros/install/scanner_interfaces/share/colcon-core/packages/scanner_interfaces)
+[3.344s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/hook/ld_library_path_lib.ps1'
+[3.344s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/hook/ld_library_path_lib.dsv'
+[3.345s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/hook/ld_library_path_lib.sh'
+[3.345s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_interfaces/bin'
+[3.345s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_interfaces/lib/pkgconfig/scanner_interfaces.pc'
+[3.346s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_interfaces/lib/python3.10/site-packages'
+[3.346s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_interfaces/bin'
+[3.348s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/package.ps1'
+[3.349s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/package.dsv'
+[3.349s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/package.sh'
+[3.350s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/package.bash'
+[3.350s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/package.zsh'
+[3.351s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ALEX/anytrack/ros/install/scanner_interfaces/share/colcon-core/packages/scanner_interfaces)
 [3.406s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scanner_interfaces)
-[3.409s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_interfaces' for CMake module files
-[3.409s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_interfaces' for CMake config files
+[3.409s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_interfaces' for CMake module files
+[3.409s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_interfaces' for CMake config files
 [3.410s] Level 1:colcon.colcon_core.shell:create_environment_hook('scanner_interfaces', 'cmake_prefix_path')
-[3.411s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/hook/cmake_prefix_path.ps1'
-[3.411s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/hook/cmake_prefix_path.dsv'
-[3.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/hook/cmake_prefix_path.sh'
-[3.412s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_interfaces/lib'
+[3.411s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/hook/cmake_prefix_path.ps1'
+[3.411s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/hook/cmake_prefix_path.dsv'
+[3.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/hook/cmake_prefix_path.sh'
+[3.412s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_interfaces/lib'
 [3.412s] Level 1:colcon.colcon_core.shell:create_environment_hook('scanner_interfaces', 'ld_library_path_lib')
-[3.413s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/hook/ld_library_path_lib.ps1'
-[3.414s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/hook/ld_library_path_lib.dsv'
-[3.414s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/hook/ld_library_path_lib.sh'
-[3.415s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_interfaces/bin'
-[3.415s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_interfaces/lib/pkgconfig/scanner_interfaces.pc'
-[3.415s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_interfaces/lib/python3.10/site-packages'
-[3.415s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_interfaces/bin'
-[3.417s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/package.ps1'
-[3.417s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/package.dsv'
-[3.418s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/package.sh'
-[3.418s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/package.bash'
-[3.418s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/package.zsh'
-[3.419s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ALEX/3dev/ros/install/scanner_interfaces/share/colcon-core/packages/scanner_interfaces)
+[3.413s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/hook/ld_library_path_lib.ps1'
+[3.414s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/hook/ld_library_path_lib.dsv'
+[3.414s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/hook/ld_library_path_lib.sh'
+[3.415s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_interfaces/bin'
+[3.415s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_interfaces/lib/pkgconfig/scanner_interfaces.pc'
+[3.415s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_interfaces/lib/python3.10/site-packages'
+[3.415s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_interfaces/bin'
+[3.417s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/package.ps1'
+[3.417s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/package.dsv'
+[3.418s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/package.sh'
+[3.418s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/package.bash'
+[3.418s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/package.zsh'
+[3.419s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ALEX/anytrack/ros/install/scanner_interfaces/share/colcon-core/packages/scanner_interfaces)
 [3.419s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
 [3.419s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
 [3.419s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
@@ -191,13 +191,13 @@
 [3.429s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
 [3.432s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
 [3.432s] DEBUG:colcon.colcon_core.event_reactor:joined thread
-[3.434s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.ps1'
-[3.435s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/3dev/ros/install/_local_setup_util_ps1.py'
-[3.436s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.ps1'
-[3.438s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.sh'
-[3.438s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/3dev/ros/install/_local_setup_util_sh.py'
-[3.439s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.sh'
-[3.440s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.bash'
-[3.441s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.bash'
-[3.443s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.zsh'
-[3.443s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.zsh'
+[3.434s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.ps1'
+[3.435s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/anytrack/ros/install/_local_setup_util_ps1.py'
+[3.436s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.ps1'
+[3.438s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.sh'
+[3.438s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/anytrack/ros/install/_local_setup_util_sh.py'
+[3.439s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.sh'
+[3.440s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.bash'
+[3.441s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.bash'
+[3.443s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.zsh'
+[3.443s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.zsh'

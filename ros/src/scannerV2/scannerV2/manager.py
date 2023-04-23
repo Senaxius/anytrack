@@ -109,7 +109,7 @@ class manager(Node):
             name=('position_manager'),
             parameters=[
                 {"device_count": length},
-                {"config_path": '/home/ALEX/3dev/config/camera_positions.json'}
+                {"config_path": '/home/ALEX/anytrack/config/camera_positions.json'}
             ]
         )
         ld.add_action(position_manager)

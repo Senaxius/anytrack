@@ -1,0 +1,44 @@
+[1.413s] Invoking command in '/home/ALEX/anytrack/ros/build/anytrack': PYTHONPATH=/home/ALEX/anytrack/ros/build/anytrack/prefix_override:/home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/ALEX/anytrack/ros/build/anytrack/build
+[1.668s] running develop
+[1.833s] Removing /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack.egg-link (link to .)
+[1.895s] Invoked command in '/home/ALEX/anytrack/ros/build/anytrack' returned '0': PYTHONPATH=/home/ALEX/anytrack/ros/build/anytrack/prefix_override:/home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/ALEX/anytrack/ros/build/anytrack/build
+[1.896s] Invoking command in '/home/ALEX/anytrack/ros/src/anytrack': PYTHONPATH=/home/ALEX/anytrack/ros/build/anytrack/prefix_override:/home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/anytrack build --build-base /home/ALEX/anytrack/ros/build/anytrack/build install --record /home/ALEX/anytrack/ros/build/anytrack/install.log --single-version-externally-managed
+[2.253s] running egg_info
+[2.254s] writing ../../build/anytrack/anytrack.egg-info/PKG-INFO
+[2.254s] writing dependency_links to ../../build/anytrack/anytrack.egg-info/dependency_links.txt
+[2.255s] writing entry points to ../../build/anytrack/anytrack.egg-info/entry_points.txt
+[2.255s] writing requirements to ../../build/anytrack/anytrack.egg-info/requires.txt
+[2.255s] writing top-level names to ../../build/anytrack/anytrack.egg-info/top_level.txt
+[2.258s] reading manifest file '../../build/anytrack/anytrack.egg-info/SOURCES.txt'
+[2.260s] writing manifest file '../../build/anytrack/anytrack.egg-info/SOURCES.txt'
+[2.260s] running build
+[2.260s] running build_py
+[2.261s] running install
+[2.261s] running install_lib
+[2.262s] creating /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack
+[2.263s] copying /home/ALEX/anytrack/ros/build/anytrack/build/lib/anytrack/manager.py -> /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack
+[2.263s] copying /home/ALEX/anytrack/ros/build/anytrack/build/lib/anytrack/position_manager.py -> /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack
+[2.263s] copying /home/ALEX/anytrack/ros/build/anytrack/build/lib/anytrack/camera_detector.py -> /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack
+[2.263s] copying /home/ALEX/anytrack/ros/build/anytrack/build/lib/anytrack/camera_info.py -> /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack
+[2.263s] copying /home/ALEX/anytrack/ros/build/anytrack/build/lib/anytrack/camera_vector.py -> /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack
+[2.264s] copying /home/ALEX/anytrack/ros/build/anytrack/build/lib/anytrack/camera_driver.py -> /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack
+[2.264s] copying /home/ALEX/anytrack/ros/build/anytrack/build/lib/anytrack/__init__.py -> /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack
+[2.265s] byte-compiling /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack/manager.py to manager.cpython-310.pyc
+[2.266s] byte-compiling /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack/position_manager.py to position_manager.cpython-310.pyc
+[2.269s] byte-compiling /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack/camera_detector.py to camera_detector.cpython-310.pyc
+[2.270s] byte-compiling /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack/camera_info.py to camera_info.cpython-310.pyc
+[2.271s] byte-compiling /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack/camera_vector.py to camera_vector.cpython-310.pyc
+[2.273s] byte-compiling /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack/camera_driver.py to camera_driver.cpython-310.pyc
+[2.274s] byte-compiling /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack/__init__.py to __init__.cpython-310.pyc
+[2.274s] running install_data
+[2.274s] running install_egg_info
+[2.277s] Copying ../../build/anytrack/anytrack.egg-info to /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack-0.0.0-py3.10.egg-info
+[2.279s] running install_scripts
+[2.310s] Installing camera_detector script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[2.311s] Installing camera_driver script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[2.311s] Installing camera_info script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[2.312s] Installing camera_vector script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[2.312s] Installing manager script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[2.312s] Installing position_manager script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[2.313s] writing list of installed files to '/home/ALEX/anytrack/ros/build/anytrack/install.log'
+[2.371s] Invoked command in '/home/ALEX/anytrack/ros/src/anytrack' returned '0': PYTHONPATH=/home/ALEX/anytrack/ros/build/anytrack/prefix_override:/home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/anytrack build --build-base /home/ALEX/anytrack/ros/build/anytrack/build install --record /home/ALEX/anytrack/ros/build/anytrack/install.log --single-version-externally-managed

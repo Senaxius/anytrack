@@ -1,4 +1,4 @@
-[0.581s] Invoking command in '/home/ALEX/3dev/ros/build/scanner': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scanner
+[0.581s] Invoking command in '/home/ALEX/anytrack/ros/build/scanner': PYTHONPATH=/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/anytrack/ros/install/scanner --editable --build-directory /home/ALEX/anytrack/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/anytrack/ros/install/scanner
 [0.825s] running develop
 [0.965s] running egg_info
 [0.965s] writing scanner.egg-info/PKG-INFO
@@ -9,9 +9,9 @@
 [0.967s] reading manifest file 'scanner.egg-info/SOURCES.txt'
 [0.968s] writing manifest file 'scanner.egg-info/SOURCES.txt'
 [0.969s] running build_ext
-[0.969s] Creating /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner.egg-link (link to .)
-[0.970s] Installing scanner script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[0.969s] Creating /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner.egg-link (link to .)
+[0.970s] Installing scanner script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
 [0.970s] 
-[0.970s] Installed /home/ALEX/3dev/ros/build/scanner
+[0.970s] Installed /home/ALEX/anytrack/ros/build/scanner
 [0.970s] running install_data
-[0.995s] Invoked command in '/home/ALEX/3dev/ros/build/scanner' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scanner
+[0.995s] Invoked command in '/home/ALEX/anytrack/ros/build/scanner' returned '0': PYTHONPATH=/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/anytrack/ros/install/scanner --editable --build-directory /home/ALEX/anytrack/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/anytrack/ros/install/scanner

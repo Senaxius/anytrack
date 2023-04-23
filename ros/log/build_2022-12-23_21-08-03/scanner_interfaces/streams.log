@@ -1,4 +1,4 @@
-[0.256s] Invoking command in '/home/ALEX/3dev/ros/build/scanner_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/scanner_interfaces -- -j12 -l12
+[0.256s] Invoking command in '/home/ALEX/anytrack/ros/build/scanner_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/scanner_interfaces -- -j12 -l12
 [0.315s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
 [0.460s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
 [0.463s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
@@ -13,7 +13,7 @@
 [1.187s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 [1.207s] -- Configuring done
 [1.244s] -- Generating done
-[1.246s] -- Build files have been written to: /home/ALEX/3dev/ros/build/scanner_interfaces
+[1.246s] -- Build files have been written to: /home/ALEX/anytrack/ros/build/scanner_interfaces
 [1.265s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
 [1.274s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
 [1.282s] [  6%] Built target ament_cmake_python_copy_scanner_interfaces
@@ -78,136 +78,136 @@
 [3.144s] [100%] Built target scanner_interfaces__rosidl_typesupport_c__pyext
 [3.145s] [100%] Built target scanner_interfaces__rosidl_typesupport_introspection_c__pyext
 [3.151s] [100%] Built target scanner_interfaces__rosidl_typesupport_fastrtps_c__pyext
-[3.161s] Invoked command in '/home/ALEX/3dev/ros/build/scanner_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/scanner_interfaces -- -j12 -l12
-[3.205s] Invoking command in '/home/ALEX/3dev/ros/build/scanner_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/scanner_interfaces
+[3.161s] Invoked command in '/home/ALEX/anytrack/ros/build/scanner_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/scanner_interfaces -- -j12 -l12
+[3.205s] Invoking command in '/home/ALEX/anytrack/ros/build/scanner_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/anytrack/ros/build/scanner_interfaces
 [3.212s] -- Install configuration: ""
-[3.212s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/ament_index/resource_index/rosidl_interfaces/scanner_interfaces
-[3.212s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces
-[3.212s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg
-[3.212s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/camera_xy.h
-[3.213s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/rosidl_generator_c__visibility_control.h
-[3.213s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail
-[3.213s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__struct.h
-[3.213s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__functions.h
-[3.213s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__type_support.h
-[3.213s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__functions.c
-[3.213s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/environment/library_path.sh
-[3.213s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/environment/library_path.dsv
-[3.213s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_generator_c.so
-[3.214s] -- Set runtime path of "/home/ALEX/3dev/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_generator_c.so" to ""
-[3.214s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces
-[3.214s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg
-[3.214s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
-[3.214s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail
-[3.214s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__rosidl_typesupport_fastrtps_c.h
-[3.214s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_fastrtps_c.so
-[3.215s] -- Set runtime path of "/home/ALEX/3dev/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
-[3.215s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces
-[3.215s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg
-[3.215s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
-[3.215s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail
-[3.215s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__rosidl_typesupport_introspection_c.h
-[3.215s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__type_support.c
-[3.215s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_introspection_c.so
-[3.215s] -- Set runtime path of "/home/ALEX/3dev/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_introspection_c.so" to ""
-[3.216s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_c.so
-[3.216s] -- Set runtime path of "/home/ALEX/3dev/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_c.so" to ""
-[3.216s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces
-[3.216s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg
-[3.216s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/camera_xy.hpp
-[3.217s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail
-[3.217s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__builder.hpp
-[3.217s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__traits.hpp
-[3.217s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__struct.hpp
-[3.217s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces
-[3.217s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg
-[3.217s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
-[3.217s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail
-[3.218s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__rosidl_typesupport_fastrtps_cpp.hpp
-[3.218s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/dds_fastrtps
-[3.218s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_fastrtps_cpp.so
-[3.218s] -- Set runtime path of "/home/ALEX/3dev/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
-[3.218s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces
-[3.218s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg
-[3.218s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail
-[3.218s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__rosidl_typesupport_introspection_cpp.hpp
-[3.218s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__type_support.cpp
-[3.219s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_introspection_cpp.so
-[3.219s] -- Set runtime path of "/home/ALEX/3dev/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
-[3.219s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_cpp.so
-[3.219s] -- Set runtime path of "/home/ALEX/3dev/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_cpp.so" to ""
-[3.219s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/environment/pythonpath.sh
-[3.219s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/environment/pythonpath.dsv
-[3.220s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces-0.0.0-py3.10.egg-info
-[3.220s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
-[3.220s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
-[3.220s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
-[3.220s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces-0.0.0-py3.10.egg-info/top_level.txt
-[3.220s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces
-[3.220s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_introspection_c.c
-[3.220s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
-[3.221s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/__init__.py
-[3.221s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/libscanner_interfaces__rosidl_generator_py.so
-[3.221s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_c.c
-[3.221s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-[3.221s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/msg
-[3.221s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/msg/_camera_xy_s.c
-[3.221s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/msg/_camera_xy.py
-[3.222s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/msg/__init__.py
-[3.222s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
-[3.222s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
-[3.255s] Listing '/home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces'...
-[3.255s] Compiling '/home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/__init__.py'...
-[3.256s] Listing '/home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/msg'...
-[3.256s] Compiling '/home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/msg/__init__.py'...
-[3.256s] Compiling '/home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/msg/_camera_xy.py'...
-[3.259s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
-[3.260s] -- Set runtime path of "/home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
-[3.260s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
-[3.260s] -- Set runtime path of "/home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
-[3.260s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
-[3.261s] -- Set runtime path of "/home/ALEX/3dev/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
-[3.261s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_generator_py.so
-[3.261s] -- Set runtime path of "/home/ALEX/3dev/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_generator_py.so" to ""
-[3.262s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/msg/CameraXY.idl
-[3.262s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/msg/CameraXY.msg
-[3.262s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/ament_index/resource_index/package_run_dependencies/scanner_interfaces
-[3.262s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/share/ament_index/resource_index/parent_prefix_path/scanner_interfaces
-[3.262s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/environment/ament_prefix_path.sh
-[3.262s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/environment/ament_prefix_path.dsv
-[3.262s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/environment/path.sh
-[3.263s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/environment/path.dsv
-[3.263s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/local_setup.bash
-[3.263s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/local_setup.sh
-[3.263s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/local_setup.zsh
-[3.263s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/local_setup.dsv
-[3.263s] -- Installing: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/package.dsv
-[3.263s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/ament_index/resource_index/packages/scanner_interfaces
-[3.263s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_generator_cExport.cmake
-[3.264s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_generator_cExport-noconfig.cmake
-[3.264s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
-[3.264s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
-[3.264s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfaces__rosidl_typesupport_introspection_cExport.cmake
-[3.264s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
-[3.264s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfaces__rosidl_typesupport_cExport.cmake
-[3.264s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfaces__rosidl_typesupport_cExport-noconfig.cmake
-[3.265s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_generator_cppExport.cmake
-[3.265s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
-[3.265s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
-[3.265s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfaces__rosidl_typesupport_introspection_cppExport.cmake
-[3.265s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
-[3.265s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfaces__rosidl_typesupport_cppExport.cmake
-[3.265s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
-[3.265s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_generator_pyExport.cmake
-[3.266s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_generator_pyExport-noconfig.cmake
-[3.266s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/rosidl_cmake-extras.cmake
-[3.266s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
-[3.266s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
-[3.266s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/ament_cmake_export_targets-extras.cmake
-[3.266s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
-[3.266s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
-[3.266s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
-[3.266s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfacesConfig.cmake
-[3.266s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfacesConfig-version.cmake
-[3.267s] -- Up-to-date: /home/ALEX/3dev/ros/install/scanner_interfaces/share/scanner_interfaces/package.xml
-[3.270s] Invoked command in '/home/ALEX/3dev/ros/build/scanner_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/scanner_interfaces
+[3.212s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/ament_index/resource_index/rosidl_interfaces/scanner_interfaces
+[3.212s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces
+[3.212s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg
+[3.212s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/camera_xy.h
+[3.213s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/rosidl_generator_c__visibility_control.h
+[3.213s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail
+[3.213s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__struct.h
+[3.213s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__functions.h
+[3.213s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__type_support.h
+[3.213s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__functions.c
+[3.213s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/environment/library_path.sh
+[3.213s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/environment/library_path.dsv
+[3.213s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_generator_c.so
+[3.214s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_generator_c.so" to ""
+[3.214s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces
+[3.214s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg
+[3.214s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.214s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail
+[3.214s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__rosidl_typesupport_fastrtps_c.h
+[3.214s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_fastrtps_c.so
+[3.215s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[3.215s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces
+[3.215s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg
+[3.215s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.215s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail
+[3.215s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__rosidl_typesupport_introspection_c.h
+[3.215s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__type_support.c
+[3.215s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_introspection_c.so
+[3.215s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[3.216s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_c.so
+[3.216s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_c.so" to ""
+[3.216s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces
+[3.216s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg
+[3.216s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/camera_xy.hpp
+[3.217s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail
+[3.217s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__builder.hpp
+[3.217s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__traits.hpp
+[3.217s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__struct.hpp
+[3.217s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces
+[3.217s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg
+[3.217s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.217s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail
+[3.218s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__rosidl_typesupport_fastrtps_cpp.hpp
+[3.218s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/dds_fastrtps
+[3.218s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[3.218s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[3.218s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces
+[3.218s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg
+[3.218s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail
+[3.218s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__rosidl_typesupport_introspection_cpp.hpp
+[3.218s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/include/scanner_interfaces/scanner_interfaces/msg/detail/camera_xy__type_support.cpp
+[3.219s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_introspection_cpp.so
+[3.219s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[3.219s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_cpp.so
+[3.219s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_typesupport_cpp.so" to ""
+[3.219s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/environment/pythonpath.sh
+[3.219s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/environment/pythonpath.dsv
+[3.220s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces-0.0.0-py3.10.egg-info
+[3.220s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[3.220s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[3.220s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[3.220s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[3.220s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces
+[3.220s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[3.220s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.221s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/__init__.py
+[3.221s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/libscanner_interfaces__rosidl_generator_py.so
+[3.221s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_c.c
+[3.221s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/_scanner_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.221s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/msg
+[3.221s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/msg/_camera_xy_s.c
+[3.221s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/msg/_camera_xy.py
+[3.222s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/msg/__init__.py
+[3.222s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.222s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.255s] Listing '/home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces'...
+[3.255s] Compiling '/home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/__init__.py'...
+[3.256s] Listing '/home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/msg'...
+[3.256s] Compiling '/home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/msg/__init__.py'...
+[3.256s] Compiling '/home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/msg/_camera_xy.py'...
+[3.259s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.260s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.260s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.260s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.260s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.261s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/scanner_interfaces/local/lib/python3.10/dist-packages/scanner_interfaces/scanner_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.261s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_generator_py.so
+[3.261s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/scanner_interfaces/lib/libscanner_interfaces__rosidl_generator_py.so" to ""
+[3.262s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/msg/CameraXY.idl
+[3.262s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/msg/CameraXY.msg
+[3.262s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/ament_index/resource_index/package_run_dependencies/scanner_interfaces
+[3.262s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/ament_index/resource_index/parent_prefix_path/scanner_interfaces
+[3.262s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/environment/ament_prefix_path.sh
+[3.262s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/environment/ament_prefix_path.dsv
+[3.262s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/environment/path.sh
+[3.263s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/environment/path.dsv
+[3.263s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/local_setup.bash
+[3.263s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/local_setup.sh
+[3.263s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/local_setup.zsh
+[3.263s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/local_setup.dsv
+[3.263s] -- Installing: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/package.dsv
+[3.263s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/ament_index/resource_index/packages/scanner_interfaces
+[3.263s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_generator_cExport.cmake
+[3.264s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_generator_cExport-noconfig.cmake
+[3.264s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[3.264s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.264s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[3.264s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.264s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfaces__rosidl_typesupport_cExport.cmake
+[3.264s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[3.265s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_generator_cppExport.cmake
+[3.265s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.265s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.265s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[3.265s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.265s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfaces__rosidl_typesupport_cppExport.cmake
+[3.265s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[3.265s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_generator_pyExport.cmake
+[3.266s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/export_scanner_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[3.266s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/rosidl_cmake-extras.cmake
+[3.266s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.266s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[3.266s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[3.266s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.266s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.266s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.266s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfacesConfig.cmake
+[3.266s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/cmake/scanner_interfacesConfig-version.cmake
+[3.267s] -- Up-to-date: /home/ALEX/anytrack/ros/install/scanner_interfaces/share/scanner_interfaces/package.xml
+[3.270s] Invoked command in '/home/ALEX/anytrack/ros/build/scanner_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/anytrack/ros/build/scanner_interfaces

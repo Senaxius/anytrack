@@ -11,7 +11,7 @@
 -- Found example_interfaces: 0.9.3 (/opt/ros/humble/share/example_interfaces/cmake)
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/ALEX/3dev/ros/build/test_cpp_pkg
+-- Build files have been written to: /home/ALEX/anytrack/ros/build/test_cpp_pkg
 [ 25%] [32mBuilding CXX object CMakeFiles/test_publisher.dir/src/test_publisher.cpp.o[0m
 [ 50%] [32mBuilding CXX object CMakeFiles/test_node.dir/src/test_node.cpp.o[0m
 [ 75%] [32m[1mLinking CXX executable test_node[0m

@@ -1,8 +1,8 @@
-[0.862s] Invoking command in '/home/ALEX/3dev/ros/build/scanner': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --uninstall --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build
+[0.862s] Invoking command in '/home/ALEX/anytrack/ros/build/scanner': PYTHONPATH=/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/anytrack/ros/install/scanner --uninstall --editable --build-directory /home/ALEX/anytrack/ros/build/scanner/build
 [1.093s] running develop
-[1.226s] Removing /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner.egg-link (link to .)
-[1.256s] Invoked command in '/home/ALEX/3dev/ros/build/scanner' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --uninstall --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build
-[1.257s] Invoking command in '/home/ALEX/3dev/ros/src/scanner': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/scanner build --build-base /home/ALEX/3dev/ros/build/scanner/build install --prefix /home/ALEX/3dev/ros/install/scanner --record /home/ALEX/3dev/ros/build/scanner/install.log --single-version-externally-managed
+[1.226s] Removing /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner.egg-link (link to .)
+[1.256s] Invoked command in '/home/ALEX/anytrack/ros/build/scanner' returned '0': PYTHONPATH=/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/anytrack/ros/install/scanner --uninstall --editable --build-directory /home/ALEX/anytrack/ros/build/scanner/build
+[1.257s] Invoking command in '/home/ALEX/anytrack/ros/src/scanner': PYTHONPATH=/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/scanner build --build-base /home/ALEX/anytrack/ros/build/scanner/build install --prefix /home/ALEX/anytrack/ros/install/scanner --record /home/ALEX/anytrack/ros/build/scanner/install.log --single-version-externally-managed
 [1.480s] running egg_info
 [1.481s] writing ../../build/scanner/scanner.egg-info/PKG-INFO
 [1.481s] writing dependency_links to ../../build/scanner/scanner.egg-info/dependency_links.txt
@@ -13,28 +13,28 @@
 [1.484s] writing manifest file '../../build/scanner/scanner.egg-info/SOURCES.txt'
 [1.485s] running build
 [1.485s] running build_py
-[1.485s] copying scanner/tf_broadcaster.py -> /home/ALEX/3dev/ros/build/scanner/build/lib/scanner
-[1.485s] copying scanner/test_vec_publisher.py -> /home/ALEX/3dev/ros/build/scanner/build/lib/scanner
-[1.485s] copying scanner/ball_scanner_template.py -> /home/ALEX/3dev/ros/build/scanner/build/lib/scanner
-[1.485s] copying scanner/ball_scanner.py -> /home/ALEX/3dev/ros/build/scanner/build/lib/scanner
+[1.485s] copying scanner/tf_broadcaster.py -> /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner
+[1.485s] copying scanner/test_vec_publisher.py -> /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner
+[1.485s] copying scanner/ball_scanner_template.py -> /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner
+[1.485s] copying scanner/ball_scanner.py -> /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner
 [1.486s] running install
 [1.486s] running install_lib
-[1.487s] creating /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner
-[1.487s] copying /home/ALEX/3dev/ros/build/scanner/build/lib/scanner/tf_broadcaster.py -> /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner
-[1.487s] copying /home/ALEX/3dev/ros/build/scanner/build/lib/scanner/__init__.py -> /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner
-[1.487s] copying /home/ALEX/3dev/ros/build/scanner/build/lib/scanner/test_vec_publisher.py -> /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner
-[1.487s] copying /home/ALEX/3dev/ros/build/scanner/build/lib/scanner/ball_scanner_template.py -> /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner
-[1.487s] copying /home/ALEX/3dev/ros/build/scanner/build/lib/scanner/ball_scanner.py -> /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner
-[1.488s] byte-compiling /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner/tf_broadcaster.py to tf_broadcaster.cpython-310.pyc
-[1.488s] byte-compiling /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner/__init__.py to __init__.cpython-310.pyc
-[1.489s] byte-compiling /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner/test_vec_publisher.py to test_vec_publisher.cpython-310.pyc
-[1.489s] byte-compiling /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner/ball_scanner_template.py to ball_scanner_template.cpython-310.pyc
-[1.490s] byte-compiling /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner/ball_scanner.py to ball_scanner.cpython-310.pyc
+[1.487s] creating /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner
+[1.487s] copying /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner/tf_broadcaster.py -> /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner
+[1.487s] copying /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner/__init__.py -> /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner
+[1.487s] copying /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner/test_vec_publisher.py -> /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner
+[1.487s] copying /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner/ball_scanner_template.py -> /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner
+[1.487s] copying /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner/ball_scanner.py -> /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner
+[1.488s] byte-compiling /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner/tf_broadcaster.py to tf_broadcaster.cpython-310.pyc
+[1.488s] byte-compiling /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner/__init__.py to __init__.cpython-310.pyc
+[1.489s] byte-compiling /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner/test_vec_publisher.py to test_vec_publisher.cpython-310.pyc
+[1.489s] byte-compiling /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner/ball_scanner_template.py to ball_scanner_template.cpython-310.pyc
+[1.490s] byte-compiling /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner/ball_scanner.py to ball_scanner.cpython-310.pyc
 [1.491s] running install_data
 [1.491s] running install_egg_info
-[1.493s] Copying ../../build/scanner/scanner.egg-info to /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner-0.0.0-py3.10.egg-info
+[1.493s] Copying ../../build/scanner/scanner.egg-info to /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner-0.0.0-py3.10.egg-info
 [1.494s] running install_scripts
-[1.514s] Installing test_vec_publisher script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
-[1.515s] Installing tf_broadcaster script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
-[1.515s] writing list of installed files to '/home/ALEX/3dev/ros/build/scanner/install.log'
-[1.567s] Invoked command in '/home/ALEX/3dev/ros/src/scanner' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/scanner build --build-base /home/ALEX/3dev/ros/build/scanner/build install --prefix /home/ALEX/3dev/ros/install/scanner --record /home/ALEX/3dev/ros/build/scanner/install.log --single-version-externally-managed
+[1.514s] Installing test_vec_publisher script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.515s] Installing tf_broadcaster script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.515s] writing list of installed files to '/home/ALEX/anytrack/ros/build/scanner/install.log'
+[1.567s] Invoked command in '/home/ALEX/anytrack/ros/src/scanner' returned '0': PYTHONPATH=/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/scanner build --build-base /home/ALEX/anytrack/ros/build/scanner/build install --prefix /home/ALEX/anytrack/ros/install/scanner --record /home/ALEX/anytrack/ros/build/scanner/install.log --single-version-externally-managed

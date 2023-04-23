@@ -1,4 +1,4 @@
-[0.586s] Invoking command in '/home/ALEX/3dev/ros/build/scannerV2': PYTHONPATH=/home/ALEX/3dev/ros/install/scannerV2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scannerV2 --editable --build-directory /home/ALEX/3dev/ros/build/scannerV2/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scannerV2
+[0.586s] Invoking command in '/home/ALEX/anytrack/ros/build/scannerV2': PYTHONPATH=/home/ALEX/anytrack/ros/install/scannerV2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/anytrack/ros/install/scannerV2 --editable --build-directory /home/ALEX/anytrack/ros/build/scannerV2/build --no-deps install_data --install-dir /home/ALEX/anytrack/ros/install/scannerV2
 [0.841s] running develop
 [0.981s] running egg_info
 [0.982s] writing scannerV2.egg-info/PKG-INFO
@@ -9,13 +9,13 @@
 [0.983s] reading manifest file 'scannerV2.egg-info/SOURCES.txt'
 [0.984s] writing manifest file 'scannerV2.egg-info/SOURCES.txt'
 [0.985s] running build_ext
-[0.985s] Creating /home/ALEX/3dev/ros/install/scannerV2/lib/python3.10/site-packages/scannerV2.egg-link (link to .)
-[0.986s] Installing camera_info script to /home/ALEX/3dev/ros/install/scannerV2/lib/scannerV2
-[0.986s] Installing manager script to /home/ALEX/3dev/ros/install/scannerV2/lib/scannerV2
-[0.986s] Installing position_manager script to /home/ALEX/3dev/ros/install/scannerV2/lib/scannerV2
-[0.986s] Installing test script to /home/ALEX/3dev/ros/install/scannerV2/lib/scannerV2
-[0.987s] Installing tracker2D script to /home/ALEX/3dev/ros/install/scannerV2/lib/scannerV2
+[0.985s] Creating /home/ALEX/anytrack/ros/install/scannerV2/lib/python3.10/site-packages/scannerV2.egg-link (link to .)
+[0.986s] Installing camera_info script to /home/ALEX/anytrack/ros/install/scannerV2/lib/scannerV2
+[0.986s] Installing manager script to /home/ALEX/anytrack/ros/install/scannerV2/lib/scannerV2
+[0.986s] Installing position_manager script to /home/ALEX/anytrack/ros/install/scannerV2/lib/scannerV2
+[0.986s] Installing test script to /home/ALEX/anytrack/ros/install/scannerV2/lib/scannerV2
+[0.987s] Installing tracker2D script to /home/ALEX/anytrack/ros/install/scannerV2/lib/scannerV2
 [0.987s] 
-[0.987s] Installed /home/ALEX/3dev/ros/build/scannerV2
+[0.987s] Installed /home/ALEX/anytrack/ros/build/scannerV2
 [0.987s] running install_data
-[1.013s] Invoked command in '/home/ALEX/3dev/ros/build/scannerV2' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/scannerV2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scannerV2 --editable --build-directory /home/ALEX/3dev/ros/build/scannerV2/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scannerV2
+[1.013s] Invoked command in '/home/ALEX/anytrack/ros/build/scannerV2' returned '0': PYTHONPATH=/home/ALEX/anytrack/ros/install/scannerV2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/anytrack/ros/install/scannerV2 --editable --build-directory /home/ALEX/anytrack/ros/build/scannerV2/build --no-deps install_data --install-dir /home/ALEX/anytrack/ros/install/scannerV2

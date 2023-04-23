@@ -1,4 +1,4 @@
-[4.420s] Invoking command in '/home/ALEX/3dev/ros/src/test_py_pkg': PYTHONPATH=/home/ALEX/3dev/ros/build/test_py_pkg/prefix_override:/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_py_pkg build --build-base /home/ALEX/3dev/ros/build/test_py_pkg/build install --record /home/ALEX/3dev/ros/build/test_py_pkg/install.log --single-version-externally-managed
+[4.420s] Invoking command in '/home/ALEX/anytrack/ros/src/test_py_pkg': PYTHONPATH=/home/ALEX/anytrack/ros/build/test_py_pkg/prefix_override:/home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_py_pkg build --build-base /home/ALEX/anytrack/ros/build/test_py_pkg/build install --record /home/ALEX/anytrack/ros/build/test_py_pkg/install.log --single-version-externally-managed
 [6.162s] running egg_info
 [6.164s] writing ../../build/test_py_pkg/test_py_pkg.egg-info/PKG-INFO
 [6.165s] writing dependency_links to ../../build/test_py_pkg/test_py_pkg.egg-info/dependency_links.txt
@@ -9,16 +9,16 @@
 [6.185s] writing manifest file '../../build/test_py_pkg/test_py_pkg.egg-info/SOURCES.txt'
 [6.188s] running build
 [6.190s] running build_py
-[6.192s] copying test_py_pkg/test_node.py -> /home/ALEX/3dev/ros/build/test_py_pkg/build/lib/test_py_pkg
+[6.192s] copying test_py_pkg/test_node.py -> /home/ALEX/anytrack/ros/build/test_py_pkg/build/lib/test_py_pkg
 [6.193s] running install
 [6.198s] running install_lib
-[6.200s] copying /home/ALEX/3dev/ros/build/test_py_pkg/build/lib/test_py_pkg/test_node.py -> /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
-[6.206s] byte-compiling /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/test_node.py to test_node.cpython-310.pyc
+[6.200s] copying /home/ALEX/anytrack/ros/build/test_py_pkg/build/lib/test_py_pkg/test_node.py -> /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg
+[6.206s] byte-compiling /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg/test_node.py to test_node.cpython-310.pyc
 [6.208s] running install_data
 [6.210s] running install_egg_info
-[6.213s] removing '/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg-0.0.0-py3.10.egg-info' (and everything under it)
-[6.216s] Copying ../../build/test_py_pkg/test_py_pkg.egg-info to /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg-0.0.0-py3.10.egg-info
+[6.213s] removing '/home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[6.216s] Copying ../../build/test_py_pkg/test_py_pkg.egg-info to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg-0.0.0-py3.10.egg-info
 [6.228s] running install_scripts
-[6.346s] Installing py_node script to /home/ALEX/3dev/ros/install/test_py_pkg/lib/test_py_pkg
-[6.349s] writing list of installed files to '/home/ALEX/3dev/ros/build/test_py_pkg/install.log'
-[6.521s] Invoked command in '/home/ALEX/3dev/ros/src/test_py_pkg' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/build/test_py_pkg/prefix_override:/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_py_pkg build --build-base /home/ALEX/3dev/ros/build/test_py_pkg/build install --record /home/ALEX/3dev/ros/build/test_py_pkg/install.log --single-version-externally-managed
+[6.346s] Installing py_node script to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/test_py_pkg
+[6.349s] writing list of installed files to '/home/ALEX/anytrack/ros/build/test_py_pkg/install.log'
+[6.521s] Invoked command in '/home/ALEX/anytrack/ros/src/test_py_pkg' returned '0': PYTHONPATH=/home/ALEX/anytrack/ros/build/test_py_pkg/prefix_override:/home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_py_pkg build --build-base /home/ALEX/anytrack/ros/build/test_py_pkg/build install --record /home/ALEX/anytrack/ros/build/test_py_pkg/install.log --single-version-externally-managed

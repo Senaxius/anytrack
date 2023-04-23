@@ -11,7 +11,7 @@ from scanner_interfaces.msg import Tracks
 from scanner_interfaces.msg import Object
 from sensor_msgs.msg import Image
 
-sys.path.append('/home/ALEX/3dev/python/lib')
+sys.path.append('/home/ALEX/anytrack/python/lib')
 import tracker as trk
 
 class tracker2D(Node):  

@@ -1,4 +1,4 @@
-[0.028s] Invoking command in '/home/ALEX/3dev/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ALEX/3dev/ros/src/test_cpp_pkg -DCMAKE_INSTALL_PREFIX=/home/ALEX/3dev/ros/install/test_cpp_pkg
+[0.028s] Invoking command in '/home/ALEX/anytrack/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ALEX/anytrack/ros/src/test_cpp_pkg -DCMAKE_INSTALL_PREFIX=/home/ALEX/anytrack/ros/install/test_cpp_pkg
 [0.151s] -- The C compiler identification is GNU 11.3.0
 [0.219s] -- The CXX compiler identification is GNU 11.3.0
 [0.228s] -- Detecting C compiler ABI info
@@ -26,30 +26,30 @@
 [0.999s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
 [1.243s] -- Configuring done
 [1.251s] -- Generating done
-[1.253s] -- Build files have been written to: /home/ALEX/3dev/ros/build/test_cpp_pkg
-[1.259s] Invoked command in '/home/ALEX/3dev/ros/build/test_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ALEX/3dev/ros/src/test_cpp_pkg -DCMAKE_INSTALL_PREFIX=/home/ALEX/3dev/ros/install/test_cpp_pkg
-[1.260s] Invoking command in '/home/ALEX/3dev/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/test_cpp_pkg -- -j12 -l12
+[1.253s] -- Build files have been written to: /home/ALEX/anytrack/ros/build/test_cpp_pkg
+[1.259s] Invoked command in '/home/ALEX/anytrack/ros/build/test_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ALEX/anytrack/ros/src/test_cpp_pkg -DCMAKE_INSTALL_PREFIX=/home/ALEX/anytrack/ros/install/test_cpp_pkg
+[1.260s] Invoking command in '/home/ALEX/anytrack/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/test_cpp_pkg -- -j12 -l12
 [1.294s] [ 50%] [32mBuilding CXX object CMakeFiles/cpp_node.dir/src/test_node.cpp.o[0m
 [3.850s] [100%] [32m[1mLinking CXX executable cpp_node[0m
 [3.947s] [100%] Built target cpp_node
-[3.955s] Invoked command in '/home/ALEX/3dev/ros/build/test_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/test_cpp_pkg -- -j12 -l12
-[3.977s] Invoking command in '/home/ALEX/3dev/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/test_cpp_pkg
+[3.955s] Invoked command in '/home/ALEX/anytrack/ros/build/test_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/test_cpp_pkg -- -j12 -l12
+[3.977s] Invoking command in '/home/ALEX/anytrack/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ALEX/anytrack/ros/build/test_cpp_pkg
 [3.982s] -- Install configuration: ""
-[3.983s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/cpp_node
-[3.983s] -- Set runtime path of "/home/ALEX/3dev/ros/install/test_cpp_pkg/lib/test_cpp_pkg/cpp_node" to ""
-[3.983s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/ament_index/resource_index/package_run_dependencies/test_cpp_pkg
-[3.983s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/ament_index/resource_index/parent_prefix_path/test_cpp_pkg
-[3.984s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/ament_prefix_path.sh
-[3.984s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/ament_prefix_path.dsv
-[3.984s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/path.sh
-[3.984s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/path.dsv
-[3.984s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.bash
-[3.984s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.sh
-[3.985s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.zsh
-[3.985s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.dsv
-[3.985s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.dsv
-[3.985s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/ament_index/resource_index/packages/test_cpp_pkg
-[3.985s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/cmake/test_cpp_pkgConfig.cmake
-[3.985s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/cmake/test_cpp_pkgConfig-version.cmake
-[3.986s] -- Installing: /home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.xml
-[3.989s] Invoked command in '/home/ALEX/3dev/ros/build/test_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/test_cpp_pkg
+[3.983s] -- Installing: /home/ALEX/anytrack/ros/install/test_cpp_pkg/lib/test_cpp_pkg/cpp_node
+[3.983s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/test_cpp_pkg/lib/test_cpp_pkg/cpp_node" to ""
+[3.983s] -- Installing: /home/ALEX/anytrack/ros/install/test_cpp_pkg/share/ament_index/resource_index/package_run_dependencies/test_cpp_pkg
+[3.983s] -- Installing: /home/ALEX/anytrack/ros/install/test_cpp_pkg/share/ament_index/resource_index/parent_prefix_path/test_cpp_pkg
+[3.984s] -- Installing: /home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/ament_prefix_path.sh
+[3.984s] -- Installing: /home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/ament_prefix_path.dsv
+[3.984s] -- Installing: /home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/path.sh
+[3.984s] -- Installing: /home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/environment/path.dsv
+[3.984s] -- Installing: /home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.bash
+[3.984s] -- Installing: /home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.sh
+[3.985s] -- Installing: /home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.zsh
+[3.985s] -- Installing: /home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/local_setup.dsv
+[3.985s] -- Installing: /home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.dsv
+[3.985s] -- Installing: /home/ALEX/anytrack/ros/install/test_cpp_pkg/share/ament_index/resource_index/packages/test_cpp_pkg
+[3.985s] -- Installing: /home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/cmake/test_cpp_pkgConfig.cmake
+[3.985s] -- Installing: /home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/cmake/test_cpp_pkgConfig-version.cmake
+[3.986s] -- Installing: /home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.xml
+[3.989s] Invoked command in '/home/ALEX/anytrack/ros/build/test_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ALEX/anytrack/ros/build/test_cpp_pkg

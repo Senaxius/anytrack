@@ -1,11 +1,11 @@
 [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
   execute_process(/usr/bin/python3.10 -m rosidl_adapter --package-name
-  3dev_interfaces --arguments-file
-  /home/ALEX/3dev/ros/build/3dev_interfaces/rosidl_adapter__arguments__3dev_interfaces.json
+  anytrack_interfaces --arguments-file
+  /home/ALEX/anytrack/ros/build/anytrack_interfaces/rosidl_adapter__arguments__anytrack_interfaces.json
   --output-dir
-  /home/ALEX/3dev/ros/build/3dev_interfaces/rosidl_adapter/3dev_interfaces
+  /home/ALEX/anytrack/ros/build/anytrack_interfaces/rosidl_adapter/anytrack_interfaces
   --output-file
-  /home/ALEX/3dev/ros/build/3dev_interfaces/rosidl_adapter/3dev_interfaces.idls)
+  /home/ALEX/anytrack/ros/build/anytrack_interfaces/rosidl_adapter/anytrack_interfaces.idls)
   returned error code 1:
 
   Traceback (most recent call last):
@@ -29,7 +29,7 @@
     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 201, in __init__
       raise InvalidResourceName(
 
-  rosidl_adapter.parser.InvalidResourceName: '3dev_interfaces' is an invalid
+  rosidl_adapter.parser.InvalidResourceName: 'anytrack_interfaces' is an invalid
   package name.  It should have the pattern
   '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
 

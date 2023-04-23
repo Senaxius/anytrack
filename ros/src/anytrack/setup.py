@@ -26,6 +26,8 @@ setup(
             "camera_info = anytrack.camera_info:main",
             "camera_vector = anytrack.camera_vector:main",
             "position_manager = anytrack.position_manager:main",
+            "calibration = anytrack.calibration:main",
+            "test = anytrack.test:main",
         ],
     },
 )

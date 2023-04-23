@@ -1,8 +1,10 @@
 [console_scripts]
+calibration = anytrack.calibration:main
 camera_detector = anytrack.camera_detector:main
 camera_driver = anytrack.camera_driver:main
 camera_info = anytrack.camera_info:main
 camera_vector = anytrack.camera_vector:main
 manager = anytrack.manager:main
 position_manager = anytrack.position_manager:main
+test = anytrack.test:main
 

@@ -6,7 +6,7 @@
 [2.691s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
 [2.692s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
 [2.692s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
-[2.692s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ALEX/3dev/ros'
+[2.692s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ALEX/anytrack/ros'
 [2.693s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
 [2.693s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
 [2.693s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
@@ -66,13 +66,13 @@
 [3.339s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
 [3.340s] DEBUG:colcon.colcon_core.event_reactor:joined thread
 [3.381s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
-[3.382s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.ps1'
-[3.388s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/3dev/ros/install/_local_setup_util_ps1.py'
-[3.397s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.ps1'
-[3.406s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.sh'
-[3.409s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/3dev/ros/install/_local_setup_util_sh.py'
-[3.412s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.sh'
-[3.418s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.bash'
-[3.422s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.bash'
-[3.429s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.zsh'
-[3.433s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.zsh'
+[3.382s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.ps1'
+[3.388s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/anytrack/ros/install/_local_setup_util_ps1.py'
+[3.397s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.ps1'
+[3.406s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.sh'
+[3.409s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/anytrack/ros/install/_local_setup_util_sh.py'
+[3.412s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.sh'
+[3.418s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.bash'
+[3.422s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.bash'
+[3.429s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.zsh'
+[3.433s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.zsh'

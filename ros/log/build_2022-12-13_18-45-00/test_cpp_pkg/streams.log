@@ -1,4 +1,4 @@
-[0.014s] Invoking command in '/home/ALEX/3dev/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/test_cpp_pkg -- -j12 -l12
+[0.014s] Invoking command in '/home/ALEX/anytrack/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/test_cpp_pkg -- -j12 -l12
 [0.050s] [35m[1mConsolidate compiler generated dependencies of target test_client_op[0m
 [0.059s] [ 14%] Built target test_client_nop
 [0.060s] [ 42%] Built target test_node
@@ -7,11 +7,11 @@
 [0.060s] [ 71%] Built target test_publisher
 [0.062s] [ 85%] Built target test_server
 [0.067s] [ 92%] [32mBuilding CXX object CMakeFiles/test_client_op.dir/src/test_client_op.cpp.o[0m
-[2.115s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_op.cpp:[m[K In constructor ‘[01m[Ktest_client_op::test_client_op()[m[K’:
-[2.115s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_op.cpp:10:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+[2.115s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_op.cpp:[m[K In constructor ‘[01m[Ktest_client_op::test_client_op()[m[K’:
+[2.115s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_op.cpp:10:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
 [2.115s]    10 |     [01;31m[K}[m[K
 [2.115s]       |     [01;31m[K^[m[K
 [2.718s] gmake[2]: *** [CMakeFiles/test_client_op.dir/build.make:76: CMakeFiles/test_client_op.dir/src/test_client_op.cpp.o] Error 1
 [2.718s] gmake[1]: *** [CMakeFiles/Makefile2:279: CMakeFiles/test_client_op.dir/all] Error 2
 [2.718s] gmake: *** [Makefile:146: all] Error 2
-[2.720s] Invoked command in '/home/ALEX/3dev/ros/build/test_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/test_cpp_pkg -- -j12 -l12
+[2.720s] Invoked command in '/home/ALEX/anytrack/ros/build/test_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/test_cpp_pkg -- -j12 -l12

@@ -26,7 +26,7 @@ class position_manager(Node):
 
         # declare Parameters
         self.declare_parameter("device_count", 0)
-        self.declare_parameter("config_path", '/home/ALEX/3dev/config/camera_positions.json')
+        self.declare_parameter("config_path", '/home/ALEX/anytrack/config/camera_positions.json')
 
         # import parameters
         self.device_count = self.get_parameter("device_count").value
@@ -34,7 +34,7 @@ class position_manager(Node):
 
         # debug only
         # self.device_count = 4
-        # self.config_path = '/home/ALEX/3dev/config/camera_positions.json'
+        # self.config_path = '/home/ALEX/anytrack/config/camera_positions.json'
         self.debug = 0
 
         # check if Parameters are set

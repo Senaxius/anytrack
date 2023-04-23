@@ -6,7 +6,6 @@ scanner_interfaces.egg-info/dependency_links.txt
 scanner_interfaces.egg-info/top_level.txt
 scanner_interfaces/msg/__init__.py
 scanner_interfaces/msg/_camera_locations.py
-scanner_interfaces/msg/_camera_xy.py
 scanner_interfaces/msg/_location.py
 scanner_interfaces/msg/_object.py
 scanner_interfaces/msg/_tracks.py

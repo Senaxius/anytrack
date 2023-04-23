@@ -6,7 +6,7 @@
 [0.869s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
 [0.869s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
 [0.869s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
-[0.869s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ALEX/3dev/ros'
+[0.869s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ALEX/anytrack/ros'
 [0.870s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
 [0.870s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
 [0.870s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
@@ -71,7 +71,7 @@
 [0.948s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
 [1.054s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
 [1.055s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
-[1.068s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/ALEX/3dev/ros/install
+[1.068s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/ALEX/anytrack/ros/install
 [1.077s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 180 installed packages in /opt/ros/humble
 [1.083s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
 [1.272s] Level 5:colcon.colcon_core.verb:set package 'test_cpp_pkg' build argument 'cmake_args' from command line to 'None'
@@ -83,7 +83,7 @@
 [1.273s] Level 5:colcon.colcon_core.verb:set package 'test_cpp_pkg' build argument 'ament_cmake_args' from command line to 'None'
 [1.273s] Level 5:colcon.colcon_core.verb:set package 'test_cpp_pkg' build argument 'catkin_cmake_args' from command line to 'None'
 [1.273s] Level 5:colcon.colcon_core.verb:set package 'test_cpp_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
-[1.273s] DEBUG:colcon.colcon_core.verb:Building package 'test_cpp_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ALEX/3dev/ros/build/test_cpp_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ALEX/3dev/ros/install/test_cpp_pkg', 'merge_install': False, 'path': '/home/ALEX/3dev/ros/src/test_cpp_pkg', 'symlink_install': False, 'test_result_base': None}
+[1.273s] DEBUG:colcon.colcon_core.verb:Building package 'test_cpp_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ALEX/anytrack/ros/build/test_cpp_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ALEX/anytrack/ros/install/test_cpp_pkg', 'merge_install': False, 'path': '/home/ALEX/anytrack/ros/src/test_cpp_pkg', 'symlink_install': False, 'test_result_base': None}
 [1.278s] Level 5:colcon.colcon_core.verb:set package 'test_py_pkg' build argument 'cmake_args' from command line to 'None'
 [1.278s] Level 5:colcon.colcon_core.verb:set package 'test_py_pkg' build argument 'cmake_target' from command line to 'None'
 [1.278s] Level 5:colcon.colcon_core.verb:set package 'test_py_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
@@ -93,82 +93,82 @@
 [1.279s] Level 5:colcon.colcon_core.verb:set package 'test_py_pkg' build argument 'ament_cmake_args' from command line to 'None'
 [1.279s] Level 5:colcon.colcon_core.verb:set package 'test_py_pkg' build argument 'catkin_cmake_args' from command line to 'None'
 [1.279s] Level 5:colcon.colcon_core.verb:set package 'test_py_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
-[1.279s] DEBUG:colcon.colcon_core.verb:Building package 'test_py_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ALEX/3dev/ros/build/test_py_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ALEX/3dev/ros/install/test_py_pkg', 'merge_install': False, 'path': '/home/ALEX/3dev/ros/src/test_py_pkg', 'symlink_install': False, 'test_result_base': None}
+[1.279s] DEBUG:colcon.colcon_core.verb:Building package 'test_py_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ALEX/anytrack/ros/build/test_py_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ALEX/anytrack/ros/install/test_py_pkg', 'merge_install': False, 'path': '/home/ALEX/anytrack/ros/src/test_py_pkg', 'symlink_install': False, 'test_result_base': None}
 [1.282s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
 [1.300s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
-[1.301s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ALEX/3dev/ros/src/test_cpp_pkg' with build type 'ament_cmake'
-[1.302s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ALEX/3dev/ros/src/test_cpp_pkg'
+[1.301s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ALEX/anytrack/ros/src/test_cpp_pkg' with build type 'ament_cmake'
+[1.302s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ALEX/anytrack/ros/src/test_cpp_pkg'
 [1.323s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
 [1.324s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
 [1.325s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
-[1.348s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ALEX/3dev/ros/src/test_py_pkg' with build type 'ament_python'
+[1.348s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ALEX/anytrack/ros/src/test_py_pkg' with build type 'ament_python'
 [1.349s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_py_pkg', 'ament_prefix_path')
-[1.358s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/test_py_pkg/share/test_py_pkg/hook/ament_prefix_path.ps1'
-[1.362s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/3dev/ros/install/test_py_pkg/share/test_py_pkg/hook/ament_prefix_path.dsv'
-[1.364s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/test_py_pkg/share/test_py_pkg/hook/ament_prefix_path.sh'
+[1.358s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/test_py_pkg/share/test_py_pkg/hook/ament_prefix_path.ps1'
+[1.362s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/anytrack/ros/install/test_py_pkg/share/test_py_pkg/hook/ament_prefix_path.dsv'
+[1.364s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/test_py_pkg/share/test_py_pkg/hook/ament_prefix_path.sh'
 [1.372s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
 [1.373s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
-[1.417s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/3dev/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/test_cpp_pkg -- -j4 -l4
-[3.291s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ALEX/3dev/ros/src/test_py_pkg'
+[1.417s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/anytrack/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/test_cpp_pkg -- -j4 -l4
+[3.291s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ALEX/anytrack/ros/src/test_py_pkg'
 [3.299s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
 [3.299s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
-[3.331s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/3dev/ros/build/test_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/test_cpp_pkg -- -j4 -l4
-[3.556s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/3dev/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/test_cpp_pkg
+[3.331s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/anytrack/ros/build/test_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/test_cpp_pkg -- -j4 -l4
+[3.556s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/anytrack/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/anytrack/ros/build/test_cpp_pkg
 [3.624s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(test_cpp_pkg)
-[3.641s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/3dev/ros/build/test_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/test_cpp_pkg
-[3.667s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_cpp_pkg' for CMake module files
-[3.671s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_cpp_pkg' for CMake config files
+[3.641s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/anytrack/ros/build/test_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/anytrack/ros/build/test_cpp_pkg
+[3.667s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_cpp_pkg' for CMake module files
+[3.671s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_cpp_pkg' for CMake config files
 [3.674s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_cpp_pkg', 'cmake_prefix_path')
-[3.681s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/hook/cmake_prefix_path.ps1'
-[3.684s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/hook/cmake_prefix_path.dsv'
-[3.686s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/hook/cmake_prefix_path.sh'
-[3.690s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_cpp_pkg/bin'
-[3.691s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_cpp_pkg/lib/pkgconfig/test_cpp_pkg.pc'
-[3.692s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_cpp_pkg/lib/python3.10/site-packages'
-[3.694s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_cpp_pkg/bin'
-[3.702s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.ps1'
-[3.707s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.dsv'
-[3.711s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.sh'
-[3.716s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.bash'
-[3.721s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.zsh'
-[3.725s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ALEX/3dev/ros/install/test_cpp_pkg/share/colcon-core/packages/test_cpp_pkg)
+[3.681s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/hook/cmake_prefix_path.ps1'
+[3.684s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/hook/cmake_prefix_path.dsv'
+[3.686s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/hook/cmake_prefix_path.sh'
+[3.690s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_cpp_pkg/bin'
+[3.691s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_cpp_pkg/lib/pkgconfig/test_cpp_pkg.pc'
+[3.692s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_cpp_pkg/lib/python3.10/site-packages'
+[3.694s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_cpp_pkg/bin'
+[3.702s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.ps1'
+[3.707s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.dsv'
+[3.711s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.sh'
+[3.716s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.bash'
+[3.721s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.zsh'
+[3.725s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/colcon-core/packages/test_cpp_pkg)
 [3.897s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(test_cpp_pkg)
-[3.907s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_cpp_pkg' for CMake module files
-[3.911s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_cpp_pkg' for CMake config files
+[3.907s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_cpp_pkg' for CMake module files
+[3.911s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_cpp_pkg' for CMake config files
 [3.915s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_cpp_pkg', 'cmake_prefix_path')
-[3.924s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/hook/cmake_prefix_path.ps1'
-[3.929s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/hook/cmake_prefix_path.dsv'
-[3.934s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/hook/cmake_prefix_path.sh'
-[3.940s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_cpp_pkg/bin'
-[3.941s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_cpp_pkg/lib/pkgconfig/test_cpp_pkg.pc'
-[3.943s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_cpp_pkg/lib/python3.10/site-packages'
-[3.955s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_cpp_pkg/bin'
-[3.971s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.ps1'
-[3.977s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.dsv'
-[3.982s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.sh'
-[3.986s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.bash'
-[3.991s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.zsh'
-[4.000s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ALEX/3dev/ros/install/test_cpp_pkg/share/colcon-core/packages/test_cpp_pkg)
-[5.712s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/3dev/ros/src/test_py_pkg': PYTHONPATH=/home/ALEX/3dev/ros/build/test_py_pkg/prefix_override:/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_py_pkg build --build-base /home/ALEX/3dev/ros/build/test_py_pkg/build install --record /home/ALEX/3dev/ros/build/test_py_pkg/install.log --single-version-externally-managed
-[7.437s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_py_pkg' for CMake module files
-[7.440s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/3dev/ros/src/test_py_pkg' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/build/test_py_pkg/prefix_override:/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_py_pkg build --build-base /home/ALEX/3dev/ros/build/test_py_pkg/build install --record /home/ALEX/3dev/ros/build/test_py_pkg/install.log --single-version-externally-managed
-[7.443s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_py_pkg' for CMake config files
-[7.447s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_py_pkg/lib'
-[7.448s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_py_pkg/bin'
-[7.449s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_py_pkg/lib/pkgconfig/test_py_pkg.pc'
-[7.450s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages'
+[3.924s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/hook/cmake_prefix_path.ps1'
+[3.929s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/hook/cmake_prefix_path.dsv'
+[3.934s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/hook/cmake_prefix_path.sh'
+[3.940s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_cpp_pkg/bin'
+[3.941s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_cpp_pkg/lib/pkgconfig/test_cpp_pkg.pc'
+[3.943s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_cpp_pkg/lib/python3.10/site-packages'
+[3.955s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_cpp_pkg/bin'
+[3.971s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.ps1'
+[3.977s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.dsv'
+[3.982s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.sh'
+[3.986s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.bash'
+[3.991s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/test_cpp_pkg/package.zsh'
+[4.000s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ALEX/anytrack/ros/install/test_cpp_pkg/share/colcon-core/packages/test_cpp_pkg)
+[5.712s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/anytrack/ros/src/test_py_pkg': PYTHONPATH=/home/ALEX/anytrack/ros/build/test_py_pkg/prefix_override:/home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_py_pkg build --build-base /home/ALEX/anytrack/ros/build/test_py_pkg/build install --record /home/ALEX/anytrack/ros/build/test_py_pkg/install.log --single-version-externally-managed
+[7.437s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_py_pkg' for CMake module files
+[7.440s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/anytrack/ros/src/test_py_pkg' returned '0': PYTHONPATH=/home/ALEX/anytrack/ros/build/test_py_pkg/prefix_override:/home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_py_pkg build --build-base /home/ALEX/anytrack/ros/build/test_py_pkg/build install --record /home/ALEX/anytrack/ros/build/test_py_pkg/install.log --single-version-externally-managed
+[7.443s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_py_pkg' for CMake config files
+[7.447s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_py_pkg/lib'
+[7.448s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_py_pkg/bin'
+[7.449s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_py_pkg/lib/pkgconfig/test_py_pkg.pc'
+[7.450s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages'
 [7.450s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_py_pkg', 'pythonpath')
-[7.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/test_py_pkg/share/test_py_pkg/hook/pythonpath.ps1'
-[7.458s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/3dev/ros/install/test_py_pkg/share/test_py_pkg/hook/pythonpath.dsv'
-[7.460s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/test_py_pkg/share/test_py_pkg/hook/pythonpath.sh'
-[7.463s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/test_py_pkg/bin'
+[7.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/test_py_pkg/share/test_py_pkg/hook/pythonpath.ps1'
+[7.458s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/anytrack/ros/install/test_py_pkg/share/test_py_pkg/hook/pythonpath.dsv'
+[7.460s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/test_py_pkg/share/test_py_pkg/hook/pythonpath.sh'
+[7.463s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/test_py_pkg/bin'
 [7.463s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(test_py_pkg)
-[7.469s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/test_py_pkg/share/test_py_pkg/package.ps1'
-[7.472s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ALEX/3dev/ros/install/test_py_pkg/share/test_py_pkg/package.dsv'
-[7.474s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/test_py_pkg/share/test_py_pkg/package.sh'
-[7.476s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/test_py_pkg/share/test_py_pkg/package.bash'
-[7.478s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/test_py_pkg/share/test_py_pkg/package.zsh'
-[7.485s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ALEX/3dev/ros/install/test_py_pkg/share/colcon-core/packages/test_py_pkg)
+[7.469s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/test_py_pkg/share/test_py_pkg/package.ps1'
+[7.472s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ALEX/anytrack/ros/install/test_py_pkg/share/test_py_pkg/package.dsv'
+[7.474s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/test_py_pkg/share/test_py_pkg/package.sh'
+[7.476s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/test_py_pkg/share/test_py_pkg/package.bash'
+[7.478s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/test_py_pkg/share/test_py_pkg/package.zsh'
+[7.485s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ALEX/anytrack/ros/install/test_py_pkg/share/colcon-core/packages/test_py_pkg)
 [7.486s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
 [7.487s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
 [7.488s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
@@ -179,13 +179,13 @@
 [7.519s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
 [7.523s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
 [7.524s] DEBUG:colcon.colcon_core.event_reactor:joined thread
-[7.530s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.ps1'
-[7.534s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/3dev/ros/install/_local_setup_util_ps1.py'
-[7.541s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.ps1'
-[7.548s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.sh'
-[7.550s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/3dev/ros/install/_local_setup_util_sh.py'
-[7.553s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.sh'
-[7.560s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.bash'
-[7.562s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.bash'
-[7.569s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.zsh'
-[7.571s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.zsh'
+[7.530s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.ps1'
+[7.534s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/anytrack/ros/install/_local_setup_util_ps1.py'
+[7.541s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.ps1'
+[7.548s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.sh'
+[7.550s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/anytrack/ros/install/_local_setup_util_sh.py'
+[7.553s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.sh'
+[7.560s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.bash'
+[7.562s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.bash'
+[7.569s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.zsh'
+[7.571s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.zsh'

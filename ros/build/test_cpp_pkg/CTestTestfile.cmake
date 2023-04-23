@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/ALEX/3dev/ros/src/test_cpp_pkg
-# Build directory: /home/ALEX/3dev/ros/build/test_cpp_pkg
+# Source directory: /home/ALEX/anytrack/ros/src/test_cpp_pkg
+# Build directory: /home/ALEX/anytrack/ros/build/test_cpp_pkg
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

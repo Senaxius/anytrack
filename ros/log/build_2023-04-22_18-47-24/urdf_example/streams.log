@@ -1,0 +1,39 @@
+[1.002s] Invoking command in '/home/ALEX/anytrack/ros/build/urdf_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scannerV2:/home/ALEX/anytrack/ros/install/scanner:/home/ALEX/anytrack/ros/install/anytrack:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/urdf_example -- -j12 -l12
+[1.022s] -- Found ament_cmake: 1.3.3 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.158s] -- Found ament_lint_auto: 0.12.5 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.223s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.225s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.225s] -- Added test 'lint_cmake' to check CMake code style
+[1.225s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.226s] -- Added test 'xmllint' to check XML markup files
+[1.227s] -- Configuring done
+[1.230s] -- Generating done
+[1.230s] -- Build files have been written to: /home/ALEX/anytrack/ros/build/urdf_example
+[1.248s] Invoked command in '/home/ALEX/anytrack/ros/build/urdf_example' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scannerV2:/home/ALEX/anytrack/ros/install/scanner:/home/ALEX/anytrack/ros/install/anytrack:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/urdf_example -- -j12 -l12
+[1.270s] Invoking command in '/home/ALEX/anytrack/ros/build/urdf_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scannerV2:/home/ALEX/anytrack/ros/install/scanner:/home/ALEX/anytrack/ros/install/anytrack:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/anytrack/ros/build/urdf_example
+[1.276s] -- Install configuration: ""
+[1.276s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/description
+[1.276s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/description/example_include.xacro
+[1.276s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/description/example_gazebo.xacro
+[1.277s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/description/example_robot.urdf.xacro
+[1.277s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/launch
+[1.277s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/launch/rsp_sim.launch.py
+[1.277s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/launch/rsp.launch.py
+[1.277s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/worlds
+[1.277s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/worlds/test_world.world
+[1.277s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/ament_index/resource_index/package_run_dependencies/urdf_example
+[1.278s] -- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/ament_index/resource_index/parent_prefix_path/urdf_example
+[1.278s] -- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/environment/ament_prefix_path.sh
+[1.278s] -- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/environment/ament_prefix_path.dsv
+[1.278s] -- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/environment/path.sh
+[1.278s] -- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/environment/path.dsv
+[1.278s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/local_setup.bash
+[1.278s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/local_setup.sh
+[1.278s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/local_setup.zsh
+[1.279s] -- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/local_setup.dsv
+[1.279s] -- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/package.dsv
+[1.279s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/ament_index/resource_index/packages/urdf_example
+[1.279s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/cmake/urdf_exampleConfig.cmake
+[1.279s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/cmake/urdf_exampleConfig-version.cmake
+[1.280s] -- Up-to-date: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/package.xml
+[1.283s] Invoked command in '/home/ALEX/anytrack/ros/build/urdf_example' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scannerV2:/home/ALEX/anytrack/ros/install/scanner:/home/ALEX/anytrack/ros/install/anytrack:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/anytrack/ros/build/urdf_example

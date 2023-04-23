@@ -1,6 +1,6 @@
 [35m[1mConsolidate compiler generated dependencies of target test_node[0m
 [ 25%] [32mBuilding CXX object CMakeFiles/test_publisher.dir/src/test_publisher.cpp.o[0m
-[01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_publisher.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kexample_interfaces/msg/string.hpp: No such file or directory
+[01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_publisher.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kexample_interfaces/msg/string.hpp: No such file or directory
     1 | #include [01;31m[K"example_interfaces/msg/string.hpp"[m[K
       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
 compilation terminated.

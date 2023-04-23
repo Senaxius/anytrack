@@ -114,8 +114,8 @@ class manager(Node):
 
             # ld.add_action(camX_driver)
             ld.add_action(camX_detector)
-            ld.add_action(camX_camera_info)
-            ld.add_action(camX_vector)
+            # ld.add_action(camX_camera_info)
+            # ld.add_action(camX_vector)
 
         position_manager = Action(
             package="anytrack",
@@ -123,10 +123,10 @@ class manager(Node):
             name=('position_manager'),
             parameters=[
                 {"device_count": length},
-                {"config_path": '/home/ALEX/3dev/config/camera_positions.json'}
+                {"config_path": '/home/ALEX/anytrack/config/camera_positions.json'}
             ]
         )
-        ld.add_action(position_manager)
+        # ld.add_action(position_manager)
         return ld
 
 def main(args=None):

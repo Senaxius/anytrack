@@ -16,5 +16,5 @@ Call Stack (most recent call first):
 
 [0m
 -- Configuring incomplete, errors occurred!
-See also "/home/ALEX/3dev/ros/build/test_cpp_pkg/CMakeFiles/CMakeOutput.log".
+See also "/home/ALEX/anytrack/ros/build/test_cpp_pkg/CMakeFiles/CMakeOutput.log".
 gmake: *** [Makefile:267: cmake_check_build_system] Error 1

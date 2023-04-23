@@ -9,4 +9,4 @@
 -- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
 -- Using RMW implementation 'rmw_fastrtps_cpp' as default
 -- Configuring incomplete, errors occurred!
-See also "/home/ALEX/3dev/ros/build/test_cpp_pkg/CMakeFiles/CMakeOutput.log".
+See also "/home/ALEX/anytrack/ros/build/test_cpp_pkg/CMakeFiles/CMakeOutput.log".

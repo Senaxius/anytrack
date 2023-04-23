@@ -1,4 +1,4 @@
-[0.017s] Invoking command in '/home/ALEX/3dev/ros/build/scanner_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake /home/ALEX/3dev/ros/src/scanner_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ALEX/3dev/ros/install/scanner_bringup
+[0.017s] Invoking command in '/home/ALEX/anytrack/ros/build/scanner_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake /home/ALEX/anytrack/ros/src/scanner_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ALEX/anytrack/ros/install/scanner_bringup
 [0.090s] -- The C compiler identification is GNU 11.3.0
 [0.152s] -- The CXX compiler identification is GNU 11.3.0
 [0.161s] -- Detecting C compiler ABI info
@@ -21,5 +21,5 @@
 [0.589s] 
 [0.589s] [0m
 [0.652s] -- Configuring incomplete, errors occurred!
-[0.652s] See also "/home/ALEX/3dev/ros/build/scanner_bringup/CMakeFiles/CMakeOutput.log".
-[0.655s] Invoked command in '/home/ALEX/3dev/ros/build/scanner_bringup' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake /home/ALEX/3dev/ros/src/scanner_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ALEX/3dev/ros/install/scanner_bringup
+[0.652s] See also "/home/ALEX/anytrack/ros/build/scanner_bringup/CMakeFiles/CMakeOutput.log".
+[0.655s] Invoked command in '/home/ALEX/anytrack/ros/build/scanner_bringup' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake /home/ALEX/anytrack/ros/src/scanner_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ALEX/anytrack/ros/install/scanner_bringup

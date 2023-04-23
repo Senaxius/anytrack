@@ -10,4 +10,4 @@
 -- Using RMW implementation 'rmw_fastrtps_cpp' as default
 -- Found example_interfaces: 0.9.3 (/opt/ros/humble/share/example_interfaces/cmake)
 -- Configuring incomplete, errors occurred!
-See also "/home/ALEX/3dev/ros/build/test_cpp_pkg/CMakeFiles/CMakeOutput.log".
+See also "/home/ALEX/anytrack/ros/build/test_cpp_pkg/CMakeFiles/CMakeOutput.log".

@@ -8,13 +8,13 @@ writing top-level names to anytrack.egg-info/top_level.txt
 reading manifest file 'anytrack.egg-info/SOURCES.txt'
 writing manifest file 'anytrack.egg-info/SOURCES.txt'
 running build_ext
-Creating /home/ALEX/3dev/ros/install/anytrack/lib/python3.10/site-packages/anytrack.egg-link (link to .)
-Installing camera_detector script to /home/ALEX/3dev/ros/install/anytrack/lib/anytrack
-Installing camera_driver script to /home/ALEX/3dev/ros/install/anytrack/lib/anytrack
-Installing camera_info script to /home/ALEX/3dev/ros/install/anytrack/lib/anytrack
-Installing camera_vector script to /home/ALEX/3dev/ros/install/anytrack/lib/anytrack
-Installing manager script to /home/ALEX/3dev/ros/install/anytrack/lib/anytrack
-Installing position_manager script to /home/ALEX/3dev/ros/install/anytrack/lib/anytrack
+Creating /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack.egg-link (link to .)
+Installing camera_detector script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+Installing camera_driver script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+Installing camera_info script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+Installing camera_vector script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+Installing manager script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+Installing position_manager script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
 
-Installed /home/ALEX/3dev/ros/build/anytrack
+Installed /home/ALEX/anytrack/ros/build/anytrack
 running install_data

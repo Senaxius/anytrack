@@ -11,7 +11,7 @@
 -- Found example_interfaces: 0.9.3 (/opt/ros/humble/share/example_interfaces/cmake)
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/ALEX/3dev/ros/build/test_cpp_pkg
+-- Build files have been written to: /home/ALEX/anytrack/ros/build/test_cpp_pkg
 [35m[1mConsolidate compiler generated dependencies of target test_server[0m
 [35m[1mConsolidate compiler generated dependencies of target number_publisher[0m
 [35m[1mConsolidate compiler generated dependencies of target test_listener[0m

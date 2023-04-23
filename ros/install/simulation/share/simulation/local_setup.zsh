@@ -1,1 +1,1 @@
-/home/ALEX/3dev/ros/build/simulation/ament_cmake_environment_hooks/local_setup.zsh
+/home/ALEX/anytrack/ros/build/simulation/ament_cmake_environment_hooks/local_setup.zsh

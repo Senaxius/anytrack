@@ -1,4 +1,4 @@
-[0.042s] Invoking command in '/home/ALEX/3dev/ros/build/opencv_cam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake /home/ALEX/3dev/ros/src/opencv_cam -DCMAKE_INSTALL_PREFIX=/home/ALEX/3dev/ros/install/opencv_cam
+[0.042s] Invoking command in '/home/ALEX/anytrack/ros/build/opencv_cam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake /home/ALEX/anytrack/ros/src/opencv_cam -DCMAKE_INSTALL_PREFIX=/home/ALEX/anytrack/ros/install/opencv_cam
 [0.307s] -- The C compiler identification is GNU 11.3.0
 [0.307s] -- The CXX compiler identification is GNU 11.3.0
 [0.307s] -- Detecting C compiler ABI info
@@ -45,5 +45,5 @@
 [1.670s] 
 [1.670s] [0m
 [1.670s] -- Configuring incomplete, errors occurred!
-[1.671s] See also "/home/ALEX/3dev/ros/build/opencv_cam/CMakeFiles/CMakeOutput.log".
-[1.676s] Invoked command in '/home/ALEX/3dev/ros/build/opencv_cam' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake /home/ALEX/3dev/ros/src/opencv_cam -DCMAKE_INSTALL_PREFIX=/home/ALEX/3dev/ros/install/opencv_cam
+[1.671s] See also "/home/ALEX/anytrack/ros/build/opencv_cam/CMakeFiles/CMakeOutput.log".
+[1.676s] Invoked command in '/home/ALEX/anytrack/ros/build/opencv_cam' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake /home/ALEX/anytrack/ros/src/opencv_cam -DCMAKE_INSTALL_PREFIX=/home/ALEX/anytrack/ros/install/opencv_cam

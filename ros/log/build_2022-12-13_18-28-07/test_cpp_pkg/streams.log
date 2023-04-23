@@ -1,4 +1,4 @@
-[0.014s] Invoking command in '/home/ALEX/3dev/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/test_cpp_pkg -- -j12 -l12
+[0.014s] Invoking command in '/home/ALEX/anytrack/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/test_cpp_pkg -- -j12 -l12
 [0.046s] [35m[1mConsolidate compiler generated dependencies of target test_client_nop[0m
 [0.055s] [  7%] [32m[1mLinking CXX executable test_client_op[0m
 [0.056s] [ 21%] Built target test_listener
@@ -13,11 +13,11 @@
 [0.115s] gmake[2]: *** [CMakeFiles/test_client_op.dir/build.make:175: test_client_op] Error 1
 [0.115s] gmake[1]: *** [CMakeFiles/Makefile2:279: CMakeFiles/test_client_op.dir/all] Error 2
 [0.116s] gmake[1]: *** Waiting for unfinished jobs....
-[2.086s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
-[2.086s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:69:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp::executor[m[K’ has not been declared
+[2.086s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[2.086s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:69:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp::executor[m[K’ has not been declared
 [2.086s]    21 |     if (rclcpp::spin_until_future_complete(node, future) == rclcpp::[01;31m[Kexecutor[m[K::FutureReturnCode::SUCCESS){
 [2.086s]       |                                                                     [01;31m[K^~~~~~~~[m[K
 [2.608s] gmake[2]: *** [CMakeFiles/test_client_nop.dir/build.make:76: CMakeFiles/test_client_nop.dir/src/test_client_nop.cpp.o] Error 1
 [2.608s] gmake[1]: *** [CMakeFiles/Makefile2:253: CMakeFiles/test_client_nop.dir/all] Error 2
 [2.608s] gmake: *** [Makefile:146: all] Error 2
-[2.610s] Invoked command in '/home/ALEX/3dev/ros/build/test_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/test_cpp_pkg -- -j12 -l12
+[2.610s] Invoked command in '/home/ALEX/anytrack/ros/build/test_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/test_cpp_pkg -- -j12 -l12

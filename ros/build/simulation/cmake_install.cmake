@@ -1,8 +1,8 @@
-# Install script for directory: /home/ALEX/3dev/ros/src/simulation
+# Install script for directory: /home/ALEX/anytrack/ros/src/simulation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ALEX/3dev/ros/install/simulation")
+  set(CMAKE_INSTALL_PREFIX "/home/ALEX/anytrack/ros/install/simulation")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/ALEX/3dev/ros/build/simulation/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/ALEX/anytrack/ros/build/simulation/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ALEX/3dev/ros/build/simulation/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ALEX/anytrack/ros/build/simulation/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

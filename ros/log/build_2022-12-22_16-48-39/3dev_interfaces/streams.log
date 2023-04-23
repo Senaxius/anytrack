@@ -1,4 +1,4 @@
-[0.016s] Invoking command in '/home/ALEX/3dev/ros/build/3dev_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake /home/ALEX/3dev/ros/src/3dev_interfaces -DCMAKE_INSTALL_PREFIX=/home/ALEX/3dev/ros/install/3dev_interfaces
+[0.016s] Invoking command in '/home/ALEX/anytrack/ros/build/anytrack_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake /home/ALEX/anytrack/ros/src/anytrack_interfaces -DCMAKE_INSTALL_PREFIX=/home/ALEX/anytrack/ros/install/anytrack_interfaces
 [0.083s] -- The C compiler identification is GNU 11.3.0
 [0.143s] -- The CXX compiler identification is GNU 11.3.0
 [0.152s] -- Detecting C compiler ABI info
@@ -19,12 +19,12 @@
 [0.625s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
 [0.766s] [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
 [0.766s]   execute_process(/usr/bin/python3.10 -m rosidl_adapter --package-name
-[0.766s]   3dev_interfaces --arguments-file
-[0.766s]   /home/ALEX/3dev/ros/build/3dev_interfaces/rosidl_adapter__arguments__3dev_interfaces.json
+[0.766s]   anytrack_interfaces --arguments-file
+[0.766s]   /home/ALEX/anytrack/ros/build/anytrack_interfaces/rosidl_adapter__arguments__anytrack_interfaces.json
 [0.766s]   --output-dir
-[0.766s]   /home/ALEX/3dev/ros/build/3dev_interfaces/rosidl_adapter/3dev_interfaces
+[0.766s]   /home/ALEX/anytrack/ros/build/anytrack_interfaces/rosidl_adapter/anytrack_interfaces
 [0.767s]   --output-file
-[0.767s]   /home/ALEX/3dev/ros/build/3dev_interfaces/rosidl_adapter/3dev_interfaces.idls)
+[0.767s]   /home/ALEX/anytrack/ros/build/anytrack_interfaces/rosidl_adapter/anytrack_interfaces.idls)
 [0.767s]   returned error code 1:
 [0.767s] 
 [0.767s]   Traceback (most recent call last):
@@ -48,7 +48,7 @@
 [0.768s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 201, in __init__
 [0.768s]       raise InvalidResourceName(
 [0.768s] 
-[0.769s]   rosidl_adapter.parser.InvalidResourceName: '3dev_interfaces' is an invalid
+[0.769s]   rosidl_adapter.parser.InvalidResourceName: 'anytrack_interfaces' is an invalid
 [0.769s]   package name.  It should have the pattern
 [0.769s]   '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
 [0.769s] 
@@ -58,5 +58,5 @@
 [0.769s] 
 [0.769s] [0m
 [0.769s] -- Configuring incomplete, errors occurred!
-[0.769s] See also "/home/ALEX/3dev/ros/build/3dev_interfaces/CMakeFiles/CMakeOutput.log".
-[0.771s] Invoked command in '/home/ALEX/3dev/ros/build/3dev_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake /home/ALEX/3dev/ros/src/3dev_interfaces -DCMAKE_INSTALL_PREFIX=/home/ALEX/3dev/ros/install/3dev_interfaces
+[0.769s] See also "/home/ALEX/anytrack/ros/build/anytrack_interfaces/CMakeFiles/CMakeOutput.log".
+[0.771s] Invoked command in '/home/ALEX/anytrack/ros/build/anytrack_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake /home/ALEX/anytrack/ros/src/anytrack_interfaces -DCMAKE_INSTALL_PREFIX=/home/ALEX/anytrack/ros/install/anytrack_interfaces

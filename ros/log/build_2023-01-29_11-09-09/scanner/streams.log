@@ -1,4 +1,4 @@
-[0.559s] Invoking command in '/home/ALEX/3dev/ros/build/scanner': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scanner
+[0.559s] Invoking command in '/home/ALEX/anytrack/ros/build/scanner': PYTHONPATH=/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/anytrack/ros/install/scanner --editable --build-directory /home/ALEX/anytrack/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/anytrack/ros/install/scanner
 [0.799s] running develop
 [0.937s] running egg_info
 [0.937s] writing scanner.egg-info/PKG-INFO
@@ -9,14 +9,14 @@
 [0.939s] reading manifest file 'scanner.egg-info/SOURCES.txt'
 [0.939s] writing manifest file 'scanner.egg-info/SOURCES.txt'
 [0.940s] running build_ext
-[0.941s] Creating /home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages/scanner.egg-link (link to .)
-[0.941s] Installing camera_info script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
-[0.941s] Installing camera_tracker script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
-[0.942s] Installing position_manager script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
-[0.942s] Installing scanner script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
-[0.942s] Installing test script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
-[0.942s] Installing tf_broadcaster script to /home/ALEX/3dev/ros/install/scanner/lib/scanner
+[0.941s] Creating /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner.egg-link (link to .)
+[0.941s] Installing camera_info script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[0.941s] Installing camera_tracker script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[0.942s] Installing position_manager script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[0.942s] Installing scanner script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[0.942s] Installing test script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[0.942s] Installing tf_broadcaster script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
 [0.942s] 
-[0.942s] Installed /home/ALEX/3dev/ros/build/scanner
+[0.942s] Installed /home/ALEX/anytrack/ros/build/scanner
 [0.943s] running install_data
-[0.968s] Invoked command in '/home/ALEX/3dev/ros/build/scanner' returned '0': PYTHONPATH=/home/ALEX/3dev/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/3dev/ros/install/scanner --editable --build-directory /home/ALEX/3dev/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/3dev/ros/install/scanner
+[0.968s] Invoked command in '/home/ALEX/anytrack/ros/build/scanner' returned '0': PYTHONPATH=/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/anytrack/ros/install/scanner --editable --build-directory /home/ALEX/anytrack/ros/build/scanner/build --no-deps install_data --install-dir /home/ALEX/anytrack/ros/install/scanner

@@ -1,0 +1,65 @@
+[1.402s] Invoking command in '/home/ALEX/anytrack/ros/src/scanner': PYTHONPATH=/home/ALEX/anytrack/ros/build/scanner/prefix_override:/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/scanner build --build-base /home/ALEX/anytrack/ros/build/scanner/build install --record /home/ALEX/anytrack/ros/build/scanner/install.log --single-version-externally-managed
+[1.709s] running egg_info
+[1.710s] creating ../../build/scanner/scanner.egg-info
+[1.710s] writing ../../build/scanner/scanner.egg-info/PKG-INFO
+[1.711s] writing dependency_links to ../../build/scanner/scanner.egg-info/dependency_links.txt
+[1.711s] writing entry points to ../../build/scanner/scanner.egg-info/entry_points.txt
+[1.711s] writing requirements to ../../build/scanner/scanner.egg-info/requires.txt
+[1.711s] writing top-level names to ../../build/scanner/scanner.egg-info/top_level.txt
+[1.711s] writing manifest file '../../build/scanner/scanner.egg-info/SOURCES.txt'
+[1.712s] reading manifest file '../../build/scanner/scanner.egg-info/SOURCES.txt'
+[1.714s] writing manifest file '../../build/scanner/scanner.egg-info/SOURCES.txt'
+[1.714s] running build
+[1.714s] running build_py
+[1.714s] creating /home/ALEX/anytrack/ros/build/scanner/build
+[1.714s] creating /home/ALEX/anytrack/ros/build/scanner/build/lib
+[1.714s] creating /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner
+[1.715s] copying scanner/camera_info.py -> /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner
+[1.715s] copying scanner/scanner.py -> /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner
+[1.716s] copying scanner/visualisation_vector.py -> /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner
+[1.716s] copying scanner/calibrater.py -> /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner
+[1.716s] copying scanner/camera_position.py -> /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner
+[1.717s] copying scanner/test.py -> /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner
+[1.717s] copying scanner/camera_tracker.py -> /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner
+[1.719s] copying scanner/foxglove_camera.py -> /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner
+[1.719s] copying scanner/__init__.py -> /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner
+[1.719s] running install
+[1.719s] running install_lib
+[1.723s] creating /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner
+[1.723s] copying /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner/camera_info.py -> /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner
+[1.723s] copying /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner/scanner.py -> /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner
+[1.723s] copying /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner/visualisation_vector.py -> /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner
+[1.723s] copying /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner/calibrater.py -> /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner
+[1.723s] copying /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner/camera_position.py -> /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner
+[1.724s] copying /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner/test.py -> /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner
+[1.724s] copying /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner/camera_tracker.py -> /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner
+[1.724s] copying /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner/foxglove_camera.py -> /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner
+[1.724s] copying /home/ALEX/anytrack/ros/build/scanner/build/lib/scanner/__init__.py -> /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner
+[1.724s] byte-compiling /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner/camera_info.py to camera_info.cpython-310.pyc
+[1.724s] byte-compiling /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner/scanner.py to scanner.cpython-310.pyc
+[1.725s] byte-compiling /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner/visualisation_vector.py to visualisation_vector.cpython-310.pyc
+[1.725s] byte-compiling /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner/calibrater.py to calibrater.cpython-310.pyc
+[1.725s] byte-compiling /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner/camera_position.py to camera_position.cpython-310.pyc
+[1.725s] byte-compiling /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner/test.py to test.cpython-310.pyc
+[1.726s] byte-compiling /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner/camera_tracker.py to camera_tracker.cpython-310.pyc
+[1.727s] byte-compiling /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner/foxglove_camera.py to foxglove_camera.cpython-310.pyc
+[1.727s] byte-compiling /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner/__init__.py to __init__.cpython-310.pyc
+[1.727s] running install_data
+[1.727s] creating /home/ALEX/anytrack/ros/install/scanner/share/ament_index
+[1.727s] creating /home/ALEX/anytrack/ros/install/scanner/share/ament_index/resource_index
+[1.728s] creating /home/ALEX/anytrack/ros/install/scanner/share/ament_index/resource_index/packages
+[1.728s] copying resource/scanner -> /home/ALEX/anytrack/ros/install/scanner/share/ament_index/resource_index/packages
+[1.728s] copying package.xml -> /home/ALEX/anytrack/ros/install/scanner/share/scanner
+[1.728s] running install_egg_info
+[1.729s] Copying ../../build/scanner/scanner.egg-info to /home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages/scanner-0.0.0-py3.10.egg-info
+[1.729s] running install_scripts
+[1.745s] Installing calibrater script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.745s] Installing camera_info script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.746s] Installing camera_position script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.746s] Installing camera_tracker script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.746s] Installing foxglove_camera script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.746s] Installing scanner script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.747s] Installing test script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.747s] Installing visualisation_vector script to /home/ALEX/anytrack/ros/install/scanner/lib/scanner
+[1.747s] writing list of installed files to '/home/ALEX/anytrack/ros/build/scanner/install.log'
+[1.794s] Invoked command in '/home/ALEX/anytrack/ros/src/scanner' returned '0': PYTHONPATH=/home/ALEX/anytrack/ros/build/scanner/prefix_override:/home/ALEX/anytrack/ros/install/scanner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/scanner build --build-base /home/ALEX/anytrack/ros/build/scanner/build install --record /home/ALEX/anytrack/ros/build/scanner/install.log --single-version-externally-managed

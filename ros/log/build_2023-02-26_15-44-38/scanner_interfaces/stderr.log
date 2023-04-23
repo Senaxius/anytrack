@@ -1,11 +1,11 @@
 [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
   execute_process(/usr/bin/python3.10 -m rosidl_adapter --package-name
   scanner_interfaces --arguments-file
-  /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter__arguments__scanner_interfaces.json
+  /home/ALEX/anytrack/ros/build/scanner_interfaces/rosidl_adapter__arguments__scanner_interfaces.json
   --output-dir
-  /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces
+  /home/ALEX/anytrack/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces
   --output-file
-  /home/ALEX/3dev/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces.idls)
+  /home/ALEX/anytrack/ros/build/scanner_interfaces/rosidl_adapter/scanner_interfaces.idls)
   returned error code 1:
 
   Error processing ' builtin_interfaces/Time stamp' of

@@ -1,4 +1,4 @@
-[0.016s] Invoking command in '/home/ALEX/3dev/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/test_cpp_pkg -- -j12 -l12
+[0.016s] Invoking command in '/home/ALEX/anytrack/ros/build/test_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/test_cpp_pkg -- -j12 -l12
 [0.041s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
 [0.186s] -- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)
 [0.226s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
@@ -12,7 +12,7 @@
 [0.705s] -- Found example_interfaces: 0.9.3 (/opt/ros/humble/share/example_interfaces/cmake)
 [0.931s] -- Configuring done
 [0.960s] -- Generating done
-[0.962s] -- Build files have been written to: /home/ALEX/3dev/ros/build/test_cpp_pkg
+[0.962s] -- Build files have been written to: /home/ALEX/anytrack/ros/build/test_cpp_pkg
 [0.981s] [35m[1mConsolidate compiler generated dependencies of target test_server[0m
 [0.982s] [35m[1mConsolidate compiler generated dependencies of target number_publisher[0m
 [0.982s] [35m[1mConsolidate compiler generated dependencies of target test_listener[0m
@@ -32,8 +32,8 @@
 [1.099s] gmake[2]: *** [CMakeFiles/test_client_op.dir/build.make:175: test_client_op] Error 1
 [1.099s] gmake[1]: *** [CMakeFiles/Makefile2:279: CMakeFiles/test_client_op.dir/all] Error 2
 [1.100s] gmake[1]: *** Waiting for unfinished jobs....
-[3.145s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
-[3.145s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:20:69:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp::executor[m[K’ has not been declared
+[3.145s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[3.145s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:20:69:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp::executor[m[K’ has not been declared
 [3.145s]    20 |     if (rclcpp::spin_until_future_complete(node, future) == rclcpp::[01;31m[Kexecutor[m[K::FutureReturnCode::SUCCESS){
 [3.145s]       |                                                                     [01;31m[K^~~~~~~~[m[K
 [3.145s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
@@ -46,24 +46,24 @@
 [3.146s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
 [3.146s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
 [3.146s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
-[3.146s]                  from [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:2[m[K:
-[3.146s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[3.146s]                  from [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:2[m[K:
+[3.146s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
 [3.146s]    21 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "%ld + %ld = %ld", request->a, request->b, response->sum);
 [3.146s]       |                     [01;31m[K^~~~[m[K
-[3.146s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
-[3.146s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.146s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[3.146s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
 [3.146s]    21 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "%ld + %ld = %ld", request->a, request->b, response->sum);
 [3.147s]       |         [01;31m[K^~~~~~~~~~~[m[K
-[3.147s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[3.147s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
 [3.147s]    21 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "%ld + %ld = %ld", request->a, request->b, response->sum);
 [3.147s]       |         [01;31m[K^~~~~~~~~~~[m[K
-[3.147s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.147s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
 [3.147s]    21 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "%ld + %ld = %ld", request->a, request->b, response->sum);
 [3.147s]       |         [01;31m[K^~~~~~~~~~~[m[K
-[3.147s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[3.147s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
 [3.147s]    21 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "%ld + %ld = %ld", request->a, request->b, response->sum);
 [3.147s]       |         [01;31m[K^~~~~~~~~~~[m[K
-[3.147s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.147s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
 [3.147s]    21 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "%ld + %ld = %ld", request->a, request->b, response->sum);
 [3.147s]       |         [01;31m[K^~~~~~~~~~~[m[K
 [3.147s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
@@ -77,14 +77,14 @@
 [3.148s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
 [3.148s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
 [3.148s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
-[3.148s]                  from [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:2[m[K:
-[3.148s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[3.148s]                  from [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:2[m[K:
+[3.148s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
 [3.148s]    21 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "%ld + %ld = %ld", request->a, request->b, response->sum);
 [3.148s]       |                     [01;31m[K^~~~[m[K
-[3.149s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[3.149s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
 [3.149s]    21 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "%ld + %ld = %ld", request->a, request->b, response->sum);
 [3.149s]       |                     [01;31m[K^~~~[m[K
-[3.149s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:84:[m[K [01;31m[Kerror: [m[K‘[01m[Kresponse[m[K’ was not declared in this scope
+[3.149s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:21:84:[m[K [01;31m[Kerror: [m[K‘[01m[Kresponse[m[K’ was not declared in this scope
 [3.149s]    21 |         RCLCPP_INFO(this->get_logger(), "%ld + %ld = %ld", request->a, request->b, [01;31m[Kresponse[m[K->sum);
 [3.149s]       |                                                                                    [01;31m[K^~~~~~~~[m[K
 [3.149s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
@@ -97,24 +97,24 @@
 [3.150s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
 [3.150s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
 [3.150s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
-[3.150s]                  from [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:2[m[K:
-[3.150s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[3.150s]                  from [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:2[m[K:
+[3.150s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
 [3.150s]    24 |         RCLCPP_ERROR([01;31m[Kthis[m[K->get_logger(), "Error while calling service");
 [3.150s]       |                      [01;31m[K^~~~[m[K
-[3.150s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
-[3.150s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.150s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[3.150s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
 [3.150s]    24 |         [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "Error while calling service");
 [3.150s]       |         [01;31m[K^~~~~~~~~~~~[m[K
-[3.150s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[3.150s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
 [3.151s]    24 |         [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "Error while calling service");
 [3.151s]       |         [01;31m[K^~~~~~~~~~~~[m[K
-[3.151s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.151s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
 [3.151s]    24 |         [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "Error while calling service");
 [3.151s]       |         [01;31m[K^~~~~~~~~~~~[m[K
-[3.151s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[3.151s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
 [3.151s]    24 |         [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "Error while calling service");
 [3.151s]       |         [01;31m[K^~~~~~~~~~~~[m[K
-[3.151s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.151s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
 [3.151s]    24 |         [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "Error while calling service");
 [3.151s]       |         [01;31m[K^~~~~~~~~~~~[m[K
 [3.151s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
@@ -128,14 +128,14 @@
 [3.152s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
 [3.152s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
 [3.152s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
-[3.152s]                  from [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:2[m[K:
-[3.152s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[3.152s]                  from [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:2[m[K:
+[3.152s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
 [3.152s]    24 |         RCLCPP_ERROR([01;31m[Kthis[m[K->get_logger(), "Error while calling service");
 [3.152s]       |                      [01;31m[K^~~~[m[K
-[3.152s] [01m[K/home/ALEX/3dev/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[3.152s] [01m[K/home/ALEX/anytrack/ros/src/test_cpp_pkg/src/test_client_nop.cpp:24:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
 [3.152s]    24 |         RCLCPP_ERROR([01;31m[Kthis[m[K->get_logger(), "Error while calling service");
 [3.152s]       |                      [01;31m[K^~~~[m[K
 [3.691s] gmake[2]: *** [CMakeFiles/test_client_nop.dir/build.make:76: CMakeFiles/test_client_nop.dir/src/test_client_nop.cpp.o] Error 1
 [3.691s] gmake[1]: *** [CMakeFiles/Makefile2:253: CMakeFiles/test_client_nop.dir/all] Error 2
 [3.691s] gmake: *** [Makefile:146: all] Error 2
-[3.692s] Invoked command in '/home/ALEX/3dev/ros/build/test_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/test_cpp_pkg -- -j12 -l12
+[3.692s] Invoked command in '/home/ALEX/anytrack/ros/build/test_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/test_cpp_pkg -- -j12 -l12

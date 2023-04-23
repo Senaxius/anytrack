@@ -12,7 +12,7 @@ running install
 running install_lib
 running install_data
 running install_egg_info
-removing '/home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg-0.0.0-py3.10.egg-info' (and everything under it)
-Copying ../../build/test_py_pkg/test_py_pkg.egg-info to /home/ALEX/3dev/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg-0.0.0-py3.10.egg-info
+removing '/home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/test_py_pkg/test_py_pkg.egg-info to /home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages/test_py_pkg-0.0.0-py3.10.egg-info
 running install_scripts
-writing list of installed files to '/home/ALEX/3dev/ros/build/test_py_pkg/install.log'
+writing list of installed files to '/home/ALEX/anytrack/ros/build/test_py_pkg/install.log'

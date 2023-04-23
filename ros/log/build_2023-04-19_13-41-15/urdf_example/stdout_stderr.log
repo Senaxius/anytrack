@@ -20,29 +20,29 @@
 -- Added test 'xmllint' to check XML markup files
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/ALEX/3dev/ros/build/urdf_example
+-- Build files have been written to: /home/ALEX/anytrack/ros/build/urdf_example
 -- Install configuration: ""
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/description
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/description/example_include.xacro
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/description/example_gazebo.xacro
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/description/example_robot.urdf.xacro
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/launch
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/launch/rsp_sim.launch.py
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/launch/rsp.launch.py
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/worlds
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/worlds/test_world.world
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/ament_index/resource_index/package_run_dependencies/urdf_example
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/ament_index/resource_index/parent_prefix_path/urdf_example
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/environment/ament_prefix_path.sh
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/environment/ament_prefix_path.dsv
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/environment/path.sh
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/environment/path.dsv
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/local_setup.bash
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/local_setup.sh
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/local_setup.zsh
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/local_setup.dsv
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/package.dsv
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/ament_index/resource_index/packages/urdf_example
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/cmake/urdf_exampleConfig.cmake
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/cmake/urdf_exampleConfig-version.cmake
--- Installing: /home/ALEX/3dev/ros/install/urdf_example/share/urdf_example/package.xml
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/description
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/description/example_include.xacro
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/description/example_gazebo.xacro
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/description/example_robot.urdf.xacro
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/launch
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/launch/rsp_sim.launch.py
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/launch/rsp.launch.py
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/worlds
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/worlds/test_world.world
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/ament_index/resource_index/package_run_dependencies/urdf_example
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/ament_index/resource_index/parent_prefix_path/urdf_example
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/environment/ament_prefix_path.sh
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/environment/ament_prefix_path.dsv
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/environment/path.sh
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/environment/path.dsv
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/local_setup.bash
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/local_setup.sh
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/local_setup.zsh
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/local_setup.dsv
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/package.dsv
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/ament_index/resource_index/packages/urdf_example
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/cmake/urdf_exampleConfig.cmake
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/cmake/urdf_exampleConfig-version.cmake
+-- Installing: /home/ALEX/anytrack/ros/install/urdf_example/share/urdf_example/package.xml

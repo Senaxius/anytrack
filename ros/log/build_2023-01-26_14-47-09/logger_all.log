@@ -8,7 +8,7 @@
 [0.186s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
 [0.186s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
 [0.186s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
-[0.186s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ALEX/3dev/ros'
+[0.186s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ALEX/anytrack/ros'
 [0.186s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
 [0.187s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
 [0.187s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
@@ -125,54 +125,54 @@
 [0.229s] Level 5:colcon.colcon_core.verb:set package 'scanner_bringup' build argument 'ament_cmake_args' from command line to 'None'
 [0.229s] Level 5:colcon.colcon_core.verb:set package 'scanner_bringup' build argument 'catkin_cmake_args' from command line to 'None'
 [0.229s] Level 5:colcon.colcon_core.verb:set package 'scanner_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
-[0.229s] DEBUG:colcon.colcon_core.verb:Building package 'scanner_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ALEX/3dev/ros/build/scanner_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ALEX/3dev/ros/install/scanner_bringup', 'merge_install': False, 'path': '/home/ALEX/3dev/ros/src/scanner_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.229s] DEBUG:colcon.colcon_core.verb:Building package 'scanner_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ALEX/anytrack/ros/build/scanner_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ALEX/anytrack/ros/install/scanner_bringup', 'merge_install': False, 'path': '/home/ALEX/anytrack/ros/src/scanner_bringup', 'symlink_install': True, 'test_result_base': None}
 [0.230s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
 [0.234s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
-[0.234s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ALEX/3dev/ros/src/scanner_bringup' with build type 'ament_cmake'
-[0.234s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ALEX/3dev/ros/src/scanner_bringup'
+[0.234s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ALEX/anytrack/ros/src/scanner_bringup' with build type 'ament_cmake'
+[0.234s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ALEX/anytrack/ros/src/scanner_bringup'
 [0.238s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
 [0.238s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
 [0.238s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
-[0.248s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/3dev/ros/build/scanner_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake /home/ALEX/3dev/ros/src/scanner_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ALEX/3dev/ros/install/scanner_bringup
-[0.450s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/3dev/ros/build/scanner_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake /home/ALEX/3dev/ros/src/scanner_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ALEX/3dev/ros/install/scanner_bringup
-[0.452s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/3dev/ros/build/scanner_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/scanner_bringup -- -j12 -l12
-[0.484s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/3dev/ros/build/scanner_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/3dev/ros/build/scanner_bringup -- -j12 -l12
-[0.507s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/3dev/ros/build/scanner_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/scanner_bringup
+[0.248s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/anytrack/ros/build/scanner_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake /home/ALEX/anytrack/ros/src/scanner_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ALEX/anytrack/ros/install/scanner_bringup
+[0.450s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/anytrack/ros/build/scanner_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake /home/ALEX/anytrack/ros/src/scanner_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ALEX/anytrack/ros/install/scanner_bringup
+[0.452s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/anytrack/ros/build/scanner_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/scanner_bringup -- -j12 -l12
+[0.484s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/anytrack/ros/build/scanner_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/scanner_bringup -- -j12 -l12
+[0.507s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ALEX/anytrack/ros/build/scanner_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/anytrack/ros/build/scanner_bringup
 [0.625s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scanner_bringup)
-[0.626s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/3dev/ros/build/scanner_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/3dev/ros/install/test_py_pkg:/home/ALEX/3dev/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/3dev/ros/build/scanner_bringup
-[0.630s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_bringup' for CMake module files
-[0.631s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_bringup' for CMake config files
+[0.626s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ALEX/anytrack/ros/build/scanner_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scanner:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/anytrack/ros/build/scanner_bringup
+[0.630s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_bringup' for CMake module files
+[0.631s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_bringup' for CMake config files
 [0.631s] Level 1:colcon.colcon_core.shell:create_environment_hook('scanner_bringup', 'cmake_prefix_path')
-[0.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/hook/cmake_prefix_path.ps1'
-[0.641s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/hook/cmake_prefix_path.dsv'
-[0.641s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/hook/cmake_prefix_path.sh'
-[0.642s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_bringup/bin'
-[0.642s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_bringup/lib/pkgconfig/scanner_bringup.pc'
-[0.643s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_bringup/lib/python3.10/site-packages'
-[0.643s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_bringup/bin'
-[0.644s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/package.ps1'
-[0.645s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/package.dsv'
-[0.645s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/package.sh'
-[0.646s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/package.bash'
-[0.647s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/package.zsh'
-[0.647s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ALEX/3dev/ros/install/scanner_bringup/share/colcon-core/packages/scanner_bringup)
+[0.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/scanner_bringup/share/scanner_bringup/hook/cmake_prefix_path.ps1'
+[0.641s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/anytrack/ros/install/scanner_bringup/share/scanner_bringup/hook/cmake_prefix_path.dsv'
+[0.641s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/scanner_bringup/share/scanner_bringup/hook/cmake_prefix_path.sh'
+[0.642s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_bringup/bin'
+[0.642s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_bringup/lib/pkgconfig/scanner_bringup.pc'
+[0.643s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_bringup/lib/python3.10/site-packages'
+[0.643s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_bringup/bin'
+[0.644s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner_bringup/share/scanner_bringup/package.ps1'
+[0.645s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ALEX/anytrack/ros/install/scanner_bringup/share/scanner_bringup/package.dsv'
+[0.645s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner_bringup/share/scanner_bringup/package.sh'
+[0.646s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner_bringup/share/scanner_bringup/package.bash'
+[0.647s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner_bringup/share/scanner_bringup/package.zsh'
+[0.647s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ALEX/anytrack/ros/install/scanner_bringup/share/colcon-core/packages/scanner_bringup)
 [0.664s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scanner_bringup)
-[0.666s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_bringup' for CMake module files
-[0.666s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_bringup' for CMake config files
+[0.666s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_bringup' for CMake module files
+[0.666s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_bringup' for CMake config files
 [0.667s] Level 1:colcon.colcon_core.shell:create_environment_hook('scanner_bringup', 'cmake_prefix_path')
-[0.668s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/hook/cmake_prefix_path.ps1'
-[0.668s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/hook/cmake_prefix_path.dsv'
-[0.668s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/hook/cmake_prefix_path.sh'
-[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_bringup/bin'
-[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_bringup/lib/pkgconfig/scanner_bringup.pc'
-[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_bringup/lib/python3.10/site-packages'
-[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/3dev/ros/install/scanner_bringup/bin'
-[0.670s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/package.ps1'
-[0.671s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/package.dsv'
-[0.671s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/package.sh'
-[0.671s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/package.bash'
-[0.672s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/3dev/ros/install/scanner_bringup/share/scanner_bringup/package.zsh'
-[0.672s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ALEX/3dev/ros/install/scanner_bringup/share/colcon-core/packages/scanner_bringup)
+[0.668s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/scanner_bringup/share/scanner_bringup/hook/cmake_prefix_path.ps1'
+[0.668s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ALEX/anytrack/ros/install/scanner_bringup/share/scanner_bringup/hook/cmake_prefix_path.dsv'
+[0.668s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ALEX/anytrack/ros/install/scanner_bringup/share/scanner_bringup/hook/cmake_prefix_path.sh'
+[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_bringup/bin'
+[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_bringup/lib/pkgconfig/scanner_bringup.pc'
+[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_bringup/lib/python3.10/site-packages'
+[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/ALEX/anytrack/ros/install/scanner_bringup/bin'
+[0.670s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner_bringup/share/scanner_bringup/package.ps1'
+[0.671s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ALEX/anytrack/ros/install/scanner_bringup/share/scanner_bringup/package.dsv'
+[0.671s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner_bringup/share/scanner_bringup/package.sh'
+[0.671s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner_bringup/share/scanner_bringup/package.bash'
+[0.672s] INFO:colcon.colcon_core.shell:Creating package script '/home/ALEX/anytrack/ros/install/scanner_bringup/share/scanner_bringup/package.zsh'
+[0.672s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ALEX/anytrack/ros/install/scanner_bringup/share/colcon-core/packages/scanner_bringup)
 [0.672s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
 [0.672s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
 [0.673s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
@@ -183,13 +183,13 @@
 [0.679s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
 [0.681s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
 [0.682s] DEBUG:colcon.colcon_core.event_reactor:joined thread
-[0.683s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.ps1'
-[0.684s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/3dev/ros/install/_local_setup_util_ps1.py'
-[0.685s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.ps1'
-[0.687s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.sh'
-[0.687s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/3dev/ros/install/_local_setup_util_sh.py'
-[0.687s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.sh'
-[0.689s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.bash'
-[0.689s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.bash'
-[0.690s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/3dev/ros/install/local_setup.zsh'
-[0.691s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/3dev/ros/install/setup.zsh'
+[0.683s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.ps1'
+[0.684s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/anytrack/ros/install/_local_setup_util_ps1.py'
+[0.685s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.ps1'
+[0.687s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.sh'
+[0.687s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ALEX/anytrack/ros/install/_local_setup_util_sh.py'
+[0.687s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.sh'
+[0.689s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.bash'
+[0.689s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.bash'
+[0.690s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ALEX/anytrack/ros/install/local_setup.zsh'
+[0.691s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ALEX/anytrack/ros/install/setup.zsh'
