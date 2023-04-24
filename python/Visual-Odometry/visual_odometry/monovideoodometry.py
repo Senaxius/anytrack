@@ -72,11 +72,6 @@ class MonoVideoOdometry(object):
         return np.array([x.pt for x in p0], dtype=np.float32).reshape(-1, 1, 2)
 
     def visual_odometry(self):
-        """
-        Estimates the location using visual odometery. Depending on self.fivepoint flag either a five point
-        method or eight point method is used. If features fall out of frame such that there are less than 2000
-        features remaining, a new feature detection is triggered.
-        """
 
         if self.n_features < 2000:
             self.p0 = self.detect(self.old_frame)

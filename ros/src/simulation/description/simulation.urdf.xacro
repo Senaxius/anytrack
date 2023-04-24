@@ -35,7 +35,8 @@
     </link>
 
     <joint name="cam1_joint" type="fixed">
-        <origin xyz="2 -2 1" rpy="0 0 ${pi/4}"/>
+        <!-- <origin xyz="2 -2 1" rpy="0 0 ${pi/4}"/> -->
+        <origin xyz="0 1 1" rpy="0 0 0"/>
         <parent link="world"/>
         <child link="cam1_link"/>
     </joint>
