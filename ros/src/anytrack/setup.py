@@ -28,6 +28,7 @@ setup(
             "position_manager = anytrack.position_manager:main",
             "calibration = anytrack.calibration:main",
             "test = anytrack.test:main",
+            "simulation_publisher = anytrack.simulation_publisher:main",
         ],
     },
 )

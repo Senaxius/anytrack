@@ -1,0 +1,28 @@
+[0.026s] Invoking command in '/home/ALEX/anytrack/ros/build/simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scannerV2:/home/ALEX/anytrack/ros/install/scanner:/home/ALEX/anytrack/ros/install/anytrack:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/simulation -- -j12 -l12
+[0.095s] Invoked command in '/home/ALEX/anytrack/ros/build/simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scannerV2:/home/ALEX/anytrack/ros/install/scanner:/home/ALEX/anytrack/ros/install/anytrack:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/simulation -- -j12 -l12
+[0.127s] Invoking command in '/home/ALEX/anytrack/ros/build/simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scannerV2:/home/ALEX/anytrack/ros/install/scanner:/home/ALEX/anytrack/ros/install/anytrack:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/anytrack/ros/build/simulation
+[0.138s] -- Install configuration: ""
+[0.138s] -- Execute custom install script
+[0.139s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/description/gazebo.xacro
+[0.139s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/description/include.xacro
+[0.139s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/description/scene.urdf.xacro
+[0.139s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/description/simulation.urdf.xacro
+[0.139s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/launch/gazebo.launch.py
+[0.139s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/launch/simulation.launch.py
+[0.140s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/worlds/gazebo_test.sdf
+[0.140s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/ament_index/resource_index/package_run_dependencies/simulation
+[0.140s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/ament_index/resource_index/parent_prefix_path/simulation
+[0.140s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/environment/ament_prefix_path.sh
+[0.140s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/environment/ament_prefix_path.dsv
+[0.140s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/environment/path.sh
+[0.141s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/environment/path.dsv
+[0.141s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/local_setup.bash
+[0.141s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/local_setup.sh
+[0.141s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/local_setup.zsh
+[0.141s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/local_setup.dsv
+[0.141s] -- Symlinking: /home/ALEX/anytrack/ros/install/simulation/share/simulation/package.dsv
+[0.149s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/ament_index/resource_index/packages/simulation
+[0.149s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/cmake/simulationConfig.cmake
+[0.149s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/cmake/simulationConfig-version.cmake
+[0.149s] -- Up-to-date symlink: /home/ALEX/anytrack/ros/install/simulation/share/simulation/package.xml
+[0.152s] Invoked command in '/home/ALEX/anytrack/ros/build/simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/test_py_pkg:/home/ALEX/anytrack/ros/install/scannerV2:/home/ALEX/anytrack/ros/install/scanner:/home/ALEX/anytrack/ros/install/anytrack:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/anytrack/ros/build/simulation

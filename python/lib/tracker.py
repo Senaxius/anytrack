@@ -147,7 +147,7 @@ def scanner_visulisation(frame, objects, line_buffer):
     color_1 = (237, 255, 0)
     color_2 = (0, 255, 255)
     color_3 = (255, 0, 255)
-    color_4 = (0, 255, 0)
+    color_4 = (0, 0, 0)
     colors = [color_1, color_2, color_3, color_4]
     for object in objects:
         if object.id < 4:

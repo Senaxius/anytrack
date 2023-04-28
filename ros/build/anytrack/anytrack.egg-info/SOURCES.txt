@@ -10,12 +10,14 @@ setup.py
 ../../build/anytrack/anytrack.egg-info/zip-safe
 anytrack/__init__.py
 anytrack/calibration.py
+anytrack/calibration_old.py
 anytrack/camera_detector.py
 anytrack/camera_driver.py
 anytrack/camera_info.py
 anytrack/camera_vector.py
 anytrack/manager.py
 anytrack/position_manager.py
+anytrack/simulation_publisher.py
 anytrack/test.py
 anytrack.egg-info/PKG-INFO
 anytrack.egg-info/SOURCES.txt

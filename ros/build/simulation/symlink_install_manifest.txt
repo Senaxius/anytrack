@@ -1,10 +1,12 @@
 /home/ALEX/anytrack/ros/install/simulation/share/simulation/description/gazebo.xacro
 /home/ALEX/anytrack/ros/install/simulation/share/simulation/description/include.xacro
-/home/ALEX/anytrack/ros/install/simulation/share/simulation/description/scene.urdf.xacro
 /home/ALEX/anytrack/ros/install/simulation/share/simulation/description/simulation.urdf.xacro
 /home/ALEX/anytrack/ros/install/simulation/share/simulation/launch/gazebo.launch.py
-/home/ALEX/anytrack/ros/install/simulation/share/simulation/launch/simulation.launch.py
-/home/ALEX/anytrack/ros/install/simulation/share/simulation/worlds/gazebo_test.sdf
+/home/ALEX/anytrack/ros/install/simulation/share/simulation/worlds/calibration.sdf
+/home/ALEX/anytrack/ros/install/simulation/share/simulation/worlds/calibration_simulation.xml
+/home/ALEX/anytrack/ros/install/simulation/share/simulation/worlds/calibration_world.world
+/home/ALEX/anytrack/ros/install/simulation/share/simulation/worlds/gazebo_ros_camera_demo.world
+/home/ALEX/anytrack/ros/install/simulation/share/simulation/worlds/test.world
 /home/ALEX/anytrack/ros/install/simulation/share/ament_index/resource_index/package_run_dependencies/simulation
 /home/ALEX/anytrack/ros/install/simulation/share/ament_index/resource_index/parent_prefix_path/simulation
 /home/ALEX/anytrack/ros/install/simulation/share/simulation/environment/ament_prefix_path.sh

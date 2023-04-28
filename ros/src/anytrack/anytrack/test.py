@@ -5,6 +5,11 @@ from rclpy.node import Node
 
 from scanner_interfaces.msg import Tracks
 
+import sys
+import numpy as np
+import cv2
+from scipy.spatial.transform import Rotation   
+
 class test(Node):  
     def __init__(self):
         super().__init__("test")  
@@ -26,7 +31,9 @@ class test(Node):
 
         self.listener_0 = self.create_subscription(msg_type=Tracks, topic=('/cam' + str("0") + '/tracks'), callback=self.track_0, qos_profile=10, callback_group=group_0)
         self.listener_1 = self.create_subscription(msg_type=Tracks, topic=('/cam' + str("1") + '/tracks'), callback=self.track_1, qos_profile=10, callback_group=group_1)
-    
+
+        self.count = 0
+
         self.loop = self.create_timer(0.1, callback=self.loop, callback_group=group_2)
 
     def track_0(self, msg):
@@ -35,7 +42,7 @@ class test(Node):
             for object in msg.tracks:
                 self.xy0 = (object.x, object.y)
                 buffer.append(self.xy0)
-            self.cam0_points = buffer
+            self.cam0_points = np.array(buffer)
     def track_1(self, msg):
         if len(msg.tracks) > 0:
             # self.xy1 = (msg.tracks[0].x, msg.tracks[0].y)
@@ -43,17 +50,58 @@ class test(Node):
             for object in msg.tracks:
                 self.xy1 = (object.x, object.y)
                 buffer.append(self.xy1)
-            self.cam1_points = buffer
+            self.cam1_points = np.array(buffer)
     
     def loop(self):
-        input()
-        # print(str(self.xy0) + "   " + str(self.xy1))
-        # self.cam0_points.append(self.xy0)
-        # self.cam1_points.append(self.xy1)
+        self.count += 1
         
-        print("self.cam0_points = np.array(" + str(self.cam0_points) + ")")
-        print()
-        print("self.cam1_points = np.array(" + str(self.cam1_points) + ")")
+        # print("self.cam0_points = np.array(" + str(self.cam0_points) + ")")
+        # print()
+        # print("self.cam1_points = np.array(" + str(self.cam1_points) + ")")
+        if self.cam0_points == []:
+            return
+
+        self.focal = 762.7249
+        self.pp = (640.5, 360.5)
+
+        self.R = np.zeros(shape=(3, 3))
+        self.t = np.zeros(shape=(3, 3))
+
+        E = np.zeros(shape=(3, 3))
+
+        E, _ = cv2.findEssentialMat(
+            self.cam0_points,
+            self.cam1_points,
+            self.focal,
+            self.pp,
+            cv2.RANSAC,
+            0.999,
+            1.0,
+            None,
+        )
+
+        _, self.R, self.t, _ = cv2.recoverPose(
+            E,
+            self.cam0_points,
+            self.cam1_points,
+            focal=self.focal,
+            pp = self.pp,
+            mask=None,
+        )
+
+        # print(self.t)
+        print("translation (x, y, z):       (" + str(round(self.t[2][0], 1)), end='')
+        print(", " + str(round(self.t[0][0], 1)), end='')
+        print(", " + str(round(self.t[1][0], 1)), end='')
+        print(")")
+
+        # print(self.R)
+        r = Rotation.from_matrix(self.R)
+        angles = r.as_euler("yzx", degrees=False)
+        print("rotation (roll, pitch, yaw): (" + str(round(angles[1], 2)), end='')
+        print(", " + str(round(angles[2], 2)), end='')
+        print(", " + str(round(angles[0], 2)), end='')
+        print(")")
 
 
 

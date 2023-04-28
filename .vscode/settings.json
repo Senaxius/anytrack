@@ -2,5 +2,6 @@
     "nuxt.isNuxtApp": false,
     "python.analysis.extraPaths": [
         "./python/lib"
-    ]
+    ],
+    "cmake.sourceDirectory": "/home/ALEX/anytrack/ros/build/scanner_interfaces/scanner_interfaces__py"
 }
