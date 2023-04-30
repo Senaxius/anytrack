@@ -1,14 +1,14 @@
 import rclpy
 from rclpy.node import Node
 
-import os
-import yaml
-
 from scanner_interfaces.msg import Tracks
-from scanner_interfaces.msg import Object
 from visualization_msgs.msg import Marker
 from visualization_msgs.msg import MarkerArray
 from geometry_msgs.msg import Point
+from sensor_msgs.msg import CameraInfo
+
+from rclpy.executors import MultiThreadedExecutor
+from rclpy.callback_groups import ReentrantCallbackGroup,MutuallyExclusiveCallbackGroup
 
 class camera_vector(Node):  
     def __init__(self):
@@ -39,48 +39,27 @@ class camera_vector(Node):
         if (self.device == -1 or self.index == -1):
             self.get_logger().warning("no index was set")
             exit()
-
-        self.get_logger().info("Starting camera vector with index " + str(self.index))
-
-        command = "v4l2-ctl -d /dev/video" + str(self.device) + " -D"
-        stream = os.popen(command)
-        output = stream.read()
-        if "HD Web Camera" in output:
-            self.config = 0
-            self.get_logger().info("Detected camera with know device type: HD Web Camera")
-            self.file = "/home/ALEX/anytrack/config/HD_WEB_Camera.yaml"
-        elif "CameraA" in output:
-            self.config = 1
-            self.get_logger().info("Detected camera with know device type: CameraA")
-            self.file = "/home/ALEX/anytrack/config/CameraA.yaml"
-        elif "WEB CAMERA M9 Pro" in output:
-            self.config = 2
-            self.get_logger().info("Detected camera with know device type: WEB CAMERA M9 Pro")
-            self.file = "/home/ALEX/anytrack/config/M9_Pro.yaml"
-        else:
-            self.get_logger().warning("Found device but no known configuration")
-            exit()
         
-        # create msg from .yaml file
-        self.data = self.read_yaml(self.file)
-
-        self.fx = (self.data["projection_matrix"]["data"][0] * (self.width / self.data["image_width"]))
-        self.fy = (self.data["projection_matrix"]["data"][5] * (self.height / self.data["image_height"]))
-        self.cx = (self.data["projection_matrix"]["data"][2] * (self.width / self.data["image_width"]))
-        self.cy = (self.data["projection_matrix"]["data"][6] * (self.height / self.data["image_height"]))
-
+        # colors for visualisation
         color_1 = (237, 255, 0)
         color_2 = (0, 255, 255)
         color_3 = (255, 0, 255)
         color_4 = (0, 255, 0)
         self.colors = [color_1, color_2, color_3, color_4]
 
-        self.subscriber = self.create_subscription(msg_type=Tracks, topic=('/cam' + str(self.index) + '/tracks'), callback=self.tracks_callback, qos_profile=10)
+        # so only once receive info
+        self.info_received = 0
+        
+        # create callback groups
+        tracks_group = MutuallyExclusiveCallbackGroup()
+        info_group = MutuallyExclusiveCallbackGroup()
+        
+        # create subscriber and publisher
+        self.info_subscriber = self.create_subscription(msg_type=CameraInfo, topic=('/cam' + str(self.index) + '/camera_info'), callback=self.info_callback, qos_profile=10, callback_group=info_group)
+        self.tracks_subscriber = self.create_subscription(msg_type=Tracks, topic=('/cam' + str(self.index) + '/tracks'), callback=self.tracks_callback, qos_profile=10, callback_group=tracks_group)
         self.publisher = self.create_publisher(msg_type=MarkerArray, topic="vector", qos_profile=10)
 
-    def read_yaml(self, filename):
-        with open(filename, "r") as file_handle:
-            return yaml.load(file_handle, Loader=yaml.FullLoader)
+        self.get_logger().info("Starting camera vector with index " + str(self.index))
 
     def tracks_callback(self, msg):
         markerarray = MarkerArray()
@@ -88,6 +67,14 @@ class camera_vector(Node):
             marker = self.create_marker(object.x, object.y, object.id)
             markerarray.markers.append(marker)
         self.publisher.publish(markerarray)
+
+    def info_callback(self, msg):
+        if self.info_received != 1:
+            self.fx = (msg.p[0] * (self.width / msg.width))
+            self.fy = (msg.p[5] * (self.height / msg.height))
+            self.cx = (msg.p[2] * (self.width / msg.width))
+            self.cy = (msg.p[6] * (self.height / msg.height))
+            self.info_received = 1
     
     def create_marker(self, x, y, id):
         x = (float(x) - self.cx) / self.fx
@@ -104,8 +91,6 @@ class camera_vector(Node):
         marker.scale.x = 0.01
         marker.scale.y = 0.0
         marker.scale.z = 0.0
-
-        # self.get_logger().info(str(self.index) + "  (" + str(round(x, 2)) + ", " + str(round(y, 2)) + ", 1)")
 
         marker.color.a = 1.0
         if id < 4:
@@ -126,7 +111,9 @@ class camera_vector(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = camera_vector() 
-    rclpy.spin(node)
+    executor = MultiThreadedExecutor()
+    executor.add_node(node)
+    executor.spin()
     rclpy.shutdown()
  
 if __name__ == "__main__":

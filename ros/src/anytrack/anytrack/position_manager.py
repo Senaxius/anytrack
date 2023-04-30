@@ -83,69 +83,23 @@ class position_manager(Node):
                 x = data["x"]
                 y = data["y"]
                 z = data["z"]
-                ax = data["ax"] / 180 * math.pi
-                ay = data["ay"] / 180 * math.pi
-                az = data["az"] / 180 * math.pi
+                ax = data["ax"] 
+                ay = data["ay"] 
+                az = data["az"] 
 
                 self.publish_position("world", ("cam" + str(i) + "_position"), x, y, z, ax, ay, az)
 
-    # def loop_callback(self):
-    #         # generate test data for BOGU
-    #         c = random.randrange(1500, 3000) / 1000
-    #         px = random.randrange(-600, 600) / 1000
-    #         py = random.randrange(-600, 600) / 1000
-    #         pz = random.randrange(int(c * 1000) - 600, int(c * 1000) + 600) / 1000
-    #         for i in range(self.device_count):
-    #             data = self.config[str(i)]
-    #             d = ((px - data["x"]))
-    #             self.get_logger().info("ID: " + str(i) + " " + str(d))
-
-
-
-            # for each device
-            # for i in range(self.device_count):
-            #     if (self.debug == 1):
-            #         print(i)
-            #         print(self.config[str(i)])
-            #     # publish camera_position
-            #     data = self.config[str(i)]
-            #     x = random.randrange(-2000, 2000) / 1000
-            #     y = random.randrange(-200, 200) / 1000
-            #     z = random.randrange(0, 4000) / 1000
-            #     c = random.randrange(1500, 3000) / 1000
-            #     ax = random.randrange(-1000, 1000) / 100 / 180 * math.pi
-            #     az = random.randrange(-1000, 1000) / 100 / 180 * math.pi
-            #     ay = angle((0-x,0-y,c-z), (0, 0, 1)) 
-            #     if (x > 0):
-            #         ay *= -1
-            #     px = random.randrange(-600, 600) / 1000
-            #     py = random.randrange(-600, 600) / 1000
-            #     pz = random.randrange(int(c * 1000) - 600, int(c * 1000) + 600) / 1000
-            #     cx = px - x
-            #     cy = py - y
-            #     cz = pz - z
-
-            #     if (i == 0):
-            #         x = data["x"]
-            #         y = data["y"]
-            #         z = data["z"]
-            #         ax = data["ax"] / 180 * math.pi
-            #         ay = data["ay"] / 180 * math.pi
-            #         az = data["az"] / 180 * math.pi
-
-            #     # self.publish_position("world", ("cam" + str(i) + "_position"), x, y, z, ax, ay, az)
-            #     self.publish_position("world", "p", px, py, pz, 0, 0, 0)
-            #     self.publish_position("cam1_position", "c", cx, cy, cz, 0, 0, 0)
-    
     def calibration_callback(self, msg):
         self.get_logger().warning("Received new position data!")
         for index, location in enumerate(msg.locations):
-           self.config[str(index)]["x"] = location.x 
-           self.config[str(index)]["y"] = location.y 
-           self.config[str(index)]["z"] = location.z 
-           self.config[str(index)]["ax"] = location.ax 
-           self.config[str(index)]["ay"] = location.ay 
-           self.config[str(index)]["az"] = location.az 
+            self.config[str(index)]["x"] = location.x 
+            self.config[str(index)]["y"] = location.y 
+            self.config[str(index)]["z"] = location.z 
+            self.config[str(index)]["ax"] = location.ax 
+            self.config[str(index)]["ay"] = location.ay 
+            self.config[str(index)]["az"] = location.az 
+
+            self.publish_position("world", ("cam" + str(index) + "_position"), location.x, location.y, location.z, location.ax, location.ay, location.az)
 
     def publish_position(self, origin, child, x, y, z, ax, ay, az):
         t = TransformStamped()

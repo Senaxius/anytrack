@@ -12,7 +12,6 @@ from scanner_interfaces.msg import CameraLocations
 from scanner_interfaces.msg import Tracks
 from scanner_interfaces.msg import Object
 from scanner_interfaces.msg import Location
-from scanner_interfaces.msg import CameraLocations
 from sensor_msgs.msg import CameraInfo
 
 class calibration(Node): 
@@ -63,9 +62,14 @@ class calibration(Node):
                 'fy': 0.0,
                 'cx': 0.0,
                 'cy': 0.0,
+                'camera_matrix': None,
+                'dist_matrix': None,
                 'buffer': [],
                 'objects': [],
             }})
+        
+        # reset camera position
+        self.publish_calibration()
 
         # checks
         self.info_check = 0
@@ -95,11 +99,20 @@ class calibration(Node):
             # undistort Points
             input = self.input[cam]
             distorted_point = (input['buffer'][0].x, input['buffer'][0].y)
-            camera_matrix = np.matrix([[input['fx'], 0, input['cx']], [0, input['fy'], input['cy']], [0, 0, 1]])
-            point = cv2.undistortPoints(distorted_point, cameraMatrix=camera_matrix, distCoeffs=None)
-            point = (point[0][0][0], point[0][0][1])
-            # input['objects'].append(point)
-            input['objects'].append(distorted_point)
+            camera_matrix = input['camera_matrix']
+            # print(camera_matrix)
+            point = cv2.undistortPoints(distorted_point, cameraMatrix=camera_matrix, distCoeffs=None, P=None)
+            point = point.flatten()
+            # print(distorted_point)
+            # print(point)
+            point = (point[0], point[1])
+            # if cam == 1:
+            #     self.output[1]['x'] = point[0]
+            #     self.output[1]['y'] = point[1]
+            #     self.output[1]['z'] = 2.0
+
+            input['objects'].append(point)
+            # input['objects'].append(distorted_point)
 
         # check if there is enough data to start calibration 
         if self.date_check == 0:
@@ -110,6 +123,7 @@ class calibration(Node):
                     print("not enough data to calibrate")
                     return
 
+
         # calculate position for number of cameras in relation to cam0
         for cam in range(self.device_count - 1):
             index = cam + 1
@@ -117,46 +131,63 @@ class calibration(Node):
             cam0_points = np.array(self.input[0]['objects'])
             cam1_points = np.array(self.input[index]['objects'])
 
-            # print(type(cam0_points))
-            # print(self.input[0]['objects'])
-            # print(cam0_points)
-
             R = np.zeros(shape=(3, 3))
             t = np.zeros(shape=(3, 3))
             E = np.zeros(shape=(3, 3))
 
+            identity_matrix = np.matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
+            # print(cam1_points[-1])
+
             E, _ = cv2.findEssentialMat(
-                cam0_points,
-                cam1_points,
-                self.input[0]['fx'],
-                (640.6, 360.5),
-                cv2.RANSAC,
-                0.999,
-                1.0,
-                None,
+                points1 = cam0_points,
+                points2 = cam1_points,
+                focal = 1.0,
+                pp = (0.0, 0.0),
+                # cameraMatrix = self.input[0]['camera_matrix'],
+                # cameraMatrix = identity_matrix,
+                method = cv2.LMEDS,
+                prob = 0.999,
+                threshold = 0.001,
+                maxIters = None,
             )
+            # print(E)
 
             _, R, t, _ = cv2.recoverPose(
                 E,
                 cam0_points,
                 cam1_points,
                 focal=self.input[0]['fx'],
+                # focal=1.0,
                 pp=(640.6, 360.5),
+                # pp=(0, 0),
                 mask=None,
             )
-            t = (t[0][0], t[1][0], t[2][0])
+
+            t = np.matmul(np.linalg.inv(R), t)
+            t = t.flatten()
+            r = Rotation.from_matrix(R)
+            angles = r.as_euler("zyx", degrees=False)
+
+            # write into calibration buffer to publish
+            self.output[index]['x'] =  round(t[0] * -2, 2)
+            self.output[index]['y'] =  round(t[1] * -2, 2)
+            self.output[index]['z'] =  round(t[2] * -2, 2)
+
+            self.output[index]['ax'] = round(angles[0] * -1, 2)
+            self.output[index]['ay'] = round(angles[1] * -1, 2)
+            self.output[index]['az'] = round(angles[2] * -1, 2)
+
+            # publish calibration data for live preview
+            self.publish_calibration()
 
             print("translation: (" + str(round(t[2], 1)), end='')
             print(", " + str(round(t[0], 1)), end='')
             print(", " + str(round(t[1], 1)), end='')
             print(")")
 
-            # print(self.R)
-            r = Rotation.from_matrix(R)
-            angles = r.as_euler("xyz", degrees=False)
-            print("rotation (in degrees): (" + str(round(angles[2], 2)), end='')
+            print("rotation (in degrees): (" + str(round(angles[1], 2)), end='')
             print(", " + str(round(angles[0], 2)), end='')
-            print(", " + str(round(angles[1], 2)), end='')
+            print(", " + str(round(angles[2], 2)), end='')
             print(")")
     
     def create_tracks_callback(self, index):
@@ -173,6 +204,24 @@ class calibration(Node):
         self.input[index]['fy'] = (msg.p[5] * (self.height / msg.height))
         self.input[index]['cx'] = (msg.p[2] * (self.width / msg.width))
         self.input[index]['cy'] = (msg.p[6] * (self.height / msg.height))
+        # self.input[index]['camera_matrix'] = msg.k
+        k = msg.k
+        self.input[index]['camera_matrix'] = np.matrix([[k[0], k[1], k[2]], [k[3], k[4], k[5]], [k[6], k[7], k[8]]])
+
+
+    def publish_calibration(self):
+        msg = CameraLocations()
+        for i in range(self.device_count):
+            location = Location()
+            location.id = i
+            location.x = self.output[i]['x']
+            location.y = self.output[i]['y']
+            location.z = self.output[i]['z']
+            location.ax = self.output[i]['ax']
+            location.ay = self.output[i]['ay']
+            location.az = self.output[i]['az']
+            msg.locations.append(location)
+        self.publisher.publish(msg)
 
 def main(args=None):
     rclpy.init(args=args)

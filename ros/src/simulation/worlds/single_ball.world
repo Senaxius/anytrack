@@ -197,7 +197,7 @@
             </clip>
           </camera>
           <plugin name='cam0_controller' filename='libgazebo_ros_camera.so'>
-            <frame_name>cam0_link_optical</frame_name>
+            <frame_name>cam0_position</frame_name>
             <min_depth>0.1</min_depth>
             <max_depth>500</max_depth>
           </plugin>
@@ -291,7 +291,7 @@
             </clip>
           </camera>
           <plugin name='cam1_controller' filename='libgazebo_ros_camera.so'>
-            <frame_name>cam1_link_optical</frame_name>
+            <frame_name>cam1_position</frame_name>
             <min_depth>0.1</min_depth>
             <max_depth>500</max_depth>
           </plugin>

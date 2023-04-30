@@ -9,13 +9,7 @@ from rclpy.node import Node
 
 from sensor_msgs.msg import Image
 
-sys.path.append('/home/ALEX/anytrack/python/lib')
-import tracker as trk
-
-class camera_driver(Node):  
-    def __init__(self):
-        super().__init__("camera_driver")  
-
+sys.path.append('/home/ALEX/anytrack/python/lib') import tracker as trk class camera_driver(Node):  def __init__(self): super().__init__("camera_driver")  
         # declare Parameters
         self.declare_parameter("index", -1)
         self.declare_parameter("device", -1)

@@ -39,6 +39,8 @@ class camera_detector(Node):
         # self.track = 1
         # self.visualize = 1
         # self.debug = 1
+        # self.width = 1280
+        # self.height = 720
 
         # check if Parameters is set
         if (self.index == -1):
@@ -53,7 +55,6 @@ class camera_detector(Node):
 
         self.detector_setup()
 
-
         # starting main camera subcription to driver
         self.driver_subscriber = self.create_subscription(msg_type=Image, topic=("/cam" + str(self.index) + "/image_raw"), callback=self.driver_callback, qos_profile=10)
     
@@ -65,6 +66,10 @@ class camera_detector(Node):
             self.objects = trk.ball_scanner(frame, colors=[self.green_ball], min_radius=10, prev_objects=prev_objects)
         if self.visualize:
             frame = trk.scanner_visulisation(frame, self.objects,line_buffer=self.line_buffer)
+        
+        if self.debug == 1:
+            cv2.imshow("frame", frame)
+            cv2.waitKey(1) 
         
         # publish data
         msg = Tracks()

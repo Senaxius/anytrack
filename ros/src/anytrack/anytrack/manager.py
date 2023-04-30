@@ -8,18 +8,38 @@ from launch_ros.actions import Node as Action
 class manager(Node): 
     def __init__(self):
         super().__init__("manager") 
+        # declare manager parameters
+        self.declare_parameter("simulation", 0)
+        self.declare_parameter("device_count", 0)
+        self.declare_parameter("debug", 1)
+        self.declare_parameter("visualize", 1)
+        self.declare_parameter("width", 1920)
+        self.declare_parameter("height", 1080)
+
+        # import parameters
+        self.simulation = self.get_parameter("simulation").value
+        self.device_count = self.get_parameter("device_count").value
+        self.visualize = self.get_parameter("visualize").value
+        self.debug = self.get_parameter("debug").value
+        self.width = self.get_parameter("width").value
+        self.height = self.get_parameter("height").value
+
         self.get_logger().info("Starting manager...")
 
         self.get_logger().info("Searching for devices...")
-        devices = self.search_devices()
-
-        if not devices:
-            self.get_logger().warning("No cameras were detected!")
-            exit()
-        self.get_logger().info("Found Number of Devices: " + str(len(devices)))
+        if self.device_count == 0:
+            self.devices = self.search_devices()
+            if not self.devices:
+                self.get_logger().warning("No cameras were detected!")
+                exit()
+        else:
+            self.devices = []
+            for i in range(self.device_count):
+                self.devices.append(i)
+        self.get_logger().info("Found Number of Devices: " + str(len(self.devices)))
 
         ls = LaunchService()
-        ls.include_launch_description(self.generate_launch_description(devices))
+        ls.include_launch_description(self.generate_launch_description())
         ls.run()
 
     def search_devices(self):
@@ -44,16 +64,13 @@ class manager(Node):
         
         return buffer
 
-    def generate_launch_description(self, devices):
+    def generate_launch_description(self):
         ld = LaunchDescription()
 
         count = 0
-        length = len(devices)
+        length = len(self.devices)
 
-        width = 1280
-        height = 720
-
-        for cam in devices:
+        for cam in self.devices:
             device = cam
             index = count
             count += 1
@@ -69,8 +86,8 @@ class manager(Node):
                     {"limit": 30},
                     {"debug": 0},
                     {"framerate": 60},
-                    {"width": width},
-                    {"height": height},
+                    {"width": self.width},
+                    {"height": self.height},
                 ]
             )
 
@@ -84,8 +101,8 @@ class manager(Node):
                     {"track": 1},
                     {"visualize": 1},
                     {"debug": 0},
-                    {"width": width},
-                    {"height": height},
+                    {"width": self.width},
+                    {"height": self.height},
                 ]
             )
             camX_camera_info = Action(
@@ -106,16 +123,18 @@ class manager(Node):
                 parameters=[
                     {"index": index},
                     {"device": device},
-                    {"multiplier": 2},
-                    {"width": width},
-                    {"height": height},
+                    {"multiplier": 10},
+                    {"width": self.width},
+                    {"height": self.height},
                 ]
             )
 
-            # ld.add_action(camX_driver)
+            if self.simulation == 0:
+                ld.add_action(camX_driver)
+                ld.add_action(camX_camera_info)
             ld.add_action(camX_detector)
-            # ld.add_action(camX_camera_info)
-            # ld.add_action(camX_vector)
+            if self.visualize == 1:
+                ld.add_action(camX_vector)
 
         position_manager = Action(
             package="anytrack",
@@ -126,7 +145,7 @@ class manager(Node):
                 {"config_path": '/home/ALEX/anytrack/config/camera_positions.json'}
             ]
         )
-        # ld.add_action(position_manager)
+        ld.add_action(position_manager)
         return ld
 
 def main(args=None):
