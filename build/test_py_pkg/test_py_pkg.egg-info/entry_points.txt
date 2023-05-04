@@ -1,9 +1,0 @@
-[console_scripts]
-counter_publist = test_py_pkg.counter_publist:main
-test_client_nop = test_py_pkg.test_client_nop:main
-test_client_op = test_py_pkg.test_client_op:main
-test_listener = test_py_pkg.test_listener:main
-test_node = test_py_pkg.test_node:main
-test_publisher = test_py_pkg.test_publisher:main
-test_server = test_py_pkg.test_server:main
-

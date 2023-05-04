@@ -3,5 +3,9 @@
     "python.analysis.extraPaths": [
         "./python/lib"
     ],
-    "cmake.sourceDirectory": "/home/ALEX/anytrack/ros/build/scanner_interfaces/scanner_interfaces__py"
+    "cmake.sourceDirectory": "/home/ALEX/anytrack/ros/build/scanner_interfaces/scanner_interfaces__py",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "python.formatting.provider": "none"
 }

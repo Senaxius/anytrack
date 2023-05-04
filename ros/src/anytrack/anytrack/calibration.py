@@ -28,9 +28,9 @@ class calibration(Node):
         self.height = self.get_parameter("height").value
 
         # debug only
-        self.device_count = 2
-        self.width = 1280
-        self.height = 720
+        # self.device_count = 2
+        # self.width = 1280
+        # self.height = 720
 
         self.get_logger().info("Starting calibrator...")
 
@@ -145,7 +145,7 @@ class calibration(Node):
                 pp = (0.0, 0.0),
                 # cameraMatrix = self.input[0]['camera_matrix'],
                 # cameraMatrix = identity_matrix,
-                method = cv2.LMEDS,
+                method = cv2.RANSAC,
                 prob = 0.999,
                 threshold = 0.001,
                 maxIters = None,
@@ -156,10 +156,10 @@ class calibration(Node):
                 E,
                 cam0_points,
                 cam1_points,
-                focal=self.input[0]['fx'],
-                # focal=1.0,
-                pp=(640.6, 360.5),
-                # pp=(0, 0),
+                # focal=self.input[0]['fx'],
+                focal=1.0,
+                # pp=(640.6, 360.5),
+                pp=(0, 0),
                 mask=None,
             )
 
@@ -175,7 +175,11 @@ class calibration(Node):
 
             self.output[index]['ax'] = round(angles[0] * -1, 2)
             self.output[index]['ay'] = round(angles[1] * -1, 2)
-            self.output[index]['az'] = round(angles[2] * -1, 2)
+            # self.output[index]['az'] = round(angles[2] * -1, 2)
+            if self.output[index]['ay'] >= 0:
+                self.output[index]['az'] = round(angles[2] * 1, 2)
+            else:
+                self.output[index]['az'] = round(angles[2] * -1, 2)
 
             # publish calibration data for live preview
             self.publish_calibration()

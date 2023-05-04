@@ -1,0 +1,370 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper, inner=2.5cm, outer=2.5cm, top=2.5cm, bottom=2cm, bindingoffset=0cm]{geometry}
+
+\title{\Large{\textbf{3D-gedruckte Unterwassersonde zur autonomen Datensammlung}}}
+\author{Yujie Cheng, Lennart Aschkar, Alexander Minor}
+
+% text input
+\usepackage[utf8]{inputenc}
+\input{texts.tex}
+% pictues and shit
+\usepackage{graphicx}
+% define assets path
+\graphicspath{{assets/}}
+% font carlito (calibri on crack)
+\usepackage[sfdefault]{roboto}
+% Used to create filler text
+\usepackage{blindtext}
+% Used to include pictures
+\usepackage{graphicx}
+% Used to wrap text around pictures
+\usepackage{wrapfig}
+% Used to compact lists
+\usepackage{enumitem}
+% Used to customize the page layout of your LaTeX documents
+\usepackage{fancyhdr}
+% Blocksatz
+\usepackage{ragged2e}
+% Used to create an index
+\usepackage{index}
+% really dont understand this shit here:
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{microtype}
+\usepackage{wallpaper}
+\usepackage{setspace}
+\usepackage[export]{adjustbox}
+\usepackage[german]{babel}
+\usepackage{tocloft}
+
+
+\makeindex
+
+\setcounter{secnumdepth}{5}
+\setlength{\abovecaptionskip}{3pt plus 1pt minus 1pt} 
+\setlength{\intextsep}{0pt}
+\setlength{\columnsep}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.3cm}
+% \setlength{\belowcaptionskip}{-20pt}
+% \captionsetup{belowskip=0pt}
+% Background
+\ThisULCornerWallPaper{0.35}{TL.jpg}
+\ThisLRCornerWallPaper{0.6}{LR.jpg}
+
+%%%%%%%%%% Startseite
+\begin{document}
+% \maketitle
+\begin{titlepage}
+  \begin{center}
+    \vspace*{3cm}
+
+    {\LARGE{3D-gedruckte Unterwassersonde zur \\ autonomen Datensammlung}}
+
+    \vspace{0.5cm}
+    {\normalsize{Yujie Cheng, Lennart Aschkar, Alexander Minor}}
+
+    \vspace{3.5cm}
+
+    \raggedright{\textbf{Erarbeitungsort:} Klaus-Groth-Schule Neumünster} \\
+    \vspace{0.2cm}
+    \raggedright{\textbf{Projektbetreuer/in:} Herr Marczynski-Buehlow} \\
+    \vspace{0.2cm}
+    \raggedright{\textbf{Fachgebiet:} Technik} \\
+    \vspace{0.2cm}
+    \raggedright{\textbf{Wettbewerbssparte:} Jugend Forscht Landesrunde} \\
+    \vspace{0.2cm}
+    \raggedright{\textbf{Bundesland:} Schleswig-Holstein} \\
+    \vspace{0.2cm}
+    \raggedright{\textbf{Wettbewerbsjahr:} 2023} \\
+
+  \end{center}
+\end{titlepage}
+
+%%%%%%%%%% Inhaltsverzeichnis
+\newpage
+% \setlength{\cftbeforesecskip}{20pt}
+% \setlength{\cftaftersecskip}{20pt}
+\tableofcontents
+
+%%%%%%%%%% Kurzfassung
+\newpage
+\section{Kurzfassung}
+\noindent
+\Kurzfassung
+
+%%%%%%%%%% Einleitung
+\newpage
+\section{Einleitung}
+\noindent
+\Einleitung
+%%%% Aktueller Stand der Entwicklung
+\subsection{Aktueller Stand der Entwicklung}
+\noindent
+\StandEntwicklung
+%%%% Wie wir auf das Thema kamen
+\subsection{Wie wir auf das Thema kamen}
+\noindent
+\Thema
+%%%% Ziele
+\subsection{Ziele}
+\noindent
+\Ziele
+
+%%%%%%%%%% Vorgehensweise
+\newpage
+\section{Vorgehensweise}
+\subsection{Konzepte}
+\noindent
+\Vorgehensweise
+%%%% Konzept 1
+\subsubsection{Konzept 1}
+\begingroup
+\begin{wrapfigure}{r}{0.25\textwidth}
+\centering
+  {\setlength{\belowcaptionskip}{-20pt}
+    \includegraphics[width=\linewidth]{Konzept-1.jpg}
+    \caption{Konzept 1}
+  }
+\end{wrapfigure}
+\KonteptEins
+
+\endgroup
+%%%% Konzept 2
+\subsubsection{Konzept 2}
+\begingroup
+\begin{wrapfigure}{r}{0.30\textwidth}
+\centering
+  {\setlength{\belowcaptionskip}{-20pt}
+    \includegraphics[width=\linewidth]{Konzept-2.jpg}
+    \caption{Konzept 2}
+  }
+\end{wrapfigure}
+\KonteptZwei
+
+\endgroup
+%%%% Konzept 3
+\subsubsection{Konzept 3}
+\begingroup
+\begin{wrapfigure}{r}{0.30\textwidth}
+\centering
+  {\setlength{\belowcaptionskip}{-10pt}
+    \includegraphics[width=\linewidth]{Konzept-3.jpg}
+    \caption{Konzept 3}
+  }
+\end{wrapfigure}
+\KonteptDrei
+
+\endgroup
+%%%% finales Konzept
+\subsubsection{finales Konzept}
+\KonteptFinal
+
+%%%%%%%%%% kleiner Prototypen
+\newpage
+\subsection{kleinere Prototypen}
+\kleinePrototypen
+%%%% Luke
+\subsubsection{Luke}
+\begingroup
+\begin{wrapfigure}{r}{0.35\textwidth}
+\centering
+  {\setlength{\belowcaptionskip}{10pt}
+    \includegraphics[width=\linewidth]{Lukev1.jpg}
+    \caption{Abdichtungs Design der Luke}
+    \includegraphics[width=\linewidth]{Fenster.jpg}
+    \caption{Fenster der Sonde}
+    \includegraphics[width=\linewidth]{WandPrototyp.jpg}
+    \caption{Prototyp der Wände}
+  }
+\end{wrapfigure}
+\Luke
+
+%%%% Fenster
+\subsubsection{Fenster}
+\Fenster
+%%%% Wände
+\subsubsection{Wände}
+\Waende
+
+\endgroup
+
+%%%%%%%%%% Hauptmodul Entwicklung
+\newpage
+\subsection{Hauptmodul Entwicklung}
+%%%% V1
+\subsubsection{Prototyp V1}
+\begingroup
+\begin{wrapfigure}{r}{0.22\textwidth}
+\centering
+  \includegraphics[width=\linewidth]{Ubert1ren.jpeg}
+  \caption{\\ Prototyp V1}
+\end{wrapfigure}
+\HauptmodulEins
+
+\endgroup
+\newpage
+%%%% V2
+\subsubsection{Prototyp V2}
+\begingroup
+\begin{wrapfigure}{r}{0.40\textwidth}
+\centering
+  \includegraphics[width=\linewidth]{Hauptmodul2.png}
+  \caption{Der zweite Prototyp}
+  \vspace{0.5cm}
+  \includegraphics[width=\linewidth]{Luke.png}
+  \caption{neues Lukendesign}
+\end{wrapfigure}
+\HauptmodulZwei
+
+\endgroup
+
+%%%%%%%%%% Gewichtmodul Entwicklung hallo
+\subsection{Gewichtmodul Entwicklung}
+\Gewichtmodul
+
+%%%%%%%%%% Wasserprobenmodul Entwicklung
+\newpage
+\subsection{Wasserprobenmodul Entwicklung}
+\begingroup
+\begin{wrapfigure}{r}{0.45\textwidth}
+\centering
+  \includegraphics[width=\linewidth]{Wasserprobenmodul.jpg}
+  \caption{Wasserprobenmodul im Querschnitt}
+\end{wrapfigure}
+\Wasserprobenmodul
+
+\endgroup
+
+%%%%%%%%%% Produktion
+\subsection{Produktion}
+\Produktion
+
+%%%% 3D Druck
+\subsubsection{3D-Druck}
+\begingroup
+\begin{wrapfigure}{r}{0.35\textwidth}
+\centering
+  {\setlength{\belowcaptionskip}{-0pt}
+    \includegraphics[width=\linewidth]{Drucker.jpg}
+    \caption{Raise3D Pro2}
+  }
+\end{wrapfigure}
+\Druck
+
+\endgroup
+
+%%%% Materialien
+\subsubsection{Materialien}
+\Materialien
+
+%%%% Nachberarbeitung
+\subsubsection{Nachberarbeitung}
+\Nachbearbeitung
+
+%%%% Komplikationen
+\subsubsection{Komplikationen}
+\Komplikationen
+
+%%%%%%%%%% Elektronik
+\subsection{Elektronik}
+\begingroup
+\begin{wrapfigure}{r}{0.45\textwidth}
+\centering
+  \includegraphics[width=\linewidth]{Sensoris.jpg}
+  \caption{Elektronikeinheit}
+\end{wrapfigure}
+\Elektronik
+
+\endgroup
+
+%%%%%%%%%% Programmierung
+\subsection{Programmierung}
+\begingroup
+\begin{wrapfigure}{r}{0.45\textwidth}
+\centering
+  \includegraphics[width=\linewidth]{Board.png}
+  \caption{fertiges PCB Design}
+\end{wrapfigure}
+\Programmierung
+
+\endgroup
+\newpage
+
+%%%%%%%%%% Ergebnisse
+\section{Ergebnisse}
+\subsection{finales Design}
+\begingroup
+\begin{wrapfigure}{r}{0.35\textwidth}
+\centering
+  \includegraphics[angle=-90,width=\linewidth]{finalesDesign.jpg}
+  \caption{finales Design}
+\end{wrapfigure}
+\finalesDesign
+
+\endgroup
+
+%%%%%%%%%% erster Tauchgang
+\newpage
+\subsection{erster Tauchgang}
+\begingroup
+\begin{wrapfigure}{r}{0.35\textwidth}
+\centering
+  \includegraphics[width=\linewidth]{Ubert2SWN.jpeg}
+  \caption{Tauchgang im Schwimmbad}
+\end{wrapfigure}
+\Tauchgang
+
+\endgroup
+\vspace{4cm}
+\begin{figure}[htb]
+\centering
+  \includegraphics[width=\linewidth]{data.png}
+  \caption{Daten des Schwimmbadtestlaufs}
+\end{figure}
+
+%%%%%%%%%% Ergebnissdisskusion
+\newpage
+\section{Ergebnisdiskussion}
+\Ergebnisdiskussion
+
+%%%%%%%%%% weitere Verbesserungen
+\newpage
+\section{weitere Verbesserungen seit der Regionalrunde}
+\begingroup
+\begin{wrapfigure}{r}{0.30\textwidth}
+\centering
+  \includegraphics[angle=0,width=\linewidth]{sensaris.jpg}
+  \caption{Sensormodul V3}
+  \vspace{0.5cm}
+  {\setlength{\belowcaptionskip}{-30pt}
+    \includegraphics[width=\linewidth]{FlügelV2.png}
+    \caption{neues Flügeldesign}
+  }
+\end{wrapfigure}
+\weitereVerbesserungen
+
+%%%%%%%%%% tatsächliche Anwendungen
+\section{tatsächliche Anwendungen}
+\tatsaechlicheAnwendungen
+
+% %%%%%%%%%% Zusammenfassung
+% \newpage
+% \section{Zusammenfassung}
+% \Zusammenfassung
+
+%%%%%%%%%% Quellenverzeichnis
+\newpage
+\section{Quellenverzeichnis}
+\begin{itemize}
+    \item Q.1: Unterwasser-Roboter sammelt Rohstoffe für Elektroautos \\ (https://www.forschung-und-wissen.de/nachrichten/technik/unterwasser-roboter-sammelt-rohstoffe-fuer-elektroautos-13376981)
+    \item Q.2: Warum schürfen wir Manganknollen in der Tiefsee \\ (https://www.pm-wissen.com/technik/a/warum-schuerfen-wir-manganknollen-in-der-tiefsee/4839/)
+    \item Q.3: Unterwasser-Instandhaltung per Roboter \\ (https://www.smart-ocean.fraunhofer.de/de/projekte/unterwasser-instandhaltung-reparatur.html
+    \item Q.4: Unterwasser-Instandhaltung per Roboter \\ (https://www.shz.de/lokales/schleswig/artikel/der-wasserpruefer-von-der-schlei-41828434)
+\end{itemize}
+%%%%%%%%%% Unterstützungsleistungen
+\section{Unterstützungsleistungen}
+\Unterstuetzungsleistungen
+
+\end{document}

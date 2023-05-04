@@ -1,0 +1,79 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper, inner=2.5cm, outer=2.5cm, top=2.5cm, bottom=2cm, bindingoffset=0cm]{geometry}
+
+\title{\Large{\textbf{3D-Tracking-System auf Basis herkömmlicher Kameras}}}
+\author{Alexander Minor}
+
+% text input
+\usepackage[utf8]{inputenc}
+\input{texts.tex}
+% pictues and shit
+\usepackage{graphicx}
+% define assets path
+\graphicspath{{assets/}}
+% font carlito (calibri on crack)
+\usepackage[sfdefault]{roboto}
+% Used to create filler text
+\usepackage{blindtext}
+% Used to include pictures
+\usepackage{graphicx}
+% Used to wrap text around pictures
+\usepackage{wrapfig}
+% Used to compact list es
+\usepackage{enumitem}
+% Used to customize the page layout of your LaTeX documents
+\usepackage{fancyhdr}
+% Blocksatz
+\usepackage{ragged2e}
+% Used to create an index
+\usepackage{index}
+% really dont understand this shit here:
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{microtype}
+\usepackage{wallpaper}
+\usepackage{setspace}
+\usepackage[export]{adjustbox}
+\usepackage[german]{babel}
+\usepackage{tocloft}
+
+
+\makeindex
+
+\setcounter{secnumdepth}{5}
+\setlength{\abovecaptionskip}{3pt plus 1pt minus 1pt} 
+\setlength{\intextsep}{0pt}
+\setlength{\columnsep}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.3cm}
+% \setlength{\belowcaptionskip}{-20pt}
+% \captionsetup{belowskip=0pt}
+% Background
+
+%%%%%%%%%% Startseite
+\begin{document}
+\begin{titlepage}
+  \begin{center}
+    \vspace*{3cm}
+
+    {\LARGE{3D-Tracking System auf Basis herkömmlicher Kameras}}
+
+    \vspace{0.5cm}
+    {\normalsize{Alexander Minor}}
+
+    \vspace{3.5cm}
+
+    \raggedright{\textbf{Schule:} Klaus-Groth-Schule Neumünster} \\
+    \vspace{0.2cm}
+    \raggedright{\textbf{Referenzfach:} Informatik/Mathematik} \\
+    \vspace{0.2cm}
+
+  \end{center}
+\end{titlepage}
+
+%%%%%%%%%% Inhaltsverzeichnis
+\newpage
+\tableofcontents
+
+\end{document}

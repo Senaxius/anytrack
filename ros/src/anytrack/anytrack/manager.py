@@ -2,22 +2,29 @@ import rclpy
 from rclpy.node import Node
 import time
 import os
+from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription, LaunchService
 from launch_ros.actions import Node as Action
+from launch.actions import IncludeLaunchDescription
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 class manager(Node): 
     def __init__(self):
         super().__init__("manager") 
         # declare manager parameters
         self.declare_parameter("simulation", 0)
+        self.declare_parameter("simulation_publisher", 0)
+        self.declare_parameter("websocket", 0)
         self.declare_parameter("device_count", 0)
         self.declare_parameter("debug", 1)
         self.declare_parameter("visualize", 1)
-        self.declare_parameter("width", 1920)
-        self.declare_parameter("height", 1080)
+        self.declare_parameter("width", 1280)
+        self.declare_parameter("height", 720)
 
         # import parameters
         self.simulation = self.get_parameter("simulation").value
+        self.simulation_publisher = self.get_parameter("simulation_publisher").value
+        self.websocket = self.get_parameter("websocket").value
         self.device_count = self.get_parameter("device_count").value
         self.visualize = self.get_parameter("visualize").value
         self.debug = self.get_parameter("debug").value
@@ -145,6 +152,26 @@ class manager(Node):
                 {"config_path": '/home/ALEX/anytrack/config/camera_positions.json'}
             ]
         )
+        gazebo = IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([os.path.join(get_package_share_directory('simulation'), 'launch'), '/gazebo.launch.py']),
+            )
+        simulation_publisher = Action(
+            package="anytrack",
+            executable="simulation_publisher",
+            name=('simulation_publisher'),
+        )
+        websocket = Action(
+            package="foxglove_bridge",
+            executable="foxglove_bridge",
+            name=('foxglove_bridge'),
+        )
+
+        # if self.simulation == 1:
+        #     ld.add_action(gazebo)
+        if self.simulation_publisher == 1:
+            ld.add_action(simulation_publisher)
+        if self.websocket == 1:
+            ld.add_action(websocket)
         ld.add_action(position_manager)
         return ld
 

@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{natbib}
+
+\title{Hallo}
+
+\begin{document}
+Die mathematischen Beispiele stammen aus \citet{Graham1995}, während etwas
+Chemie in \citet{Thomas2008} abgedeckt wird.
+
+Einige geklammerte Zitierungen: \citep{Graham1995} und dann
+\citep[S.~56]{Thomas2008}.
+
+\citep[Siehe][Seiten~45--48]{Graham1995}
+
+Gemeinsam \citep{Graham1995,Thomas2008}
+
+\bibliographystyle{plainnat}
+\bibliography{Quellen}
+\end{document}
