@@ -42,9 +42,17 @@ class Metaclass_Tracks(type):
             cls._TYPE_SUPPORT = module.type_support_msg__msg__tracks
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__msg__tracks
 
+            from builtin_interfaces.msg import Time
+            if Time.__class__._TYPE_SUPPORT is None:
+                Time.__class__.__import_type_support__()
+
             from scanner_interfaces.msg import Object
             if Object.__class__._TYPE_SUPPORT is None:
                 Object.__class__.__import_type_support__()
+
+            from std_msgs.msg import Header
+            if Header.__class__._TYPE_SUPPORT is None:
+                Header.__class__.__import_type_support__()
 
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
@@ -59,14 +67,20 @@ class Tracks(metaclass=Metaclass_Tracks):
     """Message class 'Tracks'."""
 
     __slots__ = [
+        '_header',
+        '_stamp',
         '_tracks',
     ]
 
     _fields_and_field_types = {
+        'header': 'std_msgs/Header',
+        'stamp': 'builtin_interfaces/Time',
         'tracks': 'sequence<scanner_interfaces/Object>',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.NamespacedType(['std_msgs', 'msg'], 'Header'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['builtin_interfaces', 'msg'], 'Time'),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['scanner_interfaces', 'msg'], 'Object')),  # noqa: E501
     )
 
@@ -74,6 +88,10 @@ class Tracks(metaclass=Metaclass_Tracks):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        from std_msgs.msg import Header
+        self.header = kwargs.get('header', Header())
+        from builtin_interfaces.msg import Time
+        self.stamp = kwargs.get('stamp', Time())
         self.tracks = kwargs.get('tracks', [])
 
     def __repr__(self):
@@ -105,6 +123,10 @@ class Tracks(metaclass=Metaclass_Tracks):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.header != other.header:
+            return False
+        if self.stamp != other.stamp:
+            return False
         if self.tracks != other.tracks:
             return False
         return True
@@ -113,6 +135,34 @@ class Tracks(metaclass=Metaclass_Tracks):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @builtins.property
+    def header(self):
+        """Message field 'header'."""
+        return self._header
+
+    @header.setter
+    def header(self, value):
+        if __debug__:
+            from std_msgs.msg import Header
+            assert \
+                isinstance(value, Header), \
+                "The 'header' field must be a sub message of type 'Header'"
+        self._header = value
+
+    @builtins.property
+    def stamp(self):
+        """Message field 'stamp'."""
+        return self._stamp
+
+    @stamp.setter
+    def stamp(self, value):
+        if __debug__:
+            from builtin_interfaces.msg import Time
+            assert \
+                isinstance(value, Time), \
+                "The 'stamp' field must be a sub message of type 'Time'"
+        self._stamp = value
 
     @builtins.property
     def tracks(self):

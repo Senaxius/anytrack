@@ -4,20 +4,26 @@ import numpy as np
 import cv2
 import sys
 import time
+import os
 import rclpy
 from rclpy.node import Node
 
 from sensor_msgs.msg import Image
 
-sys.path.append('/home/ALEX/anytrack/python/lib') import tracker as trk class camera_driver(Node):  def __init__(self): super().__init__("camera_driver")  
+sys.path.append('/home/ALEX/anytrack/python/lib') 
+import tracker as trk 
+class camera_driver(Node):  
+    def __init__(self): 
+        super().__init__("camera_driver")  
         # declare Parameters
         self.declare_parameter("index", -1)
         self.declare_parameter("device", -1)
         self.declare_parameter("limit", 30)
         self.declare_parameter("debug", 0)
         self.declare_parameter("framerate", 60)
-        self.declare_parameter("width", 1920)
-        self.declare_parameter("height", 1080)
+        self.declare_parameter("width", 1280)
+        self.declare_parameter("height", 720)
+        self.declare_parameter("filter", 1)
 
         # import parameters
         self.index = self.get_parameter("index").value
@@ -27,6 +33,7 @@ sys.path.append('/home/ALEX/anytrack/python/lib') import tracker as trk class ca
         self.framerate = self.get_parameter("framerate").value
         self.width = self.get_parameter("width").value
         self.height = self.get_parameter("height").value
+        self.filter = self.get_parameter("filter").value
 
         # debug only
         # self.index = 0
@@ -38,6 +45,7 @@ sys.path.append('/home/ALEX/anytrack/python/lib') import tracker as trk class ca
         # self.framerate = 60
         # self.width = 1280
         # self.height = 720
+        # self.filter = 1
 
         # check if Parameters is set
         if (self.device == -1 or self.index == -1):
@@ -46,7 +54,12 @@ sys.path.append('/home/ALEX/anytrack/python/lib') import tracker as trk class ca
 
         self.get_logger().info("Starting camera driver with index " + str(self.index) + " on device: video" + str(self.device))
 
-        self.image_publisher = self.create_publisher(msg_type=Image, topic="image_raw", qos_profile=10)
+        self.image_publisher = self.create_publisher(msg_type=Image, topic="/cam" + str(self.index) + "/image_raw", qos_profile=10)
+
+        # applay camera filter if set
+        if self.filter == 1:
+            set = os.popen('v4l2-ctl -d /dev/video' + str(self.device) + ' -c contrast=0')
+            set = os.popen('v4l2-ctl -d /dev/video' + str(self.device) + ' -c saturation=128')
 
         # starting main camera Loop
         self.bridge = CvBridge()
@@ -55,11 +68,20 @@ sys.path.append('/home/ALEX/anytrack/python/lib') import tracker as trk class ca
     def publish_image(self, image):
         msg = self.bridge.cv2_to_imgmsg(np.array(image), "bgr8")
         msg.header.frame_id = ('cam' +  str(self.index) + '_position')
+        msg.header.stamp = self.get_clock().now().to_msg()
         self.image_publisher.publish(msg)
 
     def camera_loop(self):
         # camera setup
-        cap = trk.VideoStream(src=self.device, resolution=(self.width, self.height), framerate=self.framerate).start()
+        # cap = trk.VideoStream(src=self.device, resolution=(self.width, self.height), framerate=self.framerate).start()
+
+        cap = cv2.VideoCapture(self.device)
+        # setting the right codex to use
+        fourcc = cv2.VideoWriter_fourcc('M','J','P','G')
+        cap.set(cv2.CAP_PROP_FOURCC, fourcc)
+        cap.set(cv2.CAP_PROP_FPS, self.framerate)
+        cap.set(cv2.CAP_PROP_FRAME_WIDTH, self.width)
+        cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self.height)
 
         prev_frame_time = 0
         # use this to limit the loop speed, otherwise might use too much cpu
@@ -69,7 +91,7 @@ sys.path.append('/home/ALEX/anytrack/python/lib') import tracker as trk class ca
         while (1):
             start_time = time.time()
 
-            frame = cap.read()
+            _, frame = cap.read()
 
             # publish image
             self.publish_image(frame)
@@ -87,8 +109,8 @@ sys.path.append('/home/ALEX/anytrack/python/lib') import tracker as trk class ca
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
 
-            if self.limit != 0:
-                time.sleep(max((1 / limit_rate) - (time.time() - start_time), 0))
+            # if self.limit != 0:
+            #     time.sleep(max((1 / limit_rate) - (time.time() - start_time), 0))
 
 def main(args=None):
     rclpy.init(args=args)

@@ -3,12 +3,15 @@
 // generated code does not contain a copyright notice
 
 #include "scanner_interfaces/msg/Object.idl"
+#include "std_msgs/msg/Header.idl"
 
 module scanner_interfaces {
   module msg {
     @verbatim (language="comment", text=
       "array of multiple tracked objects")
     struct Tracks {
+      std_msgs::msg::Header header;
+
       sequence<scanner_interfaces::msg::Object> tracks;
     };
   };

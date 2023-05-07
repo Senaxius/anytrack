@@ -22,6 +22,10 @@
 // Nested array functions includes
 #include "scanner_interfaces/msg/detail/object__functions.h"
 // end nested array functions include
+ROSIDL_GENERATOR_C_IMPORT
+bool std_msgs__msg__header__convert_from_py(PyObject * _pymsg, void * _ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+PyObject * std_msgs__msg__header__convert_to_py(void * raw_ros_message);
 bool scanner_interfaces__msg__object__convert_from_py(PyObject * _pymsg, void * _ros_message);
 PyObject * scanner_interfaces__msg__object__convert_to_py(void * raw_ros_message);
 
@@ -58,6 +62,17 @@ bool scanner_interfaces__msg__tracks__convert_from_py(PyObject * _pymsg, void * 
     assert(strncmp("scanner_interfaces.msg._tracks.Tracks", full_classname_dest, 37) == 0);
   }
   scanner_interfaces__msg__Tracks * ros_message = _ros_message;
+  {  // header
+    PyObject * field = PyObject_GetAttrString(_pymsg, "header");
+    if (!field) {
+      return false;
+    }
+    if (!std_msgs__msg__header__convert_from_py(field, &ros_message->header)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
   {  // tracks
     PyObject * field = PyObject_GetAttrString(_pymsg, "tracks");
     if (!field) {
@@ -113,6 +128,20 @@ PyObject * scanner_interfaces__msg__tracks__convert_to_py(void * raw_ros_message
     }
   }
   scanner_interfaces__msg__Tracks * ros_message = (scanner_interfaces__msg__Tracks *)raw_ros_message;
+  {  // header
+    PyObject * field = NULL;
+    field = std_msgs__msg__header__convert_to_py(&ros_message->header);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "header", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // tracks
     PyObject * field = NULL;
     size_t size = ros_message->tracks.size;

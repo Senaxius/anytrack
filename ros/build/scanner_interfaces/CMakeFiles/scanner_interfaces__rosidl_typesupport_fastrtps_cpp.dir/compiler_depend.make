@@ -926,6 +926,8 @@ CMakeFiles/scanner_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesu
   /usr/include/c++/11/stdexcept \
   /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_initialization.hpp \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
+  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp \
   rosidl_generator_cpp/scanner_interfaces/msg/detail/object__struct.hpp \
   /opt/ros/humble/include/fastcdr/fastcdr/Cdr.h \
   /opt/ros/humble/include/fastcdr/fastcdr/fastcdr_dll.h \
@@ -1014,9 +1016,13 @@ rosidl_typesupport_fastrtps_cpp/scanner_interfaces/msg/detail/location__rosidl_t
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
 
+/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp:
+
 /usr/include/c++/11/bits/locale_classes.tcc:
 
 /usr/include/c++/11/bits/locale_classes.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:
 
 /usr/include/c++/11/bits/ios_base.h:
 

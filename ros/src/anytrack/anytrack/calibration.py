@@ -58,15 +58,14 @@ class calibration(Node):
                 'az': 0.0,
             }})
             self.input.update({i: {
-                'fx': 0.0,
-                'fy': 0.0,
-                'cx': 0.0,
-                'cy': 0.0,
-                'camera_matrix': None,
-                'dist_matrix': None,
+                'time': 0,
+                'camera_matrix': [],
+                'dist_matrix': [],
                 'buffer': [],
                 'objects': [],
             }})
+        
+        self.average = [[], [], [], [], [], []]
         
         # reset camera position
         self.publish_calibration()
@@ -83,7 +82,7 @@ class calibration(Node):
         if self.info_check == 0:
             for cam in self.input:
                 self.info_check = 1
-                if self.input[cam]['fx'] == 0.0:
+                if len(self.input[cam]['camera_matrix']) == 0:
                     self.info_check = 0
                     print("no camera_matrix received yet")
                     return
@@ -98,19 +97,16 @@ class calibration(Node):
         for cam in self.input:
             # undistort Points
             input = self.input[cam]
+            if len(input['buffer']) != 1:
+                print("ohno")
+                return
             distorted_point = (input['buffer'][0].x, input['buffer'][0].y)
             camera_matrix = input['camera_matrix']
-            # print(camera_matrix)
-            point = cv2.undistortPoints(distorted_point, cameraMatrix=camera_matrix, distCoeffs=None, P=None)
+            dist_matrix = input['dist_matrix']
+            point = cv2.undistortPoints(distorted_point, cameraMatrix=camera_matrix, distCoeffs=dist_matrix, P=None)
             point = point.flatten()
-            # print(distorted_point)
-            # print(point)
             point = (point[0], point[1])
-            # if cam == 1:
-            #     self.output[1]['x'] = point[0]
-            #     self.output[1]['y'] = point[1]
-            #     self.output[1]['z'] = 2.0
-
+            # print(point)
             input['objects'].append(point)
             # input['objects'].append(distorted_point)
 
@@ -135,30 +131,32 @@ class calibration(Node):
             t = np.zeros(shape=(3, 3))
             E = np.zeros(shape=(3, 3))
 
-            identity_matrix = np.matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
-            # print(cam1_points[-1])
+            # diff = abs((self.input[0]['time'] - self.input[index]['time']) / 1000000000)
+            # print(diff)
+            # if diff >= 0.01:
+            #     print("time difference too big!")
+            #     return
 
-            E, _ = cv2.findEssentialMat(
-                points1 = cam0_points,
-                points2 = cam1_points,
-                focal = 1.0,
-                pp = (0.0, 0.0),
-                # cameraMatrix = self.input[0]['camera_matrix'],
-                # cameraMatrix = identity_matrix,
-                method = cv2.RANSAC,
-                prob = 0.999,
-                threshold = 0.001,
-                maxIters = None,
-            )
-            # print(E)
+            try: 
+                E, _ = cv2.findEssentialMat(
+                    points1 = cam0_points,
+                    points2 = cam1_points,
+                    focal = 1.0,
+                    pp = (0.0, 0.0),
+                    method = cv2.RANSAC,
+                    prob = 0.999,
+                    threshold = 0.0001,
+                    maxIters = None,
+                )
+            except:
+                print("Error occurd, try again!")
+                return
 
             _, R, t, _ = cv2.recoverPose(
                 E,
                 cam0_points,
                 cam1_points,
-                # focal=self.input[0]['fx'],
                 focal=1.0,
-                # pp=(640.6, 360.5),
                 pp=(0, 0),
                 mask=None,
             )
@@ -169,30 +167,52 @@ class calibration(Node):
             angles = r.as_euler("zyx", degrees=False)
 
             # write into calibration buffer to publish
-            self.output[index]['x'] =  round(t[0] * -2, 2)
-            self.output[index]['y'] =  round(t[1] * -2, 2)
-            self.output[index]['z'] =  round(t[2] * -2, 2)
-
+            self.output[index]['x'] =  round(t[0] * -1, 2)
+            self.output[index]['y'] =  round(t[1] * -1, 2)
+            self.output[index]['z'] =  round(t[2] * -1, 2)
             self.output[index]['ax'] = round(angles[0] * -1, 2)
             self.output[index]['ay'] = round(angles[1] * -1, 2)
+            self.output[index]['az'] = round(angles[2] * 1, 2)
+
+
+            # self.average[0].append(self.output[1]['x'])
+            # self.average[1].append(self.output[1]['y'])
+            # self.average[2].append(self.output[1]['z'])
+            # self.average[3].append(self.output[1]['ax'])
+            # self.average[4].append(self.output[1]['ay'])
+            # self.average[5].append(self.output[1]['az'])
+
+            # self.output[index]['x'] =  sum(self.average[0]) / len(self.average[0])
+            # self.output[index]['y'] =  sum(self.average[1]) / len(self.average[1])
+            # self.output[index]['z'] =  sum(self.average[2]) / len(self.average[2])
+            # self.output[index]['ax'] = sum(self.average[3]) / len(self.average[3])
+            # self.output[index]['ay'] = sum(self.average[4]) / len(self.average[4])
+            # self.output[index]['az'] = sum(self.average[5]) / len(self.average[5])
+            # self.output[index]['ax'] = round(angles[0] * -1, 2)
+            # self.output[index]['ay'] = round(angles[1] * -1, 2)
             # self.output[index]['az'] = round(angles[2] * -1, 2)
-            if self.output[index]['ay'] >= 0:
-                self.output[index]['az'] = round(angles[2] * 1, 2)
-            else:
-                self.output[index]['az'] = round(angles[2] * -1, 2)
+            # if self.output[index]['ay'] >= 0:
+            #     self.output[index]['az'] = round(angles[2] * 1, 2)
+            # else:
+            #     self.output[index]['az'] = round(angles[2] * -1, 2)
 
             # publish calibration data for live preview
             self.publish_calibration()
+            print(self.output[index])
+            
+            # self.ax_list.append(self.output[1]['ax'])
+            # av = sum(self.ax_list) / len(self.ax_list)
+            # print(av)
 
-            print("translation: (" + str(round(t[2], 1)), end='')
-            print(", " + str(round(t[0], 1)), end='')
-            print(", " + str(round(t[1], 1)), end='')
-            print(")")
+            # print("translation: (" + str(round(t[2], 1)), end='')
+            # print(", " + str(round(t[0], 1)), end='')
+            # print(", " + str(round(t[1], 1)), end='')
+            # print(")")
 
-            print("rotation (in degrees): (" + str(round(angles[1], 2)), end='')
-            print(", " + str(round(angles[0], 2)), end='')
-            print(", " + str(round(angles[2], 2)), end='')
-            print(")")
+            # print("rotation (in degrees): (" + str(round(angles[1], 2)), end='')
+            # print(", " + str(round(angles[0], 2)), end='')
+            # print(", " + str(round(angles[2], 2)), end='')
+            # print(")")
     
     def create_tracks_callback(self, index):
         return lambda msg:self.tracks_callback(msg, index)
@@ -200,18 +220,15 @@ class calibration(Node):
         return lambda msg:self.info_callback(msg, index)
     
     def tracks_callback(self, msg, index):
+        self.input[index]['time'] = msg.header.stamp.sec * 1000000000 + msg.header.stamp.nanosec
         self.input[index]['buffer'] = []
         for object in msg.tracks:
             self.input[index]['buffer'].append(object)
     def info_callback(self, msg, index):
-        self.input[index]['fx'] = (msg.p[0] * (self.width / msg.width))
-        self.input[index]['fy'] = (msg.p[5] * (self.height / msg.height))
-        self.input[index]['cx'] = (msg.p[2] * (self.width / msg.width))
-        self.input[index]['cy'] = (msg.p[6] * (self.height / msg.height))
-        # self.input[index]['camera_matrix'] = msg.k
         k = msg.k
+        d = msg.d
         self.input[index]['camera_matrix'] = np.matrix([[k[0], k[1], k[2]], [k[3], k[4], k[5]], [k[6], k[7], k[8]]])
-
+        self.input[index]['dist_matrix'] = np.array([d[0], d[1], d[2], d[3], d[4]])
 
     def publish_calibration(self):
         msg = CameraLocations()

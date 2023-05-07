@@ -81,6 +81,38 @@ rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_
 rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: rosidl_adapter/scanner_interfaces/msg/Tracks.idl
 rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: rosidl_adapter/scanner_interfaces/msg/Location.idl
 rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: rosidl_adapter/scanner_interfaces/msg/CameraLocations.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Bool.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Byte.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Char.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/ColorRGBA.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Empty.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Float32.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Float32MultiArray.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Float64.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Float64MultiArray.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Header.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Int16.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Int16MultiArray.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Int32.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Int32MultiArray.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Int64.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Int64MultiArray.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Int8.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Int8MultiArray.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/MultiArrayDimension.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/MultiArrayLayout.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/String.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/UInt16.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/UInt16MultiArray.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/UInt32.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/UInt32MultiArray.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/UInt64.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
+rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ALEX/anytrack/ros/build/scanner_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C introspection for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c --generator-arguments-file /home/ALEX/anytrack/ros/build/scanner_interfaces/rosidl_typesupport_introspection_c__arguments.json
 
@@ -177,7 +209,11 @@ libscanner_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/scanner
 libscanner_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/scanner_interfaces/msg/detail/camera_locations__type_support.c.o
 libscanner_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_c.dir/build.make
 libscanner_interfaces__rosidl_typesupport_introspection_c.so: libscanner_interfaces__rosidl_generator_c.so
+libscanner_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
+libscanner_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
 libscanner_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
+libscanner_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
+libscanner_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so
 libscanner_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libscanner_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librcutils.so
 libscanner_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/scanner_interfaces__rosidl_typesupport_introspection_c.dir/link.txt

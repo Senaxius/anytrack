@@ -139,6 +139,10 @@ CMakeFiles/scanner_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/sca
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
+  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   rosidl_generator_c/scanner_interfaces/msg/detail/object__struct.h \
   rosidl_generator_c/scanner_interfaces/msg/detail/tracks__type_support.h \
   rosidl_generator_c/scanner_interfaces/msg/rosidl_generator_c__visibility_control.h \
@@ -150,13 +154,21 @@ CMakeFiles/scanner_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/sca
 
 rosidl_generator_c/scanner_interfaces/msg/detail/tracks__type_support.h:
 
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
+
+/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
+
 rosidl_generator_c/scanner_interfaces/msg/detail/tracks__struct.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h:
 
 rosidl_typesupport_c/scanner_interfaces/msg/object__type_support.cpp:
 
 rosidl_generator_c/scanner_interfaces/msg/detail/location__type_support.h:
 
 /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/type_support_map.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
 
 rosidl_typesupport_c/scanner_interfaces/msg/tracks__type_support.cpp:
 

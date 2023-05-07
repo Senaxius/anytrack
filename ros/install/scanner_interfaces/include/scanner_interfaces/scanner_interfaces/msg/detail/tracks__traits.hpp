@@ -15,6 +15,8 @@
 #include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
+// Member 'header'
+#include "std_msgs/msg/detail/header__traits.hpp"
 // Member 'tracks'
 #include "scanner_interfaces/msg/detail/object__traits.hpp"
 
@@ -29,6 +31,13 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
+  // member: header
+  {
+    out << "header: ";
+    to_flow_style_yaml(msg.header, out);
+    out << ", ";
+  }
+
   // member: tracks
   {
     if (msg.tracks.size() == 0) {
@@ -52,6 +61,15 @@ inline void to_block_style_yaml(
   const Tracks & msg,
   std::ostream & out, size_t indentation = 0)
 {
+  // member: header
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "header:\n";
+    to_block_style_yaml(msg.header, out, indentation + 2);
+  }
+
   // member: tracks
   {
     if (indentation > 0) {

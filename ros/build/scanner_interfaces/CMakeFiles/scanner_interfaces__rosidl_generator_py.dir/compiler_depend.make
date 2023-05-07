@@ -1006,13 +1006,20 @@ CMakeFiles/scanner_interfaces__rosidl_generator_py.dir/rosidl_generator_py/scann
   /usr/include/python3.10/numpy/__multiarray_api.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/scanner_interfaces/msg/detail/tracks__struct.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
+  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   rosidl_generator_c/scanner_interfaces/msg/detail/object__struct.h \
   rosidl_generator_c/scanner_interfaces/msg/detail/tracks__functions.h \
   rosidl_generator_c/scanner_interfaces/msg/rosidl_generator_c__visibility_control.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h \
   rosidl_generator_c/scanner_interfaces/msg/detail/object__functions.h
 
+
+/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h:
 
 /usr/include/asm-generic/errno-base.h:
 
@@ -1091,6 +1098,8 @@ rosidl_generator_py/scanner_interfaces/msg/_object_s.c:
 /usr/include/linux/close_range.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
 /usr/include/python3.10/cpython/dictobject.h:
 

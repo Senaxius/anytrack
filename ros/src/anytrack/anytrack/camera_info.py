@@ -32,28 +32,37 @@ class camera_info(Node):
         command = "v4l2-ctl -d /dev/video" + str(self.device) + " -D"
         stream = os.popen(command)
         output = stream.read()
-        if "HD Web Camera" in output:
-            self.config = 0
-            self.get_logger().info("Detected camera with know device type: HD Web Camera")
-            self.file = "/home/ALEX/anytrack/config/HD_WEB_Camera.yaml"
-        elif "CameraA" in output:
-            self.config = 1
-            self.get_logger().info("Detected camera with know device type: CameraA")
-            self.file = "/home/ALEX/anytrack/config/CameraA.yaml"
-        elif "WEB CAMERA M9 Pro" in output:
-            self.config = 2
-            self.get_logger().info("Detected camera with know device type: WEB CAMERA M9 Pro")
-            self.file = "/home/ALEX/anytrack/config/M9_Pro.yaml"
+        if self.device == 0:
+            self.get_logger().info("Detected camera with know device type: M9 Pro 'Black'") 
+            self.file = "/home/ALEX/anytrack/config/M9_black.yaml"
+        elif self.device == 2:
+            self.get_logger().info("Detected camera with know device type: M9 Pro 'Normal'") 
+            self.file = "/home/ALEX/anytrack/config/M9_normal.yaml"
         else:
             self.get_logger().warning("Found device but no known configuration")
             exit()
-        
+        # if "HD Web Camera" in output:
+        #     self.config = 0
+        #     self.get_logger().info("Detected camera with know device type: HD Web Camera")
+        #     self.file = "/home/ALEX/anytrack/config/HD_WEB_Camera.yaml"
+        # elif "CameraA" in output:
+        #     self.config = 1
+        #     self.get_logger().info("Detected camera with know device type: CameraA")
+        #     self.file = "/home/ALEX/anytrack/config/CameraA.yaml"
+        # elif "WEB CAMERA M9 Pro" in output:
+        #     self.config = 2
+        #     self.get_logger().info("Detected camera with know device type: WEB CAMERA M9 Pro")
+        #     self.file = "/home/ALEX/anytrack/config/M9_Pro.yaml"
+        # else:
+        #     self.get_logger().warning("Found device but no known configuration")
+        #     exit()
+
         # create msg from .yaml file
         self.data = self.read_yaml(self.file)
         self.msg = self.convert_yaml_to_msg(self.data)
 
         # create publisher
-        self.camera_info_publisher_ = self.create_publisher(msg_type=CameraInfo, topic="camera_info", qos_profile=10)
+        self.camera_info_publisher_ = self.create_publisher(msg_type=CameraInfo, topic="/cam" + str(self.index) + "/camera_info", qos_profile=10)
 
         while(1):
             self.camera_info_publisher_.publish(self.msg)
@@ -68,11 +77,11 @@ class camera_info(Node):
         msg = CameraInfo()
         msg.width = data["image_width"]
         msg.height = data["image_height"]
-        # msg.k = data["camera_matrix"]["data"]
-        # msg.d = data["distortion_coefficients"]["data"]
+        msg.k = data["camera_matrix"]["data"]
+        msg.d = data["distortion_coefficients"]["data"]
         msg.r = data["rectification_matrix"]["data"]
         msg.p = data["projection_matrix"]["data"]
-        # msg.distortion_model = data["distortion_model"]
+        msg.distortion_model = data["distortion_model"]
         ################ TODO: adaptive frame id
         msg.header.frame_id = ('cam' +  str(self.index) + '_position')
         return msg

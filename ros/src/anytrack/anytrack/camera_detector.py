@@ -49,9 +49,9 @@ class camera_detector(Node):
 
         self.get_logger().info("Starting camera detector with index " + str(self.index))
 
-        self.tracks_publisher = self.create_publisher(msg_type=Tracks, topic="tracks", qos_profile=10)
+        self.tracks_publisher = self.create_publisher(msg_type=Tracks, topic="/cam" + str(self.index) + "/tracks", qos_profile=10)
 
-        self.image_publisher = self.create_publisher(msg_type=Image, topic="image_tracked", qos_profile=10)
+        self.image_publisher = self.create_publisher(msg_type=Image, topic="/cam" + str(self.index) + "/image_tracked", qos_profile=10)
 
         self.detector_setup()
 
@@ -75,6 +75,7 @@ class camera_detector(Node):
         msg = Tracks()
         for object in self.objects:
             self.add_object_to_msg(msg.tracks, object, self.width, self.height)
+        msg.header.stamp = self.get_clock().now().to_msg()
         self.tracks_publisher.publish(msg)
 
         # publish image
@@ -83,8 +84,8 @@ class camera_detector(Node):
     def add_object_to_msg(self, msg, object, x_max, y_max):
         b = Object()
         b.id = object.id
-        b.x = object.x
-        b.y = object.y
+        b.x = round(object.x, 1)
+        b.y = round(object.y, 1)
         b.x_max = x_max
         b.y_max = y_max
         b.radius = object.radius
@@ -114,67 +115,6 @@ class camera_detector(Node):
 
         # bridge to convert between ros msg and opencv
         self.bridge = CvBridge()
-
-    # def camera_loop(self):
-    #     # camera setup
-    #     cap = trk.VideoStream(src=self.device, resolution=(self.width, self.height), framerate=self.framerate).start()
-
-    #     prev_frame_time = 0
-    #     # use this to limit the loop speed, otherwise might use too much cpu
-    #     limit_rate = self.limit
-    #     # buffer for tracking line (only visualisation)
-    #     buffer_size = 10
-    #     line_buffer = []
-    #     for i in range(4):
-    #         line_buffer.append(deque(maxlen=buffer_size))
-    #     # create TrackingObject
-    #     green_ball = trk.ColorObject()
-    #     green_ball.start_color = (43, 222, 116)
-    #     green_ball.end_color = (63, 255, 255)
-        
-    #     if self.debug:
-    #         frame = cap.read()
-    #         # cv2.imshow("Frame", frame)
-    #         # cv2.moveWindow("Frame", 1920, 0)
-
-    #     objects = []
-
-    #     # camera loop
-    #     while (1):
-    #         start_time = time.time()
-
-    #         frame = cap.read()
-
-    #         prev_objects = objects
-    #         if self.track:
-    #             objects = trk.ball_scanner(frame, colors=[green_ball], min_radius=10, prev_objects=prev_objects)
-    #         if self.visualize:
-    #             frame = trk.scanner_visulisation(frame, objects,line_buffer=line_buffer)
-            
-    #         # publish data
-    #         msg = Tracks()
-    #         for object in objects:
-    #             self.add_object_to_msg(msg.tracks, object, self.width, self.height)
-    #         self.tracks_publisher.publish(msg)
-    #         # publish image
-    #         self.publish_image(frame)
-
-
-    #         if self.debug:
-    #             # cv2.imshow("Frame", frame)
-    #             # print fps
-    #             new_frame_time = time.time()
-    #             fps = 1/(new_frame_time-prev_frame_time)
-    #             prev_frame_time = new_frame_time
-    #             fps = int(fps)
-    #             print(fps)
-    #             cv2.imshow("frame", cv2.resize(frame, (960, 540)))
-
-    #         if cv2.waitKey(1) & 0xFF == ord('q'):
-    #             break
-
-    #         if self.limit != 0:
-    #             time.sleep(max((1 / limit_rate) - (time.time() - start_time), 0))
 
 def main(args=None):
     rclpy.init(args=args)

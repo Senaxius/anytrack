@@ -10,7 +10,6 @@ setup.py
 ../../build/anytrack/anytrack.egg-info/zip-safe
 anytrack/__init__.py
 anytrack/calibration.py
-anytrack/calibration_old.py
 anytrack/camera_detector.py
 anytrack/camera_driver.py
 anytrack/camera_info.py

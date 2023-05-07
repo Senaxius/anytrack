@@ -12,6 +12,8 @@
 
 
 // Include directives for member types
+// Member `header`
+#include "std_msgs/msg/detail/header__functions.h"
 // Member `tracks`
 #include "scanner_interfaces/msg/detail/object__functions.h"
 
@@ -19,6 +21,11 @@ bool
 scanner_interfaces__msg__Tracks__init(scanner_interfaces__msg__Tracks * msg)
 {
   if (!msg) {
+    return false;
+  }
+  // header
+  if (!std_msgs__msg__Header__init(&msg->header)) {
+    scanner_interfaces__msg__Tracks__fini(msg);
     return false;
   }
   // tracks
@@ -35,6 +42,8 @@ scanner_interfaces__msg__Tracks__fini(scanner_interfaces__msg__Tracks * msg)
   if (!msg) {
     return;
   }
+  // header
+  std_msgs__msg__Header__fini(&msg->header);
   // tracks
   scanner_interfaces__msg__Object__Sequence__fini(&msg->tracks);
 }
@@ -43,6 +52,12 @@ bool
 scanner_interfaces__msg__Tracks__are_equal(const scanner_interfaces__msg__Tracks * lhs, const scanner_interfaces__msg__Tracks * rhs)
 {
   if (!lhs || !rhs) {
+    return false;
+  }
+  // header
+  if (!std_msgs__msg__Header__are_equal(
+      &(lhs->header), &(rhs->header)))
+  {
     return false;
   }
   // tracks
@@ -60,6 +75,12 @@ scanner_interfaces__msg__Tracks__copy(
   scanner_interfaces__msg__Tracks * output)
 {
   if (!input || !output) {
+    return false;
+  }
+  // header
+  if (!std_msgs__msg__Header__copy(
+      &(input->header), &(output->header)))
+  {
     return false;
   }
   // tracks

@@ -29,6 +29,7 @@ setup(
             "calibration = anytrack.calibration:main",
             "test = anytrack.test:main",
             "simulation_publisher = anytrack.simulation_publisher:main",
+            "pointcloud_publisher = anytrack.pointcloud_publisher:main",
         ],
     },
 )

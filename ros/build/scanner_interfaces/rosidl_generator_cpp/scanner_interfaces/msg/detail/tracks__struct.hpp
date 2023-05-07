@@ -16,6 +16,8 @@
 
 
 // Include directives for member types
+// Member 'header'
+#include "std_msgs/msg/detail/header__struct.hpp"
 // Member 'tracks'
 #include "scanner_interfaces/msg/detail/object__struct.hpp"
 
@@ -38,22 +40,32 @@ struct Tracks_
   using Type = Tracks_<ContainerAllocator>;
 
   explicit Tracks_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : header(_init)
   {
     (void)_init;
   }
 
   explicit Tracks_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : header(_alloc, _init)
   {
     (void)_init;
-    (void)_alloc;
   }
 
   // field types and members
+  using _header_type =
+    std_msgs::msg::Header_<ContainerAllocator>;
+  _header_type header;
   using _tracks_type =
     std::vector<scanner_interfaces::msg::Object_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<scanner_interfaces::msg::Object_<ContainerAllocator>>>;
   _tracks_type tracks;
 
   // setters for named parameter idiom
+  Type & set__header(
+    const std_msgs::msg::Header_<ContainerAllocator> & _arg)
+  {
+    this->header = _arg;
+    return *this;
+  }
   Type & set__tracks(
     const std::vector<scanner_interfaces::msg::Object_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<scanner_interfaces::msg::Object_<ContainerAllocator>>> & _arg)
   {
@@ -103,6 +115,9 @@ struct Tracks_
   // comparison operators
   bool operator==(const Tracks_ & other) const
   {
+    if (this->header != other.header) {
+      return false;
+    }
     if (this->tracks != other.tracks) {
       return false;
     }

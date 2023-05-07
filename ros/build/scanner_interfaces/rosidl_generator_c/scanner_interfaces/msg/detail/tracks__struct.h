@@ -18,6 +18,8 @@ extern "C"
 // Constants defined in the message
 
 // Include directives for member types
+// Member 'header'
+#include "std_msgs/msg/detail/header__struct.h"
 // Member 'tracks'
 #include "scanner_interfaces/msg/detail/object__struct.h"
 
@@ -27,6 +29,7 @@ extern "C"
  */
 typedef struct scanner_interfaces__msg__Tracks
 {
+  std_msgs__msg__Header header;
   scanner_interfaces__msg__Object__Sequence tracks;
 } scanner_interfaces__msg__Tracks;
 

@@ -13,6 +13,10 @@
 
 
 // Include directives for member types
+// Member `header`
+#include "std_msgs/msg/header.h"
+// Member `header`
+#include "std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h"
 // Member `tracks`
 #include "scanner_interfaces/msg/object.h"
 // Member `tracks`
@@ -92,7 +96,24 @@ bool scanner_interfaces__msg__Tracks__rosidl_typesupport_introspection_c__resize
   return scanner_interfaces__msg__Object__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember scanner_interfaces__msg__Tracks__rosidl_typesupport_introspection_c__Tracks_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember scanner_interfaces__msg__Tracks__rosidl_typesupport_introspection_c__Tracks_message_member_array[2] = {
+  {
+    "header",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message (initialized later)
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(scanner_interfaces__msg__Tracks, header),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
   {
     "tracks",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -115,7 +136,7 @@ static rosidl_typesupport_introspection_c__MessageMember scanner_interfaces__msg
 static const rosidl_typesupport_introspection_c__MessageMembers scanner_interfaces__msg__Tracks__rosidl_typesupport_introspection_c__Tracks_message_members = {
   "scanner_interfaces__msg",  // message namespace
   "Tracks",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(scanner_interfaces__msg__Tracks),
   scanner_interfaces__msg__Tracks__rosidl_typesupport_introspection_c__Tracks_message_member_array,  // message members
   scanner_interfaces__msg__Tracks__rosidl_typesupport_introspection_c__Tracks_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -134,6 +155,8 @@ ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_scanner_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, scanner_interfaces, msg, Tracks)() {
   scanner_interfaces__msg__Tracks__rosidl_typesupport_introspection_c__Tracks_message_member_array[0].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, std_msgs, msg, Header)();
+  scanner_interfaces__msg__Tracks__rosidl_typesupport_introspection_c__Tracks_message_member_array[1].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, scanner_interfaces, msg, Object)();
   if (!scanner_interfaces__msg__Tracks__rosidl_typesupport_introspection_c__Tracks_message_type_support_handle.typesupport_identifier) {
     scanner_interfaces__msg__Tracks__rosidl_typesupport_introspection_c__Tracks_message_type_support_handle.typesupport_identifier =

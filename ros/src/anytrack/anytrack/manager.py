@@ -20,6 +20,7 @@ class manager(Node):
         self.declare_parameter("visualize", 1)
         self.declare_parameter("width", 1280)
         self.declare_parameter("height", 720)
+        self.declare_parameter("filter", 1)
 
         # import parameters
         self.simulation = self.get_parameter("simulation").value
@@ -30,6 +31,7 @@ class manager(Node):
         self.debug = self.get_parameter("debug").value
         self.width = self.get_parameter("width").value
         self.height = self.get_parameter("height").value
+        self.filter = self.get_parameter("filter").value
 
         self.get_logger().info("Starting manager...")
 
@@ -92,9 +94,10 @@ class manager(Node):
                     {"device": device},
                     {"limit": 30},
                     {"debug": 0},
-                    {"framerate": 60},
+                    {"framerate": 30},
                     {"width": self.width},
                     {"height": self.height},
+                    {"filter": self.filter},
                 ]
             )
 

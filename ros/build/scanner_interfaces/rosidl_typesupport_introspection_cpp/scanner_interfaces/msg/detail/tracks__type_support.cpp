@@ -82,7 +82,24 @@ void resize_function__Tracks__tracks(void * untyped_member, size_t size)
   member->resize(size);
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Tracks_message_member_array[1] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Tracks_message_member_array[2] = {
+  {
+    "header",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<std_msgs::msg::Header>(),  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(scanner_interfaces::msg::Tracks, header),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
   {
     "tracks",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
@@ -105,7 +122,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Tracks_messag
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Tracks_message_members = {
   "scanner_interfaces::msg",  // message namespace
   "Tracks",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(scanner_interfaces::msg::Tracks),
   Tracks_message_member_array,  // message members
   Tracks_init_function,  // function to initialize message memory (memory has to be allocated)
