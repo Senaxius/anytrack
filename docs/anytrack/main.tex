@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt, ngerman]{article}
 
 \usepackage[a4paper, inner=2.5cm, outer=2.5cm, top=2.5cm, bottom=2cm, bindingoffset=0cm]{geometry}
 
@@ -40,7 +40,13 @@
 \usepackage[german]{babel}
 \usepackage{tocloft}
 \usepackage{caption}
-
+% german quotes
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+% make figures not go brr
+\usepackage{float}
+% Change "Abbildung" to "Abb."
+\addto\captionsgerman{\renewcommand{\figurename}{Abb.}}
 
 \makeindex
 
@@ -57,40 +63,42 @@
 
 %%%%%%%%%% Startseite
 \begin{document}
-\begin{titlepage}
-  \begin{center}
-    \vspace*{3cm}
+% \begin{titlepage}
+%   \begin{center}
+%     \vspace*{3cm}
 
-    {\LARGE{3D-Tracking System auf Basis herkömmlicher Kameras}}
+%     {\LARGE{3D-Tracking System auf Basis herkömmlicher Kameras}}
 
-    \vspace{0.5cm}
-    {\normalsize{Alexander Minor}}
+%     \vspace{0.5cm}
+%     {\normalsize{Alexander Minor}}
 
-    \vspace{3.5cm}
+%     \vspace{3.5cm}
 
-    \raggedright{\textbf{Schule:} Klaus-Groth-Schule Neumünster} \\
-    \vspace{0.2cm}
-    \raggedright{\textbf{Referenzfach:} Informatik/Mathematik} \\
-    \vspace{0.2cm}
+%     \raggedright{\textbf{Schule:} Klaus-Groth-Schule Neumünster} \\
+%     \vspace{0.2cm}
+%     \raggedright{\textbf{Referenzfach:} Informatik/Mathematik} \\
+%     \vspace{0.2cm}
 
-  \end{center}
-\end{titlepage}
+%   \end{center}
+% \end{titlepage}
 
 %%%%%%%%%% Inhaltsverzeichnis
-\newpage
+% \newpage
 \tableofcontents
 
 \newpage
 
 \section{Einleitung}
-Das genaue Bestimmen der Position eines Objektes im dreidimensionalen Raum ist zu einer grundlegenden technischen Vorrausetzung in vielen Gebieten geworden. Egal ob in Motion-Capture, in der Produktion von Filmen oder im Bereich der Robotik, solche Systeme sind ein essenzielles Werkzeug in der Entwicklung und Evaluierung von Software und physischen Produkten.\par
+Kameras sind die mit Abstand vielseitig nutzbaren Sensoren, denn einem Bild oder Video allein können viele Information über die Umgebung oder ein bestimmtes Objekt entnommen werden. Ohne weitere bekannte Parameter und Informationen können jedoch nicht mehr als zweidimensionale Projektionen der realen Welt akkurat erschaffen werden. In den letzten Jahren entwickelte sich für dieses Problem das sogenannte 3D-Tracking, bei dem mithilfe mehrerer statisch positionierten visuellen Sensoren die Position eines Objektes im dreidimensionalen Raum geschätzt werden kann. Diese revolutionären Systeme sind heute essenzieller Bestandteil vieler Gebiete, von der Filmproduktion bis zum autonomen Fahren. \par
 \begin{wrapfigure}{r}{0.40\textwidth}
     \includegraphics[width=\linewidth]{motion_capture_fifa.jpg}
     \caption{Motion Capture in der Filmproduktion}
     \includegraphics[width=\linewidth]{drones.jpg}
-    \caption{Ein Schwarm von Dronen kontroliert durch 3D-Tracking}
+    \caption{Ein Schwarm von Drohnen kontroliert durch 3D-Tracking}
 \end{wrapfigure}
-In Filmen werden 3D-Tracking Systeme verwendet, um Bewegungen, Kämpfe und Szenen digital aufzuzeichnen und die gewonnenen Daten mit Hilfe computergenerierter Effekte zu den spektakulären Szenen heutiger Filme zu verwandeln, ohne die einzigartige und komplexe Bewegungsart des Menschen zu vernachlässigen. Im Sport können Trajektorien eines Balles oder Bewegungen eines Spielers aufgezeichnet werden, um dem Training wichtige Informationen hinzuzufügen und auch in der Robotik ermöglicht das Tracking genau Steuerung und Korrektur von Drohnen oder Robotern. Nur durch die exakte Erfassung der Position können Fehler direkt oder im Voraus erkannt und korrigiert werden, denn auch wenn die Bewegung eines Roboter-Armes für das menschliche Auge korrekt wirken, könnten milimeter genaue Fehler durch ein 3D-Tracking-System erkannt werden. 
+In Filmen werden 3D-Tracking Systeme verwendet, um Bewegungen, Kämpfe und Szenen digital aufzuzeichnen und die gewonnenen Daten mit Hilfe computergenerierter Effekte zu den Szenen moderner Filme zu verwandeln, ohne die einzigartige Bewegungsart des Menschen zu verlieren (siehe Abbildung 1). 
+
+Im Sport können Trajektorien eines Balles oder Bewegungen eines Spielers aufgezeichnet werden, um dem Training wichtige Informationen hinzuzufügen und auch in der Robotik ermöglicht das Tracking genau Steuerung und Korrektur von Drohnen oder Robotern. Nur durch die exakte Erfassung der Position können Fehler direkt oder im Voraus erkannt und korrigiert werden, die akkurate Positionierung und Bewegung des in Abbildung 2 zu sehenden Drohnen-Schwarm ist nur möglich, da eine zentrale Kontrolleinheit mithilfe der Daten aus einem 3D-Tracking-System die Bewegung der Drohnen hundertfach pro Sekunde anpasst. 
 \subsection{Problematik}
 \begin{wrapfigure}{r}{0.38\textwidth}
 \centering
@@ -99,29 +107,28 @@ In Filmen werden 3D-Tracking Systeme verwendet, um Bewegungen, Kämpfe und Szene
     \caption{Optitrack UV-Tracking-Kamera}
   }
 \end{wrapfigure}
-Die Problematik mit dem sich dieses Projekt befasst, ist dass es nur wenige Anbieter für solche Systeme gibt. Die Technik ist sehr teuer und nur gut finanzierte Projekte haben Zugriff auf diese revolutionären Systeme. Der bekannteste Anbieter Optitrack verlangt für die rechts gezeigt Kamera 4143\$, von denen für ein funktionierendes System mindestens 4 gebraucht werden. 
+Die Problematik, mit dem sich dieses Projekt befasst ist, dass es nur wenige Anbieter für solche Systeme gibt. Die Technik ist sehr teuer und nur gut finanzierte Projekte haben Zugriff auf diese revolutionären Systeme. Der bekannteste Anbieter Optitrack verlangt für die rechts gezeigt Kamera 4143\$, von denen für ein funktionierendes System mindestens 4 gebraucht werden. 
 
 Das Ziel dieses Projektes ist es daher, ein Open-Source, günstiges und einfach zu integrierendes dreidimensionales Trackings-System zu entwickeln, damit Forscher, Entwickler und Interessierte auf der ganzen Welt, egal ob für Robotik, Filmproduktion oder der Messung von Bewegungen, 3D-Tracking als Basis für ihre Projekte verwenden können. \par
-In dieser Projektarbeit wird die Theorie,der Entwicklungsprozess und die Ergebnisses meines 3D-Tracking Systems auf Basis herkömmlicher Webcams beschrieben und evaluiert.  
-
+In dieser Projektarbeit wird die Theorie, der Entwicklungsprozess und die Ergebnisse meines 3D-Tracking Systems auf Basis herkömmlicher Webcams beschrieben und evaluiert.  
 \newpage
 \section{Vorgehen}
-Bevor die tatsächliche Entwicklung der Software beginnen konnte, mussten zuerst die theoretische Funktionsweise definiert werden und wie der Aufbau des Systemes grob aussehen sollte.
+Bevor die tatsächliche Entwicklung der Software beginnen konnte, mussten zuerst die theoretische Funktionsweise und der grobe Aufbau des Systemes definiert werden.
 
 \subsection{Theorie}
-In einer Aufnahme einer herkömmlichen Kamera lässt sich die Position eines Objektes im 2d Raum mit Hilfe von Object Tracking erfassen. Erweitert man diese Informationen mit den intrinsischen Werten der Kamera, also Brennweite, Verzerrung und Skalierung, in den 3d Raum, fehlen einem die nötigen Informationen um die Tiefe, also die Entfernung zur Kamera zu berechnen.  
+In einer Aufnahme einer herkömmlichen Kamera lässt sich die Position eines Objektes im zweidimensionalen Raum mithilfe von Object Tracking erfassen. Erweitert man diese Informationen mit den intrinsischen Werten der Kamera, also Brennweite, Verzerrung und Skalierung, in den dreidimensionalen Raum, fehlen einem die nötigen Informationen, um die Tiefe, also die Entfernung zur Kamera, zu berechnen.  
 
 \begin{wrapfigure}{r}{0.38\textwidth}
 \centering
   \includegraphics[angle=0,width=\linewidth]{triangulation.png}
-  \caption{unterschiedliche Kamera Perspektiven}
+  \caption{resultierenden Geraden zweier Perspektiven}
 \end{wrapfigure}
-Es bleibt also eine Gerade, auf der sich das Objekt befinden könnte. Wenn man nun eine zweite Kamera hinzufügt, erhält man eine weitere Gerade, auf der sich das Objekt befinden könnte. Liegen die Kameras an unterschiedlichen Orten, lässt sich die akkurate Position des zu trackenden Objektes durch den Schnittpunkt der beiden Geraden berechnen. Wenn man jegliche Messfehler vernachlässigt, und die exakte Position der Kameras bekannt ist, würden zwei Kameras schon ausreichen, um die nötigen Daten zur Berechnung zu liefern.  
+Es bleibt also eine Gerade, auf der sich das Objekt befinden könnte. Wenn man nun eine zweite Kamera hinzufügt, erhält man eine weitere Gerade, auf der sich das Objekt befinden könnte. Liegen die Kameras an unterschiedlichen Orten, lässt sich die akkurate Position des zu trackenden Objektes durch den Schnittpunkt der beiden Geraden berechnen (siehe Abbildung 4). Wenn man jegliche Messfehler vernachlässigt, und die exakte Position der Kameras bekannt ist, würden zwei Kameras schon ausreichen, um die nötigen Daten zur Berechnung zu liefern.  
 
 In der Realität gibt es aber einige Aspekte, die die Genauigkeit und Funktionalität des Systems negativ beeinflussen: 
 \begin{itemize}
   \item Da ein Bild einer Kamera eine begrenzte Auflösung hat, kann eine Kante eines Objektes nur die Hälfte eines Pixels ausfüllen. Durch das „Auf- oder Abrunden“ dieser Bildinformationen entsteht ein Messfehler, der mit zunehmender Distanz größer wird. 
-  \item Da die verwendeten Kameras meist keine Informationen zu den intrinsischen Daten mitliefern, lassen sich diese nur mit Hilfe einer Kalibrierungsequenz ermessen. In der werden mehrere aufgenommen verzerrte Bilder so angepasst, dass sie den tatsächlichen Eigenschaften eines bekannten Objektes nahekommen, in der Praxis ist dies meist ein Schachbrett. In der resultierenden Projektion der Aufnahme im dreidimensionalen Raum können durch Messfehler Verzerrungen oder Verschiebungen entstehen. 
+  \item Da die verwendeten Kameras  nur selten Informationen zu den intrinsischen Daten mitliefern, lassen sich diese nur mithilfe einer Kalibrierungssequenz ermessen. In der werden mehrere aufgenommen verzerrte Bilder so angepasst, dass sie den tatsächlichen Eigenschaften eines bekannten Objektes nahekommen, in der Praxis ist dies meist ein Schachbrett. In der resultierenden Projektion der Aufnahme im dreidimensionalen Raum können durch Messfehler Verzerrungen oder Verschiebungen entstehen. 
   \item Der mit Abstand stärkste Einfluss auf mögliche Fehler ist die durch eine Kalibrierungssequenz geschätzte Position der Kameras. Sowohl Rotation und Transposition zur Uhrkamera müssen perfekt sein, damit tatsächlich ein Schnittpunkt entsteht. 
 \end{itemize}
 
@@ -136,56 +143,65 @@ Es wird also ersichtlich, dass ein perfekter Systemaufbau aufgrund der vielen Va
 Bevor es an die tatsächliche Entwicklung gehen kann, müssen einige Spezifikationen, Voraussetzungen und zu verwendende Systeme definiert werden, damit das grobe Konzept auch tatsächlich umsetzbar ist. Dazu gehört die verwendete Hardware in Form von Kameras und Software in der Form von Programmiersprache, Bibliotheken und Programmen zur Entwicklung und Visualisierung. 
 
 \subsubsection{Python}
-Da das Projekt komplex ist, ist eine „high-level“ Programmiersprache zu präferieren, wodurch komplexere Aufgaben mit weniger Befehlen gelöst werden können. In diesem Bereich bietet sich Python besonders an, da diese einerseits großen Support in Form von zahlreichen Librarys und einer aktiven Community besitzt und ich andererseits bereits viel Erfahrung in diesem Bereich hatte. 
+Da das Projekt komplex ist, ist eine „high-level“ Programmiersprache zu präferieren, wodurch komplexere Aufgaben mit weniger Befehlen gelöst werden können. In diesem Bereich bietet sich Python besonders an, da diese einerseits großen Support in Form von zahlreichen Libraries und einer aktiven Community besitzt und ich andererseits bereits viel Erfahrung in diesem Bereich hatte. 
 
 \subsubsection{ROS}
-Das zu entwickelnde System sollte besonders variabel, erweiterbar und vielseitig nutzbar sein, es macht also Sinn den Code modular aufzubauen, so dass bestimmte Teile ausgetauscht, verbessert oder erweitert werden können, ohne die Funktionalität zu zerstören.  
+Das zu entwickelnde System sollte besonders variabel, erweiterbar und vielseitig nutzbar sein, es ist daher sinnvoll den Code modular aufzubauen, sodass bestimmte Teile ausgetauscht, verbessert oder erweitert werden können, ohne die Funktionalität des ganzen Systems zu hindern.  
 
-Um eine solche Modularität schaffen zu können, braucht man bestimmte Vereinbarungen und Vorgaben, wie zwischen Teilen kommuniziert werden soll, wie diese voneinander abhängig sind und wie die generelle Struktur des Systems aussieht.  
+Um eine solche Modularität schaffen zu können, werden bestimmte Vereinbarungen und Vorgaben gebraucht, wie zwischen Teilen kommuniziert werden soll, wie diese voneinander abhängig sind und wie die generelle Struktur des Systems aussieht.  
 
-So wäre es beispielsweise sinnvoll, das Auslesen, Verarbeiten und Vergleich der Kamerabilder voneinander zu separieren, so dass einerseits eine gewisse Unabhängigkeit entsteht und andererseits so von Multithreading nutzen gemacht werden kann, der Aufteilung der Rechenlast auf mehrere CPU-Kerne.  
+So wäre es beispielsweise sinnvoll, das Auslesen, Verarbeiten und Vergleichen der Kamerabilder voneinander zu separieren, sodass einerseits eine gewisse Unabhängigkeit entsteht und andererseits so von Multithreading Nutzen gemacht werden kann, der Aufteilung der Rechenlast auf mehrere CPU-Kerne.  
 
-Auch wenn zahlreiche Lösungen für das Aufteilen eines Python Programmes in verschiedene Threads (Unterprogramme) bereits nativ möglich ist, wäre die Integration in komplexere Systeme äußerst mühselig, da vor allem die Kommunikation in Form von geteilten Variablen eher primitiv und zeitlich aufwändig wäre. Es musste also ein System her, dass die Kommunikation und Separierung der Programme vereinfachen würde und idealerweise bereits vorgefertigte System für kleinere Aspekte des Projektes hätte, so dass bei der Entwicklung auf bereits getesteten Code zurückgegriffen werden konnte. 
+Auch wenn zahlreiche Lösungen für das Aufteilen eines Python-Programmes in verschiedene Threads (Unterprogramme) bereits nativ möglich ist, wäre die Integration in komplexere Systeme äußerst mühselig, da vor allem die Kommunikation in Form von geteilten Variablen eher primitiv und zeitlich aufwändig wäre. Es musste also ein System her, dass die Kommunikation und Separierung der Programme vereinfachen würde und idealerweise bereits vorgefertigte System für kleinere Aspekte des Projektes hätte, sodass bei der Entwicklung auf bereits getesteten Code zurückgegriffen werden konnte. 
 
 \begin{wrapfigure}{r}{0.38\textwidth}
 \centering
   \includegraphics[angle=0,width=\linewidth]{ROS_diagram.jpg}
   \caption{Anwendungen von ROS}
 \end{wrapfigure}
-Alle diese Voraussetzungen erfüllte das Open-Source System „ROS“ (Robotics Operation System), ein seit 2007 entwickelte Framework für Roboter, welches in zahlreichen persönlichen und Industriellen Systemen verwendet wird. ROS, oder im Falle dieses Projektes die zweite Version ROS2, ist weniger eine Library für eine bestimmte Programmiersprache, sondern wie im Namen schon enthalten, ein „Operating System“, also eine Vielzahl an Librarys, Tools und Algorithmen für die Entwicklung von Robotern, die tiefer im System integriert sind. Der Code selbst wird dann in Python geschrieben, und kann mit Hilfe einer Library (rclpy) mit ROS kommunizieren. 
+Alle diese Voraussetzungen erfüllte das Open-Source System „ROS“ (Robotic Operation System), ein seit 2007 entwickelte Framework für Roboter, welches in zahlreichen persönlichen und industriellen Systemen verwendet wird. ROS, oder im Falle dieses Projektes die zweite Version ROS2, ist weniger eine Library für eine bestimmte Programmiersprache, sondern wie im Namen schon enthalten, ein „Operating System“, also eine Vielzahl an Libraries, Tools und Algorithmen für die Entwicklung von Robotern, die tiefer im System integriert sind. Der Code selbst wird dann in Python geschrieben, und kann mithilfe einer Library (rclpy) mit ROS kommunizieren. 
 
-ROS ermöglicht es nun, so genannte „Nodes“ zu erstellen, diese sind unabhängige Module, die in ihrer eigenen Python oder C++ Datei erstellt werden können. So gibt es beispielsweise für jede Kamera eine Node, die sich nur um das Auslesen der Bilder kümmert, eine weitere zum Erkennen verschiedener Objekte und eine andere zum Vergleichen dieser Daten mit anderen Kameras.  
+ROS ermöglicht es nun, sogenannte „Nodes“ zu erstellen, diese sind unabhängige Module, die in ihrer eigenen Python oder C++ Datei erstellt werden können. So gibt es beispielsweise für jede Kamera eine Node, die sich nur um das Auslesen der Bilder kümmert, eine weitere zum Erkennen verschiedener Objekte und eine andere zum Vergleichen dieser Daten mit anderen Kameras.  
 
-\newpage
-
-\begin{wrapfigure}{r}{0.46\textwidth}
-\centering
-  \includegraphics[angle=0,width=\linewidth]{Publisher.png}
-  \caption{Publisher-Subscriber-Modell}
-  \includegraphics[angle=0,width=\linewidth]{Server.png}
-  \caption{Server-Client-Modell}
-\end{wrapfigure}
 Allein können diese Module allerdings nichts erreichen, da sie von Informationen untereinander abhängig sind. Auch hier bietet ROS zwei zentrale Tools zur Kommunikation zwischen Nodes:  
 
-Einmal das sogenannte Publisher-Subscriber Modell, in dem die Kommunikation ähnlich dem UDP-Netzwerkprotokoll verläuft und die Nodes nichts von gegenseitiger Existenz wissen, und einmal des Service Modell, in dem die Kommunikation ähnlich dem TCP-Netzwerkprotokoll verläuft, es also Anfragen (Requests) und Antworten (Responses) gibt.  
+\begin{itemize}
+  \item Das Publisher-Subscriber Modell, in dem die Kommunikation stets nur in eine Richtung läuft. Wie in Abbildung 6 zu sehen, veröffentlicht der Publisher eine Nachricht mit bestimmten Parametern (Message) auf einem Topic, auf dem mehrere Subscriber "zuhören" können. 
+  \begin{figure}[h]
+    \includegraphics[angle=0,width=\linewidth]{Publisher.png}
+    \caption{Publisher-Subscriber-Modell}
+  \end{figure}
+  \item Das Service-Modell, in dem die Kommunikation wie bei einem TCP-Handshake verläuft, also vom Client eine Anfrage zum Server gesendet wird und bei erfolgreicher interpretation eine Antwort zurück kommt. 
+  \begin{figure}[h]
+    \includegraphics[angle=0,width=\linewidth]{Server.png}
+    \caption{Server-Client-Modell}
+  \end{figure}
+\end{itemize}
+
+Da alle Kommunikation meist einseitig sind und Geschwindigkeit eine wichtige Rolle spielt, wird im 3D-Tracking-System stets über das Publisher-Subscriber-Modell kommuniziert.
 
 Ein weiterer Kernaspekt, weshalb ROS ein essenzieller Part dieser Entwicklung ist, hat mit der Etablierung der Technik zu tun. Da jede Art von Kommunikation durch sogenannte „Messages“ beschrieben wird, also welche Daten genau übertragen werden, gibt es viele Programme, die diese „verstehen“ können. Bilder, Vektoren, Kamera-Matrizen oder simple Punkte, werden daher immer auf dieselbe Weise versendet. So gibt es gute Möglichkeiten zur Visualisierung und Simulation der Daten, sowie zahlreiche andere Apps, die die Entwicklung durch ROS erleichtern. 
 \subsubsection{Opencv}
-Eine weitere Library die in diesem Projekt eine große Rolle spielt, ist OpenCV, bzw. die Python Implementation. Dies ist eine freie Programmbibliothek mit Algorithmen für die Bildverarbeitung und Computer Vision. Durch sie wird sowohl das Auslesen der Kameradaten, als auch die Kalibrierung zur Berechnung der intrinsischen Parameter möglich.
+Eine weitere Library, die in diesem Projekt eine große Rolle spielt, ist OpenCV, bzw. die Python Implementation. Dies ist eine freie Programmbibliothek mit Algorithmen für die Bildverarbeitung und Computer Vision. Durch sie wird sowohl das Auslesen der Kameradaten, als auch die Kalibrierung zur Berechnung der intrinsischen Parameter möglich.
 \subsection{Vorgehensweise und Wandel}
-Um die Versitalität und Zuverlässigkeit des Systemes sicherzustellen, wurde in der Entwicklung jedes Modul ausgiebig getestet, sowohl seperat als auch im System integriert. Das Vorgehen in der Programmierung war also stets mit dem Testen des Systemes verbunden, weshalb jedes Modul kontinuierlich im Laufe des Projektes verbessert wurde, sobald Fehler entdeckt wurden oder neu Funktionalität nötig war. 
+Um die Flexibilität und Zuverlässigkeit des Systems sicherzustellen, wurde in der Entwicklung jedes Modul ausgiebig getestet, sowohl separat als auch im System integriert. Das Vorgehen in der Programmierung war also stets mit dem Testen des Systems verbunden, weshalb jedes Modul kontinuierlich im Laufe des Projektes verbessert wurde, sobald Fehler entdeckt wurden oder neu Funktionalität nötig war. 
 
-\newpage
 \section{Systemaufbau}
-Jede Ausführung des Tracking-Systemes startet mit dem sogenannten "Manager", dies ist ein Programm, welches nach angeschlossenen Kameras sucht und alle nötigen Nodes zum Tracking configuriert und startet. Ein laufendes System kann in etwa so aussehen:
+Jede Ausführung des Tracking-Systems startet mit dem sogenannten "Manager", dies ist ein Programm, welches nach angeschlossenen Kameras sucht und alle nötigen Nodes zum Tracking konfiguriert und startet. Ein laufendes System kann in etwa so aussehen:
 \begin{figure}[h]
   \centering
   \includegraphics[angle=0,width=\linewidth]{anytrack-basic-tracking.png}
   \caption{Nodes, Topics und Messages eines laufenen Systemes mit 2 Kameras}
 \end{figure}
 
+Die Funktionalität und Aufgabe der einzelnen Module  wird im Folgenden erklärt:
+\subsection{Driver}
+Ursprünglich war das Auslesen und Verarbeiten der Bilder in einem Modul kombiniert, in dem eine kontinuierliche Schleife die Daten ausliest, verarbeitet und nach zu trackenden Objekten scannt. Im späteren Verlauf der Entwicklung zeigte sich jedoch, dass es nur durch die Separierung möglich ist, eine Simulationsumgebung möglichst direkt in das System zu integrieren. Dies ist nötig gewesen, da die Entwicklung des Kalibrierung-Prozesses zur Schätzung der Kamera Posen synthetische Daten gebraucht hat, um ein stabiles und stets identisches System zum Testen zu haben. 
+
+Wenn die Bilder nicht von der Simulationssoftware gegeben werden, gibt der "camera\_driver" (siehe Abbildung 8) das Bild im ROS Netzwerk frei.
+
 \subsection{2D-Tracking}
-Bevor die Position eines Objektes im dreidimensionalen Raum berechnet werden kann, müssen erstmal die zweidimensionalen Koordinaten des Objektes im Bild der Kamera errechnet werden. Als Tracking-Objekt dienen kleine hellgrüne Kugeln, da sie von allen Seiten gleich aussehen und gut vom Hintergrund zu unterscheiden sind  
+Bevor die Position eines Objektes im dreidimensionalen Raum berechnet werden kann, müssen erstmal die zweidimensionalen Koordinaten des Objektes im Bild der Kamera errechnet werden, wofür das "camera\_detector" Modul zuständig ist. Als Tracking-Objekt dienen kleine hellgrüne Kugeln, da sie von allen Seiten gleich aussehen und gut vom Hintergrund zu unterscheiden sind  
 
 Üblicherweise wird für solche Zwecke Object-Tracking verwendet, bei dem die bestimmten visuellen Eigenschaften eines Objektes gespeichert und im nächsten Frame danach gesucht wird. Ein solches Objekt kann ein Auto, ein Mensch oder in diesem Fall eine Kugel sein.  
 
@@ -193,49 +209,89 @@ Auch wenn Object-Tracking mit Librarys wie OpenCV erstaunlich leicht zu integrie
 
 Die Problematik bei dieser Technik liegt in der Unterscheidung des Objektes zum Hintergrund. In professionellen, aber sehr viel teuren Systemen, wird auf Infrarot-Kameras und besonders reflektierende kleine Kugeln gesetzt. Dieselbe Technik lässt sich aber auch auf herkömmlichen Webcams anwenden, wenn die Kugeln in einer besonders starken und im Hintergrund nicht vorhandenen Farbe sind. 
 
-\begin{wrapfigure}{r}{0.40\textwidth}
-\centering
-  \includegraphics[angle=0,width=\linewidth]{rgb-hsv.png}
-  \caption{RGB und HSV Farbformat}
-  {\setlength{\belowcaptionskip}{0pt}
+\vspace{10pt}
+\begin{figure}[H]
+  \begin{wrapfigure}{r}{0.4\textwidth}
+    \includegraphics[angle=0,width=\linewidth]{rgb-hsv.png}
+    \caption{RGB und HSV Farbformat}
+    \label{Abb: HSV}
     \includegraphics[angle=0,width=\linewidth]{2d-normal-filter.jpg}
     \caption{angewandter Farbfilter}
-  }
-\end{wrapfigure}
-Durch das Konvertieren des aufgenommenen Bildes vom RGB zum HSV-Format (siehe Abbildung), kann man die Daten so filtern, dass nur eine bestimmte Farbe übrigbleibt. Das HSV-Format ist dabei sehr nützlich, da ähnliche Farben (wie beispielsweise hell und dunkelgrün), nah einander liegen, und nur durch Filtern des Farbwertes (Hue), der Farbsättigung (Saturation) und dem Hellwert (Value), eine grobe Maske erstellt werden kann. 
+    \label{Abb: Farbfilter}
+  \end{wrapfigure}
+  Die Problematik bei dieser Technik liegt in der Unterscheidung des Objektes zum Hintergrund. In professionellen, aber sehr viel teuren Systemen, wird auf Infrarot-Kameras und besonders reflektierende kleine Kugeln gesetzt. Dieselbe Technik lässt sich aber auch auf herkömmlichen Webcams anwenden, wenn die Kugeln in einer besonders starken und im Hintergrund nicht vorhandenen Farbe sind. 
 
-\begin{wrapfigure}{r}{0.40\textwidth}
-\centering
-  \includegraphics[angle=0,width=\linewidth]{2d-normal.jpg}
-  \includegraphics[angle=0,width=\linewidth]{2d-normal-dark.jpg}
-  \caption{Aufnahme in unterschiedlichen Lichtverhältnisses}
+  Durch das Konvertieren des aufgenommenen Bildes vom RGB zum HSV-Format (siehe Abbildung \ref{Abb: HSV}), kann man die Daten so filtern, dass nur eine bestimmte Farbe übrigbleibt. Das HSV-Format ist dabei sehr nützlich, da ähnliche Farben (wie beispielsweise hell und dunkelgrün), nah einander liegen, und nur durch Filtern des Farbwertes (Hue), der Farbsättigung (Saturation) und dem Hellwert (Value), eine grobe Maske erstellt werden kann (siehe Abbildung \ref{Abb: Farbfilter}). 
+\end{figure}
+
+Beim Testen dieses Konzeptes stellte sich jedoch heraus, dass die Farbe allein nicht genug Kontrast ist, um die Kugel zuverlässig vom Hintergrund zu unterscheiden. Bei schlechter oder einseitiger Beleuchtung wurde die Farbe bestimmter Objekte signifikant dunkler, sodass die Filter, die am Tag funktioniert haben, nun gar nicht oder nur unzuverlässig funktionieren würden (siehe Kreise in Abbildung \ref{Abb: Lichtbedingungen}).  
+
+\begin{figure}[htbp!]
+  \centering
+  \begin{subfigure}[t]{0.45\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{2d-normal.jpg}
+      \caption{normale Lichtverhältnisses}
+      \label{Abb: 2d-normal}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.45\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{2d-normal-dark.jpg}
+      \caption{dunkle Lichtverhältnisseschrieben}
+      \label{Abb: 2d-normal-dunkel}
+  \end{subfigure}
+  \caption{Tracking Resultate in unterschiedlichen Lichtbedingungen}
+  \label{Abb: Lichtbedingungen}
+\end{figure}
+
+\newpage
+\begin{wrapfigure}{r}{0.35\textwidth}
   \includegraphics[angle=0,width=\linewidth]{2d-uv-normal.jpg}
-  \caption{Aufnahme mit UV-Licht}
-  \includegraphics[angle=0,width=\linewidth]{2d-color.jpg}
-  \includegraphics[angle=0,width=\linewidth]{2d-color-dark.jpg}
-  \caption{Aufnahme mit Nachbearbeitung in unterschiedlichen Lichtverhältnisses}
+  \caption{Farb-Maske nach Bildbearbeitungen}
+  \label{Abb: UV}
 \end{wrapfigure}
-Beim Testen dieses Konzeptes stellte sich jedoch heraus, dass die Farbe allein nicht genug Kontrast ist, um die Kugel zuverlässig vom Hintergrund zu unterscheiden. Bei schlechter oder einseitiger Beleuchtung wurde eine Seite der Kugel signifikant dunkler, so dass die Filter, die am Tag funktioniert haben, nun nur noch die Hälfte durchlassen würden.  
+Die ursprüngliche Lösung für dieses Problem ist eine UV-Lampe gewesen, da das grüne Plastik der Kugel das umgangssprachlich genannte „Schwarzlicht“ stark reflektiert, und so stark von anderen Objekten im Raum unterschieden werden konnte. 
 
-Die ursprüngliche Lösung für dieses Problem sollte eine UV-Lampe gewesen, da das grüne Plastik der Kugel das umgangssprachlich genannte „Schwarzlicht“ stark reflektiert, und so stark von anderen Objekten im Raum unterschieden werden konnte. 
-
-Auch wenn diese Lösung in gewissen Fällen funktioniert hat, musste die Stärke der Lampe und die Farbfilter für jede Umgebung neu eingestellt werden, um korrekt zu funktionieren. Ebenfalls war die Qualität des Trackings stark von dem Einfallswinkel des UV-Lichtes abhängig war. Würde dieses nämlich direkt in die Linse der Kamera reflektiert werden, was beim Auftreffen auf eine Kugel immer der Fall ist, würde dieser Bereich möglicherweise komplett weiß werden (siehe Abbildung). Anders als Hellgrün ist Weiß eine Farbe, die immer im Hintergrund zu finden ist, und kann daher nicht in die Farbfilter mit integriert werden. 
+Auch wenn diese Lösung in gewissen Fällen funktioniert hat, musste die Stärke der Lampe und die Farbfilter für jede Umgebung neu eingestellt werden, um korrekt zu funktionieren. Ebenfalls war die Qualität des Trackings stark von dem Einfallswinkel des UV-Lichtes abhängig war. Würde dieses nämlich direkt in die Linse der Kamera reflektiert werden, was beim Auftreffen auf eine Kugel immer der Fall ist, würde dieser Bereich möglicherweise komplett weiß werden (siehe Abbildung \ref{Abb: UV}). Anders als Hellgrün ist Weiß eine Farbe, die immer im Hintergrund zu finden ist, und kann daher nicht in die Farbfilter mit integriert werden. 
 
 Eine viel einfachere Lösung ergab sich durch das Experimentieren mit verschiedenen Bildbearbeitungen, die vor dem Tracking Algorithmus auf das Bild angewendet werden.  
 Durch das Vermindern des Kontrastes und der Erhöhung der Sättigung sticht die Kugel nun viel stärker aus dem Bild hervor, und kann so deutlich einfacher mit einer Maske ausgeschnitten werden. Zudem verschwindet so der Kontrast zwischen den Seiten der Kugel, wodurch man einen stärker fokussierten Farbfilter verwenden kann, was Messfehler drastisch reduziert.  
-\newpage
-\begin{wrapfigure}{r}{0.40\textwidth}
-  {\setlength{\belowcaptionskip}{-30pt}
-    \includegraphics[angle=0,width=\linewidth]{2d-color-filter.jpg}
-    \caption{Farb-Maske nach Bildbearbeitungen}
-  }
-\end{wrapfigure}
-Von der nun übrig gebliebenen Binär-Maske lässt sich relativ einfach das Zentrum einer Kontur und der Radius berechnen, indem eine Kreisform an die Konturen der einzelnen Masken angelegt wird. Durch diese Technik kann das Zentrum einer Kugel selbst dann noch akkurat berechnet werden, wenn die Hälfte abgedeckt wird. 
+Von der übrig gebliebenen Binär-Maske lässt sich relativ einfach das Zentrum einer Kontur und der Radius berechnen, indem eine Kreisform an die Konturen der einzelnen Masken angenähert wird, bis diese den Rand der Kontur erreicht. Durch diese Technik kann das Zentrum einer Kugel selbst dann
+\begin{figure}[htbp!]
+  \centering
+  \begin{subfigure}[t]{0.45\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{2d-color.jpg}
+      \caption{normale Lichtverhältnisses}
+      \label{Abb: 2d-color-normal}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.45\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{2d-color-dark.jpg}
+      \caption{dunkle Lichtverhältnisseschrieben}
+      \label{Abb: 2d-color-dunkel}
+  \end{subfigure}
+  \hfill
+  \vspace{10pt}
+  \begin{subfigure}[t]{0.6\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{2d-color-filter.jpg}
+      \caption{resultierende Maske}
+      \label{Abb: 2d-color-maske}
+  \end{subfigure}
+  \caption{Tracking Resultate in unterschiedlichen Lichtbedingungen mit Nachbearbeitung}
+  \label{Abb: Nachbearbeitungen}
+\end{figure}
 
 \subsubsection{Identifizierung der Objekt}
-Auch wenn es für die meisten Anwendungen nicht nötig ist, können verschiedene Tracking Punkte durch zwei unterschiedliche Methoden im zeitlichen Verlauf und selbst in Bewegung voneinander unterschieden werden. Einerseits können mehrere Tracking-Farben hinzugefügt werden, zum Beispiel eine rote, blaue und grüne Kugel, andererseits vergibt der Tracking-Algorithmus jeder Kontur eine ID, und versucht im nächsten Frame diese anhand der Nähe zu den neuen Ergebnissen zum selben zu zuteilen. In der Praxis funktioniert die zweite Technik trotz ihrer Simplizität erstaunlich gut, sogar beim Überkreuzen zweier Laufbahnen.  
+Auch wenn es für die meisten Anwendungen nicht nötig ist, können verschiedene Tracking Punkte durch zwei unterschiedliche Methoden im zeitlichen Verlauf und selbst in Bewegung voneinander unterschieden werden. Einerseits können mehrere Tracking-Farben hinzugefügt werden, zum Beispiel eine rote, blaue und grüne Kugel, andererseits vergibt der Tracking-Algorithmus jeder Kontur eine ID, und versucht im nächsten Frame diese anhand der Nähe zu den neuen Ergebnissen zum selben zuzuteilen. In der Praxis funktioniert die zweite Technik trotz ihrer Simplizität erstaunlich gut, sogar beim Überkreuzen zweier Laufbahnen.  
 
 \subsection{Kamera-Kalibrierung}
+Um die aus dem 2D-Tracking gewonnenen Daten in den dreidimensionalen Raum zu übertragen benötigt einige Information, die sich in intrinsische und externe Parameter gruppieren lassen. Ersteres sind dabei die Eigenschaften der Kamera selbst, also Brennweite, Verzerrung und Auflösung. Letzteres ist dabei vom 3D-Tracking-System konfiguriert. 
+Der Rest der Parameter, die die Projektion eines 2D-Bildpunktes in den 3D-Raum beschreiben, müssen durch eine Kamera-Kalibrierung geschätzt und in folgende Berechnungen mit integriert werden. 
+
 \subsection{3D-Vektoren}
 \subsection{Positions-Kalibrierung}
 

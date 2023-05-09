@@ -38,6 +38,9 @@ class camera_info(Node):
         elif self.device == 2:
             self.get_logger().info("Detected camera with know device type: M9 Pro 'Normal'") 
             self.file = "/home/ALEX/anytrack/config/M9_normal.yaml"
+        elif self.device == 4:
+            self.get_logger().info("Detected camera with know device type: CameraA") 
+            self.file = "/home/ALEX/anytrack/config/HD_WEB_Camera.yaml"
         else:
             self.get_logger().warning("Found device but no known configuration")
             exit()
