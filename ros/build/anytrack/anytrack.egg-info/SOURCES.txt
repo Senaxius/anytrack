@@ -15,6 +15,7 @@ anytrack/camera_driver.py
 anytrack/camera_info.py
 anytrack/camera_vector.py
 anytrack/manager.py
+anytrack/pointcloud_publisher.py
 anytrack/position_manager.py
 anytrack/simulation_publisher.py
 anytrack/test.py

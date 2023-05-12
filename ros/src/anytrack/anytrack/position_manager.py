@@ -63,9 +63,12 @@ class position_manager(Node):
             x = data["x"]
             y = data["y"]
             z = data["z"]
-            ax = data["ax"] / 180 * math.pi
-            ay = data["ay"] / 180 * math.pi
-            az = data["az"] / 180 * math.pi
+            ax = data["ax"] 
+            ay = data["ay"] 
+            az = 1
+            # ax = data["ax"] / 180 * math.pi
+            # ay = data["ay"] / 180 * math.pi
+            # az = data["az"] / 180 * math.pi
 
             self.publish_position("world", ("cam" + str(i) + "_position"), x, y, z, ax, ay, az)
 

@@ -1,0 +1,12 @@
+\begin{thebibliography}{1}
+
+\bibitem{jsan}
+Paolo Tripicchio, Salvatore D’Avella, Gerardo Camacho-Gonzalez, Lorenzo Landolfi, Gabriele Baris, Carlo~Alberto Avizzano, and Alessandro Filippeschi.
+\newblock Multi-camera extrinsic calibration for real-time tracking in large outdoor environments.
+\newblock {\em Journal of Sensor and Actuator Networks}, 11(3), 2022.
+
+\bibitem{sfm}
+Kai Wu.
+\newblock Structure from motion tutorial.
+
+\end{thebibliography}

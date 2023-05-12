@@ -44,6 +44,7 @@ class calibration(Node):
         # create variables to store output and input for calibration
         self.output = dict()
         self.input = dict()
+        self.average = dict()
 
         # create subscribers
         for i in range(self.device_count):
@@ -57,6 +58,14 @@ class calibration(Node):
                 'ay': 0.0,
                 'az': 0.0,
             }})
+            self.average.update({i: {
+                'x': [],
+                'y': [],
+                'z': [],
+                'ax': [],
+                'ay': [],
+                'az': [],
+            }})
             self.input.update({i: {
                 'time': 0,
                 'camera_matrix': [],
@@ -65,7 +74,7 @@ class calibration(Node):
                 'objects': [],
             }})
         
-        self.average = [[], [], [], [], [], []]
+        self.average_counter = 10
         
         # reset camera position
         self.publish_calibration()
@@ -174,35 +183,33 @@ class calibration(Node):
             self.output[index]['ay'] = round(angles[1] * -1, 2)
             self.output[index]['az'] = round(angles[2] * 1, 2)
 
+            # Filter
+            self.average[index]['x'].append(self.output[index]['x'])
+            self.average[index]['y'].append(self.output[index]['y'])
+            self.average[index]['z'].append(self.output[index]['z'])
+            self.average[index]['ax'].append(self.output[index]['ax'])
+            self.average[index]['ay'].append(self.output[index]['ay'])
+            self.average[index]['az'].append(self.output[index]['az'])
 
-            # self.average[0].append(self.output[1]['x'])
-            # self.average[1].append(self.output[1]['y'])
-            # self.average[2].append(self.output[1]['z'])
-            # self.average[3].append(self.output[1]['ax'])
-            # self.average[4].append(self.output[1]['ay'])
-            # self.average[5].append(self.output[1]['az'])
+            if len(self.average[index]['x']) > self.average_counter:
+                self.average[index]['x'].pop(0)
+                self.average[index]['y'].pop(0)
+                self.average[index]['z'].pop(0)
+                self.average[index]['ax'].pop(0)
+                self.average[index]['ay'].pop(0)
+                self.average[index]['az'].pop(0)
 
-            # self.output[index]['x'] =  sum(self.average[0]) / len(self.average[0])
-            # self.output[index]['y'] =  sum(self.average[1]) / len(self.average[1])
-            # self.output[index]['z'] =  sum(self.average[2]) / len(self.average[2])
-            # self.output[index]['ax'] = sum(self.average[3]) / len(self.average[3])
-            # self.output[index]['ay'] = sum(self.average[4]) / len(self.average[4])
-            # self.output[index]['az'] = sum(self.average[5]) / len(self.average[5])
-            # self.output[index]['ax'] = round(angles[0] * -1, 2)
-            # self.output[index]['ay'] = round(angles[1] * -1, 2)
-            # self.output[index]['az'] = round(angles[2] * -1, 2)
-            # if self.output[index]['ay'] >= 0:
-            #     self.output[index]['az'] = round(angles[2] * 1, 2)
-            # else:
-            #     self.output[index]['az'] = round(angles[2] * -1, 2)
+            self.output[index]['x']  = sum(self.average[index]['x']) / len(self.average[index]['x'])
+            self.output[index]['y']  = sum(self.average[index]['y']) / len(self.average[index]['y']) 
+            self.output[index]['z']  = sum(self.average[index]['z']) / len(self.average[index]['z']) 
+            self.output[index]['ax'] = sum(self.average[index]['ax']) / len(self.average[index]['ax'])
+            self.output[index]['ay'] = sum(self.average[index]['ay']) / len(self.average[index]['ay'])
+            self.output[index]['az'] = sum(self.average[index]['az']) / len(self.average[index]['az'])
+
 
             # publish calibration data for live preview
             self.publish_calibration()
             print(self.output[index])
-            
-            # self.ax_list.append(self.output[1]['ax'])
-            # av = sum(self.ax_list) / len(self.ax_list)
-            # print(av)
 
             # print("translation: (" + str(round(t[2], 1)), end='')
             # print(", " + str(round(t[0], 1)), end='')

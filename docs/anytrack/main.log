@@ -1,0 +1,486 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.5.2)  12 MAY 2023 21:54
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/ALEX/anytrack/docs/anytrack/main.tex
+(/home/ALEX/anytrack/docs/anytrack/main.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22> (/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
+\Gm@dimlist=\toks17
+) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2023/02/13 3.86 The Babel package
+\babel@savecnt=\count196
+\U@D=\dimen149
+\l@unhyphenated=\language87
+ (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count197
+ (/usr/share/texmf-dist/tex/generic/babel-german/ngerman.ldf
+Language: ngerman 2021/02/27 v2.13 German support for babel (post-1996 orthography)
+ (/usr/share/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+Language: ngermanb 2021/02/27 v2.13 German support for babel (post-1996 orthography)
+Package babel Info: Making " an active character on input line 122.
+)) (/usr/share/texmf-dist/tex/generic/babel-german/german.ldf
+Language: german 2021/02/27 v2.13 German support for babel (pre-1996 orthography)
+ (/usr/share/texmf-dist/tex/generic/babel-german/germanb.ldf
+Language: germanb 2021/02/27 v2.13 German support for babel (pre-1996 orthography)
+))) (/usr/share/texmf-dist/tex/generic/babel/locale/de/babel-german.tex
+Package babel Info: Importing font and identification data for german
+(babel)             from babel-de-1901.ini. Reported on input line 25.
+) (/usr/share/texmf-dist/tex/generic/babel/locale/de/babel-ngerman.tex
+Package babel Info: Importing font and identification data for ngerman
+(babel)             from babel-de.ini. Reported on input line 11.
+) (/usr/share/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2022-09-14 v5.2n context-sensitive quotations (JAW)
+ (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count198
+)
+\csq@reset=\count199
+\csq@gtype=\count266
+\csq@glevel=\count267
+\csq@qlevel=\count268
+\csq@maxlvl=\count269
+\csq@tshold=\count270
+\csq@ltx@everypar=\toks18
+ (/usr/share/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2022-09-14 v5.2n csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (/usr/share/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+))
+Package csquotes Info: Allocating character ".
+ (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
+) (/usr/share/texmf-dist/tex/latex/roboto/roboto.sty
+Package: roboto 2022/09/10 (Bob Tennent) Supports Roboto fonts for all LaTeX engines.
+ (/usr/share/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+) (/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks19
+\XKV@tempa@toks=\toks20
+)
+\XKV@depth=\count271
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/share/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/usr/share/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+Package: fontaxes 2020/07/21 v1.0e Font selection axes
+LaTeX Info: Redefining \upshape on input line 29.
+LaTeX Info: Redefining \itshape on input line 31.
+LaTeX Info: Redefining \slshape on input line 33.
+LaTeX Info: Redefining \swshape on input line 35.
+LaTeX Info: Redefining \scshape on input line 37.
+LaTeX Info: Redefining \sscshape on input line 39.
+LaTeX Info: Redefining \ulcshape on input line 41.
+LaTeX Info: Redefining \textsw on input line 47.
+LaTeX Info: Redefining \textssc on input line 48.
+LaTeX Info: Redefining \textulc on input line 49.
+)) (/usr/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen152
+\WF@size=\dimen153
+\c@WF@wrappedlines=\count272
+\WF@box=\box51
+\WF@everypar=\toks21
+Package: wrapfig 2003/01/31  v 3.6
+) (/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip50
+\enit@outerparindent=\dimen154
+\enit@toks=\toks22
+\enit@inbox=\box52
+\enit@count@id=\count273
+\enitdp@description=\count274
+) (/usr/share/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2023/02/25 v3.4 ragged2e Package
+\CenteringLeftskip=\skip51
+\RaggedLeftLeftskip=\skip52
+\RaggedRightLeftskip=\skip53
+\CenteringRightskip=\skip54
+\RaggedLeftRightskip=\skip55
+\RaggedRightRightskip=\skip56
+\CenteringParfillskip=\skip57
+\RaggedLeftParfillskip=\skip58
+\RaggedRightParfillskip=\skip59
+\JustifyingParfillskip=\skip60
+\CenteringParindent=\skip61
+\RaggedLeftParindent=\skip62
+\RaggedRightParindent=\skip63
+\JustifyingParindent=\skip64
+) (/usr/share/texmf-dist/tex/latex/index/index.sty
+Package: index 2004/01/20 v4.2beta Improved index support (dmj)
+\@indexbox=\insert252
+\indexproofstyle=\toks23
+
+
+LaTeX Warning: Command \markboth  has changed.
+               Check if current package is valid.
+
+
+LaTeX Warning: Command \markright  has changed.
+               Check if current package is valid.
+
+) (/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+ (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen155
+\captionmargin=\dimen156
+\caption@leftmargin=\dimen157
+\caption@rightmargin=\dimen158
+\caption@width=\dimen159
+\caption@indent=\dimen160
+\caption@parindent=\dimen161
+\caption@hangindent=\dimen162
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count275
+\c@continuedfloat=\count276
+Package caption Info: wrapfig package is loaded.
+) (/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 239.
+\c@subfigure=\count277
+Package caption Info: New subtype `subtable' on input line 239.
+\c@subtable=\count278
+) (/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count279
+\float@exts=\toks24
+\float@box=\box53
+\@float@everytoks=\toks25
+\@floatcapt=\box54
+) (/usr/share/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip65
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks26
+\ex@=\dimen163
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen164
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count280
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count281
+\leftroot@=\count282
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count283
+\DOTSCASE@=\count284
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box55
+\strutbox@=\box56
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen165
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count285
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count286
+\dotsspace@=\muskip16
+\c@parentequation=\count287
+\dspbrk@lvl=\count288
+\tag@help=\toks27
+\row@=\count289
+\column@=\count290
+\maxfields@=\count291
+\andhelp@=\toks28
+\eqnshift@=\dimen166
+\alignsep@=\dimen167
+\tagshift@=\dimen168
+\tagwidth@=\dimen169
+\totwidth@=\dimen170
+\lineht@=\dimen171
+\@envbody=\toks29
+\multlinegap=\skip66
+\multlinetaggap=\skip67
+\mathdisplay@stack=\toks30
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+\idxtitle@default=\toks31
+\tf@default=\write3
+\openout3 = `main.idx'.
+
+Package index Info: Writing index file main.idx on input line 48.
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'german'.
+LaTeX Font Info:    Trying to load font information for OT1+Roboto-LF on input line 51.
+ (/usr/share/texmf-dist/tex/latex/roboto/OT1Roboto-LF.fd
+File: OT1Roboto-LF.fd 2019/12/11 (autoinst) Font definitions for OT1/Roboto-LF.
+)
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/m/n' aliased to
+(Font)              `OT1/Roboto-LF/regular/n' on input line 51.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 12.0pt on input line 51.
+ (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count292
+\l__pdf_internal_box=\box57
+) (./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 717.00946pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=717.00946pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package csquotes Info: Redefining character " on input line 51.
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count293
+\scratchdimen=\dimen172
+\scratchbox=\box58
+\nofMPsegments=\count294
+\nofMParguments=\count295
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count296
+\MPscratchDim=\dimen173
+\MPnumerator=\count297
+\makeMPintoPDFobject=\count298
+\everyMPtoPDFconversion=\toks33
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/usr/share/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+ (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+\c@mv@tabular=\count299
+\c@mv@boldtabular=\count300
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/m/n' aliased to
+(Font)              `OT1/Roboto-LF/regular/n' on input line 73.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 17.28pt on input line 73.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/b/n' aliased to
+(Font)              `OT1/Roboto-LF/bold/n' on input line 73.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
+(Font)              scaled to size 17.28pt on input line 73.
+ (./main.toc
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/b/n' aliased to
+(Font)              `OT1/Roboto-LF/bold/n' on input line 2.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
+(Font)              scaled to size 12.0pt on input line 2.
+)
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/roboto/rbto_schjax.enc}]
+<assets//motion_capture_fifa.jpg, id=8, 481.8pt x 271.0125pt>
+File: assets//motion_capture_fifa.jpg Graphic file (type jpg)
+<use assets//motion_capture_fifa.jpg>
+Package pdftex.def Info: assets//motion_capture_fifa.jpg  used on input line 80.
+(pdftex.def)             Requested size: 182.09486pt x 102.42754pt.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/m/n' aliased to
+(Font)              `OT1/Roboto-LF/regular/n' on input line 81.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 10.95pt on input line 81.
+<assets//drones.jpg, id=9, 782.925pt x 439.6425pt>
+File: assets//drones.jpg Graphic file (type jpg)
+<use assets//drones.jpg>
+Package pdftex.def Info: assets//drones.jpg  used on input line 82.
+(pdftex.def)             Requested size: 182.09486pt x 102.24936pt.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/m/n' aliased to
+(Font)              `OT1/Roboto-LF/regular/n' on input line 88.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 14.4pt on input line 88.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/b/n' aliased to
+(Font)              `OT1/Roboto-LF/bold/n' on input line 88.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
+(Font)              scaled to size 14.4pt on input line 88.
+<assets//4143.png, id=10, 586.19pt x 360.34625pt>
+File: assets//4143.png Graphic file (type png)
+<use assets//4143.png>
+Package pdftex.def Info: assets//4143.png  used on input line 93.
+(pdftex.def)             Requested size: 586.18857pt x 360.34537pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]\OT1/Roboto-LF/regular/n/10.95 Abb. 3: |Op-ti-track UV-Tracking-
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+Roboto-LF on input line 97.
+(/usr/share/texmf-dist/tex/latex/roboto/TS1Roboto-LF.fd
+File: TS1Roboto-LF.fd 2019/12/11 (autoinst) Font definitions for TS1/Roboto-LF.
+)
+LaTeX Font Info:    Font shape `TS1/Roboto-LF/m/n' aliased to
+(Font)              `TS1/Roboto-LF/regular/n' on input line 97.
+LaTeX Font Info:    Font shape `TS1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 12.0pt on input line 97.
+ [2 <./assets//motion_capture_fifa.jpg> <./assets//drones.jpg> <./assets//4143.png>]
+Overfull \hbox (10.1966pt too wide) in paragraph at lines 99--99
+\OT1/Roboto-LF/regular/n/12 der Mes-sung von Be-we-gun-gen, 3D-Tracking als Ba-sis f[]ur ih-re Pro-jek-te ver-wen-den k[]onnen. 
+ []
+
+[3{/usr/share/texmf-dist/fonts/enc/dvips/roboto/rbto_ocbbsb.enc}]
+<assets//triangulation.png, id=19, 212.795pt x 133.49875pt>
+File: assets//triangulation.png Graphic file (type png)
+<use assets//triangulation.png>
+Package pdftex.def Info: assets//triangulation.png  used on input line 110.
+(pdftex.def)             Requested size: 212.79446pt x 133.4984pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--111
+[]\OT1/Roboto-LF/regular/n/10.95 Abb. 4: |re-sul-tie-ren-den Ge-ra-den
+ []
+
+[4 <./assets//triangulation.png>]
+Overfull \hbox (8.21678pt too wide) in paragraph at lines 124--125
+\OT1/Roboto-LF/regular/n/12 Ann[]aherung ei-nes m[]oglichen Schnitt-punk-tes ver-schie-de-ner Ge-ra-den ent-steht dann,
+ []
+
+[5]
+<assets//ROS_diagram.jpg, id=28, 457.71pt x 455.7025pt>
+File: assets//ROS_diagram.jpg Graphic file (type jpg)
+<use assets//ROS_diagram.jpg>
+Package pdftex.def Info: assets//ROS_diagram.jpg  used on input lin
