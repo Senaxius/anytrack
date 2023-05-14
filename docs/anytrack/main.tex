@@ -108,7 +108,7 @@ In einer Aufnahme einer herkömmlichen Kamera lässt sich die Position eines Obj
 \begin{wrapfigure}{r}{0.38\textwidth}
 \centering
   \includegraphics[angle=0,width=\linewidth]{triangulation.png}
-  \caption{resultierenden Geraden zweier Perspektiven}
+  \caption{Epipolargeometrie zweier Perspektiven}
 \end{wrapfigure}
 Es bleibt also eine Gerade, auf der sich das Objekt befinden könnte. Wenn man nun eine zweite Kamera hinzufügt, erhält man eine weitere Gerade, auf der sich das Objekt befinden könnte. Liegen die Kameras an unterschiedlichen Orten, lässt sich die akkurate Position des zu trackenden Objektes durch den Schnittpunkt der beiden Geraden berechnen (siehe Abbildung 4). Wenn man jegliche Messfehler vernachlässigt, und die exakte Position der Kameras bekannt ist, würden zwei Kameras schon ausreichen, um die nötigen Daten zur Berechnung zu liefern.  
 
@@ -333,9 +333,38 @@ Die nötigen intrinsischen Parameter werden berechnet, indem man mehrere Bilder 
 Um das System besonders leicht bedienbar zu machen, übernimmt das Modul "camera\_info" viele Aufgaben, die sonst manuell erledigt werden müssen. Beim Starten des Systems durch den "Manager" (siehe Abschnitt Systemaufbau) wird für jede angeschlossene Kamera ein solches Modul gestartet, welches dann auf Basis des Gerätenamen des vom Manager zugewiesenen USB-Ports das Modell erkennt und nach abgespeicherten Konfigurationen sucht. Wenn eine solche gefunden wurde, wird die Kamera-Matrix, die Verzerrungs-Parameter und die Auflösung auf dem "camX/camera\_info" Topic freigegeben, sodass sowohl Visualisierungssoftware als auch andere Module auf die Kamera spezifischen Parameter zugreifen können. Wenn keine bekannte Konfigurationen gefunden wurde, wird der Nutzer benachrichtigt und zum Kalibrierungsprozess weitergeleitet.
 
 \subsection{Positions-Kalibrierung}
-Um die unterschiedlichen Kamera-Perspektiven im dreidimensionalen Raum in Relation zu setzen, werden die extrinsischen Parameter benötigt. Diese beschreiben die Pose der Kamera, also die Translation und Rotation im Raum. Da diese Werte für jedes aufgebaute 3D-Tracking-System unterschiedlich sind und den größten Einfluss auf die Präzision und Richtigkeit der berechneten Position eines Objektes haben, wird Positions-Kalibrierung benötigt, die es dem Nutzer ermöglicht, die Pose der einzelnen Kameras anhand von Daten schätzen zu lassen. 
+Um die unterschiedlichen Kamera-Perspektiven im dreidimensionalen Raum in Relation zu setzen, werden die extrinsischen Parameter benötigt. Diese beschreiben die Pose der Kamera, also die Translation und Rotation im Raum. Da diese Werte für jedes aufgebaute 3D-Tracking-System unterschiedlich sind und den größten Einfluss auf die Präzision und Richtigkeit der berechneten Position eines Objektes haben, wird eine Positions-Kalibrierung benötigt, die es dem Nutzer ermöglicht, die Pose der einzelnen Kameras anhand von Daten schätzen zu lassen. 
 
 \subsubsection{Theorie}
+Die Pose einer Kamera im Weltkoordinatensystem lässt sich mit der sogenannten essenziellen Matrix beschreiben, unter der Bedingung, dass die intrinsischen Parameter der Kamera bekannt sind. Diese Matrix besteht aus der Rotations-Matrix und dem Translations-Vektor und beschreibt daher die 6 Freiheitsgrade. 
+
+Zur Schätzung dieser Matrix wird im Bereich der "computer vision" meist der Prozess "visuelle Odometrie" verwendet, welcher die Berechnung der relativen Pose zweier visuellen Perspektiven durch Analysieren von Kamerabildern ermöglicht. Möglich ist dies, da die projizierten Bildpunkte in perspektivischer Relation zueinander, Informationen über die relative Position der Kameras untereinander enthalten, und diese durch bestimmte Algorithmen geschätzt werden können.
+
+Ein solches Verfahren lässt sich in folgende Schritte einteilen:
+
+\begin{enumerate}
+  \item Beide Perspektiven werden mit einem Algorithmus auf gut zu identifizierende Punkte untersucht, meiste kontrastreiche Ecken und Kanten.
+  \item Die gefundenen Punkte werden anhand ihrer Umgebung und visuellen Eigenschaften zueinander zugeteilt. Dies ist nur möglich, wenn beide Kameras dieselbe Szene beobachten.
+  \item Zwischen den nun gefundenen ``Punktepaaren'' lassen sich
+  Epipolarlinien ziehen, welche es, mit der Projektionsmatrix der Kamera (siehe
+  Kamera-Kalibrierung) zusammen, einem sogenannten N-Punkt-Algorithmus
+  ermöglichen, eine zugehörige essenzielle Matrix anzunähern.
+  \item Das Verfahren wird mehrmals auf unterschiedlich ausgewählte Gruppen
+  von Punkten angewendet, und die geschätzten Positionen mithilfe des RANSAC
+  Algorithmus auf Ausreißer gefiltert.
+\end{enumerate}
+
+Die genaue Funktionsweise aller genannter Algorithmen werden in folgenden Quellen beschrieben: 
+
+\subsubsection{Anpassung des Verfahrens}
+In einem Vergleich zwischen dem 5- und 8-Punkt-Algorithmus (zwei spezifische Modelle der N-Punkt-Algorithmen), hat sich der 5-Punkt-Algorithmus als weitaus akkurater herausgestellt (siehe ...) und wird daher für dieses System verwendet.
+
+Da das oben beschriebene Verfahren überwiegend für das Bestimmen einer Kamerabewegung verwendet wird, also die unterschiedlichen Perspektiven von derselben Kamera zeitlich versetzt aufgenommen werden, gäbe es in dieser Anwendung bestimmte Faktoren, die die Leistung des Verfahrens beeinträchtigen würden.
+Einerseits ist die Qualität der Schätzung stets von der Menge an gefundenen Epipolarlinien abhängig, welche wiederum mit einem kontrastreichen Hintergrund mit vielen Konturen verbunden ist. Andererseits ist die Positionierung der Kameras so eingeschränkt, da diese stets identische Konturen im Bild haben müssen.  
+
+
+
+
 
 \subsection{3D-Vektoren}
 
