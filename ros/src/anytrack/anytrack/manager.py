@@ -12,26 +12,32 @@ class manager(Node):
     def __init__(self):
         super().__init__("manager") 
         # declare manager parameters
+        self.declare_parameter("websocket", 0)
+        self.declare_parameter("gazebo", 0)
         self.declare_parameter("simulation", 0)
         self.declare_parameter("simulation_publisher", 0)
-        self.declare_parameter("websocket", 0)
+        self.declare_parameter("config_path", '/home/ALEX/anytrack/config/camera_positions.json')
         self.declare_parameter("device_count", 0)
-        self.declare_parameter("debug", 1)
-        self.declare_parameter("visualize", 1)
+        self.declare_parameter("image_vis", 0)
+        self.declare_parameter("vector", 1)
+        self.declare_parameter("filter", 1)
         self.declare_parameter("width", 1280)
         self.declare_parameter("height", 720)
-        self.declare_parameter("filter", 1)
+        self.declare_parameter("debug", 0)
 
         # import parameters
+        self.websocket = self.get_parameter("websocket").value
+        self.gazebo = self.get_parameter("gazebo").value
         self.simulation = self.get_parameter("simulation").value
         self.simulation_publisher = self.get_parameter("simulation_publisher").value
-        self.websocket = self.get_parameter("websocket").value
+        self.config_path = self.get_parameter("config_path").value
         self.device_count = self.get_parameter("device_count").value
-        self.visualize = self.get_parameter("visualize").value
-        self.debug = self.get_parameter("debug").value
+        self.image_vis= self.get_parameter("image_vis").value
+        self.vector = self.get_parameter("vector").value
+        self.filter = self.get_parameter("filter").value
         self.width = self.get_parameter("width").value
         self.height = self.get_parameter("height").value
-        self.filter = self.get_parameter("filter").value
+        self.debug = self.get_parameter("debug").value
 
         self.get_logger().info("Starting manager...")
 
@@ -61,7 +67,6 @@ class manager(Node):
         output = output.strip()
         output = output.replace("video", '')
         output = output.replace("\n", ',')
-
         untested_devices = output.split(',')
 
         for index in untested_devices:
@@ -92,8 +97,7 @@ class manager(Node):
                 parameters=[
                     {"index": index},
                     {"device": device},
-                    {"limit": 30},
-                    {"debug": 0},
+                    {"debug": self.debug},
                     {"framerate": 30},
                     {"width": self.width},
                     {"height": self.height},
@@ -108,9 +112,8 @@ class manager(Node):
                 namespace= ('cam' + str(index)),
                 parameters=[
                     {"index": index},
-                    {"track": 1},
-                    {"visualize": 1},
-                    {"debug": 0},
+                    {"visualize": self.image_vis},
+                    {"debug": self.debug},
                     {"width": self.width},
                     {"height": self.height},
                 ]
@@ -143,7 +146,7 @@ class manager(Node):
                 ld.add_action(camX_driver)
                 ld.add_action(camX_camera_info)
             ld.add_action(camX_detector)
-            if self.visualize == 1:
+            if self.vector == 1:
                 ld.add_action(camX_vector)
 
         position_manager = Action(
@@ -152,7 +155,7 @@ class manager(Node):
             name=('position_manager'),
             parameters=[
                 {"device_count": length},
-                {"config_path": '/home/ALEX/anytrack/config/camera_positions.json'}
+                {"config_path": self.config_path}
             ]
         )
         gazebo = IncludeLaunchDescription(
@@ -169,8 +172,8 @@ class manager(Node):
             name=('foxglove_bridge'),
         )
 
-        # if self.simulation == 1:
-        #     ld.add_action(gazebo)
+        if self.gazebo == 1:
+            ld.add_action(gazebo)
         if self.simulation_publisher == 1:
             ld.add_action(simulation_publisher)
         if self.websocket == 1:

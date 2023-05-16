@@ -1,0 +1,15 @@
+manager:
+  ros__parameters:
+    websocket: 0
+    gazebo: 0
+    simulation: 1
+    simulation_publisher: 0
+    device_count: 4
+    image_vis: 0
+    vector: 1
+    visualize: 1
+    filter: 0
+    width: 1280
+    height: 720
+    debug: 1
+

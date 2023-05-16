@@ -21,6 +21,11 @@ elif [ $1 = "stop" ]; then
     docker stop rosco
     echo "--------------------done--------------------"
 elif [ $1 = "run" ]; then
+    if [ -z "$(docker ps | grep -o "rosco")" ]; then
+        echo "starting docker image.."
+        xhost +local:docker
+        docker start rosco
+    fi
     echo "opening cli"
     xhost +local:docker
     docker exec -it rosco /bin/zsh

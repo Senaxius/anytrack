@@ -60,12 +60,13 @@ class position_manager(Node):
                 print(self.config[str(i)])
             # publish camera_position
             data = self.config[str(i)]
-            x = data["x"]
-            y = data["y"]
-            z = data["z"]
+            scale = data["scale"]
+            x = data["x"] * scale
+            y = data["y"] * scale
+            z = data["z"] * scale
             ax = data["ax"] 
             ay = data["ay"] 
-            az = 1
+            az = data["az"]
             # ax = data["ax"] / 180 * math.pi
             # ay = data["ay"] / 180 * math.pi
             # az = data["az"] / 180 * math.pi
@@ -83,12 +84,13 @@ class position_manager(Node):
                     print(self.config[str(i)])
                 # publish camera_position
                 data = self.config[str(i)]
-                x = data["x"]
-                y = data["y"]
-                z = data["z"]
+                scale = data["scale"]
+                x = data["x"] * scale
+                y = data["y"] * scale
+                z = data["z"] * scale
                 ax = data["ax"] 
                 ay = data["ay"] 
-                az = data["az"] 
+                az = data["az"]
 
                 self.publish_position("world", ("cam" + str(i) + "_position"), x, y, z, ax, ay, az)
 

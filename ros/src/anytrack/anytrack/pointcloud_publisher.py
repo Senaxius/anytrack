@@ -25,7 +25,14 @@ class test(Node):
         self.t_publisher = self.create_publisher(msg_type=PointCloud2, topic="/translation_points", qos_profile=10)
         self.r_publisher = self.create_publisher(msg_type=PointCloud2, topic="/rotation_points", qos_profile=10)
 
+        self.counter = 0
+        self.min = 80
+
     def points_callback(self, msg):
+        if self.counter <= self.min:
+            print("not yet enough data to reach min")
+            self.counter += 1
+            return
         x = msg.locations[1].x 
         y = msg.locations[1].y 
         z = msg.locations[1].z 

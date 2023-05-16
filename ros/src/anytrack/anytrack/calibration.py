@@ -7,6 +7,8 @@ import math as m
 import cv2
 import numpy as np
 from scipy.spatial.transform import Rotation   
+import threading as th
+import json
 
 from scanner_interfaces.msg import CameraLocations
 from scanner_interfaces.msg import Tracks
@@ -57,6 +59,7 @@ class calibration(Node):
                 'ax': 0.0,
                 'ay': 0.0,
                 'az': 0.0,
+                'scale': 1.0
             }})
             self.average.update({i: {
                 'x': [],
@@ -82,9 +85,16 @@ class calibration(Node):
         # checks
         self.info_check = 0
         self.date_check = 0
+
+        self.key = 0
+        th.Thread(target=self.key_capture, args=(), name='key_capture_thread', daemon=True).start()
+
         # main loop
         self.loop = self.create_timer(0.1, self.loop_callback, callback_group=loop_group)
 
+    def key_capture(self):
+        input()
+        self.key += 1
 
     def loop_callback(self):
         # check if input is good to calibrate
@@ -154,7 +164,7 @@ class calibration(Node):
                     pp = (0.0, 0.0),
                     method = cv2.RANSAC,
                     prob = 0.999,
-                    threshold = 0.0001,
+                    threshold = 0.001,
                     maxIters = None,
                 )
             except:
@@ -176,12 +186,12 @@ class calibration(Node):
             angles = r.as_euler("zyx", degrees=False)
 
             # write into calibration buffer to publish
-            self.output[index]['x'] =  round(t[0] * -1, 2)
-            self.output[index]['y'] =  round(t[1] * -1, 2)
-            self.output[index]['z'] =  round(t[2] * -1, 2)
-            self.output[index]['ax'] = round(angles[0] * -1, 2)
-            self.output[index]['ay'] = round(angles[1] * -1, 2)
-            self.output[index]['az'] = round(angles[2] * 1, 2)
+            self.output[index]['x'] =  t[0] * -1
+            self.output[index]['y'] =  t[1] * -1
+            self.output[index]['z'] =  t[2] * -1
+            self.output[index]['ax'] = angles[0] * -1
+            self.output[index]['ay'] = angles[1] * -1
+            self.output[index]['az'] = angles[2] * -1
 
             # Filter
             self.average[index]['x'].append(self.output[index]['x'])
@@ -206,10 +216,23 @@ class calibration(Node):
             self.output[index]['ay'] = sum(self.average[index]['ay']) / len(self.average[index]['ay'])
             self.output[index]['az'] = sum(self.average[index]['az']) / len(self.average[index]['az'])
 
+            self.output[index]['x']  = round(self.output[index]['x'], 2)
+            self.output[index]['y']  = round(self.output[index]['y'], 2) 
+            self.output[index]['z']  = round(self.output[index]['z'], 2) 
+            self.output[index]['ax'] = round(self.output[index]['ax'], 3)
+            self.output[index]['ay'] = round(self.output[index]['ay'], 3)
+            self.output[index]['az'] = round(self.output[index]['az'], 3)
+
 
             # publish calibration data for live preview
             self.publish_calibration()
             print(self.output[index])
+
+            # k=ord(getch.getch())
+            if self.key >= 1:
+                self.write_config()
+                self.destroy_node()
+            
 
             # print("translation: (" + str(round(t[2], 1)), end='')
             # print(", " + str(round(t[0], 1)), end='')
@@ -250,6 +273,16 @@ class calibration(Node):
             location.az = self.output[i]['az']
             msg.locations.append(location)
         self.publisher.publish(msg)
+    
+    def write_config(self):
+        config = {}
+        for i in range(self.device_count):
+            config.update({str(i): self.output[i]})
+        file = json.dumps(config)
+        name = input("Config File Name: ")
+        with open(("/home/ALEX/anytrack/config/positions/" + name + ".json"), "w") as outfile:
+            outfile.write(file)
+        print("Calibration done!")
 
 def main(args=None):
     rclpy.init(args=args)

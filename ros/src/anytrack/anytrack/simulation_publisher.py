@@ -12,13 +12,13 @@ class simulation_publisher(Node):
 
         self.client = self.create_client(SetEntityState, "/simulation/set_entity_state")
 
-        self.corners = [(0, 0, 0), (0, 6, 0), (4, 5, 0), (4, 1, 0), (0, 0, 3), (0, 6, 3), (4, 5, 3), (4, 1, 3)]
-        # self.corners = [(0, 0, 0), (0, 3, 0), (3, 3, 0), (3, -3, 3), (1, -2, 3), (2, 1, 0.5)]
-        self.iter = 100
+        # self.corners = [(0, 0, 0), (0, 6, 0), (4, 5, 0), (4, 1, 0), (0, 0, 3), (0, 6, 3), (4, 5, 3), (4, 1, 3)]
+        self.corners = [(2.5, 0, 0.3), (1.5, 4, -0.4), (3.5, 3, -0.6), (0, 2, 1.7), (5, -3, 2), (2, -1.5, 0.3), (5, 0, 2),  ]
+        self.iter = 200
         self.id = 0
         self.cor_id_now = 0
         self.cor_id_future = 1
-        self.max = 7
+        self.max = len(self.corners) - 1
 
         self.loop = self.create_timer(0.01, self.loop)
 
@@ -60,29 +60,6 @@ class simulation_publisher(Node):
 
         print(self.id)
 
-
-
-
-        # self.px = self.x
-        # self.py = self.y
-        # self.pz = self.z
-        # self.x = 0
-        # self.y = 0
-        # self.z = 0
-
-        # while(1):
-        #     self.x = self.px + (random.random() - 0.5)
-        #     if self.x <= 10 and self.x >= 4:
-        #         break
-        # while(1):
-        #     self.y = self.py + ((random.random() - 0.5) * 2)
-        #     if self.y <= 3 and self.y >= -3:
-        #         break
-        # while(1):
-        #     self.z = self.pz + (random.random() - 0.5)
-        #     if self.z <= 2 and self.z >= 0.3:
-        #         break
-        
         self.set_position(self.x, self.y, self.z)
         
 

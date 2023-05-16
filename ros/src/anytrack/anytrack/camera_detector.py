@@ -20,7 +20,6 @@ class camera_detector(Node):
 
         # declare Parameters
         self.declare_parameter("index", -1)
-        self.declare_parameter("track", 1)
         self.declare_parameter("visualize", 1)
         self.declare_parameter("debug", 0)
         self.declare_parameter("width", 1920)
@@ -28,7 +27,6 @@ class camera_detector(Node):
 
         # import parameters
         self.index = self.get_parameter("index").value
-        self.track = self.get_parameter("track").value
         self.visualize = self.get_parameter("visualize").value
         self.debug = self.get_parameter("debug").value
         self.width = self.get_parameter("width").value
@@ -36,7 +34,6 @@ class camera_detector(Node):
 
         # debug only
         # self.index = 0
-        # self.track = 1
         # self.visualize = 1
         # self.debug = 1
         # self.width = 1280
@@ -62,15 +59,9 @@ class camera_detector(Node):
         frame = self.bridge.imgmsg_to_cv2(msg)
 
         prev_objects = self.objects
-        if self.track:
-            self.objects = trk.ball_scanner(frame, colors=[self.green_ball], min_radius=10, prev_objects=prev_objects)
+        self.objects = trk.ball_scanner(frame, colors=[self.green_ball], min_radius=10, prev_objects=prev_objects)
         if self.visualize:
             frame = trk.scanner_visulisation(frame, self.objects,line_buffer=self.line_buffer)
-        
-        if self.debug == 1:
-            cv2.imshow("frame", frame)
-            cv2.waitKey(1) 
-        
         # publish data
         msg = Tracks()
         for object in self.objects:
@@ -102,7 +93,7 @@ class camera_detector(Node):
     
     def detector_setup(self):
         # buffer for tracking line (only visualisation)
-        self.buffer_size = 10
+        self.buffer_size = 100
         self.line_buffer = []
         for i in range(4):
             self.line_buffer.append(deque(maxlen=self.buffer_size))

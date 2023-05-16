@@ -18,9 +18,8 @@ class camera_driver(Node):
         # declare Parameters
         self.declare_parameter("index", -1)
         self.declare_parameter("device", -1)
-        self.declare_parameter("limit", 30)
         self.declare_parameter("debug", 0)
-        self.declare_parameter("framerate", 60)
+        self.declare_parameter("framerate", 30)
         self.declare_parameter("width", 1280)
         self.declare_parameter("height", 720)
         self.declare_parameter("filter", 1)
@@ -28,7 +27,6 @@ class camera_driver(Node):
         # import parameters
         self.index = self.get_parameter("index").value
         self.device = self.get_parameter("device").value
-        self.limit = self.get_parameter("limit").value
         self.debug = self.get_parameter("debug").value
         self.framerate = self.get_parameter("framerate").value
         self.width = self.get_parameter("width").value
@@ -40,7 +38,6 @@ class camera_driver(Node):
         # self.device = 0
         # self.track = 1
         # self.visualize = 1
-        # self.limit = 0
         # self.debug = 1
         # self.framerate = 60
         # self.width = 1280
@@ -84,8 +81,6 @@ class camera_driver(Node):
         cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self.height)
 
         prev_frame_time = 0
-        # use this to limit the loop speed, otherwise might use too much cpu
-        limit_rate = self.limit
 
         # camera loop
         while (1):
@@ -106,11 +101,7 @@ class camera_driver(Node):
                 print(fps)
                 cv2.imshow("frame", cv2.resize(frame, (960, 540)))
 
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                break
-
-            # if self.limit != 0:
-            #     time.sleep(max((1 / limit_rate) - (time.time() - start_time), 0))
+            cv2.waitKey(1)
 
 def main(args=None):
     rclpy.init(args=args)

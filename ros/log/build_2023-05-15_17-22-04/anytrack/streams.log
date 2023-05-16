@@ -1,0 +1,27 @@
+[0.908s] Invoking command in '/home/ALEX/anytrack/ros/build/anytrack': PYTHONPATH=/home/ALEX/anytrack/ros/build/anytrack/prefix_override:/home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ALEX/anytrack/ros/build/anytrack/build --no-deps install_data
+[1.258s] running develop
+[1.461s] running egg_info
+[1.462s] writing anytrack.egg-info/PKG-INFO
+[1.462s] writing dependency_links to anytrack.egg-info/dependency_links.txt
+[1.462s] writing entry points to anytrack.egg-info/entry_points.txt
+[1.462s] writing requirements to anytrack.egg-info/requires.txt
+[1.462s] writing top-level names to anytrack.egg-info/top_level.txt
+[1.465s] reading manifest file 'anytrack.egg-info/SOURCES.txt'
+[1.471s] writing manifest file 'anytrack.egg-info/SOURCES.txt'
+[1.473s] running build_ext
+[1.473s] Creating /home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages/anytrack.egg-link (link to .)
+[1.474s] Installing calibration script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[1.474s] Installing camera_detector script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[1.474s] Installing camera_driver script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[1.474s] Installing camera_info script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[1.474s] Installing camera_vector script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[1.474s] Installing manager script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[1.474s] Installing optical_flow script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[1.474s] Installing pointcloud_publisher script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[1.475s] Installing position_manager script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[1.475s] Installing simulation_publisher script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[1.475s] Installing test script to /home/ALEX/anytrack/ros/install/anytrack/lib/anytrack
+[1.475s] 
+[1.475s] Installed /home/ALEX/anytrack/ros/build/anytrack
+[1.475s] running install_data
+[1.527s] Invoked command in '/home/ALEX/anytrack/ros/build/anytrack' returned '0': PYTHONPATH=/home/ALEX/anytrack/ros/build/anytrack/prefix_override:/home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ALEX/anytrack/ros/build/anytrack/build --no-deps install_data

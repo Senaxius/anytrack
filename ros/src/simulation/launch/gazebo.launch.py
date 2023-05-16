@@ -13,6 +13,7 @@ def generate_launch_description():
     file_subpath = 'description/simulation.urdf.xacro'
     world = '/home/ALEX/anytrack/ros/src/simulation/worlds/single_ball.world'
     world = '/home/ALEX/anytrack/ros/src/simulation/worlds/multi_camera.world'
+    world = '/home/ALEX/anytrack/ros/src/simulation/worlds/test.world'
     # world = '/home/ALEX/anytrack/ros/src/simulation/worlds/multi_ball.world'
     # world = '/home/ALEX/anytrack/ros/src/simulation/worlds/test.world'
 
