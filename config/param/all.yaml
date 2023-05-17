@@ -1,0 +1,15 @@
+manager:
+  ros__parameters:
+    websocket: 1
+    gazebo: 0
+    simulation: 0
+    simulation_publisher: 0
+    device_count: 0
+    image_vis: 1
+    vector: 1
+    filter: 0
+    width: 1920
+    height: 1080
+    debug: 0
+    config_path: "/home/ALEX/anytrack/config/positions/real.json"
+

@@ -1,11 +1,14 @@
 import rclpy
 from rclpy.node import Node
 
-from scanner_interfaces.msg import Tracks
+from interfaces.msg import Tracks
 from visualization_msgs.msg import Marker
 from visualization_msgs.msg import MarkerArray
 from geometry_msgs.msg import Point
 from sensor_msgs.msg import CameraInfo
+
+import cv2
+import numpy as np
 
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import ReentrantCallbackGroup,MutuallyExclusiveCallbackGroup
@@ -25,15 +28,11 @@ class camera_vector(Node):
         self.index = self.get_parameter("index").value
         self.device = self.get_parameter("device").value
         self.multiplier = self.get_parameter("multiplier").value
-        self.width = self.get_parameter("width").value
-        self.height = self.get_parameter("height").value
 
         # debug only
         # self.index = 0
         # self.device = 0
         # self.multiplier = 2
-        # self.width = 1280
-        # self.height = 720
 
         # check if Parameters is set
         if (self.device == -1 or self.index == -1):
@@ -42,22 +41,23 @@ class camera_vector(Node):
         
         # colors for visualisation
         color_1 = (237, 255, 0)
+        # color_1 = (158, 50, 168)
         color_2 = (0, 255, 255)
         color_3 = (255, 0, 255)
         color_4 = (0, 255, 0)
         self.colors = [color_1, color_2, color_3, color_4]
 
-        # so only once receive info
-        self.info_received = 0
-        
+        self.k = []
+        self.d = []
+
         # create callback groups
-        tracks_group = MutuallyExclusiveCallbackGroup()
+        tracks_group = ReentrantCallbackGroup()
         info_group = MutuallyExclusiveCallbackGroup()
         
         # create subscriber and publisher
         self.info_subscriber = self.create_subscription(msg_type=CameraInfo, topic=('/cam' + str(self.index) + '/camera_info'), callback=self.info_callback, qos_profile=10, callback_group=info_group)
         self.tracks_subscriber = self.create_subscription(msg_type=Tracks, topic=('/cam' + str(self.index) + '/tracks'), callback=self.tracks_callback, qos_profile=10, callback_group=tracks_group)
-        self.publisher = self.create_publisher(msg_type=MarkerArray, topic="vector", qos_profile=10)
+        self.publisher = self.create_publisher(msg_type=MarkerArray, topic=('/cam' + str(self.index) + '/vector'), qos_profile=10)
 
         self.get_logger().info("Starting camera vector with index " + str(self.index))
 
@@ -69,16 +69,17 @@ class camera_vector(Node):
         self.publisher.publish(markerarray)
 
     def info_callback(self, msg):
-        if self.info_received != 1:
-            self.fx = (msg.p[0] * (self.width / msg.width))
-            self.fy = (msg.p[5] * (self.height / msg.height))
-            self.cx = (msg.p[2] * (self.width / msg.width))
-            self.cy = (msg.p[6] * (self.height / msg.height))
-            self.info_received = 1
+        k = msg.k
+        d = msg.d
+        self.k = np.matrix([[k[0], k[1], k[2]], [k[3], k[4], k[5]], [k[6], k[7], k[8]]])
+        self.d =  np.array([d[0], d[1], d[2], d[3], d[4]])
     
     def create_marker(self, x, y, id):
-        x = (float(x) - self.cx) / self.fx
-        y = (float(y) - self.cy) / self.fy
+
+        point = cv2.undistortPoints((x, y), cameraMatrix=self.k, distCoeffs=self.d, P=None).flatten()
+        x = point[0]
+        y = point[1]
+
         marker = Marker()
         marker.header.frame_id = ('cam' + str(self.index) + '_position')
         marker.header.stamp = self.get_clock().now().to_msg()
@@ -88,7 +89,7 @@ class camera_vector(Node):
         marker.lifetime.sec = 1
         marker.lifetime.nanosec = 200000000
         
-        marker.scale.x = 0.01
+        marker.scale.x = 0.005
         marker.scale.y = 0.0
         marker.scale.z = 0.0
 

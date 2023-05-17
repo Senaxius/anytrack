@@ -1,0 +1,5 @@
+/home/ALEX/anytrack/ros/install/simulation/share/simulation/worlds/empty.world
+/home/ALEX/anytrack/ros/install/simulation/share/simulation/worlds/multi_camera.world
+/home/ALEX/anytrack/ros/install/simulation/share/simulation/worlds/single_ball.world
+/home/ALEX/anytrack/ros/install/simulation/share/simulation/worlds/multi_ball.world
+/home/ALEX/anytrack/ros/install/simulation/share/simulation/package.dsv

@@ -460,7 +460,27 @@ verglichen und die Skalierung der einzelnen Translationen so weit angepasst, bis
 diese identisch mit dem Vergleichswert sind. Der Prozess wird zum Vermindern von
 Messfehlern mehrmals wiederholt und der Durchschnitt der Werte gespeichert.
 
-\subsection{3D-Vektoren}
+\subsection{Schätzung der Markerposition}
+Das letzte und wichtigste Modul für das 3D-Tracking-System ist für die Schätzung der tatsächlichen Position eines Markers anhand aller durch Kalibrierung und Kontur-Tracking erfassten Daten zuständig. Idealerweise, würde es ausreichen die Schnittpunkte der entstehenden Geraden zu errechnen, in der Realität schneiden sich diese jedoch auf Grund von minimalen Messfehlern nie, weshalb es sich folglich um ein Optimierungsproblem handelt. 
+
+\subsubsection{Theorie}
+Die Aufgabe des "object\_estimator" Moduls ist es folglich, die Position eines Punktes um Raum zu finden, welcher am nächsten zu allen Geraden liegt. Bei Verwendung zweier Kameras wäre auch dies durch simple Mathematik lösbar, indem mithilfe einer Hilfsebene die kürzeste Linie zwischen zwei windschiefen Geraden errechnet wird.
+
+Da es in einem akkuraten und zuverlässigen System meist mehr als 2 Perspektiven gibt und zudem auch mehrere Objekte simultan getracked werden müssen, bietet sich eine andere Methode an: das Gradientenverfahren (eng: gradient descent). 
+
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \includegraphics[width=\linewidth]{gradient_descent.png}
+  \caption{Gradiententenverfahren für das Finden des tiefsten Punktes}
+  \label{Abb: gradient_descent}
+\end{wrapfigure}
+Dieses Optimierungs-Verfahren wird oft im Bereich des Maschinelles Lernen verwendet und basiert auf einer Brute-Force Methode, die versucht einen bestimmten Fehler zu minimieren. Der Algorithmus verhält sich ähnlich wie eine Kugel, die durch die Gravitation stets den tiefsten Punkt eines Geländes findet (siehe Abbildung \ref{Abb: gradient_descent}).
+
+Das "object\_estimator" Modul generiert also zunächst einen zufälligen Punkt im dreidimensionalen Raum und berechnet den Durchschnitt der Entfernungen zu allen Geraden. Der Punkt wird nun temporär in alle 3 Richtungen verschoben und die Differenz des Entfernungsdurchschnittes errechnet. Die drei resultierenden Vektoren werden mit ihrer jeweiligen Differenz multipliziert und schließlich alle zusammen addiert, um den idealen Vektor zur erhalten, der die durchschnittliche Differenz minimiert. Dabei ist dieser Schritt umso größer, je mehr sich die "Qualität" des Punktes verbessert. 
+
+Dieser Schritt wird so lange wiederholt, bis jede Verschiebung des Punktes die Entfernung zu den Geraden vergrößern würden. Dieser Punkt wird als finale Schätzung gespeichert und im System veröffentlicht. Zusätzlich wird im nächsten Durchlauf dieser Punkt als Start verwendet, um Rechenaufwand zu minimieren.
+
+\subsubsection{System-Integration}
+
 
 \section{Ergebnisse}
 

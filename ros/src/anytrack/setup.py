@@ -30,7 +30,7 @@ setup(
             "test = anytrack.test:main",
             "simulation_publisher = anytrack.simulation_publisher:main",
             "pointcloud_publisher = anytrack.pointcloud_publisher:main",
-            "optical_flow = anytrack.optical_flow:main",
+            "object_estimator = anytrack.object_estimator:main",
         ],
     },
 )

@@ -125,7 +125,9 @@ class manager(Node):
                 namespace= ('cam' + str(index)),
                 parameters=[
                     {"index": index},
-                    {"device": device}
+                    {"device": device},
+                    {"width": self.width},
+                    {"height": self.height},
                 ]
             )
             camX_vector= Action(

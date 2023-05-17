@@ -1,6 +1,0 @@
-source;share/scanner/hook/pythonpath.ps1
-source;share/scanner/hook/pythonpath.dsv
-source;share/scanner/hook/pythonpath.sh
-source;share/scanner/hook/ament_prefix_path.ps1
-source;share/scanner/hook/ament_prefix_path.dsv
-source;share/scanner/hook/ament_prefix_path.sh

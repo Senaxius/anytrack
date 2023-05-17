@@ -3,17 +3,15 @@ from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import ReentrantCallbackGroup,MutuallyExclusiveCallbackGroup
 
-import math as m
 import cv2
 import numpy as np
 from scipy.spatial.transform import Rotation   
 import threading as th
 import json
 
-from scanner_interfaces.msg import CameraLocations
-from scanner_interfaces.msg import Tracks
-from scanner_interfaces.msg import Object
-from scanner_interfaces.msg import Location
+from interfaces.msg import CameraLocations
+from interfaces.msg import Tracks
+from interfaces.msg import Location
 from sensor_msgs.msg import CameraInfo
 
 class calibration(Node): 
@@ -53,7 +51,7 @@ class calibration(Node):
             self.create_subscription(msg_type=Tracks, topic=('/cam' + str(i) + '/tracks'), callback=self.create_tracks_callback(i), qos_profile=10, callback_group=tracks_group)
             self.create_subscription(msg_type=CameraInfo, topic=('/cam' + str(i) + '/camera_info'), callback=self.create_info_callback(i), qos_profile=10, callback_group=info_group)
             self.output.update({i: {
-                'x': float(i*1.5),
+                'x': float(i * 1.5),
                 'y': 0.0,
                 'z': 0.0,
                 'ax': 0.0,
@@ -170,7 +168,7 @@ class calibration(Node):
             except:
                 print("Error occurd, try again!")
                 return
-
+            
             _, R, t, _ = cv2.recoverPose(
                 E,
                 cam0_points,
@@ -286,12 +284,11 @@ class calibration(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = calibration() 
+    node = calibration()
     executor = MultiThreadedExecutor()
     executor.add_node(node)
     executor.spin()
     rclpy.shutdown()
- 
- 
+
 if __name__ == "__main__":
     main()

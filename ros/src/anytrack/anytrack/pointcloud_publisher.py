@@ -3,7 +3,7 @@ from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup, ReentrantCallbackGroup
 from rclpy.node import Node
 
-from scanner_interfaces.msg import CameraLocations
+from interfaces.msg import CameraLocations
 from sensor_msgs.msg import PointCloud2
 from sensor_msgs_py import point_cloud2
 from sensor_msgs.msg import PointField

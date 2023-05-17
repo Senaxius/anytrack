@@ -13,10 +13,14 @@ class camera_info(Node):
         # declare Parameters
         self.declare_parameter("index", -1)
         self.declare_parameter("device", -1)
+        self.declare_parameter("width", 1280)
+        self.declare_parameter("height", 720)
 
         # import parameters
         self.index = self.get_parameter("index").value
         self.device = self.get_parameter("device").value
+        self.width = self.get_parameter("width").value
+        self.height = self.get_parameter("height").value
 
         # debug only
         # self.index = 0
@@ -84,8 +88,25 @@ class camera_info(Node):
         msg.d = data["distortion_coefficients"]["data"]
         msg.r = data["rectification_matrix"]["data"]
         msg.p = data["projection_matrix"]["data"]
+        # Convert for change in resolution
+        msg.k[0] *= (self.width / msg.width)
+        msg.k[2] *= (self.width / msg.width)
+        msg.k[4] *= (self.height / msg.height)
+        msg.k[5] *= (self.height / msg.height)
+
+        msg.p[0] *= (self.width / msg.width)
+        msg.p[2] *= (self.width / msg.width)
+        msg.p[5] *= (self.height / msg.height)
+        msg.p[6] *= (self.height / msg.height)
+
+        msg.width = self.width
+        msg.height = self.height
+        # for index, param in enumerate(msg.k):
+        #     msg.k[index] = param * (self.width / msg.width)
+        # for index, param in enumerate(msg.p):
+        #     msg.p[index] = param * (self.width / msg.width)
+
         msg.distortion_model = data["distortion_model"]
-        ################ TODO: adaptive frame id
         msg.header.frame_id = ('cam' +  str(self.index) + '_position')
         return msg
 

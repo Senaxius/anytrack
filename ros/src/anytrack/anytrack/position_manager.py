@@ -4,12 +4,10 @@ from rclpy.node import Node
 import json
 import math
 import numpy as np
-import random
 
 from geometry_msgs.msg import TransformStamped
 from tf2_ros import TransformBroadcaster
-from scanner_interfaces.msg import Location
-from scanner_interfaces.msg import CameraLocations
+from interfaces.msg import CameraLocations
 
 def dotproduct(v1, v2):
   return sum((a*b) for a, b in zip(v1, v2))

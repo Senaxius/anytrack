@@ -1,13 +1,6 @@
 package.xml
 setup.cfg
 setup.py
-../../build/anytrack/anytrack.egg-info/PKG-INFO
-../../build/anytrack/anytrack.egg-info/SOURCES.txt
-../../build/anytrack/anytrack.egg-info/dependency_links.txt
-../../build/anytrack/anytrack.egg-info/entry_points.txt
-../../build/anytrack/anytrack.egg-info/requires.txt
-../../build/anytrack/anytrack.egg-info/top_level.txt
-../../build/anytrack/anytrack.egg-info/zip-safe
 anytrack/__init__.py
 anytrack/calibration.py
 anytrack/camera_detector.py
@@ -15,7 +8,7 @@ anytrack/camera_driver.py
 anytrack/camera_info.py
 anytrack/camera_vector.py
 anytrack/manager.py
-anytrack/optical_flow.py
+anytrack/object_estimator.py
 anytrack/pointcloud_publisher.py
 anytrack/position_manager.py
 anytrack/simulation_publisher.py
