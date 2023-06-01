@@ -1,12 +1,53 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{rob}
+Barbara Frank, Cyrill Stachniss, Giorgio Grisetti, Kai Arras, and Wolfram Burgard.
+\newblock Robotics 2 camera calibration.
+\newblock \url{http://ais.informatik.uni-freiburg.de/teaching/ws10/robotics2/pdfs/rob2-10-camera-calibration.pdf}.
+
+\bibitem{foxglove}
+Foxglove Studio.
+\newblock Foxglove studio (software).
+\newblock \url{https://foxglove.dev/}.
 
 \bibitem{jsan}
 Paolo Tripicchio, Salvatore D’Avella, Gerardo Camacho-Gonzalez, Lorenzo Landolfi, Gabriele Baris, Carlo~Alberto Avizzano, and Alessandro Filippeschi.
 \newblock Multi-camera extrinsic calibration for real-time tracking in large outdoor environments.
 \newblock {\em Journal of Sensor and Actuator Networks}, 11(3), 2022.
 
+\bibitem{github_odometry}
+Vineeth.
+\newblock Visual odometry.
+\newblock \url{https://github.com/vineeths96/Visual-Odometry}.
+
+\bibitem{docker}
+Wikipedia.
+\newblock Docker (software).
+\newblock \url{https://de.wikipedia.org/wiki/Docker_(Software)}.
+
+\bibitem{wiki_epipolar}
+Wikipedia.
+\newblock Epipolargeometrie.
+\newblock \url{https://de.wikipedia.org/wiki/Epipolargeometrie}.
+
+\bibitem{stereo_geometry}
+Wikipedia.
+\newblock Stereo geometry, epipolar lines and essential matrix.
+\newblock \url{https://datahacker.rs/camera-calibration-epipolar-lines-essential-matrix/}.
+
+\bibitem{wiki_odometry}
+Wikipedia.
+\newblock Visual odometry.
+\newblock \url{https://en.wikipedia.org/wiki/Visual_odometry}.
+
 \bibitem{sfm}
 Kai Wu.
 \newblock Structure from motion tutorial.
+\newblock \url{https://imkaywu.github.io/tutorials/sfm/}.
+
+\bibitem{visual_odometry}
+Sung-Joo Yoon and Taejung Kim.
+\newblock Development of stereo visual odometry based on photogrammetric feature optimization.
+\newblock {\em Remote Sensing}, 11(1), 2019.
 
 \end{thebibliography}

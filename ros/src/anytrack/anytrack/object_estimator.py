@@ -3,21 +3,21 @@ from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import ReentrantCallbackGroup,MutuallyExclusiveCallbackGroup
 
-# from scipy.spatial.transform import Rotation   
-# import threading as th
 import cv2
 import numpy as np
 from scipy.spatial.transform import Rotation as R
 import time 
-
+import sys
 
 from interfaces.msg import Tracks
 from sensor_msgs.msg import CameraInfo
 from tf2_msgs.msg import TFMessage
 
-from geometry_msgs.msg import Point
-from visualization_msgs.msg import Marker
 from visualization_msgs.msg import MarkerArray
+
+sys.path.append('/home/ALEX/anytrack/python/lib')
+import vector as vec
+import marker as mrk
 
 class object_estimator(Node): 
     def __init__(self):
@@ -70,25 +70,68 @@ class object_estimator(Node):
         self.publisher = self.create_publisher(msg_type=MarkerArray, topic=('test'), qos_profile=10)
         
         # # # main loop
-        self.guess = (0, 0, 1)
+        self.guess = np.array([0., 0., 0.])
         self.loop_time = 0.03
+        # self.loop_time = 0.10
         self.loop = self.create_timer(self.loop_time, self.loop_callback, callback_group=loop_grp)
 
     def loop_callback(self):
         start_time = time.time()
 
-
-
-        markerarray = MarkerArray()
         id = 0
-        marker = self.create_point(self.guess, id)
-        markerarray.markers.append(marker)
+        markerarray = MarkerArray()
+        # average_distance = 0
+        # print(self.output)
+
+        while (1):
+            # Berechnung des durch. Abstands des ersten Schätzpunktes
+            distance = self.calulate_average_distance(self.guess)
+
+            # Skalierung der Schrittgröße
+            scale = distance * 0.5
+
+            # Idealer Richtungsvektor, um Abstand zu Geraden zu minimieren wird initialisiert
+            move_vec = np.array([0., 0., 0.])
+            
+            # Punkt wird in alle 3 Richtungen verschoben
+            for i in range(3):
+                # temporärere Punkt wird erstellt
+                temp_point = self.guess.copy()
+
+                # verschieben des temporärere Punkt in eine Richtung verschoben um die Schrittgröße 
+                temp_point[i] += scale 
+                temp_point[i+1] += scale
+
+                # Abstandswerte des neuen Punktes werden errechnet
+                probe_distance = self.calulate_average_distance(temp_point)
+
+                # Wenn die Änderung den Abstand verbessert, wird die Schätzung in diese Richtung verschoben
+                # Wenn die Änderung den Abstand verschlechter, wird die Schätzung in andere Richtung verschoben
+                # Je größer die Verbesserung, desto größer die Verschiebung
+                move_vec[i] = (distance - probe_distance) 
+
+            # neuer Schätzwert wird abgespeicher
+            self.guess = np.array(vec.add_v3v3(self.guess, move_vec))
+
+            marker = mrk.create_point(self.guess, 'isect', id, 'world', self.get_clock().now().to_msg())
+            markerarray.markers.append(marker)
+            id += 1
+            # stop loop if running too long
+            speed = (self.loop_time - (time.time() - start_time))
+            if speed <= 0.1:
+                break
+
+        # print(scale)
+        # marker = mrk.create_point(self.guess, 'isect', 100, 'world', self.get_clock().now().to_msg())
         self.publisher.publish(markerarray)
 
-        
-
-        speed = (self.loop_time - (time.time() - start_time))
-        print(str(speed))
+        # speed = (self.loop_time - (time.time() - start_time))
+        # print(str(speed))
+        # marker = mrk.create_point(self.guess, 'isect', 100, 'world', self.get_clock().now().to_msg())
+        # markerarray.markers.append(marker)
+        # marker = mrk.create_line(self.guess, isect_point, 'isect', id, 'world', self.get_clock().now().to_msg())
+        # markerarray.markers.append(marker)
+        # id += 1
 
     def create_tracks_callback(self, index):
         return lambda msg:self.tracks_callback(msg, index)
@@ -141,77 +184,19 @@ class object_estimator(Node):
         self.input[id]['start'] = (t.translation.x, t.translation.y, t.translation.z)
         self.input[id]['R'] = R.from_quat([t.rotation.x, t.rotation.y, t.rotation.z, t.rotation.w]).as_matrix()
 
+    def calulate_average_distance(self, point):
+        distances = []
+        for cam in self.output:
+            for line in cam:
+                normal_vec = vec.sub_v3v3(line[0], line[1])
+                isect_point = vec.isect_line_plane_v3(line[0], line[1], self.guess, normal_vec)
+                distances.append(vec.len_between_points_v3(point, isect_point))
+        # calculate average distance
+        if distances != []:
+            return (sum(distances) / len(distances))
+        else:
+            return 0
 
-    def create_marker(self, start_p, end_p, id):
-        marker = Marker()
-        marker.header.frame_id = ('world')
-        marker.header.stamp = self.get_clock().now().to_msg()
-        marker.id = id
-        marker.ns = ('test')
-        marker.action = marker.ADD
-        marker.lifetime.sec = 1
-        marker.lifetime.nanosec = 200000000
-        
-        marker.scale.x = 0.005
-        marker.scale.y = 0.0
-        marker.scale.z = 0.0
-
-        marker.color.a = 0.3
-        marker.color.r = 0.5
-        marker.color.g = 0.3
-        marker.color.b = 0.1
-        start = Point()
-        start.x = float(start_p[0])
-        start.y = float(start_p[1])
-        start.z = float(start_p[2])
-        end = Point()
-        end.x = float(end_p[0])  
-        end.y = float(end_p[1])
-        end.z = float(end_p[2])  
-        marker.points = [start, end]
-        return marker
-
-    def create_point(self, point, id):
-        marker = Marker()
-        marker.header.frame_id = ('world')
-        marker.header.stamp = self.get_clock().now().to_msg()
-        marker.id = id
-        marker.ns = ('object_estimations')
-        marker.action = marker.ADD
-        marker.lifetime.sec = 1
-        marker.lifetime.nanosec = 200000000
-        marker.type = 2
-        
-        marker.scale.x = 0.05
-        marker.scale.y = 0.05
-        marker.scale.z = 0.05
-
-        marker.color.a = 1.0
-        marker.color.r = float(30)
-        marker.color.g = float(227)
-        marker.color.b = float(105)
-        pose = Point()
-        pose.x = float(point[0])
-        pose.y = float(point[1])
-        pose.z = float(point[2])
-        marker.pose.position = pose
-        return marker
-    # def quaternionMult(self, quaternionOne, quaternionTwo):
-    #     w1, x1, y1, z1 = quaternionOne
-    #     w2, x2, y2, z2 = quaternionTwo
-    #     w = w1 * w2 - x1 * x2 - y1 * y2 - z1 * z2
-    #     x = w1 * x2 + x1 * w2 + y1 * z2 - z1 * y2
-    #     y = w1 * y2 + y1 * w2 + z1 * x2 - x1 * z2
-    #     z = w1 * z2 + z1 * w2 + x1 * y2 - y1 * x2
-    #     return w, x, y, z
-
-    # def quaternionConjugate(self, quaternion):
-    #     w, x, y, z = quaternion
-    #     return (w, -x, -y, -z)
-
-    # def quaternionvectorProduct(self, quaternion, vector):
-    #     quaternion2 = (0.0,) + vector
-    #     return self.quaternionMult(self.quaternionMult(quaternion, quaternion2), self.quaternionConjugate(quaternion))[1:]
 
 def main(args=None):
     rclpy.init(args=args)
@@ -223,3 +208,4 @@ def main(args=None):
 
 if __name__ == "__main__":
     main()
+

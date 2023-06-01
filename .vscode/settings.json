@@ -3,7 +3,7 @@
     "python.analysis.extraPaths": [
         "./python/lib"
     ],
-    "cmake.sourceDirectory": "/home/ALEX/anytrack/ros/build/scanner_interfaces/scanner_interfaces__py",
+    "cmake.sourceDirectory": "/home/ALEX/anytrack/old/urdf_example",
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8"
     },
