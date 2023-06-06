@@ -21,13 +21,29 @@ sys.path.append('/home/ALEX/anytrack/python/lib')
 import vector as vec
 import marker as mrk
 
+class vec:
+    def __init__(self, line, cam, id):
+        self.cam_id = cam
+        self.line_id = id
+        self.line = line
+        self.distances = []
+        self.object_id = None
+    def update_line(self, line):
+        self.line = line 
+    def add_distance(self, line):
+        self.line = line 
+    # def update_object(self, object):
+    #     self.object = 
+    
 class object:
-    def __init__(self, count):
+    def __init__(self, count, id):
+        self.id = id
+        self.filter = 0.3
         self.points = []
         self.lines = []
         self.vecs = []
         for i in range(count):
-            self.lines.append(None)
+            # self.lines.append(None)
             self.vecs.append((np.array([0,0,0]) , np.array([0,0,0])))
         self.average = (0,0,0)
         self.guess = (0,0,0)
@@ -35,10 +51,13 @@ class object:
     def add_point(self, point):
         self.points.append(point)
         self.average=self.calculate_average()
+        self.guess=self.run_filter()
     def add_line(self, line):
-        self.points.append(line)
+        self.lines.append(line)
     def calculate_average(self):
         return sum(self.points) / len(self.points)
+    def run_filter(self):
+        return ((1 - self.filter) * np.array(self.guess) + self.filter * np.array(self.average))
 
 class object_estimator(Node): 
     def __init__(self):
@@ -100,12 +119,99 @@ class object_estimator(Node):
                 (255, 0, 0, 255),
                 (255, 0, 255, 0),
                 (255, 25, 160, 13),
+                (255, 25, 160, 13),
+                (255, 25, 160, 13),
+                (255, 25, 160, 13),
+                (255, 25, 160, 13),
                 ]
         self.objects = []
+        self.lines = []
 
-        self.loop_time = 0.1
+        self.loop_time = 0.03
         # self.loop = self.create_timer(self.loop_time, self.closest_distance_single, callback_group=loop_grp)
-        self.loop = self.create_timer(self.loop_time, self.closest_distance_multi, callback_group=loop_grp)
+        # self.loop = self.create_timer(self.loop_time, self.closest_distance_multi, callback_group=loop_grp)
+        self.loop = self.create_timer(self.loop_time, self.closest_distance_multi_v2, callback_group=loop_grp)
+
+    def closest_distance_multi_v2(self): # with closestDistanceBetweenLines for multiple points
+        buffer = self.output
+
+        ### find new lines
+        line_buffer = []
+        for cam_index, cam in enumerate(buffer):
+            for line_index, line in enumerate(cam):
+                found = 0
+                for existing_line in self.lines:
+                    if existing_line.line_id == line_index and existing_line.cam_id == cam_index:
+                        existing_line.line = line
+                        line_buffer.append(existing_line)
+                        found = 1
+                        break
+                if found == 0:
+                    # print("found new line with cam_index: " + str(cam_index) + " and line_index: " + str(line_index))
+                    new_line = vec(line, cam_index, line_index)
+                    line_buffer.append(new_line)
+        self.lines = line_buffer
+
+        ### calculate distances between every line
+        for line_index, line in enumerate(self.lines):
+            line.distances = []
+            for line_index_2, line_2 in enumerate([probe for probe in self.lines if probe.cam_id != line.cam_id]):
+                a0 = np.array(line.line[0])
+                a1 = np.array(line.line[1])
+                b0 = np.array(line_2.line[0])
+                b1 = np.array(line_2.line[1])
+                pA, pB, dis = self.closestDistanceBetweenLines(a0,a1,b0,b1)
+                mid = pA + (0.5 * (pB - pA))
+                line.distances.append((line_2.cam_id, line_2.line_id, dis))
+
+
+        ### add line to object, or create new one
+        for line_index, line in enumerate([probe for probe in self.lines if probe.object_id == None]):
+            found = 0
+            print("wtf")
+            # check if line can be appended to known objects
+            # print(line)
+            for ob_index, ob in enumerate(self.objects):
+                for line_2 in ob.lines:
+                    dis = [probe for probe in line.distances if probe[0] == line_2.cam_id and probe[1] == line_2.line_id]
+                    print("line_index: " + str(line_index) + " ob_index: " + str(ob_index) + " dis: " + str(dis))
+                    found = 1
+                    # if len(dis) != 1:
+                    #     print("WTF")
+                    #     break
+                    # print(dis[0][2])
+                    # if len(dis) != 1:
+                    #     print("WTF")
+                    # dis = dis[0][2]
+            # if not, create new one
+            if found == 0:
+                id = 0
+                for ob in self.objects:
+                    if ob.id == id:
+                        id += 1
+                    else:
+                        break
+                new_object = object(self.device_count, id)
+                line.object_id = id
+                new_object.add_line(line)
+                self.objects.append(new_object)
+
+        ### remove objects, where only 1 or less lines are left
+        for ob_index, ob in enumerate(self.objects):
+            num_lines = len(ob.lines)
+            for line in ob.lines:
+                line = [probe for probe in self.lines if probe.line_id == line.line_id and probe.cam_id == line.cam_id]
+                if len(line) == 0:
+                    num_lines -= 1
+            if num_lines <= 1:
+                self.objects.pop(ob_index)
+
+        # print(len(self.objects))
+        # for i in self.objects:
+        #     print(len(i.lines))
+
+
+
 
 
     def closest_distance_multi(self): # with closestDistanceBetweenLines for multiple points
@@ -118,14 +224,12 @@ class object_estimator(Node):
 
         # update known objects
         for i, ob in enumerate(self.objects):
-            # print("Len before: " + str(len(ob.points)))
             ob.points = []
             for index, line_number in enumerate(ob.lines):
                 if line_number == None:
                     continue
                 line = np.array([i for i in buffer[index] if i[2] == line_number], dtype=object)
                 if len(line) == 0:
-                    # print("line gone :(")
                     continue
                 a0 = np.array(line[0][0])
                 a1 = np.array(line[0][1])
@@ -141,6 +245,8 @@ class object_estimator(Node):
                     pA, pB, dis = self.closestDistanceBetweenLines(a0,a1,b0,b1)
                     mid = pA + (0.5 * (pB - pA))
                     ob.add_point(mid)
+                    ob.vecs[index] = (a0, a1)
+                    ob.vecs[index2] = (b0, b1)
                     # marker = mrk.create_point(mid, 'debug', id, 'world', self.get_clock().now().to_msg(), self.colors[i], lifetime=(1, 30000000))
                     # id += 1
                     # markerarray.markers.append(marker)
@@ -150,7 +256,6 @@ class object_estimator(Node):
                     # update shit
                     buffer[index] = [i for i in buffer[index] if i[2] != line]
 
-        print(buffer)
 
         # self.objects = []
 
@@ -173,7 +278,10 @@ class object_estimator(Node):
                                 if dis <= 0.08:
                                     if objects == []:
                                         temp = object(count=self.device_count)
+                                        print("found new object")
                                         temp.add_point(mid)
+                                        temp.vecs[index] = (a0, a1)
+                                        temp.vecs[index2] = (b0, b1)
                                         temp.lines[index] = point[2]
                                         temp.lines[index2] = point2[2]
                                         objects.append(temp)
@@ -190,7 +298,10 @@ class object_estimator(Node):
                                                 break
                                         if found == 0:
                                             temp = object(count=self.device_count)
+                                            print("found new object")
                                             temp.add_point(mid)
+                                            temp.vecs[index] = (a0, a1)
+                                            temp.vecs[index2] = (b0, b1)
                                             temp.lines[index] = point[2]
                                             temp.lines[index2] = point2[2]
                                             objects.append(temp)
@@ -209,13 +320,13 @@ class object_estimator(Node):
 
         # print the points
         for index, ob in enumerate(self.objects):
-            marker = mrk.create_point(ob.average, 'debug', id, 'world', self.get_clock().now().to_msg(), (255, 0, 255, 0), lifetime=(1, 30000000))
+            marker = mrk.create_point(ob.guess, 'debug', id, 'world', self.get_clock().now().to_msg(), self.colors[index], lifetime=(1, 30000000))
             id += 1
             markerarray.markers.append(marker)
             # for vec in ob.vecs:
-                # marker = mrk.create_line(vec[0], vec[0] + ((vec[1] - vec[0]) * 10), 'debug', id, 'world', self.get_clock().now().to_msg(), self.colors[index], lifetime=(1, 30000000))
-                # id += 1
-                # markerarray.markers.append(marker)
+            #     marker = mrk.create_line(vec[0], vec[0] + ((vec[1] - vec[0]) * 10), 'debug', id, 'world', self.get_clock().now().to_msg(), self.colors[index], lifetime=(1, 30000000))
+            #     id += 1
+            #     markerarray.markers.append(marker)
         self.publisher.publish(markerarray)
 
         speed = (self.loop_time - (time.time() - start_time))

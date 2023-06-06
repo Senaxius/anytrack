@@ -72,7 +72,7 @@ class position_manager(Node):
             self.publish_position("world", ("cam" + str(i) + "_position"), x, y, z, ax, ay, az)
 
         # main loop
-        self.loop = self.create_timer(3, self.loop_callback)
+        self.loop = self.create_timer(1, self.loop_callback)
 
     def loop_callback(self):
             # for each device
