@@ -53,10 +53,28 @@ class camera_driver(Node):
 
         self.image_publisher = self.create_publisher(msg_type=Image, topic="/cam" + str(self.index) + "/image_raw", qos_profile=10)
 
+
+        if self.device == 0:
+            self.get_logger().info("Detected camera with know device type: M9 Pro 'Black'") 
+            self.file = "/home/ALEX/anytrack/config/cameras/M9_black.yaml"
+        elif self.device == 2:
+            self.get_logger().info("Detected camera with know device type: M9 Pro 'Normal'") 
+            self.file = "/home/ALEX/anytrack/config/cameras/M9_normal.yaml"
+        elif self.device == 4:
+            self.get_logger().info("Detected camera with know device type: HD Web Camera") 
+            self.file = "/home/ALEX/anytrack/config/cameras/HD_Web_Camera.yaml"
+        else:
+            self.get_logger().warning("Found device but no known configuration")
+            exit()
+
         # applay camera filter if set
         if self.filter == 1:
-            set = os.popen('v4l2-ctl -d /dev/video' + str(self.device) + ' -c contrast=0')
-            set = os.popen('v4l2-ctl -d /dev/video' + str(self.device) + ' -c saturation=128')
+            if self.device == 0 or self.device == 2:
+                set = os.popen('v4l2-ctl -d /dev/video' + str(self.device) + ' -c contrast=0')
+                set = os.popen('v4l2-ctl -d /dev/video' + str(self.device) + ' -c saturation=128')
+            if self.device == 4 :
+                set = os.popen('v4l2-ctl -d /dev/video' + str(self.device) + ' -c contrast=71')
+                set = os.popen('v4l2-ctl -d /dev/video' + str(self.device) + ' -c saturation=255')
 
         # starting main camera Loop
         self.bridge = CvBridge()

@@ -4,10 +4,12 @@ manager:
     gazebo: 0
     simulation: 0
     simulation_publisher: 0
+    ball_count: 0
     device_count: 0
-    image_vis: 1
+    image_vis: 0
     vector: 1
-    filter: 0
+    filter: 1
+    estimator: 0
     width: 1280
     height: 720
     debug: 0

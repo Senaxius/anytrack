@@ -1,14 +1,16 @@
 manager:
   ros__parameters:
-    websocket: 1
+    websocket: 0
     gazebo: 1
     simulation: 1
     simulation_publisher: 1
+    ball_count: 2
     device_count: 4
-    image_vis: 1
+    image_vis: 0
     vector: 1
     filter: 0
+    estimator: 0
     width: 1280
     height: 720
     debug: 0
-    config_path: 1/home/ALEX/anytrack/config/positions/sim.json"
+    config_path: "/home/ALEX/anytrack/config/positions/sim.json"

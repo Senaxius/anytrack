@@ -28,7 +28,11 @@ elif [ $1 = "run" ]; then
     fi
     echo "opening cli"
     xhost +local:docker
-    docker exec -it rosco /bin/zsh
+    if [ $# -eq 2 ]; then
+      docker exec -it -w $2 rosco /bin/zsh
+    else
+      docker exec -it rosco /bin/zsh 
+    fi
     echo "--------------------done--------------------"
 elif [ $1 = "remove" ]; then
     echo "removing rosco"

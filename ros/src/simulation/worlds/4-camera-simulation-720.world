@@ -68,7 +68,7 @@
           </geometry>
           <material>
             <script>
-              <name>Gazebo/Green</name>
+              <name>Gazebo/Orange</name>
               <uri>file://media/materials/scripts/gazebo.material</uri>
             </script>
           </material>
@@ -90,7 +90,7 @@
         </visual>
         <!-- Sensor Info -->
         <sensor name='cam0' type='camera'>
-          <update_rate>30</update_rate>
+          <update_rate>60</update_rate>
           <visualize>1</visualize>
           <camera name='cam0'>
             <horizontal_fov>1.39626</horizontal_fov>
@@ -146,7 +146,7 @@
         </visual>
         <!-- Sensor Info -->
         <sensor name='cam1' type='camera'>
-          <update_rate>30</update_rate>
+          <update_rate>60</update_rate>
           <visualize>1</visualize>
           <camera name='cam1'>
             <horizontal_fov>1.39626</horizontal_fov>
@@ -202,7 +202,7 @@
         </visual>
         <!-- Sensor Info -->
         <sensor name='cam2' type='camera'>
-          <update_rate>30</update_rate>
+          <update_rate>60</update_rate>
           <visualize>1</visualize>
           <camera name='cam2'>
             <horizontal_fov>1.39626</horizontal_fov>
@@ -258,7 +258,7 @@
         </visual>
         <!-- Sensor Info -->
         <sensor name='cam3' type='camera'>
-          <update_rate>30</update_rate>
+          <update_rate>60</update_rate>
           <visualize>1</visualize>
           <camera name='cam3'>
             <horizontal_fov>1.39626</horizontal_fov>
@@ -290,7 +290,7 @@
       </camera>
     </gui>
     <!-- Ball -->
-    <model name='ball'>
+    <model name='ball_0'>
       <link name='link_0'>
         <pose>0 0 0 0 -0 0</pose>
         <gravity>0</gravity>
@@ -308,7 +308,7 @@
             <lighting>1</lighting>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Green</name>
+              <name>Gazebo/Orange</name>
             </script>
             <shader type='pixel'>
               <normal_map>__default__</normal_map>

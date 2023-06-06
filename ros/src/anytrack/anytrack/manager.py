@@ -16,11 +16,13 @@ class manager(Node):
         self.declare_parameter("gazebo", 0)
         self.declare_parameter("simulation", 0)
         self.declare_parameter("simulation_publisher", 0)
+        self.declare_parameter("ball_count", 1)
         self.declare_parameter("config_path", '/home/ALEX/anytrack/config/camera_positions.json')
         self.declare_parameter("device_count", 0)
         self.declare_parameter("image_vis", 0)
         self.declare_parameter("vector", 1)
         self.declare_parameter("filter", 1)
+        self.declare_parameter("estimator", 1)
         self.declare_parameter("width", 1280)
         self.declare_parameter("height", 720)
         self.declare_parameter("debug", 0)
@@ -30,11 +32,13 @@ class manager(Node):
         self.gazebo = self.get_parameter("gazebo").value
         self.simulation = self.get_parameter("simulation").value
         self.simulation_publisher = self.get_parameter("simulation_publisher").value
+        self.ball_count = self.get_parameter("ball_count").value
         self.config_path = self.get_parameter("config_path").value
         self.device_count = self.get_parameter("device_count").value
         self.image_vis= self.get_parameter("image_vis").value
         self.vector = self.get_parameter("vector").value
         self.filter = self.get_parameter("filter").value
+        self.estimator = self.get_parameter("estimator").value
         self.width = self.get_parameter("width").value
         self.height = self.get_parameter("height").value
         self.debug = self.get_parameter("debug").value
@@ -160,6 +164,14 @@ class manager(Node):
                 {"config_path": self.config_path}
             ]
         )
+        object_estimator = Action(
+            package="anytrack",
+            executable="object_estimator",
+            name=('object_estimator'),
+            parameters=[
+                {"device_count": length},
+            ]
+        )
         gazebo = IncludeLaunchDescription(
             PythonLaunchDescriptionSource([os.path.join(get_package_share_directory('simulation'), 'launch'), '/gazebo.launch.py']),
             )
@@ -167,6 +179,9 @@ class manager(Node):
             package="anytrack",
             executable="simulation_publisher",
             name=('simulation_publisher'),
+            parameters=[
+                {"ball_count": self.ball_count},
+            ]
         )
         websocket = Action(
             package="foxglove_bridge",
@@ -176,6 +191,8 @@ class manager(Node):
 
         if self.gazebo == 1:
             ld.add_action(gazebo)
+        if self.estimator == 1:
+            ld.add_action(object_estimator)
         if self.simulation_publisher == 1:
             ld.add_action(simulation_publisher)
         if self.websocket == 1:

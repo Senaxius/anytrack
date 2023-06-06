@@ -1,9 +1,11 @@
+import enum
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import ReentrantCallbackGroup,MutuallyExclusiveCallbackGroup
 
 import cv2
+import math as m
 import numpy as np
 from scipy.spatial.transform import Rotation as R
 import time 
@@ -18,6 +20,25 @@ from visualization_msgs.msg import MarkerArray
 sys.path.append('/home/ALEX/anytrack/python/lib')
 import vector as vec
 import marker as mrk
+
+class object:
+    def __init__(self, count):
+        self.points = []
+        self.lines = []
+        self.vecs = []
+        for i in range(count):
+            self.lines.append(None)
+            self.vecs.append((np.array([0,0,0]) , np.array([0,0,0])))
+        self.average = (0,0,0)
+        self.guess = (0,0,0)
+
+    def add_point(self, point):
+        self.points.append(point)
+        self.average=self.calculate_average()
+    def add_line(self, line):
+        self.points.append(line)
+    def calculate_average(self):
+        return sum(self.points) / len(self.points)
 
 class object_estimator(Node): 
     def __init__(self):
@@ -41,6 +62,7 @@ class object_estimator(Node):
         tracks_grp = ReentrantCallbackGroup()
         info_grp = ReentrantCallbackGroup()
         loop_grp = MutuallyExclusiveCallbackGroup()
+        loop2_grp = MutuallyExclusiveCallbackGroup()
 
         # tracks_group = ReentrantCallbackGroup()
         # info_group = ReentrantCallbackGroup()
@@ -67,15 +89,181 @@ class object_estimator(Node):
             self.output.append([])
         
         self.tf_sub = self.create_subscription(msg_type=TFMessage, topic=('/tf'), callback=self.tf_callback, qos_profile=10, callback_group=tf_grp)
-        self.publisher = self.create_publisher(msg_type=MarkerArray, topic=('test'), qos_profile=10)
+        self.publisher = self.create_publisher(msg_type=MarkerArray, topic=('/anytrack_objects'), qos_profile=10)
         
         # # # main loop
         self.guess = np.array([0., 0., 0.])
-        self.loop_time = 0.03
-        # self.loop_time = 0.10
-        self.loop = self.create_timer(self.loop_time, self.loop_callback, callback_group=loop_grp)
+        self.step = 0.02
+        self.filter = 0.3
+        self.colors = [
+                (255, 255, 0, 255),
+                (255, 0, 0, 255),
+                (255, 0, 255, 0),
+                (255, 25, 160, 13),
+                ]
+        self.objects = []
 
-    def loop_callback(self):
+        self.loop_time = 0.1
+        # self.loop = self.create_timer(self.loop_time, self.closest_distance_single, callback_group=loop_grp)
+        self.loop = self.create_timer(self.loop_time, self.closest_distance_multi, callback_group=loop_grp)
+
+
+    def closest_distance_multi(self): # with closestDistanceBetweenLines for multiple points
+        start_time = time.time()
+        id = 0
+        markerarray = MarkerArray()
+
+        # move lines into buffer
+        buffer = self.output
+
+        # update known objects
+        for i, ob in enumerate(self.objects):
+            # print("Len before: " + str(len(ob.points)))
+            ob.points = []
+            for index, line_number in enumerate(ob.lines):
+                if line_number == None:
+                    continue
+                line = np.array([i for i in buffer[index] if i[2] == line_number], dtype=object)
+                if len(line) == 0:
+                    # print("line gone :(")
+                    continue
+                a0 = np.array(line[0][0])
+                a1 = np.array(line[0][1])
+                for index2, line_number2 in enumerate(ob.lines):
+                    if index == index2:
+                        continue
+                    line2 = np.array([i for i in buffer[index2] if i[2] == line_number2], dtype=object)
+                    if len(line2) == 0:
+                        # print("line gone :(")
+                        continue
+                    b0 = np.array(line2[0][0])
+                    b1 = np.array(line2[0][1])
+                    pA, pB, dis = self.closestDistanceBetweenLines(a0,a1,b0,b1)
+                    mid = pA + (0.5 * (pB - pA))
+                    ob.add_point(mid)
+                    # marker = mrk.create_point(mid, 'debug', id, 'world', self.get_clock().now().to_msg(), self.colors[i], lifetime=(1, 30000000))
+                    # id += 1
+                    # markerarray.markers.append(marker)
+
+            for index, line in enumerate(ob.lines):
+                if line != None:
+                    # update shit
+                    buffer[index] = [i for i in buffer[index] if i[2] != line]
+
+        print(buffer)
+
+        # self.objects = []
+
+
+        # check for new objects
+        objects = []
+        for index, cam in enumerate(buffer):
+            if cam != []:
+                for point in cam:
+                    for index2, cam2 in enumerate(buffer):
+                        if index2 != index and cam2 != []:
+                            for point2 in cam2:
+                                a0 = np.array(point[0])
+                                a1 = np.array(point[1])
+                                b0 = np.array(point2[0])
+                                b1 = np.array(point2[1])
+                                pA, pB, dis = self.closestDistanceBetweenLines(a0,a1,b0,b1)
+                                mid = pA + (0.5 * (pB - pA))
+
+                                if dis <= 0.08:
+                                    if objects == []:
+                                        temp = object(count=self.device_count)
+                                        temp.add_point(mid)
+                                        temp.lines[index] = point[2]
+                                        temp.lines[index2] = point2[2]
+                                        objects.append(temp)
+                                    else:
+                                        found = 0
+                                        for ob in objects:
+                                            if self.distanceBetweenPoints(ob.average, mid) <= 0.1:
+                                                ob.add_point(mid)
+                                                ob.vecs[index] = (a0, a1)
+                                                ob.vecs[index2] = (b0, b1)
+                                                ob.lines[index] = point[2]
+                                                ob.lines[index2] = point2[2]
+                                                found = 1
+                                                break
+                                        if found == 0:
+                                            temp = object(count=self.device_count)
+                                            temp.add_point(mid)
+                                            temp.lines[index] = point[2]
+                                            temp.lines[index2] = point2[2]
+                                            objects.append(temp)
+        number = 0
+        for i in buffer:
+            for a in i:
+                number += 1
+        number = int(round(number / int(self.device_count), 0))
+        objects.sort(key=lambda key: len(key.points), reverse=True)
+        for index in range(number):
+            if len(objects) >= number:
+                ob = objects[index]
+                # print("found new object!")
+                ob.guess = ob.average
+                self.objects.append(ob)
+
+        # print the points
+        for index, ob in enumerate(self.objects):
+            marker = mrk.create_point(ob.average, 'debug', id, 'world', self.get_clock().now().to_msg(), (255, 0, 255, 0), lifetime=(1, 30000000))
+            id += 1
+            markerarray.markers.append(marker)
+            # for vec in ob.vecs:
+                # marker = mrk.create_line(vec[0], vec[0] + ((vec[1] - vec[0]) * 10), 'debug', id, 'world', self.get_clock().now().to_msg(), self.colors[index], lifetime=(1, 30000000))
+                # id += 1
+                # markerarray.markers.append(marker)
+        self.publisher.publish(markerarray)
+
+        speed = (self.loop_time - (time.time() - start_time))
+        # print(speed)
+
+    def closest_distance_single(self): # with closestDistanceBetweenLines for one point
+        id = 0
+        markerarray = MarkerArray()
+
+        self.guesses = []
+        self.distances = []
+
+        for index, cam in enumerate(self.output):
+            if cam != []:
+                for index2, cam2 in enumerate(self.output):
+                    if index2 != index:
+                        if cam2 != []:
+                            # print(cam2[0][0])
+                            a0 = np.array(cam[0][0])
+                            a1 = np.array(cam[0][1])
+                            b0 = np.array(cam2[0][0])
+                            b1 = np.array(cam2[0][1])
+                            pA, pB, dis = self.closestDistanceBetweenLines(a0,a1,b0,b1)
+                            mid = pA + (0.5 * (pB - pA))
+                            self.distances.append(dis)
+                            self.guesses.append(mid)
+
+        if len(self.guesses) != 0:
+            x, y, z = [], [], []
+            for point in self.guesses:
+                x.append(point[0])
+                y.append(point[1])
+                z.append(point[2])
+            average = np.array([sum(x) / len(x), sum(y) / len(y), sum(z) / len(z)])
+
+            self.guess = (1-self.filter) * self.guess + self.filter * average 
+
+            marker = mrk.create_point(self.guess, 'closest_distance_single', 0, 'world', self.get_clock().now().to_msg(), color=(255, 3, 212, 11), lifetime=(1, 50000000))
+            markerarray.markers.append(marker)
+
+            self.publisher.publish(markerarray)
+
+            # calculate quality 
+            quality = sum(self.distances) / len(self.distances)
+            # TODO: publish this in some sort of message for calibration feedback
+            # TODO: design camera specific quality feedback
+
+    def gradient_descent_v1(self): #  with guassien descent
         start_time = time.time()
 
         id = 0
@@ -100,7 +288,7 @@ class object_estimator(Node):
 
                 # verschieben des temporärere Punkt in eine Richtung verschoben um die Schrittgröße 
                 temp_point[i] += scale 
-                temp_point[i+1] += scale
+                # temp_point[i+1] += scale
 
                 # Abstandswerte des neuen Punktes werden errechnet
                 probe_distance = self.calulate_average_distance(temp_point)
@@ -133,6 +321,58 @@ class object_estimator(Node):
         # markerarray.markers.append(marker)
         # id += 1
 
+    def guassian_descent_v2(self): # shit idk what this is^^
+        start_time = time.time()
+
+        id = 0
+        markerarray = MarkerArray()
+
+        while (1):
+            distance = self.calulate_average_distance(self.guess)
+            # self.step = distance / 10
+            move_vec = np.array([0., 0., 0.])
+
+            for i in range(3):
+                temp_point = self.guess.copy()
+                temp_point[i] += self.step
+                probe_distance = self.calulate_average_distance(temp_point)
+                change = distance - probe_distance
+                if change >= 0:
+                    move_vec[i] = (distance - probe_distance) 
+            for i in range(3):
+                temp_point = self.guess.copy()
+                temp_point[i] -= self.step
+                probe_distance = self.calulate_average_distance(temp_point)
+                change = distance - probe_distance
+                if change >= 0:
+                    move_vec[i] = -(distance - probe_distance) 
+
+            # improvement = self.calulate_average_distance(self.guess + move_vec) * 1
+            # improvement = 1
+            # print(improvement)
+
+            # marker = mrk.create_line(self.guess, (self.guess + move_vec), 'isect', id, 'world', self.get_clock().now().to_msg())
+            self.guess = self.guess + move_vec
+
+            # marker = mrk.create_line(self.guess, move_vec * 10, 'isect', id, 'world', self.get_clock().now().to_msg())
+
+            speed = (self.loop_time - (time.time() - start_time))
+            if speed <= 0.1:
+                break
+
+        marker = mrk.create_point(self.guess, 'isect', id, 'world', self.get_clock().now().to_msg())
+        markerarray.markers.append(marker)
+        self.publisher.publish(markerarray)
+
+
+            # move_vec[i] = (distance - probe_distance) 
+
+        # neuer Schätzwert wird abgespeicher
+        # self.guess = np.array(vec.add_v3v3(self.guess, move_vec))
+
+        # marker = mrk.create_line((0,0,0), move_vec * 100, 'isect', id, 'world', self.get_clock().now().to_msg())
+        # self.publisher.publish(markerarray)
+
     def create_tracks_callback(self, index):
         return lambda msg:self.tracks_callback(msg, index)
     def create_info_callback(self, index):
@@ -145,7 +385,7 @@ class object_estimator(Node):
         if len(input['tf']) == 0:
             return
 
-        self.output[index] = []
+        buffer = []
         # markerarray = MarkerArray()
         start = input['start']
         for object in msg.tracks:
@@ -155,7 +395,9 @@ class object_estimator(Node):
             point = (point[0], point[1], 1)
             point = np.matmul(point, np.linalg.inv(input['R']))
             end = (point[0] + start[0], point[1] + start[1], point[2] + start[2])
-            self.output[index].append((start, end))
+            buffer.append((start, end, object.id))
+
+        self.output[index] = buffer
 
         # visualization
             # marker = self.create_marker(start, end)
@@ -193,9 +435,48 @@ class object_estimator(Node):
                 distances.append(vec.len_between_points_v3(point, isect_point))
         # calculate average distance
         if distances != []:
-            return (sum(distances) / len(distances))
+            # return (sum(distances) / len(distances))
+            return sum(distances)
         else:
             return 0
+
+    def closestDistanceBetweenLines(self, a0,a1,b0,b1):
+        # Calculate denomitator
+        A = a1 - a0
+        B = b1 - b0
+        magA = np.linalg.norm(A)
+        magB = np.linalg.norm(B)
+        
+        _A = A / magA
+        _B = B / magB
+        
+        cross = np.cross(_A, _B);
+        denom = np.linalg.norm(cross)**2
+        
+        # If lines are parallel (denom=0) test if lines overlap.
+        # If they don't overlap then there is a closest point solution.
+        # If they do overlap, there are infinite closest positions, but there is a closest distance
+        if not denom:
+            d0 = np.dot(_A,(b0-a0))
+            
+            return None,None,np.linalg.norm(((d0*_A)+a0)-b0)
+            
+        # Lines criss-cross: Calculate the projected closest points
+        t = (b0 - a0);
+        detA = np.linalg.det([t, _B, cross])
+        detB = np.linalg.det([t, _A, cross])
+
+        t0 = detA/denom;
+        t1 = detB/denom;
+
+        pA = a0 + (_A * t0) # Projected closest point on segment A
+        pB = b0 + (_B * t1) # Projected closest point on segment B
+
+        return np.array(pA),np.array(pB),np.linalg.norm(pA-pB)
+
+    def distanceBetweenPoints(self, p0, p1):
+        return m.sqrt(m.pow(p0[0] - p1[0], 2) + m.pow(p0[1] - p1[1], 2) + m.pow(p0[2] - p1[2], 2))
+
 
 
 def main(args=None):

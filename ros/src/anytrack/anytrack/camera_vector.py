@@ -86,8 +86,8 @@ class camera_vector(Node):
         marker.id = id
         marker.ns = ('cam' + str(self.index) + '/markers')
         marker.action = marker.ADD
-        marker.lifetime.sec = 1
-        marker.lifetime.nanosec = 200000000
+        marker.lifetime.sec = 0
+        marker.lifetime.nanosec = 250000000
         
         marker.scale.x = 0.005
         marker.scale.y = 0.0
