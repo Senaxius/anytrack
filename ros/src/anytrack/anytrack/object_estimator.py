@@ -109,6 +109,10 @@ class object_estimator(Node):
         
         self.tf_sub = self.create_subscription(msg_type=TFMessage, topic=('/tf'), callback=self.tf_callback, qos_profile=10, callback_group=tf_grp)
         self.publisher = self.create_publisher(msg_type=MarkerArray, topic=('/anytrack_objects'), qos_profile=10)
+
+        self.ready = []
+        for i in range(self.device_count):
+            self.ready.append(0)
         
         # # # main loop
         self.guess = np.array([0., 0., 0.])
@@ -128,11 +132,36 @@ class object_estimator(Node):
         self.lines = []
 
         self.loop_time = 0.03
+        # self.loop_time = 0.5
         # self.loop = self.create_timer(self.loop_time, self.closest_distance_single, callback_group=loop_grp)
         # self.loop = self.create_timer(self.loop_time, self.closest_distance_multi, callback_group=loop_grp)
         self.loop = self.create_timer(self.loop_time, self.closest_distance_multi_v2, callback_group=loop_grp)
+        # self.loop = self.create_timer(self.loop_time, self.test, callback_group=loop_grp)
+
+    def test(self):
+        self.objects = []
+        for i in range(100):
+            self.objects.append(i)
+        length = len(self.objects)
+        for index in range(len(self.objects)):
+            move = length - len(self.objects)
+            self.objects.pop(index - move)
+        # for ob_index, ob in enumerate(self.objects):
+        #     move = length - len(self.objects)
+        #     # print(ob_index - move)
+        #     # self.objects.pop(ob_index - move)
+        #     self.objects.pop(0)
+
+        print(len(self.objects))
 
     def closest_distance_multi_v2(self): # with closestDistanceBetweenLines for multiple points
+        id = 0
+        markerarray = MarkerArray()
+        # wait until enough data is gathered
+        for i in self.ready:
+            if i < 5:
+                print("not enough data!")
+                return
         buffer = self.output
 
         ### find new lines
@@ -164,25 +193,27 @@ class object_estimator(Node):
                 mid = pA + (0.5 * (pB - pA))
                 line.distances.append((line_2.cam_id, line_2.line_id, dis))
 
+        # update known objects
 
         ### add line to object, or create new one
         for line_index, line in enumerate([probe for probe in self.lines if probe.object_id == None]):
             found = 0
-            print("wtf")
             # check if line can be appended to known objects
-            # print(line)
             for ob_index, ob in enumerate(self.objects):
+                distances = []
                 for line_2 in ob.lines:
+                    if line.cam_id == line_2.cam_id:
+                        break
                     dis = [probe for probe in line.distances if probe[0] == line_2.cam_id and probe[1] == line_2.line_id]
-                    print("line_index: " + str(line_index) + " ob_index: " + str(ob_index) + " dis: " + str(dis))
-                    found = 1
-                    # if len(dis) != 1:
-                    #     print("WTF")
-                    #     break
-                    # print(dis[0][2])
-                    # if len(dis) != 1:
-                    #     print("WTF")
-                    # dis = dis[0][2]
+                    if len(dis) == 0:
+                        break
+                    distances.append(dis[0][2])
+                if len(distances) > 0:
+                    if (sum(distances) / len(distances)) < 0.001:
+                        ob.add_line(line)
+                        line.object_id = ob_index
+                        found = 1
+
             # if not, create new one
             if found == 0:
                 id = 0
@@ -195,23 +226,48 @@ class object_estimator(Node):
                 line.object_id = id
                 new_object.add_line(line)
                 self.objects.append(new_object)
+                # print("created object with id: " + str(id))
 
         ### remove objects, where only 1 or less lines are left
-        for ob_index, ob in enumerate(self.objects):
-            num_lines = len(ob.lines)
-            for line in ob.lines:
-                line = [probe for probe in self.lines if probe.line_id == line.line_id and probe.cam_id == line.cam_id]
-                if len(line) == 0:
-                    num_lines -= 1
-            if num_lines <= 1:
+        length = len(self.objects)
+        for i in range(len(self.objects)):
+            move = length - len(self.objects)
+            ob_index = i - move
+            ob = self.objects[ob_index]
+            # remove lines that are gone
+            length2 = len(ob.lines)
+            for a in range(len(ob.lines)):
+                move2 = length2 - len(ob.lines)
+                line_index = a - move2
+                line = ob.lines[line_index]
+                test = [probe for probe in self.lines if probe.line_id == line.line_id and probe.cam_id == line.cam_id]
+                if len(test) == 0:
+                    ob.lines.pop(line_index)
+            if len(ob.lines) <= 1:
+                # ungroup leftover lines
+                for line_index, line in enumerate(ob.lines):
+                    for buffer_line_index, buffer_line in enumerate(self.lines):
+                        if buffer_line.cam_id == line.cam_id and buffer_line.line_id == line.line_id:
+                            self.lines[buffer_line_index].object_id = None
+                # remove lost object
+                print("removed lost item with id: " + str(ob.id))
                 self.objects.pop(ob_index)
 
         # print(len(self.objects))
-        # for i in self.objects:
-        #     print(len(i.lines))
+        # for i in self.lines:
+        #     print(i.object_id, i.cam_id, i.line_id)
 
 
-
+        # print shit
+        for ob_index, ob in enumerate(self.objects):
+            # print(len(ob.lines))
+            for line in ob.lines:
+                p0 = np.array(line.line[0])
+                p1 = np.array(line.line[1])
+                marker = mrk.create_line(p0, p0 + ((p1 - p0) * 10), 'debug', id, 'world', self.get_clock().now().to_msg(), self.colors[ob.id], lifetime=(1, 50000000))
+                id += 1
+                markerarray.markers.append(marker)
+        self.publisher.publish(markerarray)
 
 
     def closest_distance_multi(self): # with closestDistanceBetweenLines for multiple points
@@ -508,6 +564,7 @@ class object_estimator(Node):
             end = (point[0] + start[0], point[1] + start[1], point[2] + start[2])
             buffer.append((start, end, object.id))
 
+        self.ready[index] += 1
         self.output[index] = buffer
 
         # visualization
@@ -516,6 +573,7 @@ class object_estimator(Node):
         # self.publisher.publish(markerarray)
     
     def info_callback(self, msg, index):
+        self.ready[index] *= 5
         k = msg.k
         d = msg.d
         self.input[index]['camera_matrix'] = np.matrix([[k[0], k[1], k[2]], [k[3], k[4], k[5]], [k[6], k[7], k[8]]])
