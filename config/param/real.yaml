@@ -1,6 +1,6 @@
 manager:
   ros__parameters:
-    websocket: 1
+    websocket: 0
     gazebo: 0
     simulation: 0
     simulation_publisher: 0

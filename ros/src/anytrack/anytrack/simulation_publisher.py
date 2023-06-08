@@ -9,7 +9,7 @@ from gazebo_msgs.srv import SetEntityState
 
 class ball_0:
     corners = [(2.5, 0, 0.3), (1.5, 4, -0.4), (3.5, 3, -0.6), (0, 2, 1.7), (5, -3, 2), (2, -1.5, 0.3), (5, 0, 2),]
-    iter = 200
+    iter = 100
     id = 0
     cor_id_now = 0
     cor_id_future = 1
