@@ -8,6 +8,7 @@ anytrack/camera_detector.py
 anytrack/camera_driver.py
 anytrack/camera_info.py
 anytrack/camera_vector.py
+anytrack/foxglove_camera.py
 anytrack/manager.py
 anytrack/object_estimator.py
 anytrack/pointcloud_publisher.py

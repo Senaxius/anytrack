@@ -32,6 +32,7 @@ setup(
             "simulation_publisher = anytrack.simulation_publisher:main",
             "pointcloud_publisher = anytrack.pointcloud_publisher:main",
             "object_estimator = anytrack.object_estimator:main",
+            "foxglove_camera = anytrack.foxglove_camera:main",
         ],
     },
 )

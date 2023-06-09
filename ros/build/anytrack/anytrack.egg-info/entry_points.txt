@@ -5,6 +5,7 @@ camera_detector = anytrack.camera_detector:main
 camera_driver = anytrack.camera_driver:main
 camera_info = anytrack.camera_info:main
 camera_vector = anytrack.camera_vector:main
+foxglove_camera = anytrack.foxglove_camera:main
 manager = anytrack.manager:main
 object_estimator = anytrack.object_estimator:main
 pointcloud_publisher = anytrack.pointcloud_publisher:main
