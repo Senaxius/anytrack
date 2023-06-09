@@ -9,9 +9,9 @@ from scipy.spatial.transform import Rotation
 import threading as th
 import json
 
+from interfaces.msg import CameraLocationList
+from interfaces.msg import Object2d
 from interfaces.msg import CameraLocations
-from interfaces.msg import Tracks
-from interfaces.msg import Location
 from sensor_msgs.msg import CameraInfo
 
 class calibration(Node): 

@@ -1,0 +1,367 @@
+<sdf version='1.7'>
+  <world name='anytrack'>
+    <!-- ROS -->
+    <plugin name='gazebo_ros_state' filename='libgazebo_ros_state.so'>
+      <ros>
+        <namespace>/simulation</namespace>
+        <argument>model_states:=model_states_demo</argument>
+      </ros>
+      <update_rate>1.0</update_rate>
+    </plugin>
+    <!-- Sun -->
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <!-- Model -->
+    <model name='anytrack-system'>
+      <!-- Joints -->
+      <!-- cam0 -->
+      <joint name='cam0_joint' type='fixed'>
+        <pose relative_to='__model__'>0 0 1 0 -0 0</pose>
+        <parent>world</parent>
+        <child>cam0_link</child>
+      </joint>
+      <!-- cam1 -->
+      <joint name='cam1_joint' type='fixed'>
+        <pose relative_to='__model__'>0 3 1 0 0 -0.3</pose>
+        <parent>world</parent>
+        <child>cam1_link</child>
+      </joint>
+      <!-- cam2 -->
+      <joint name='cam2_joint' type='fixed'>
+        <pose relative_to='__model__'>0.0 -3 1.0 0 0.0 0.3</pose>
+        <parent>world</parent>
+        <child>cam2_link</child>
+      </joint>
+      <!-- cam3 -->
+      <joint name='cam3_joint' type='fixed'>
+        <pose relative_to='__model__'>5 6 1.0 0 -0.0 -1.6</pose>
+        <parent>world</parent>
+        <child>cam3_link</child>
+      </joint>
+      <!-- Links -->
+      <!-- cam0 -->
+      <link name='cam0_link'>
+        <pose relative_to='cam0_joint'>0 0 0 0 -0 0</pose>
+        <!-- Visuals -->
+        <visual name="cam0_link_visual">
+          <pose>-0.03 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.06 0.15 0.15</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Orange</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='cam0_link_visual_1'>
+          <pose>0.03 0 0 3.14159 1.57079 3.14159</pose>
+          <geometry>
+            <cylinder>
+              <length>0.06</length>
+              <radius>0.04</radius>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Green</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <!-- Sensor Info -->
+        <sensor name='cam0' type='camera'>
+          <update_rate>60</update_rate>
+          <visualize>1</visualize>
+          <camera name='cam0'>
+            <horizontal_fov>1.39626</horizontal_fov>
+            <image>
+              <width>1280</width>
+              <height>720</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.02</near>
+              <far>300</far>
+            </clip>
+          </camera>
+          <plugin name='cam0_controller' filename='libgazebo_ros_camera.so'>
+            <frame_name>cam0_position</frame_name>
+            <min_depth>0.1</min_depth>
+            <max_depth>500</max_depth>
+          </plugin>
+        </sensor>
+      </link>
+      <!-- cam1 -->
+      <link name='cam1_link'>
+        <pose relative_to='cam1_joint'>0 0 0 0 -0 0</pose>
+        <!-- Visuals -->
+        <visual name="cam1_link_visual">
+          <pose>-0.03 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.06 0.15 0.15</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='cam1_link_visual_1'>
+          <pose>0.03 0 0 3.14159 1.57079 3.14159</pose>
+          <geometry>
+            <cylinder>
+              <length>0.06</length>
+              <radius>0.04</radius>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <!-- Sensor Info -->
+        <sensor name='cam1' type='camera'>
+          <update_rate>60</update_rate>
+          <visualize>1</visualize>
+          <camera name='cam1'>
+            <horizontal_fov>1.39626</horizontal_fov>
+            <image>
+              <width>1280</width>
+              <height>720</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.02</near>
+              <far>300</far>
+            </clip>
+          </camera>
+          <plugin name='cam1_controller' filename='libgazebo_ros_camera.so'>
+            <frame_name>cam1_position</frame_name>
+            <min_depth>0.1</min_depth>
+            <max_depth>500</max_depth>
+          </plugin>
+        </sensor>
+      </link>
+      <!-- cam2 -->
+      <link name='cam2_link'>
+        <pose relative_to='cam2_joint'>0 0 0 0 -0 0</pose>
+        <!-- Visuals -->
+        <visual name="cam2_link_visual">
+          <pose>-0.03 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.06 0.15 0.15</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='cam2_link_visual_1'>
+          <pose>0.03 0 0 3.14159 1.57079 3.14159</pose>
+          <geometry>
+            <cylinder>
+              <length>0.06</length>
+              <radius>0.04</radius>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <!-- Sensor Info -->
+        <sensor name='cam2' type='camera'>
+          <update_rate>60</update_rate>
+          <visualize>1</visualize>
+          <camera name='cam2'>
+            <horizontal_fov>1.39626</horizontal_fov>
+            <image>
+              <width>1280</width>
+              <height>720</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.02</near>
+              <far>300</far>
+            </clip>
+          </camera>
+          <plugin name='cam2_controller' filename='libgazebo_ros_camera.so'>
+            <frame_name>cam2_position</frame_name>
+            <min_depth>0.1</min_depth>
+            <max_depth>500</max_depth>
+          </plugin>
+        </sensor>
+      </link>
+            <!-- cam3 -->
+      <link name='cam3_link'>
+        <pose relative_to='cam3_joint'>0 0 0 0 -0 0</pose>
+        <!-- Visuals -->
+        <visual name="cam3_link_visual">
+          <pose>-0.03 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.06 0.15 0.15</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Purple</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='cam3_link_visual_1'>
+          <pose>0.03 0 0 3.14159 1.57079 3.14159</pose>
+          <geometry>
+            <cylinder>
+              <length>0.06</length>
+              <radius>0.04</radius>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Purple</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <!-- Sensor Info -->
+        <sensor name='cam3' type='camera'>
+          <update_rate>60</update_rate>
+          <visualize>1</visualize>
+          <camera name='cam3'>
+            <horizontal_fov>1.39626</horizontal_fov>
+            <image>
+              <width>1280</width>
+              <height>720</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.02</near>
+              <far>300</far>
+            </clip>
+          </camera>
+          <plugin name='cam3_controller' filename='libgazebo_ros_camera.so'>
+            <frame_name>cam3_position</frame_name>
+            <min_depth>0.1</min_depth>
+            <max_depth>500</max_depth>
+          </plugin>
+        </sensor>
+      </link>
+      <pose>0 0 0 0 -0 0</pose>
+    </model>
+    <!-- Gui -->
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-6 4 3 0 0.2 -0.4</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <!-- Ball 0 -->
+    <model name='ball_0'>
+      <link name='link_0'>
+        <pose>0 0 0 0 -0 0</pose>
+        <gravity>0</gravity>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <enable_wind>0</enable_wind>
+        <visual name='visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.20</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Orange</name>
+            </script>
+            <shader type='pixel'>
+              <normal_map>__default__</normal_map>
+            </shader>
+            <ambient>0 1 0 1</ambient>
+            <diffuse>0 1 0 1</diffuse>
+            <specular>0 1 0 1</specular>
+            <emissive>0 1 0 1</emissive>
+          </material>
+          <transparency>0</transparency>
+          <cast_shadows>1</cast_shadows>
+        </visual>
+      </link>
+      <static>0</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose>5.53954 -0.831899 0 0 -0 0</pose>
+    </model>
+    <!-- Ball 1 -->
+    <model name='ball_1'>
+      <link name='link_0'>
+        <pose>0 0 0 0 0 0</pose>
+        <gravity>0</gravity>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <enable_wind>0</enable_wind>
+        <visual name='visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.20</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Orange</name>
+            </script>
+            <shader type='pixel'>
+              <normal_map>__default__</normal_map>
+            </shader>
+            <ambient>0 1 0 1</ambient>
+            <diffuse>0 1 0 1</diffuse>
+            <specular>0 1 0 1</specular>
+            <emissive>0 1 0 1</emissive>
+          </material>
+          <transparency>0</transparency>
+          <cast_shadows>1</cast_shadows>
+        </visual>
+      </link>
+      <static>0</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose>5.53954 -0.831899 0 0 -0 0</pose>
+    </model>
+  </world>
+</sdf>

@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from interfaces/msg/CameraLocationList.msg
+// generated code does not contain a copyright notice
+
+#include "interfaces/msg/CameraLocation.idl"
+
+module interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "array of multiple camera locations")
+    struct CameraLocationList {
+      sequence<interfaces::msg::CameraLocation> locations;
+    };
+  };
+};

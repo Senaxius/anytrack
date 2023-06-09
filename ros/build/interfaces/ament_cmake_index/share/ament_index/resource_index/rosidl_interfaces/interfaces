@@ -1,8 +1,8 @@
-msg/CameraLocations.idl
-msg/CameraLocations.msg
-msg/Location.idl
-msg/Location.msg
-msg/Object.idl
-msg/Object.msg
-msg/Tracks.idl
-msg/Tracks.msg
+msg/CameraLocation.idl
+msg/CameraLocation.msg
+msg/CameraLocationList.idl
+msg/CameraLocationList.msg
+msg/Object2d.idl
+msg/Object2d.msg
+msg/Object2dList.idl
+msg/Object2dList.msg

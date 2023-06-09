@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from interfaces/msg/Object2dList.msg
+// generated code does not contain a copyright notice
+
+#include "interfaces/msg/Object2d.idl"
+#include "std_msgs/msg/Header.idl"
+
+module interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "array of multiple tracked objects")
+    struct Object2dList {
+      std_msgs::msg::Header header;
+
+      sequence<interfaces::msg::Object2d> tracks;
+    };
+  };
+};

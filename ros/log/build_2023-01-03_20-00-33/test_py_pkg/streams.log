@@ -1,2 +1,0 @@
-[0.888s] Invoking command in '/home/ALEX/anytrack/ros/build/test_py_pkg': PYTHONPATH=/home/ALEX/anytrack/ros/install/test_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/ALEX/anytrack/ros/install/test_py_pkg --uninstall --editable --build-directory /home/ALEX/anytrack/ros/build/test_py_pkg/build
-[1.128s] running develop

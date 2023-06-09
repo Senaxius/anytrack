@@ -1,9 +1,9 @@
 {
   "package_name": "interfaces",
   "non_idl_tuples": [
-    "/home/ALEX/anytrack/ros/src/interfaces:msg/Object.msg",
-    "/home/ALEX/anytrack/ros/src/interfaces:msg/Tracks.msg",
-    "/home/ALEX/anytrack/ros/src/interfaces:msg/Location.msg",
-    "/home/ALEX/anytrack/ros/src/interfaces:msg/CameraLocations.msg"
+    "/home/ALEX/anytrack/ros/src/interfaces:msg/Object2d.msg",
+    "/home/ALEX/anytrack/ros/src/interfaces:msg/Object2dList.msg",
+    "/home/ALEX/anytrack/ros/src/interfaces:msg/CameraLocation.msg",
+    "/home/ALEX/anytrack/ros/src/interfaces:msg/CameraLocationList.msg"
   ]
 }

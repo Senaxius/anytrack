@@ -7,8 +7,8 @@ import sys
 import rclpy
 from rclpy.node import Node
 
-from interfaces.msg import Tracks
-from interfaces.msg import Object
+from interfaces.msg import Object2dList
+from interfaces.msg import Object2d
 from sensor_msgs.msg import Image
 
 sys.path.append('/home/ALEX/anytrack/python/lib')
@@ -46,7 +46,7 @@ class camera_detector(Node):
 
         self.get_logger().info("Starting camera detector with index " + str(self.index))
 
-        self.tracks_publisher = self.create_publisher(msg_type=Tracks, topic="/cam" + str(self.index) + "/tracks", qos_profile=10)
+        self.tracks_publisher = self.create_publisher(msg_type=Object2dList, topic="/cam" + str(self.index) + "/tracks", qos_profile=10)
 
         self.image_publisher = self.create_publisher(msg_type=Image, topic="/cam" + str(self.index) + "/image_tracked", qos_profile=10)
 
@@ -63,7 +63,7 @@ class camera_detector(Node):
         if self.visualize:
             frame = trk.scanner_visulisation(frame, self.objects,line_buffer=self.line_buffer)
         # publish data
-        msg = Tracks()
+        msg = Object2dList()
         for object in self.objects:
             self.add_object_to_msg(msg.tracks, object, self.width, self.height)
         msg.header.stamp = self.get_clock().now().to_msg()
@@ -73,7 +73,7 @@ class camera_detector(Node):
         self.publish_image(frame)
 
     def add_object_to_msg(self, msg, object, x_max, y_max):
-        b = Object()
+        b = Object2d()
         b.id = object.id
         b.x = round(object.x, 1)
         b.y = round(object.y, 1)

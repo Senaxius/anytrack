@@ -7,7 +7,7 @@ import numpy as np
 
 from geometry_msgs.msg import TransformStamped
 from tf2_ros import TransformBroadcaster
-from interfaces.msg import CameraLocations
+from interfaces.msg import CameraLocationList
 
 def dotproduct(v1, v2):
   return sum((a*b) for a, b in zip(v1, v2))
@@ -46,7 +46,7 @@ class position_manager(Node):
         self.position_broadcaster = TransformBroadcaster(self)
 
         # starting calibrator subscriber
-        self.subscriber = self.create_subscription(msg_type=CameraLocations, topic='/calibration', callback=self.calibration_callback, qos_profile=10)
+        self.subscriber = self.create_subscription(msg_type=CameraLocationList, topic='/calibration', callback=self.calibration_callback, qos_profile=10)
 
         # reading config file
         file = open(self.config_path)

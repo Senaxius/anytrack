@@ -69,185 +69,185 @@ include CMakeFiles/interfaces__rosidl_generator_c.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
 
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/lib/rosidl_generator_c/rosidl_generator_c
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_c/__init__.py
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/action__type_support.h.em
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl.h.em
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__functions.c.em
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__functions.h.em
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__struct.h.em
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__type_support.h.em
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__functions.c.em
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__functions.h.em
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__struct.h.em
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__type_support.h.em
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
-rosidl_generator_c/interfaces/msg/object.h: rosidl_adapter/interfaces/msg/Object.idl
-rosidl_generator_c/interfaces/msg/object.h: rosidl_adapter/interfaces/msg/Tracks.idl
-rosidl_generator_c/interfaces/msg/object.h: rosidl_adapter/interfaces/msg/Location.idl
-rosidl_generator_c/interfaces/msg/object.h: rosidl_adapter/interfaces/msg/CameraLocations.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Bool.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Byte.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Char.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/ColorRGBA.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Empty.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Float32.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Float32MultiArray.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Float64.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Float64MultiArray.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Header.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Int16.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Int16MultiArray.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Int32.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Int32MultiArray.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Int64.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Int64MultiArray.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Int8.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/Int8MultiArray.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/MultiArrayDimension.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/MultiArrayLayout.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/String.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/UInt16.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/UInt16MultiArray.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/UInt32.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/UInt32MultiArray.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/UInt64.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
-rosidl_generator_c/interfaces/msg/object.h: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/lib/rosidl_generator_c/rosidl_generator_c
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_c/__init__.py
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/rosidl_generator_c/resource/action__type_support.h.em
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl.h.em
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__functions.c.em
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__functions.h.em
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__struct.h.em
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__type_support.h.em
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__functions.c.em
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__functions.h.em
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__struct.h.em
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__type_support.h.em
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
+rosidl_generator_c/interfaces/msg/object2d.h: rosidl_adapter/interfaces/msg/Object2d.idl
+rosidl_generator_c/interfaces/msg/object2d.h: rosidl_adapter/interfaces/msg/Object2dList.idl
+rosidl_generator_c/interfaces/msg/object2d.h: rosidl_adapter/interfaces/msg/CameraLocation.idl
+rosidl_generator_c/interfaces/msg/object2d.h: rosidl_adapter/interfaces/msg/CameraLocationList.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Bool.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Byte.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Char.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/ColorRGBA.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Empty.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Float32.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Float32MultiArray.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Float64.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Float64MultiArray.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Header.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Int16.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Int16MultiArray.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Int32.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Int32MultiArray.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Int64.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Int64MultiArray.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Int8.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/Int8MultiArray.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/MultiArrayDimension.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/MultiArrayLayout.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/String.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/UInt16.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/UInt16MultiArray.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/UInt32.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/UInt32MultiArray.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/UInt64.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
+rosidl_generator_c/interfaces/msg/object2d.h: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ALEX/anytrack/ros/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c__arguments.json
 
-rosidl_generator_c/interfaces/msg/detail/object__functions.h: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/object__functions.h
+rosidl_generator_c/interfaces/msg/detail/object2d__functions.h: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/object2d__functions.h
 
-rosidl_generator_c/interfaces/msg/detail/object__struct.h: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/object__struct.h
+rosidl_generator_c/interfaces/msg/detail/object2d__struct.h: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/object2d__struct.h
 
-rosidl_generator_c/interfaces/msg/detail/object__type_support.h: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/object__type_support.h
+rosidl_generator_c/interfaces/msg/detail/object2d__type_support.h: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/object2d__type_support.h
 
-rosidl_generator_c/interfaces/msg/tracks.h: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/tracks.h
+rosidl_generator_c/interfaces/msg/object2d_list.h: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/object2d_list.h
 
-rosidl_generator_c/interfaces/msg/detail/tracks__functions.h: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/tracks__functions.h
+rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.h: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.h
 
-rosidl_generator_c/interfaces/msg/detail/tracks__struct.h: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/tracks__struct.h
+rosidl_generator_c/interfaces/msg/detail/object2d_list__struct.h: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/object2d_list__struct.h
 
-rosidl_generator_c/interfaces/msg/detail/tracks__type_support.h: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/tracks__type_support.h
+rosidl_generator_c/interfaces/msg/detail/object2d_list__type_support.h: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/object2d_list__type_support.h
 
-rosidl_generator_c/interfaces/msg/location.h: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/location.h
+rosidl_generator_c/interfaces/msg/camera_location.h: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/camera_location.h
 
-rosidl_generator_c/interfaces/msg/detail/location__functions.h: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/location__functions.h
+rosidl_generator_c/interfaces/msg/detail/camera_location__functions.h: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/camera_location__functions.h
 
-rosidl_generator_c/interfaces/msg/detail/location__struct.h: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/location__struct.h
+rosidl_generator_c/interfaces/msg/detail/camera_location__struct.h: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/camera_location__struct.h
 
-rosidl_generator_c/interfaces/msg/detail/location__type_support.h: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/location__type_support.h
+rosidl_generator_c/interfaces/msg/detail/camera_location__type_support.h: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/camera_location__type_support.h
 
-rosidl_generator_c/interfaces/msg/camera_locations.h: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/camera_locations.h
+rosidl_generator_c/interfaces/msg/camera_location_list.h: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/camera_location_list.h
 
-rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.h: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.h
+rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.h: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.h
 
-rosidl_generator_c/interfaces/msg/detail/camera_locations__struct.h: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/camera_locations__struct.h
+rosidl_generator_c/interfaces/msg/detail/camera_location_list__struct.h: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/camera_location_list__struct.h
 
-rosidl_generator_c/interfaces/msg/detail/camera_locations__type_support.h: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/camera_locations__type_support.h
+rosidl_generator_c/interfaces/msg/detail/camera_location_list__type_support.h: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/camera_location_list__type_support.h
 
-rosidl_generator_c/interfaces/msg/detail/object__functions.c: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/object__functions.c
+rosidl_generator_c/interfaces/msg/detail/object2d__functions.c: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/object2d__functions.c
 
-rosidl_generator_c/interfaces/msg/detail/tracks__functions.c: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/tracks__functions.c
+rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c
 
-rosidl_generator_c/interfaces/msg/detail/location__functions.c: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/location__functions.c
+rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c
 
-rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c: rosidl_generator_c/interfaces/msg/object.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c
+rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c: rosidl_generator_c/interfaces/msg/object2d.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c
 
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object__functions.c.o: rosidl_generator_c/interfaces/msg/detail/object__functions.c
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ALEX/anytrack/ros/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object__functions.c.o -MF CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object__functions.c.o.d -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object__functions.c.o -c /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/object__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.o: rosidl_generator_c/interfaces/msg/detail/object2d__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ALEX/anytrack/ros/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.o -MF CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.o.d -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.o -c /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c
 
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object__functions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/object__functions.c > CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object__functions.c.i
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c > CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.i
 
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object__functions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/object__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object__functions.c.s
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.s
 
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c.o: rosidl_generator_c/interfaces/msg/detail/tracks__functions.c
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ALEX/anytrack/ros/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c.o -MF CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c.o.d -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c.o -c /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.o: rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ALEX/anytrack/ros/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.o -MF CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.o.d -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.o -c /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c
 
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c > CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c.i
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c > CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.i
 
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c.s
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.s
 
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/location__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/location__functions.c.o: rosidl_generator_c/interfaces/msg/detail/location__functions.c
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/location__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ALEX/anytrack/ros/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/location__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/location__functions.c.o -MF CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/location__functions.c.o.d -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/location__functions.c.o -c /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/location__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.o: rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ALEX/anytrack/ros/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.o -MF CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.o.d -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.o -c /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c
 
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/location__functions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/location__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/location__functions.c > CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/location__functions.c.i
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c > CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.i
 
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/location__functions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/location__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/location__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/location__functions.c.s
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.s
 
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c.o: rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ALEX/anytrack/ros/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c.o -MF CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c.o.d -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c.o -c /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.o: rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ALEX/anytrack/ros/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.o -MF CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.o.d -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.o -c /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c
 
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c > CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c.i
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c > CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.i
 
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c.s
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.s
 
 # Object files for target interfaces__rosidl_generator_c
 interfaces__rosidl_generator_c_OBJECTS = \
-"CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object__functions.c.o" \
-"CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c.o" \
-"CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/location__functions.c.o" \
-"CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c.o"
+"CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.o" \
+"CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.o" \
+"CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.o" \
+"CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.o"
 
 # External object files for target interfaces__rosidl_generator_c
 interfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
 
-libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object__functions.c.o
-libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/tracks__functions.c.o
-libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/location__functions.c.o
-libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c.o
+libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.o
+libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.o
+libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.o
+libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.o
 libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/build.make
 libinterfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
 libinterfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so
@@ -265,26 +265,26 @@ CMakeFiles/interfaces__rosidl_generator_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/interfaces__rosidl_generator_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/interfaces__rosidl_generator_c.dir/clean
 
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/camera_locations.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.c
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/camera_locations__functions.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/camera_locations__struct.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/camera_locations__type_support.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/location__functions.c
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/location__functions.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/location__struct.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/location__type_support.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/object__functions.c
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/object__functions.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/object__struct.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/object__type_support.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/tracks__functions.c
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/tracks__functions.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/tracks__struct.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/tracks__type_support.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/location.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/object.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/tracks.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/camera_location.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/camera_location_list.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/camera_location__functions.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/camera_location__struct.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/camera_location__type_support.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/camera_location_list__struct.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/camera_location_list__type_support.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/object2d__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/object2d__functions.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/object2d__struct.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/object2d__type_support.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/object2d_list__struct.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/object2d_list__type_support.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/object2d.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/object2d_list.h
 	cd /home/ALEX/anytrack/ros/build/interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ALEX/anytrack/ros/src/interfaces /home/ALEX/anytrack/ros/src/interfaces /home/ALEX/anytrack/ros/build/interfaces /home/ALEX/anytrack/ros/build/interfaces /home/ALEX/anytrack/ros/build/interfaces/CMakeFiles/interfaces__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/interfaces__rosidl_generator_c.dir/depend
 

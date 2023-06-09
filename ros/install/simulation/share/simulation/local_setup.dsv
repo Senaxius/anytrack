@@ -1,1 +1,2 @@
-/home/ALEX/anytrack/ros/build/simulation/ament_cmake_environment_hooks/local_setup.dsv
+source;share/simulation/environment/ament_prefix_path.sh
+source;share/simulation/environment/path.sh

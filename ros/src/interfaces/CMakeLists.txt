@@ -11,10 +11,10 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/Object.msg"
-  "msg/Tracks.msg"
-  "msg/Location.msg"
-  "msg/CameraLocations.msg"
+  "msg/Object2d.msg"
+  "msg/Object2dList.msg"
+  "msg/CameraLocation.msg"
+  "msg/CameraLocationList.msg"
   DEPENDENCIES builtin_interfaces std_msgs
 )
 

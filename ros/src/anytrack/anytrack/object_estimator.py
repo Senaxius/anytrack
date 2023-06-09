@@ -12,7 +12,7 @@ import time
 import sys
 import copy
 
-from interfaces.msg import Tracks
+from interfaces.msg import Object2dList
 from sensor_msgs.msg import CameraInfo
 from tf2_msgs.msg import TFMessage
 
@@ -44,8 +44,12 @@ class object:
         self.guess = (0,0,0)
     def add_point(self, point):
         self.points.append(point)
-        self.average=self.calculate_average()
-        self.guess=self.run_filter()
+        if len(self.points) == 1:
+            self.average = point
+            self.guess = point
+        else:
+            self.average=self.calculate_average()
+            self.guess=self.run_filter()
     def add_line(self, line):
         self.lines.append(line)
     def calculate_average(self):
@@ -83,7 +87,7 @@ class object_estimator(Node):
 
         ### create subscribers for data_gathering
         for i in range(self.device_count):
-            self.create_subscription(msg_type=Tracks, topic=('/cam' + str(i) + '/tracks'), callback=self.create_tracks_callback(i), qos_profile=10, callback_group=tracks_grp)
+            self.create_subscription(msg_type=Object2dList, topic=('/cam' + str(i) + '/tracks'), callback=self.create_tracks_callback(i), qos_profile=10, callback_group=tracks_grp)
             self.create_subscription(msg_type=CameraInfo, topic=('/cam' + str(i) + '/camera_info'), callback=self.create_info_callback(i), qos_profile=10, callback_group=info_grp)
             self.input.update({i: {
                 'camera_matrix': [],
@@ -188,7 +192,7 @@ class object_estimator(Node):
                 self.objects.pop(ob_index)
                 continue
 
-            ### calculate points
+            ### check for lines that are too far away
             ob.points = []
             for line_index, line in enumerate(ob.lines):
                 if line.object_id == None:
@@ -201,12 +205,9 @@ class object_estimator(Node):
                     a1 = np.array(line.line[1])
                     b0 = np.array(line_2.line[0])
                     b1 = np.array(line_2.line[1])
-                    pA, pB, dis = self.closestDistanceBetweenLines(a0,a1,b0,b1)
-                    mid = pA + (0.5 * (pB - pA))
+                    _, _, dis = self.closestDistanceBetweenLines(a0,a1,b0,b1)
                     if dis > 0.1:
                         warnings += 1
-                    else:
-                        ob.add_point(mid)
                 if warnings > 1:
                     line.object_id = None
 
@@ -287,6 +288,19 @@ class object_estimator(Node):
                 if self.debug:
                     print("Remove object " + str(ob.id) + " (too small)")
                 self.objects.pop(ob_index)
+
+        # calculate points
+        for ob_index, ob in enumerate(self.objects):
+            ob.points = []
+            for line_index, line in enumerate(ob.lines):
+                for line_index_2, line_2 in enumerate([probe for probe in ob.lines if probe.cam_id != line.cam_id]):
+                    a0 = np.array(line.line[0])
+                    a1 = np.array(line.line[1])
+                    b0 = np.array(line_2.line[0])
+                    b1 = np.array(line_2.line[1])
+                    pA, pB, dis = self.closestDistanceBetweenLines(a0,a1,b0,b1)
+                    mid = pA + (0.5 * (pB - pA))
+                    ob.add_point(mid)
 
         # publish lines
         # for line in self.lines:

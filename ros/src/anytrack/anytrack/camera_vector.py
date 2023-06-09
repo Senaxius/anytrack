@@ -1,7 +1,6 @@
 import rclpy
 from rclpy.node import Node
 
-from interfaces.msg import Tracks
 from visualization_msgs.msg import Marker
 from visualization_msgs.msg import MarkerArray
 from geometry_msgs.msg import Point
@@ -9,6 +8,8 @@ from sensor_msgs.msg import CameraInfo
 
 import cv2
 import numpy as np
+
+from interfaces.msg import Object2dList
 
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import ReentrantCallbackGroup,MutuallyExclusiveCallbackGroup
@@ -56,7 +57,7 @@ class camera_vector(Node):
         
         # create subscriber and publisher
         self.info_subscriber = self.create_subscription(msg_type=CameraInfo, topic=('/cam' + str(self.index) + '/camera_info'), callback=self.info_callback, qos_profile=10, callback_group=info_group)
-        self.tracks_subscriber = self.create_subscription(msg_type=Tracks, topic=('/cam' + str(self.index) + '/tracks'), callback=self.tracks_callback, qos_profile=10, callback_group=tracks_group)
+        self.tracks_subscriber = self.create_subscription(msg_type=Object2dList, topic=('/cam' + str(self.index) + '/tracks'), callback=self.tracks_callback, qos_profile=10, callback_group=tracks_group)
         self.publisher = self.create_publisher(msg_type=MarkerArray, topic=('/cam' + str(self.index) + '/vector'), qos_profile=10)
 
         self.get_logger().info("Starting camera vector with index " + str(self.index))

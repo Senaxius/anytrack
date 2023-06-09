@@ -69,15 +69,15 @@ include interfaces__py/CMakeFiles/interfaces__py.dir/progress.make
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c
-interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_object.py
-interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_tracks.py
-interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_location.py
-interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_camera_locations.py
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_object2d.py
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_object2d_list.py
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_camera_location.py
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_camera_location_list.py
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/__init__.py
-interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_object_s.c
-interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_tracks_s.c
-interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_location_s.c
-interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_camera_locations_s.c
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_object2d_s.c
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_object2d_list_s.c
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_camera_location_s.c
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_camera_location_list_s.c
 
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -92,10 +92,10 @@ rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c:
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_msg.py.em
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
-rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/msg/Object.idl
-rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/msg/Tracks.idl
-rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/msg/Location.idl
-rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/msg/CameraLocations.idl
+rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/msg/Object2d.idl
+rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/msg/Object2dList.idl
+rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/msg/CameraLocation.idl
+rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/msg/CameraLocationList.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Bool.idl
@@ -137,46 +137,46 @@ rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c
 
-rosidl_generator_py/interfaces/msg/_object.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_object.py
+rosidl_generator_py/interfaces/msg/_object2d.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_object2d.py
 
-rosidl_generator_py/interfaces/msg/_tracks.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_tracks.py
+rosidl_generator_py/interfaces/msg/_object2d_list.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_object2d_list.py
 
-rosidl_generator_py/interfaces/msg/_location.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_location.py
+rosidl_generator_py/interfaces/msg/_camera_location.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_camera_location.py
 
-rosidl_generator_py/interfaces/msg/_camera_locations.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_camera_locations.py
+rosidl_generator_py/interfaces/msg/_camera_location_list.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_camera_location_list.py
 
 rosidl_generator_py/interfaces/msg/__init__.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/__init__.py
 
-rosidl_generator_py/interfaces/msg/_object_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_object_s.c
+rosidl_generator_py/interfaces/msg/_object2d_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_object2d_s.c
 
-rosidl_generator_py/interfaces/msg/_tracks_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_tracks_s.c
+rosidl_generator_py/interfaces/msg/_object2d_list_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_object2d_list_s.c
 
-rosidl_generator_py/interfaces/msg/_location_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_location_s.c
+rosidl_generator_py/interfaces/msg/_camera_location_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_camera_location_s.c
 
-rosidl_generator_py/interfaces/msg/_camera_locations_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_camera_locations_s.c
+rosidl_generator_py/interfaces/msg/_camera_location_list_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_camera_location_list_s.c
 
 interfaces__py: interfaces__py/CMakeFiles/interfaces__py
 interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c
 interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 interfaces__py: rosidl_generator_py/interfaces/msg/__init__.py
-interfaces__py: rosidl_generator_py/interfaces/msg/_camera_locations.py
-interfaces__py: rosidl_generator_py/interfaces/msg/_camera_locations_s.c
-interfaces__py: rosidl_generator_py/interfaces/msg/_location.py
-interfaces__py: rosidl_generator_py/interfaces/msg/_location_s.c
-interfaces__py: rosidl_generator_py/interfaces/msg/_object.py
-interfaces__py: rosidl_generator_py/interfaces/msg/_object_s.c
-interfaces__py: rosidl_generator_py/interfaces/msg/_tracks.py
-interfaces__py: rosidl_generator_py/interfaces/msg/_tracks_s.c
+interfaces__py: rosidl_generator_py/interfaces/msg/_camera_location.py
+interfaces__py: rosidl_generator_py/interfaces/msg/_camera_location_list.py
+interfaces__py: rosidl_generator_py/interfaces/msg/_camera_location_list_s.c
+interfaces__py: rosidl_generator_py/interfaces/msg/_camera_location_s.c
+interfaces__py: rosidl_generator_py/interfaces/msg/_object2d.py
+interfaces__py: rosidl_generator_py/interfaces/msg/_object2d_list.py
+interfaces__py: rosidl_generator_py/interfaces/msg/_object2d_list_s.c
+interfaces__py: rosidl_generator_py/interfaces/msg/_object2d_s.c
 interfaces__py: interfaces__py/CMakeFiles/interfaces__py.dir/build.make
 .PHONY : interfaces__py
 

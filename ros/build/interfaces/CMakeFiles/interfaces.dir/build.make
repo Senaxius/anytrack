@@ -66,10 +66,10 @@ include CMakeFiles/interfaces.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/interfaces.dir/progress.make
 
-CMakeFiles/interfaces: /home/ALEX/anytrack/ros/src/interfaces/msg/Object.msg
-CMakeFiles/interfaces: /home/ALEX/anytrack/ros/src/interfaces/msg/Tracks.msg
-CMakeFiles/interfaces: /home/ALEX/anytrack/ros/src/interfaces/msg/Location.msg
-CMakeFiles/interfaces: /home/ALEX/anytrack/ros/src/interfaces/msg/CameraLocations.msg
+CMakeFiles/interfaces: /home/ALEX/anytrack/ros/src/interfaces/msg/Object2d.msg
+CMakeFiles/interfaces: /home/ALEX/anytrack/ros/src/interfaces/msg/Object2dList.msg
+CMakeFiles/interfaces: /home/ALEX/anytrack/ros/src/interfaces/msg/CameraLocation.msg
+CMakeFiles/interfaces: /home/ALEX/anytrack/ros/src/interfaces/msg/CameraLocationList.msg
 CMakeFiles/interfaces: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 CMakeFiles/interfaces: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 CMakeFiles/interfaces: /opt/ros/humble/share/std_msgs/msg/Bool.idl

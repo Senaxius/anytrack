@@ -1,15 +1,19 @@
 manager:
   ros__parameters:
-    websocket: 0
-    gazebo: 0
+    # Foxglove:
+    websocket: 1
+    # Simulation:
     simulation: 0
+    gazebo: 0
     simulation_publisher: 0
     ball_count: 0
     device_count: 0
-    image_vis: 0
+    # Visualisation (optional):
+    image_vis: 1
     vector: 1
     filter: 1
-    estimator: 0
+    # Config:
+    estimator: 1
     width: 1280
     height: 720
     debug: 0

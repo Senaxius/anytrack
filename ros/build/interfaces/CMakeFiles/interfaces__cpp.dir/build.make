@@ -66,139 +66,139 @@ include CMakeFiles/interfaces__cpp.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/interfaces__cpp.dir/progress.make
 
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object__builder.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object__struct.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object__traits.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/tracks.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/tracks__builder.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/tracks__struct.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/tracks__traits.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/location.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/location__builder.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/location__struct.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/location__traits.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/camera_locations.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_locations__builder.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_locations__struct.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_locations__traits.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object2d__builder.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object2d__struct.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object2d__traits.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/object2d_list.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object2d_list__builder.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object2d_list__struct.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object2d_list__traits.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/camera_location.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_location__builder.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_location__struct.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_location__traits.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/camera_location_list.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_location_list__builder.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_location_list__struct.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_location_list__traits.hpp
 
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__builder.hpp.em
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__struct.hpp.em
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__traits.hpp.em
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl.hpp.em
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__builder.hpp.em
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__struct.hpp.em
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__traits.hpp.em
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__builder.hpp.em
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__struct.hpp.em
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__traits.hpp.em
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__builder.hpp.em
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
-rosidl_generator_cpp/interfaces/msg/object.hpp: rosidl_adapter/interfaces/msg/Object.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: rosidl_adapter/interfaces/msg/Tracks.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: rosidl_adapter/interfaces/msg/Location.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: rosidl_adapter/interfaces/msg/CameraLocations.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Char.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/ColorRGBA.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Empty.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Float32.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Float32MultiArray.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Float64.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Float64MultiArray.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Header.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Int16.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Int16MultiArray.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Int32.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Int32MultiArray.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Int64.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Int64MultiArray.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Int8.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/Int8MultiArray.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/MultiArrayDimension.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/MultiArrayLayout.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/String.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/UInt16.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/UInt16MultiArray.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/UInt32.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/UInt32MultiArray.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/UInt64.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
-rosidl_generator_cpp/interfaces/msg/object.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__builder.hpp.em
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__struct.hpp.em
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__traits.hpp.em
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl.hpp.em
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__builder.hpp.em
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__struct.hpp.em
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__traits.hpp.em
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__builder.hpp.em
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__struct.hpp.em
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__traits.hpp.em
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__builder.hpp.em
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: rosidl_adapter/interfaces/msg/Object2d.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: rosidl_adapter/interfaces/msg/Object2dList.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: rosidl_adapter/interfaces/msg/CameraLocation.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: rosidl_adapter/interfaces/msg/CameraLocationList.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Char.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/ColorRGBA.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Empty.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Float32.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Float32MultiArray.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Float64.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Float64MultiArray.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Header.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Int16.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Int16MultiArray.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Int32.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Int32MultiArray.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Int64.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Int64MultiArray.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Int8.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/Int8MultiArray.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/MultiArrayDimension.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/MultiArrayLayout.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/String.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/UInt16.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/UInt16MultiArray.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/UInt32.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/UInt32MultiArray.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/UInt64.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
+rosidl_generator_cpp/interfaces/msg/object2d.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ALEX/anytrack/ros/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/ALEX/anytrack/ros/build/interfaces/rosidl_generator_cpp__arguments.json
 
-rosidl_generator_cpp/interfaces/msg/detail/object__builder.hpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/object__builder.hpp
+rosidl_generator_cpp/interfaces/msg/detail/object2d__builder.hpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/object2d__builder.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/object__struct.hpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/object__struct.hpp
+rosidl_generator_cpp/interfaces/msg/detail/object2d__struct.hpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/object2d__struct.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/object__traits.hpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/object__traits.hpp
+rosidl_generator_cpp/interfaces/msg/detail/object2d__traits.hpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/object2d__traits.hpp
 
-rosidl_generator_cpp/interfaces/msg/tracks.hpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/tracks.hpp
+rosidl_generator_cpp/interfaces/msg/object2d_list.hpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/object2d_list.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/tracks__builder.hpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/tracks__builder.hpp
+rosidl_generator_cpp/interfaces/msg/detail/object2d_list__builder.hpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/object2d_list__builder.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/tracks__struct.hpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/tracks__struct.hpp
+rosidl_generator_cpp/interfaces/msg/detail/object2d_list__struct.hpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/object2d_list__struct.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/tracks__traits.hpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/tracks__traits.hpp
+rosidl_generator_cpp/interfaces/msg/detail/object2d_list__traits.hpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/object2d_list__traits.hpp
 
-rosidl_generator_cpp/interfaces/msg/location.hpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/location.hpp
+rosidl_generator_cpp/interfaces/msg/camera_location.hpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/camera_location.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/location__builder.hpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/location__builder.hpp
+rosidl_generator_cpp/interfaces/msg/detail/camera_location__builder.hpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/camera_location__builder.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/location__struct.hpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/location__struct.hpp
+rosidl_generator_cpp/interfaces/msg/detail/camera_location__struct.hpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/camera_location__struct.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/location__traits.hpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/location__traits.hpp
+rosidl_generator_cpp/interfaces/msg/detail/camera_location__traits.hpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/camera_location__traits.hpp
 
-rosidl_generator_cpp/interfaces/msg/camera_locations.hpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/camera_locations.hpp
+rosidl_generator_cpp/interfaces/msg/camera_location_list.hpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/camera_location_list.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/camera_locations__builder.hpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/camera_locations__builder.hpp
+rosidl_generator_cpp/interfaces/msg/detail/camera_location_list__builder.hpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/camera_location_list__builder.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/camera_locations__struct.hpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/camera_locations__struct.hpp
+rosidl_generator_cpp/interfaces/msg/detail/camera_location_list__struct.hpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/camera_location_list__struct.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/camera_locations__traits.hpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/camera_locations__traits.hpp
+rosidl_generator_cpp/interfaces/msg/detail/camera_location_list__traits.hpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/camera_location_list__traits.hpp
 
 interfaces__cpp: CMakeFiles/interfaces__cpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/camera_locations.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_locations__builder.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_locations__struct.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_locations__traits.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/location__builder.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/location__struct.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/location__traits.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object__builder.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object__struct.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object__traits.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/tracks__builder.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/tracks__struct.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/tracks__traits.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/location.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/object.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/tracks.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/camera_location.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/camera_location_list.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_location__builder.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_location__struct.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_location__traits.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_location_list__builder.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_location_list__struct.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_location_list__traits.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object2d__builder.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object2d__struct.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object2d__traits.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object2d_list__builder.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object2d_list__struct.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/object2d_list__traits.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/object2d.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/object2d_list.hpp
 interfaces__cpp: CMakeFiles/interfaces__cpp.dir/build.make
 .PHONY : interfaces__cpp
 
