@@ -1,15 +1,15 @@
 manager:
   ros__parameters:
-    websocket: 1
+    websocket: 0
     gazebo: 1
     simulation: 1
-    simulation_publisher: 0
-    ball_count: 2
+    simulation_publisher: 1
+    ball_count: 1
     device_count: 4
     image_vis: 0
     vector: 1
     filter: 0
-    estimator: 1
+    estimator: 0
     width: 1280
     height: 720
     debug: 0

@@ -27,6 +27,7 @@ setup(
             "camera_vector = anytrack.camera_vector:main",
             "position_manager = anytrack.position_manager:main",
             "calibration = anytrack.calibration:main",
+            "calibration_old = anytrack.calibration_old:main",
             "test = anytrack.test:main",
             "simulation_publisher = anytrack.simulation_publisher:main",
             "pointcloud_publisher = anytrack.pointcloud_publisher:main",

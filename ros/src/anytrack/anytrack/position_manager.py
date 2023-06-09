@@ -72,9 +72,11 @@ class position_manager(Node):
             self.publish_position("world", ("cam" + str(i) + "_position"), x, y, z, ax, ay, az)
 
         # main loop
+        self.calibration = 0
         self.loop = self.create_timer(1, self.loop_callback)
 
     def loop_callback(self):
+        if self.calibration == 0:
             # for each device
             for i in range(self.device_count):
                 if (self.debug == 1):
@@ -93,6 +95,7 @@ class position_manager(Node):
                 self.publish_position("world", ("cam" + str(i) + "_position"), x, y, z, ax, ay, az)
 
     def calibration_callback(self, msg):
+        self.calibration = 1
         self.get_logger().warning("Received new position data!")
         for index, location in enumerate(msg.locations):
             self.config[str(index)]["x"] = location.x 

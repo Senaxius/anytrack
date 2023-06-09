@@ -15,8 +15,8 @@ def generate_launch_description():
     # world = '/home/ALEX/anytrack/ros/src/simulation/worlds/multi_camera.world'
     # world = '/home/ALEX/anytrack/ros/src/simulation/worlds/test.world'
     # world = '/home/ALEX/anytrack/ros/src/simulation/worlds/multi_ball.world'
-    # world = '/home/ALEX/anytrack/ros/src/simulation/worlds/4-camera-simulation-720.world'
-    world = '/home/ALEX/anytrack/ros/src/simulation/worlds/4-camera-simulation-720-multiple-ball.world'
+    world = '/home/ALEX/anytrack/ros/src/simulation/worlds/4-camera-simulation-720.world'
+    # world = '/home/ALEX/anytrack/ros/src/simulation/worlds/4-camera-simulation-720-multiple-ball.world'
 
     # Use xacro to process the file
     # xacro_file = os.path.join(get_package_share_directory(pkg_name),file_subpath)

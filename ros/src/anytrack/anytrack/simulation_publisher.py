@@ -45,7 +45,7 @@ class simulation_publisher(Node):
 
         self.client = self.create_client(SetEntityState, "/simulation/set_entity_state")
 
-        self.loop = self.create_timer(0.02, self.loop)
+        self.loop = self.create_timer(0.03, self.loop)
 
         self.get_logger().info("Starting publisher...")
 

@@ -1,7 +1,7 @@
 manager:
   ros__parameters:
     # Foxglove:
-    websocket: 1
+    websocket: 0
     # Simulation:
     simulation: 0
     gazebo: 0
@@ -13,9 +13,9 @@ manager:
     vector: 1
     filter: 1
     # Config:
-    estimator: 1
+    estimator: 0
     width: 1280
     height: 720
     debug: 0
-    config_path: "/home/ALEX/anytrack/config/positions/real.json"
+    config_path: "/home/ALEX/anytrack/config/positions/real2.json"
 

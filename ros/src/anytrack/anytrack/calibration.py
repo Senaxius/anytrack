@@ -8,11 +8,17 @@ import numpy as np
 from scipy.spatial.transform import Rotation   
 import threading as th
 import json
+import sys
 
 from interfaces.msg import CameraLocationList
-from interfaces.msg import Object2d
-from interfaces.msg import CameraLocations
+from interfaces.msg import Object2dList
+from interfaces.msg import CameraLocation
 from sensor_msgs.msg import CameraInfo
+
+from visualization_msgs.msg import MarkerArray
+
+sys.path.append('/home/ALEX/anytrack/python/lib')
+import marker as mrk
 
 class calibration(Node): 
     def __init__(self):
@@ -39,7 +45,8 @@ class calibration(Node):
         info_group = ReentrantCallbackGroup()
 
         # create calibration publisher
-        self.publisher = self.create_publisher(msg_type=CameraLocations, topic="calibration", qos_profile=10)
+        self.publisher = self.create_publisher(msg_type=CameraLocationList, topic="calibration", qos_profile=10)
+        self.marker_publisher = self.create_publisher(msg_type=MarkerArray, topic=('/test'), qos_profile=10)
 
         # create variables to store output and input for calibration
         self.output = dict()
@@ -48,7 +55,7 @@ class calibration(Node):
 
         # create subscribers
         for i in range(self.device_count):
-            self.create_subscription(msg_type=Tracks, topic=('/cam' + str(i) + '/tracks'), callback=self.create_tracks_callback(i), qos_profile=10, callback_group=tracks_group)
+            self.create_subscription(msg_type=Object2dList, topic=('/cam' + str(i) + '/tracks'), callback=self.create_tracks_callback(i), qos_profile=10, callback_group=tracks_group)
             self.create_subscription(msg_type=CameraInfo, topic=('/cam' + str(i) + '/camera_info'), callback=self.create_info_callback(i), qos_profile=10, callback_group=info_group)
             self.output.update({i: {
                 'x': float(i * 1.5),
@@ -73,6 +80,8 @@ class calibration(Node):
                 'dist_matrix': [],
                 'buffer': [],
                 'objects': [],
+                'guesses': [],
+                'distance': -1,
             }})
         
         self.average_counter = 10
@@ -162,7 +171,7 @@ class calibration(Node):
                     pp = (0.0, 0.0),
                     method = cv2.RANSAC,
                     prob = 0.999,
-                    threshold = 0.001,
+                    threshold = 0.003,
                     maxIters = None,
                 )
             except:
@@ -183,65 +192,52 @@ class calibration(Node):
             r = Rotation.from_matrix(R)
             angles = r.as_euler("zyx", degrees=False)
 
-            # write into calibration buffer to publish
-            self.output[index]['x'] =  t[0] * -1
-            self.output[index]['y'] =  t[1] * -1
-            self.output[index]['z'] =  t[2] * -1
-            self.output[index]['ax'] = angles[0] * -1
-            self.output[index]['ay'] = angles[1] * -1
-            self.output[index]['az'] = angles[2] * -1
+            # calculate score v2
+            input = self.input[index]
 
-            # Filter
-            self.average[index]['x'].append(self.output[index]['x'])
-            self.average[index]['y'].append(self.output[index]['y'])
-            self.average[index]['z'].append(self.output[index]['z'])
-            self.average[index]['ax'].append(self.output[index]['ax'])
-            self.average[index]['ay'].append(self.output[index]['ay'])
-            self.average[index]['az'].append(self.output[index]['az'])
+            T = np.array([t[0] * -1, t[1] * -1, t[2] * -1])
+            input['guesses'].append((T, R))
 
-            if len(self.average[index]['x']) > self.average_counter:
-                self.average[index]['x'].pop(0)
-                self.average[index]['y'].pop(0)
-                self.average[index]['z'].pop(0)
-                self.average[index]['ax'].pop(0)
-                self.average[index]['ay'].pop(0)
-                self.average[index]['az'].pop(0)
+            best_guess = (T, R)
+            previous_distance = -1
+            for guess in input['guesses']:
+                start0 = np.array([0,0,0])
+                start1 = guess[0]
+                distances = []
+                for i in range(len(cam1_points)):
+                    end0 = np.array([cam0_points[i][0], cam0_points[i][1], 1])
+                    end1 = np.array([cam1_points[i][0], cam1_points[i][1], 1])
+                    end1 = np.matmul(end1, guess[1])
+                    end1 = (guess[0][0] + end1[0], guess[0][1] + end1[1], guess[0][2] + end1[2])
+                    _, _, dis = self.closestDistanceBetweenLines(start0,end0,start1,end1)
+                    distances.append(dis)
+                average_dis = sum(distances) / len(distances)
+                # print(average_dis)
+                if previous_distance == -1:
+                    previous_distance = average_dis
+                    best_guess = guess
+                else:
+                    if average_dis < previous_distance:
+                        previous_distance = average_dis
+                        best_guess = guess
 
-            self.output[index]['x']  = sum(self.average[index]['x']) / len(self.average[index]['x'])
-            self.output[index]['y']  = sum(self.average[index]['y']) / len(self.average[index]['y']) 
-            self.output[index]['z']  = sum(self.average[index]['z']) / len(self.average[index]['z']) 
-            self.output[index]['ax'] = sum(self.average[index]['ax']) / len(self.average[index]['ax'])
-            self.output[index]['ay'] = sum(self.average[index]['ay']) / len(self.average[index]['ay'])
-            self.output[index]['az'] = sum(self.average[index]['az']) / len(self.average[index]['az'])
-
-            self.output[index]['x']  = round(self.output[index]['x'], 2)
-            self.output[index]['y']  = round(self.output[index]['y'], 2) 
-            self.output[index]['z']  = round(self.output[index]['z'], 2) 
-            self.output[index]['ax'] = round(self.output[index]['ax'], 3)
-            self.output[index]['ay'] = round(self.output[index]['ay'], 3)
-            self.output[index]['az'] = round(self.output[index]['az'], 3)
-
-
+                self.output[index]['x'] =  best_guess[0][0]
+                self.output[index]['y'] =  best_guess[0][1]
+                self.output[index]['z'] =  best_guess[0][2]
+                r = Rotation.from_matrix(best_guess[1])
+                angles = r.as_euler("zyx", degrees=False)
+                self.output[index]['ax'] = angles[0] * -1
+                self.output[index]['ay'] = angles[1] * -1
+                self.output[index]['az'] = angles[2] * -1
+            
             # publish calibration data for live preview
             self.publish_calibration()
             print(self.output[index])
 
-            # k=ord(getch.getch())
             if self.key >= 1:
                 self.write_config()
                 self.destroy_node()
-            
 
-            # print("translation: (" + str(round(t[2], 1)), end='')
-            # print(", " + str(round(t[0], 1)), end='')
-            # print(", " + str(round(t[1], 1)), end='')
-            # print(")")
-
-            # print("rotation (in degrees): (" + str(round(angles[1], 2)), end='')
-            # print(", " + str(round(angles[0], 2)), end='')
-            # print(", " + str(round(angles[2], 2)), end='')
-            # print(")")
-    
     def create_tracks_callback(self, index):
         return lambda msg:self.tracks_callback(msg, index)
     def create_info_callback(self, index):
@@ -259,9 +255,9 @@ class calibration(Node):
         self.input[index]['dist_matrix'] = np.array([d[0], d[1], d[2], d[3], d[4]])
 
     def publish_calibration(self):
-        msg = CameraLocations()
+        msg = CameraLocationList()
         for i in range(self.device_count):
-            location = Location()
+            location = CameraLocation()
             location.id = i
             location.x = self.output[i]['x']
             location.y = self.output[i]['y']
@@ -281,6 +277,40 @@ class calibration(Node):
         with open(("/home/ALEX/anytrack/config/positions/" + name + ".json"), "w") as outfile:
             outfile.write(file)
         print("Calibration done!")
+
+    def closestDistanceBetweenLines(self, a0,a1,b0,b1):
+        # Calculate denomitator
+        A = a1 - a0
+        B = b1 - b0
+        magA = np.linalg.norm(A)
+        magB = np.linalg.norm(B)
+        
+        _A = A / magA
+        _B = B / magB
+        
+        cross = np.cross(_A, _B);
+        denom = np.linalg.norm(cross)**2
+        
+        # If lines are parallel (denom=0) test if lines overlap.
+        # If they don't overlap then there is a closest point solution.
+        # If they do overlap, there are infinite closest positions, but there is a closest distance
+        if not denom:
+            d0 = np.dot(_A,(b0-a0))
+            
+            return None,None,np.linalg.norm(((d0*_A)+a0)-b0)
+            
+        # Lines criss-cross: Calculate the projected closest points
+        t = (b0 - a0);
+        detA = np.linalg.det([t, _B, cross])
+        detB = np.linalg.det([t, _A, cross])
+
+        t0 = detA/denom;
+        t1 = detB/denom;
+
+        pA = a0 + (_A * t0) # Projected closest point on segment A
+        pB = b0 + (_B * t1) # Projected closest point on segment B
+
+        return np.array(pA),np.array(pB),np.linalg.norm(pA-pB)
 
 def main(args=None):
     rclpy.init(args=args)
