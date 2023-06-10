@@ -30,13 +30,6 @@ class calibration(Node):
 
         # import parameters
         self.device_count = self.get_parameter("device_count").value
-        self.width = self.get_parameter("width").value
-        self.height = self.get_parameter("height").value
-
-        # debug only
-        # self.device_count = 2
-        # self.width = 1280
-        # self.height = 720
 
         self.get_logger().info("Starting calibrator...")
 
@@ -50,6 +43,7 @@ class calibration(Node):
 
         # create variables to store output and input for calibration
         self.output = dict()
+        self.scale_data = dict()
         self.input = dict()
         self.average = dict()
 
@@ -64,7 +58,11 @@ class calibration(Node):
                 'ax': 0.0,
                 'ay': 0.0,
                 'az': 0.0,
-                'scale': 1.0
+                'scale': 1.0,
+            }})
+            self.scale_data.update({i: {
+                'T': [],
+                'R': [],
             }})
             self.average.update({i: {
                 'x': [],
@@ -94,6 +92,7 @@ class calibration(Node):
         self.date_check = 0
 
         self.key = 0
+        self.scale_calibration = 1
         th.Thread(target=self.key_capture, args=(), name='key_capture_thread', daemon=True).start()
 
         # main loop
@@ -104,6 +103,10 @@ class calibration(Node):
         self.key += 1
 
     def loop_callback(self):
+        if self.key == 1:
+            # self.write_config()
+            self.scale_calibration = 1
+            # self.destroy_node()
         # check if input is good to calibrate
         if self.info_check == 0:
             for cam in self.input:
@@ -115,7 +118,10 @@ class calibration(Node):
         
         # check if every camera detected one object
         for cam in self.input:
-            if len(self.input[cam]['buffer']) != 1:
+            if len(self.input[cam]['buffer']) != 1 and self.scale_calibration == 0:
+                print("not every camera detected one object")
+                return
+            if len(self.input[cam]['buffer']) < 1 and self.scale_calibration == 1:
                 print("not every camera detected one object")
                 return
         
@@ -123,28 +129,74 @@ class calibration(Node):
         for cam in self.input:
             # undistort Points
             input = self.input[cam]
-            if len(input['buffer']) != 1:
-                print("ohno")
-                return
-            distorted_point = (input['buffer'][0].x, input['buffer'][0].y)
-            camera_matrix = input['camera_matrix']
-            dist_matrix = input['dist_matrix']
-            point = cv2.undistortPoints(distorted_point, cameraMatrix=camera_matrix, distCoeffs=dist_matrix, P=None)
-            point = point.flatten()
-            point = (point[0], point[1])
-            # print(point)
-            input['objects'].append(point)
-            # input['objects'].append(distorted_point)
+            if self.scale_calibration == 0:
+                distorted_point = (input['buffer'][0].x, input['buffer'][0].y)
+                camera_matrix = input['camera_matrix']
+                dist_matrix = input['dist_matrix']
+                point = cv2.undistortPoints(distorted_point, cameraMatrix=camera_matrix, distCoeffs=dist_matrix, P=None)
+                point = point.flatten()
+                point = (point[0], point[1])
+                input['objects'].append(point)
+            else:
+                input['objects'] = []
+                for i in range(len(input['buffer'])):
+                    distorted_point = (input['buffer'][i].x, input['buffer'][i].y)
+                    camera_matrix = input['camera_matrix']
+                    dist_matrix = input['dist_matrix']
+                    point = cv2.undistortPoints(distorted_point, cameraMatrix=camera_matrix, distCoeffs=dist_matrix, P=None)
+                    point = point.flatten()
+                    point = (point[0], point[1])
+                    input['objects'].append(point)
 
         # check if there is enough data to start calibration 
         if self.date_check == 0:
-            for cam in self.input:
-                self.date_check = 1
-                if len(self.input[cam]['objects']) <= 7:
-                    self.date_check = 0
-                    print("not enough data to calibrate")
-                    return
+            if self.scale_calibration == 0:
+                for cam in self.input:
+                    self.date_check = 1
+                    if len(self.input[cam]['objects']) <= 7:
+                        self.date_check = 0
+                        print("not enough data to calibrate")
+                        return
 
+        # Calibrate scale
+        if self.scale_calibration == 1:
+            ready_cams = []
+            for cam_index, cam in enumerate(self.input):
+                if len(self.input[cam]['buffer']) == 5:
+                    ready_cams.append(cam_index)
+            if len(ready_cams) == 0:
+                print("Hold the Calibration-Wand in front of two Cameras")
+            markerarray = MarkerArray()
+            if 0 in ready_cams:
+                raw_points = np.array(self.input[0]['objects'])
+                start0 = np.array([0,0,0])
+                points = []
+                corners = []
+                center = None
+                for i in range(len(raw_points)):
+                    end0 = np.array([raw_points[i][0], raw_points[i][1], 1])
+                    points.append((end0[0], end0[1], end0[2], i))
+                for point in points:
+                    if point[3] == max(points, key=lambda x: x[0])[3]:
+                        corners.append(point)
+                    elif point[3] == min(points, key=lambda x: x[0])[3]:
+                        corners.append(point)
+                    elif point[3] == max(points, key=lambda y: y[1])[3]:
+                        corners.append(point)
+                    elif point[3] == min(points, key=lambda y: y[1])[3]:
+                        corners.append(point)
+                    else:
+                        center = point
+                    
+                id = 0
+                for i in corners:
+                    marker = mrk.create_point(i, "test", id, 'world', self.get_clock().now().to_msg(), (255, 0, 255, 0), lifetime=(1, 50000000))
+                    id += 1
+                    markerarray.markers.append(marker)
+                marker = mrk.create_point(center, "test", id, 'world', self.get_clock().now().to_msg(), (255, 255, 0, 0), lifetime=(1, 50000000))
+                markerarray.markers.append(marker)
+                self.marker_publisher.publish(markerarray)
+            return
 
         # calculate position for number of cameras in relation to cam0
         for cam in range(self.device_count - 1):
@@ -199,6 +251,8 @@ class calibration(Node):
             input['guesses'].append((T, R))
 
             best_guess = (T, R)
+            self.scale_data[index]['T'] = T
+            self.scale_data[index]['R'] = R
             previous_distance = -1
             for guess in input['guesses']:
                 start0 = np.array([0,0,0])
@@ -234,9 +288,6 @@ class calibration(Node):
             self.publish_calibration()
             print(self.output[index])
 
-            if self.key >= 1:
-                self.write_config()
-                self.destroy_node()
 
     def create_tracks_callback(self, index):
         return lambda msg:self.tracks_callback(msg, index)

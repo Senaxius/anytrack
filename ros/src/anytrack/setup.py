@@ -28,6 +28,7 @@ setup(
             "position_manager = anytrack.position_manager:main",
             "calibration = anytrack.calibration:main",
             "calibration_old = anytrack.calibration_old:main",
+            "scale_calibration = anytrack.scale_calibration:main",
             "test = anytrack.test:main",
             "simulation_publisher = anytrack.simulation_publisher:main",
             "pointcloud_publisher = anytrack.pointcloud_publisher:main",
