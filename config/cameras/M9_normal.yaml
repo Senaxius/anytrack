@@ -24,3 +24,10 @@ projection_matrix:
   data: [1057.66711,    0.     ,  636.89155,    0.     ,
             0.     , 1057.33191,  353.05261,    0.     ,
             0.     ,    0.     ,    1.     ,    0.     ]
+color:
+  start: [42, 140, 95]
+  end: [68, 255, 255]
+filter:
+  contrast: 0
+  saturation: 128
+

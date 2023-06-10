@@ -56,6 +56,7 @@ class manager(Node):
             for i in range(self.device_count):
                 self.devices.append(i)
         self.get_logger().info("Found Number of Devices: " + str(len(self.devices)))
+        self.get_logger().info(str(self.devices))
 
         ls = LaunchService()
         ls.include_launch_description(self.generate_launch_description())
@@ -85,13 +86,33 @@ class manager(Node):
     def generate_launch_description(self):
         ld = LaunchDescription()
 
-        count = 0
         length = len(self.devices)
-
-        for cam in self.devices:
-            device = cam
-            index = count
-            count += 1
+        for index, device in enumerate(self.devices):
+            command = "v4l2-ctl -d /dev/video" + str(device) + " -D"
+            stream = os.popen(command)
+            output = stream.read()
+            m = 0
+            if "HD Web Camera" in output:
+                model = "HD Web Camera" 
+                file = "/home/ALEX/anytrack/config/cameras/HD_Web_Camera.yaml"
+            elif "CameraA" in output:
+                model = "CameraA" 
+                file = "/home/ALEX/anytrack/config/cameras/CameraA.yaml"
+            elif "WEB CAMERA M9 Pro" in output:
+                if m == 0:
+                    model = "WEB CAMERA M9 Pro (Black)" 
+                    file = "/home/ALEX/anytrack/config/cameras/M9_black.yaml"
+                    m = 1
+                else:
+                    model = "WEB CAMERA M9 Pro (Normal)" 
+                    file = "/home/ALEX/anytrack/config/cameras/M9_normal.yaml"
+            elif "Razer" in output:
+                model = "Razer Kiyo" 
+                file = "/home/ALEX/anytrack/config/cameras/Razer.yaml"
+            else:
+                self.get_logger().warning("video"+ str(device) + " Found device but no known configuration")
+                exit()
+            self.get_logger().info("device: /dev/video" + str(device) + ", model: " + str(model))
 
             camX_driver = Action(
                 package="anytrack",
@@ -101,12 +122,13 @@ class manager(Node):
                 parameters=[
                     {"index": index},
                     {"device": device},
+                    {"config": file},
                     {"debug": self.debug},
                     {"framerate": 30},
                     {"width": self.width},
                     {"height": self.height},
                     {"filter": self.filter},
-                ]
+                ],
             )
 
             camX_detector = Action(
@@ -116,6 +138,7 @@ class manager(Node):
                 namespace= ('cam' + str(index)),
                 parameters=[
                     {"index": index},
+                    {"config": file},
                     {"visualize": self.image_vis},
                     {"debug": self.debug},
                     {"width": self.width},
@@ -130,6 +153,7 @@ class manager(Node):
                 parameters=[
                     {"index": index},
                     {"device": device},
+                    {"config": file},
                     {"width": self.width},
                     {"height": self.height},
                 ]
@@ -147,7 +171,6 @@ class manager(Node):
                     {"height": self.height},
                 ]
             )
-
             if self.simulation == 0:
                 ld.add_action(camX_driver)
                 ld.add_action(camX_camera_info)

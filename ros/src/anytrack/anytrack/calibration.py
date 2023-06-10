@@ -189,8 +189,8 @@ class calibration(Node):
 
             t = np.matmul(np.linalg.inv(R), t)
             t = t.flatten()
-            r = Rotation.from_matrix(R)
-            angles = r.as_euler("zyx", degrees=False)
+            # r = Rotation.from_matrix(R)
+            # angles = r.as_euler("xyz", degrees=False)
 
             # calculate score v2
             input = self.input[index]
@@ -225,7 +225,7 @@ class calibration(Node):
                 self.output[index]['y'] =  best_guess[0][1]
                 self.output[index]['z'] =  best_guess[0][2]
                 r = Rotation.from_matrix(best_guess[1])
-                angles = r.as_euler("zyx", degrees=False)
+                angles = r.as_euler("xyz", degrees=False)
                 self.output[index]['ax'] = angles[0] * -1
                 self.output[index]['ay'] = angles[1] * -1
                 self.output[index]['az'] = angles[2] * -1

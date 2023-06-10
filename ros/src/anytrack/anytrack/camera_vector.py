@@ -76,7 +76,6 @@ class camera_vector(Node):
         self.d =  np.array([d[0], d[1], d[2], d[3], d[4]])
     
     def create_marker(self, x, y, id):
-
         point = cv2.undistortPoints((x, y), cameraMatrix=self.k, distCoeffs=self.d, P=None).flatten()
         x = point[0]
         y = point[1]

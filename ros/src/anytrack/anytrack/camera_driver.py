@@ -2,10 +2,11 @@ from collections import deque
 from cv_bridge import CvBridge
 import numpy as np
 import cv2
+import os
 import sys
 import time
-import os
 import rclpy
+import yaml
 from rclpy.node import Node
 
 from sensor_msgs.msg import Image
@@ -18,6 +19,7 @@ class camera_driver(Node):
         # declare Parameters
         self.declare_parameter("index", -1)
         self.declare_parameter("device", -1)
+        self.declare_parameter("config", '')
         self.declare_parameter("debug", 0)
         self.declare_parameter("framerate", 30)
         self.declare_parameter("width", 1280)
@@ -27,6 +29,7 @@ class camera_driver(Node):
         # import parameters
         self.index = self.get_parameter("index").value
         self.device = self.get_parameter("device").value
+        self.file = self.get_parameter("config").value
         self.debug = self.get_parameter("debug").value
         self.framerate = self.get_parameter("framerate").value
         self.width = self.get_parameter("width").value
@@ -50,35 +53,20 @@ class camera_driver(Node):
             exit()
 
         self.get_logger().info("Starting camera driver with index " + str(self.index) + " on device: video" + str(self.device))
+        if self.filter == 1:
+            self.data = self.read_yaml(self.file)
+            for filter in self.data['filter']:
+                os.popen('v4l2-ctl -d /dev/video' + str(self.device) + ' -c ' + str(filter) + '=' + str(self.data['filter'][filter]))
 
         self.image_publisher = self.create_publisher(msg_type=Image, topic="/cam" + str(self.index) + "/image_raw", qos_profile=10)
-
-
-        if self.device == 0:
-            self.get_logger().info("Detected camera with know device type: M9 Pro 'Black'") 
-            self.file = "/home/ALEX/anytrack/config/cameras/M9_black.yaml"
-        elif self.device == 2:
-            self.get_logger().info("Detected camera with know device type: M9 Pro 'Normal'") 
-            self.file = "/home/ALEX/anytrack/config/cameras/M9_normal.yaml"
-        elif self.device == 4:
-            self.get_logger().info("Detected camera with know device type: HD Web Camera") 
-            self.file = "/home/ALEX/anytrack/config/cameras/HD_Web_Camera.yaml"
-        else:
-            self.get_logger().warning("Found device but no known configuration")
-            exit()
-
-        # applay camera filter if set
-        if self.filter == 1:
-            if self.device == 0 or self.device == 2:
-                set = os.popen('v4l2-ctl -d /dev/video' + str(self.device) + ' -c contrast=0')
-                set = os.popen('v4l2-ctl -d /dev/video' + str(self.device) + ' -c saturation=128')
-            if self.device == 4 :
-                set = os.popen('v4l2-ctl -d /dev/video' + str(self.device) + ' -c contrast=71')
-                set = os.popen('v4l2-ctl -d /dev/video' + str(self.device) + ' -c saturation=255')
 
         # starting main camera Loop
         self.bridge = CvBridge()
         self.camera_loop()
+
+    def read_yaml(self, filename):
+        with open(filename, "r") as file_handle:
+            return yaml.load(file_handle, Loader=yaml.FullLoader)
 
     def publish_image(self, image):
         msg = self.bridge.cv2_to_imgmsg(np.array(image), "bgr8")

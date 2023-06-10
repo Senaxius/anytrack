@@ -141,8 +141,6 @@ def ball_scanner(frame, colors=[], min_radius=10, prev_objects=[]):
                 ids.append(object.id)
     return objects
 
-
-
 def scanner_visulisation(frame, objects, line_buffer):
     color_1 = (237, 255, 0)
     color_2 = (0, 255, 255)

@@ -13,9 +13,9 @@ manager:
     vector: 1
     filter: 1
     # Config:
-    estimator: 0
+    estimator: 1
     width: 1280
     height: 720
     debug: 0
-    config_path: "/home/ALEX/anytrack/config/positions/real2.json"
+    config_path: "/home/ALEX/anytrack/config/positions/default.json"
 

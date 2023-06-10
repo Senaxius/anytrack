@@ -4,6 +4,8 @@ import numpy as np
 import cv2
 import time
 import sys
+import os
+import yaml
 import rclpy
 from rclpy.node import Node
 
@@ -20,6 +22,7 @@ class camera_detector(Node):
 
         # declare Parameters
         self.declare_parameter("index", -1)
+        self.declare_parameter("config", '')
         self.declare_parameter("visualize", 1)
         self.declare_parameter("debug", 0)
         self.declare_parameter("width", 1920)
@@ -27,6 +30,7 @@ class camera_detector(Node):
 
         # import parameters
         self.index = self.get_parameter("index").value
+        self.file = self.get_parameter("config").value
         self.visualize = self.get_parameter("visualize").value
         self.debug = self.get_parameter("debug").value
         self.width = self.get_parameter("width").value
@@ -45,15 +49,32 @@ class camera_detector(Node):
             exit()
 
         self.get_logger().info("Starting camera detector with index " + str(self.index))
+        self.data = self.read_yaml(self.file)
 
         self.tracks_publisher = self.create_publisher(msg_type=Object2dList, topic="/cam" + str(self.index) + "/tracks", qos_profile=10)
 
         self.image_publisher = self.create_publisher(msg_type=Image, topic="/cam" + str(self.index) + "/image_tracked", qos_profile=10)
 
-        self.detector_setup()
+        self.buffer_size = 10
+        self.line_buffer = []
+        for i in range(4):
+            self.line_buffer.append(deque(maxlen=self.buffer_size))
+        # create TrackingObject
+        self.green_ball = trk.ColorObject()
+        self.green_ball.start_color = np.array(self.data['color']['start'])
+        self.green_ball.end_color = np.array(self.data['color']['end'])
+        
+        self.objects = []
+
+        # bridge to convert between ros msg and opencv
+        self.bridge = CvBridge()
 
         # starting main camera subcription to driver
         self.driver_subscriber = self.create_subscription(msg_type=Image, topic=("/cam" + str(self.index) + "/image_raw"), callback=self.driver_callback, qos_profile=10)
+
+    def read_yaml(self, filename):
+        with open(filename, "r") as file_handle:
+            return yaml.load(file_handle, Loader=yaml.FullLoader)
     
     def driver_callback(self, msg):
         frame = self.bridge.imgmsg_to_cv2(msg)
@@ -90,29 +111,12 @@ class camera_detector(Node):
         msg = self.bridge.cv2_to_imgmsg(np.array(image), "bgr8")
         msg.header.frame_id = ('cam' +  str(self.index) + '_position')
         self.image_publisher.publish(msg)
-    
-    def detector_setup(self):
-        # buffer for tracking line (only visualisation)
-        self.buffer_size = 100
-        self.line_buffer = []
-        for i in range(4):
-            self.line_buffer.append(deque(maxlen=self.buffer_size))
-        # create TrackingObject
-        self.green_ball = trk.ColorObject()
-        self.green_ball.start_color = (43, 222, 116)
-        self.green_ball.end_color = (63, 255, 255)
-        
-        self.objects = []
-
-        # bridge to convert between ros msg and opencv
-        self.bridge = CvBridge()
 
 def main(args=None):
     rclpy.init(args=args)
     node = camera_detector() 
     rclpy.spin(node)
     rclpy.shutdown()
- 
  
 if __name__ == "__main__":
     main()

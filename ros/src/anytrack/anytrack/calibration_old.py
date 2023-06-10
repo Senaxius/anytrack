@@ -181,12 +181,14 @@ class calibration(Node):
             t = np.matmul(np.linalg.inv(R), t)
             t = t.flatten()
             r = Rotation.from_matrix(R)
-            angles = r.as_euler("zyx", degrees=False)
+            # angles = r.as_euler("zyx", degrees=False)
+            angles = r.as_euler("xyz", degrees=False)
 
             # write into calibration buffer to publish
             self.output[index]['x'] =  t[0] * -1
             self.output[index]['y'] =  t[1] * -1
             self.output[index]['z'] =  t[2] * -1
+
             self.output[index]['ax'] = angles[0] * -1
             self.output[index]['ay'] = angles[1] * -1
             self.output[index]['az'] = angles[2] * -1
@@ -242,6 +244,7 @@ class calibration(Node):
         for object in msg.tracks:
             self.input[index]['buffer'].append(object)
     def info_callback(self, msg, index):
+        print(index)
         k = msg.k
         d = msg.d
         self.input[index]['camera_matrix'] = np.matrix([[k[0], k[1], k[2]], [k[3], k[4], k[5]], [k[6], k[7], k[8]]])
