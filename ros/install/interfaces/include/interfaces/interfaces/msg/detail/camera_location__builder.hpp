@@ -21,16 +21,32 @@ namespace msg
 namespace builder
 {
 
+class Init_CameraLocation_scale
+{
+public:
+  explicit Init_CameraLocation_scale(::interfaces::msg::CameraLocation & msg)
+  : msg_(msg)
+  {}
+  ::interfaces::msg::CameraLocation scale(::interfaces::msg::CameraLocation::_scale_type arg)
+  {
+    msg_.scale = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::interfaces::msg::CameraLocation msg_;
+};
+
 class Init_CameraLocation_az
 {
 public:
   explicit Init_CameraLocation_az(::interfaces::msg::CameraLocation & msg)
   : msg_(msg)
   {}
-  ::interfaces::msg::CameraLocation az(::interfaces::msg::CameraLocation::_az_type arg)
+  Init_CameraLocation_scale az(::interfaces::msg::CameraLocation::_az_type arg)
   {
     msg_.az = std::move(arg);
-    return std::move(msg_);
+    return Init_CameraLocation_scale(msg_);
   }
 
 private:

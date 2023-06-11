@@ -104,8 +104,10 @@ class position_manager(Node):
             self.config[str(index)]["ax"] = location.ax 
             self.config[str(index)]["ay"] = location.ay 
             self.config[str(index)]["az"] = location.az 
+            self.config[str(index)]["scale"] = location.scale 
 
             self.publish_position("world", ("cam" + str(index) + "_position"), location.x, location.y, location.z, location.ax, location.ay, location.az)
+            self.publish_position("world", ("cam" + str(index) + "_position"), location.x * location.scale, location.y * location.scale, location.z * location.scale, location.ax, location.ay, location.az)
 
     def publish_position(self, origin, child, x, y, z, ax, ay, az):
         t = TransformStamped()

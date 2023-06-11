@@ -84,6 +84,11 @@ static bool _CameraLocation__cdr_serialize(
     cdr << ros_message->az;
   }
 
+  // Field name: scale
+  {
+    cdr << ros_message->scale;
+  }
+
   return true;
 }
 
@@ -129,6 +134,11 @@ static bool _CameraLocation__cdr_deserialize(
   // Field name: az
   {
     cdr >> ros_message->az;
+  }
+
+  // Field name: scale
+  {
+    cdr >> ros_message->scale;
   }
 
   return true;
@@ -187,6 +197,12 @@ size_t get_serialized_size_interfaces__msg__CameraLocation(
   // field.name az
   {
     size_t item_size = sizeof(ros_message->az);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name scale
+  {
+    size_t item_size = sizeof(ros_message->scale);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -259,6 +275,13 @@ size_t max_serialized_size_interfaces__msg__CameraLocation(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
   // member: az
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: scale
   {
     size_t array_size = 1;
 

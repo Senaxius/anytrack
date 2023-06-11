@@ -113,6 +113,15 @@ bool interfaces__msg__camera_location__convert_from_py(PyObject * _pymsg, void *
     ros_message->az = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // scale
+    PyObject * field = PyObject_GetAttrString(_pymsg, "scale");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->scale = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -206,6 +215,17 @@ PyObject * interfaces__msg__camera_location__convert_to_py(void * raw_ros_messag
     field = PyFloat_FromDouble(ros_message->az);
     {
       int rc = PyObject_SetAttrString(_pymessage, "az", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // scale
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->scale);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "scale", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

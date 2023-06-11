@@ -64,6 +64,7 @@ class CameraLocation(metaclass=Metaclass_CameraLocation):
         '_ax',
         '_ay',
         '_az',
+        '_scale',
     ]
 
     _fields_and_field_types = {
@@ -74,10 +75,12 @@ class CameraLocation(metaclass=Metaclass_CameraLocation):
         'ax': 'double',
         'ay': 'double',
         'az': 'double',
+        'scale': 'double',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('int8'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
@@ -97,6 +100,7 @@ class CameraLocation(metaclass=Metaclass_CameraLocation):
         self.ax = kwargs.get('ax', float())
         self.ay = kwargs.get('ay', float())
         self.az = kwargs.get('az', float())
+        self.scale = kwargs.get('scale', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -140,6 +144,8 @@ class CameraLocation(metaclass=Metaclass_CameraLocation):
         if self.ay != other.ay:
             return False
         if self.az != other.az:
+            return False
+        if self.scale != other.scale:
             return False
         return True
 
@@ -252,3 +258,18 @@ class CameraLocation(metaclass=Metaclass_CameraLocation):
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
                 "The 'az' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._az = value
+
+    @builtins.property
+    def scale(self):
+        """Message field 'scale'."""
+        return self._scale
+
+    @scale.setter
+    def scale(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'scale' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'scale' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._scale = value

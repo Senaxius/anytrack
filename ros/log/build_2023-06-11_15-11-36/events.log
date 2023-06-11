@@ -1,0 +1,349 @@
+[0.000000] (-) TimerEvent: {}
+[0.000394] (-) JobUnselected: {'identifier': 'anytrack'}
+[0.000624] (-) JobUnselected: {'identifier': 'simulation'}
+[0.000675] (interfaces) JobQueued: {'identifier': 'interfaces', 'dependencies': OrderedDict()}
+[0.000708] (interfaces) JobStarted: {'identifier': 'interfaces'}
+[0.012690] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'cmake'}
+[0.013137] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'build'}
+[0.013693] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ALEX/anytrack/ros/build/interfaces', '--', '-j12', '-l12'], 'cwd': '/home/ALEX/anytrack/ros/build/interfaces', 'env': OrderedDict([('HOSTNAME', 'Arch-PC'), ('FZF_CTRL_T_COMMAND', 'fd --type f --hidden'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ALEX/anytrack/ros/install/interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/home/ALEX/anytrack/ros/src'), ('LESS', '-R'), ('ZSH', '/usr/local/zsh/oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('VISUAL', 'nvim'), ('STM', '/home/ALEX/STM32/etc/gcc-arm-none-eabi/bin'), ('ALEX', '/home/ALEX'), ('ROS_DISTRO', 'humble'), ('FZF_CTRL_T_OPTS', "--preview 'bat --color=always --line-range :50 {}'"), ('COLCON_PREFIX_PATH', '/home/ALEX/xray/ros/install:/home/ALEX/anytrack/ros/install'), ('LOGNAME', 'root'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('FZF_ALT_C_COMMAND', 'fd --type d . --hidden'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/texlive/2023/bin/x86_64-linux:/home/ALEX/anytrack/docker:/root/.fzf/bin'), ('DIRHISTORY_SIZE', '30'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/ALEX/anytrack/ros/install/simulation:/home/ALEX/anytrack/ros/install/interfaces:/home/ALEX/anytrack/ros/install/anytrack:/home/ALEX/xray/ros/install/xray:/opt/ros/humble'), ('FZF_ALT_C_OPTS', "--preview 'tree -C {} | head -50'"), ('LC_ALL', 'C.UTF-8'), ('PWD', '/home/ALEX/anytrack/ros/build/interfaces'), ('FZF_DEFAULT_COMMAND', 'fd --type f --hidden'), ('PYTHONPATH', '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages:/home/ALEX/anytrack/ros/build/anytrack:/home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages:/home/ALEX/xray/ros/build/xray:/home/ALEX/xray/ros/install/xray/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('EDITOR', 'nvim'), ('CMAKE_PREFIX_PATH', '/home/ALEX/anytrack/ros/install/simulation:/home/ALEX/anytrack/ros/install/interfaces:/home/ALEX/anytrack/ros/install/anytrack:/home/ALEX/xray/ros/install/xray:/opt/ros/humble')]), 'shell': False}
+[0.036371] (interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099831] (-) TimerEvent: {}
+[0.169907] (interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.171683] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.174450] (interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.199938] (-) TimerEvent: {}
+[0.206061] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.233700] (interfaces) StdoutLine: {'line': b'-- Found std_msgs: 4.2.3 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.300046] (-) TimerEvent: {}
+[0.400274] (-) TimerEvent: {}
+[0.500517] (-) TimerEvent: {}
+[0.549609] (interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.600626] (-) TimerEvent: {}
+[0.700894] (-) TimerEvent: {}
+[0.754279] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.800990] (-) TimerEvent: {}
+[0.901235] (-) TimerEvent: {}
+[1.001479] (-) TimerEvent: {}
+[1.024063] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.045101] (interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.065901] (interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.066062] (interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.066126] (interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.097686] (interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.101564] (-) TimerEvent: {}
+[1.130365] (interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[1.133134] (interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/ALEX/anytrack/ros/build/interfaces\n'}
+[1.152601] (interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.160763] (interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.168645] (interfaces) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_copy_interfaces\n'}
+[1.201657] (-) TimerEvent: {}
+[1.301917] (-) TimerEvent: {}
+[1.402154] (-) TimerEvent: {}
+[1.406017] (interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[1.406429] (interfaces) StdoutLine: {'line': b'writing interfaces.egg-info/PKG-INFO\n'}
+[1.406594] (interfaces) StdoutLine: {'line': b'writing dependency_links to interfaces.egg-info/dependency_links.txt\n'}
+[1.406727] (interfaces) StdoutLine: {'line': b'writing top-level names to interfaces.egg-info/top_level.txt\n'}
+[1.408508] (interfaces) StdoutLine: {'line': b"reading manifest file 'interfaces.egg-info/SOURCES.txt'\n"}
+[1.408977] (interfaces) StdoutLine: {'line': b"writing manifest file 'interfaces.egg-info/SOURCES.txt'\n"}
+[1.431102] (interfaces) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_build_interfaces_egg\n'}
+[1.502252] (-) TimerEvent: {}
+[1.558390] (interfaces) StdoutLine: {'line': b'[  3%] Built target interfaces__cpp\n'}
+[1.567086] (interfaces) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.567373] (interfaces) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.567702] (interfaces) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.596850] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_generator_c\x1b[0m\n'}
+[1.602367] (-) TimerEvent: {}
+[1.609742] (interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.o\x1b[0m\n'}
+[1.609993] (interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.o\x1b[0m\n'}
+[1.610107] (interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.o\x1b[0m\n'}
+[1.610920] (interfaces) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.o\x1b[0m\n'}
+[1.662660] (interfaces) StdoutLine: {'line': b'[ 18%] \x1b[32m\x1b[1mLinking C shared library libinterfaces__rosidl_generator_c.so\x1b[0m\n'}
+[1.693788] (interfaces) StdoutLine: {'line': b'[ 18%] Built target interfaces__rosidl_generator_c\n'}
+[1.702264] (interfaces) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[1.702611] (-) TimerEvent: {}
+[1.702747] (interfaces) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.702863] (interfaces) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.802712] (-) TimerEvent: {}
+[1.875906] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[1.890534] (interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/object2d_list__type_support.cpp.o\x1b[0m\n'}
+[1.891232] (interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/camera_location_list__type_support.cpp.o\x1b[0m\n'}
+[1.892262] (interfaces) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/object2d__type_support.cpp.o\x1b[0m\n'}
+[1.892422] (interfaces) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/camera_location__type_support.cpp.o\x1b[0m\n'}
+[1.902836] (-) TimerEvent: {}
+[1.948083] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[1.969300] (interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/object2d_list__type_support.cpp.o\x1b[0m\n'}
+[1.977544] (interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/object2d__type_support.cpp.o\x1b[0m\n'}
+[1.980631] (interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/camera_location__type_support.cpp.o\x1b[0m\n'}
+[2.002911] (-) TimerEvent: {}
+[2.007197] (interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/camera_location_list__type_support.cpp.o\x1b[0m\n'}
+[2.010099] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[2.031186] (interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/object2d__type_support.cpp.o\x1b[0m\n'}
+[2.103031] (-) TimerEvent: {}
+[2.114940] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[2.133740] (interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/object2d__type_support.cpp.o\x1b[0m\n'}
+[2.179023] (interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/object2d_list__type_support.cpp.o\x1b[0m\n'}
+[2.203154] (-) TimerEvent: {}
+[2.218338] (interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/object2d_list__type_support.cpp.o\x1b[0m\n'}
+[2.220187] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[2.238229] (interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/object2d__type_support.c.o\x1b[0m\n'}
+[2.240245] (interfaces) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/camera_location__type_support.cpp.o\x1b[0m\n'}
+[2.243591] (interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/camera_location__type_support.cpp.o\x1b[0m\n'}
+[2.256840] (interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/camera_location_list__type_support.cpp.o\x1b[0m\n'}
+[2.273951] (interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[2.287389] (interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/object2d_list__type_support.c.o\x1b[0m\n'}
+[2.287643] (interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/camera_location_list__type_support.cpp.o\x1b[0m\n'}
+[2.303262] (-) TimerEvent: {}
+[2.312768] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[2.330493] (interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[2.331081] (interfaces) StdoutLine: {'line': b'[ 60%] Built target interfaces__rosidl_typesupport_cpp\n'}
+[2.335156] (interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/object2d__type_support_c.cpp.o\x1b[0m\n'}
+[2.342512] (interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/camera_location__type_support.c.o\x1b[0m\n'}
+[2.345174] (interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/object2d_list__type_support_c.cpp.o\x1b[0m\n'}
+[2.393224] (interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/camera_location_list__type_support.c.o\x1b[0m\n'}
+[2.394196] (interfaces) StdoutLine: {'line': b'[ 67%] Built target interfaces__rosidl_typesupport_c\n'}
+[2.403380] (-) TimerEvent: {}
+[2.405941] (interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/camera_location__type_support_c.cpp.o\x1b[0m\n'}
+[2.459222] (interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking C shared library libinterfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[2.496852] (interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/camera_location_list__type_support_c.cpp.o\x1b[0m\n'}
+[2.500996] (interfaces) StdoutLine: {'line': b'[ 72%] Built target interfaces__rosidl_typesupport_introspection_c\n'}
+[2.503592] (-) TimerEvent: {}
+[2.584416] (interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[2.603696] (-) TimerEvent: {}
+[2.671662] (interfaces) StdoutLine: {'line': b'[ 74%] Built target interfaces__rosidl_typesupport_introspection_cpp\n'}
+[2.703808] (-) TimerEvent: {}
+[2.804080] (-) TimerEvent: {}
+[2.806429] (interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[2.869602] (interfaces) StdoutLine: {'line': b'[ 76%] Built target interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[2.889786] (interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[2.904191] (-) TimerEvent: {}
+[2.951251] (interfaces) StdoutLine: {'line': b'[ 78%] Built target interfaces__rosidl_typesupport_fastrtps_c\n'}
+[2.966306] (interfaces) StdoutLine: {'line': b'[ 78%] Built target interfaces\n'}
+[2.981791] (interfaces) StdoutLine: {'line': b'[ 80%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[3.004285] (-) TimerEvent: {}
+[3.104527] (-) TimerEvent: {}
+[3.204750] (-) TimerEvent: {}
+[3.304981] (-) TimerEvent: {}
+[3.405211] (-) TimerEvent: {}
+[3.505436] (-) TimerEvent: {}
+[3.573196] (interfaces) StdoutLine: {'line': b'[ 80%] Built target interfaces__py\n'}
+[3.581809] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_generator_py\x1b[0m\n'}
+[3.594766] (interfaces) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/msg/_object2d_s.c.o\x1b[0m\n'}
+[3.595037] (interfaces) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/msg/_object2d_list_s.c.o\x1b[0m\n'}
+[3.595143] (interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/msg/_camera_location_s.c.o\x1b[0m\n'}
+[3.595235] (interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/msg/_camera_location_list_s.c.o\x1b[0m\n'}
+[3.605541] (-) TimerEvent: {}
+[3.688130] (interfaces) StdoutLine: {'line': b'[ 89%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interfaces/libinterfaces__rosidl_generator_py.so\x1b[0m\n'}
+[3.705643] (-) TimerEvent: {}
+[3.720392] (interfaces) StdoutLine: {'line': b'[ 89%] Built target interfaces__rosidl_generator_py\n'}
+[3.728576] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[3.728740] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[3.728804] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[3.739509] (interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[3.739678] (interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[3.739765] (interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[3.805749] (-) TimerEvent: {}
+[3.834834] (interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.839993] (interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.842084] (interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.866201] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces__rosidl_typesupport_c__pyext\n'}
+[3.873109] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[3.873330] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[3.881892] (interfaces) CommandEnded: {'returncode': 0}
+[3.905842] (-) TimerEvent: {}
+[3.959964] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'install'}
+[3.966621] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ALEX/anytrack/ros/build/interfaces'], 'cwd': '/home/ALEX/anytrack/ros/build/interfaces', 'env': OrderedDict([('HOSTNAME', 'Arch-PC'), ('FZF_CTRL_T_COMMAND', 'fd --type f --hidden'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ALEX/anytrack/ros/install/interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/home/ALEX/anytrack/ros/src'), ('LESS', '-R'), ('ZSH', '/usr/local/zsh/oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('VISUAL', 'nvim'), ('STM', '/home/ALEX/STM32/etc/gcc-arm-none-eabi/bin'), ('ALEX', '/home/ALEX'), ('ROS_DISTRO', 'humble'), ('FZF_CTRL_T_OPTS', "--preview 'bat --color=always --line-range :50 {}'"), ('COLCON_PREFIX_PATH', '/home/ALEX/xray/ros/install:/home/ALEX/anytrack/ros/install'), ('LOGNAME', 'root'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('FZF_ALT_C_COMMAND', 'fd --type d . --hidden'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/texlive/2023/bin/x86_64-linux:/home/ALEX/anytrack/docker:/root/.fzf/bin'), ('DIRHISTORY_SIZE', '30'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/ALEX/anytrack/ros/install/simulation:/home/ALEX/anytrack/ros/install/interfaces:/home/ALEX/anytrack/ros/install/anytrack:/home/ALEX/xray/ros/install/xray:/opt/ros/humble'), ('FZF_ALT_C_OPTS', "--preview 'tree -C {} | head -50'"), ('LC_ALL', 'C.UTF-8'), ('PWD', '/home/ALEX/anytrack/ros/build/interfaces'), ('FZF_DEFAULT_COMMAND', 'fd --type f --hidden'), ('PYTHONPATH', '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages:/home/ALEX/anytrack/ros/build/anytrack:/home/ALEX/anytrack/ros/install/anytrack/lib/python3.10/site-packages:/home/ALEX/xray/ros/build/xray:/home/ALEX/xray/ros/install/xray/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('EDITOR', 'nvim'), ('CMAKE_PREFIX_PATH', '/home/ALEX/anytrack/ros/install/simulation:/home/ALEX/anytrack/ros/install/interfaces:/home/ALEX/anytrack/ros/install/anytrack:/home/ALEX/xray/ros/install/xray:/opt/ros/humble')]), 'shell': False}
+[3.973254] (interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.973476] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/ament_index/resource_index/rosidl_interfaces/interfaces\n'}
+[3.973554] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces\n'}
+[3.973620] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg\n'}
+[3.973685] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/object2d_list.h\n'}
+[3.973791] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/camera_location_list.h\n'}
+[3.973918] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.973984] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[3.974047] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__struct.h\n'}
+[3.974149] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__functions.h\n'}
+[3.974214] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__functions.h\n'}
+[3.974311] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__struct.h\n'}
+[3.974411] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__functions.c\n'}
+[3.974514] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__functions.c\n'}
+[3.974614] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__type_support.h\n'}
+[3.974710] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__type_support.h\n'}
+[3.974806] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__type_support.h\n'}
+[3.974924] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__functions.h\n'}
+[3.975039] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__type_support.h\n'}
+[3.975154] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__struct.h\n'}
+[3.975274] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__functions.h\n'}
+[3.975395] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__functions.c\n'}
+[3.975520] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__functions.c\n'}
+[3.975636] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__struct.h\n'}
+[3.975748] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/object2d.h\n'}
+[3.975862] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/camera_location.h\n'}
+[3.976008] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/environment/library_path.sh\n'}
+[3.976107] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/environment/library_path.dsv\n'}
+[3.976299] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_generator_c.so\n'}
+[3.976663] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_generator_c.so" to ""\n'}
+[3.976761] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces\n'}
+[3.976861] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg\n'}
+[3.976974] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.977042] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[3.977105] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__rosidl_typesupport_fastrtps_c.h\n'}
+[3.977202] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__rosidl_typesupport_fastrtps_c.h\n'}
+[3.977298] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__rosidl_typesupport_fastrtps_c.h\n'}
+[3.977396] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__rosidl_typesupport_fastrtps_c.h\n'}
+[3.977517] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[3.977894] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[3.977965] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces\n'}
+[3.978028] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg\n'}
+[3.978125] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[3.978243] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__rosidl_typesupport_introspection_c.h\n'}
+[3.978315] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__rosidl_typesupport_introspection_c.h\n'}
+[3.978379] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__rosidl_typesupport_introspection_c.h\n'}
+[3.978476] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__type_support.c\n'}
+[3.978577] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__type_support.c\n'}
+[3.978675] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__rosidl_typesupport_introspection_c.h\n'}
+[3.978766] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__type_support.c\n'}
+[3.978893] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__type_support.c\n'}
+[3.979014] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.979148] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so\n'}
+[3.979424] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[3.979548] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so\n'}
+[3.979800] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so" to ""\n'}
+[3.979900] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces\n'}
+[3.980006] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg\n'}
+[3.980073] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/camera_location_list.hpp\n'}
+[3.980175] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[3.980238] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__struct.hpp\n'}
+[3.980335] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__traits.hpp\n'}
+[3.980434] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__builder.hpp\n'}
+[3.980531] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__builder.hpp\n'}
+[3.980622] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__struct.hpp\n'}
+[3.980743] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__builder.hpp\n'}
+[3.980860] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__struct.hpp\n'}
+[3.980981] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__traits.hpp\n'}
+[3.981113] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__builder.hpp\n'}
+[3.981238] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__traits.hpp\n'}
+[3.981355] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__traits.hpp\n'}
+[3.981472] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__struct.hpp\n'}
+[3.981594] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/object2d_list.hpp\n'}
+[3.981710] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/camera_location.hpp\n'}
+[3.981820] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/object2d.hpp\n'}
+[3.981962] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces\n'}
+[3.982063] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg\n'}
+[3.982180] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.982244] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[3.982306] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.982403] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.982501] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.982641] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.982773] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/dds_fastrtps\n'}
+[3.982908] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.983144] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[3.983250] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces\n'}
+[3.983372] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg\n'}
+[3.983461] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[3.983527] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__type_support.cpp\n'}
+[3.983594] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.983690] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__type_support.cpp\n'}
+[3.983825] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.983966] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.984189] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__type_support.cpp\n'}
+[3.984331] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__type_support.cpp\n'}
+[3.984448] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.984595] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[3.984782] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[3.984899] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so\n'}
+[3.985150] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[3.985256] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/environment/pythonpath.sh\n'}
+[3.985357] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/environment/pythonpath.dsv\n'}
+[3.985457] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info\n'}
+[3.985525] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[3.985623] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[3.985706] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[3.985796] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[3.985896] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces\n'}
+[3.985970] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.986060] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[3.986152] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[3.986241] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.986335] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.986456] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/libinterfaces__rosidl_generator_py.so\n'}
+[3.986587] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[3.986699] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg\n'}
+[3.986787] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_camera_location_list_s.c\n'}
+[3.986876] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_object2d_s.c\n'}
+[3.986962] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_object2d_list_s.c\n'}
+[3.987050] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_object2d_list.py\n'}
+[3.987154] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_camera_location_s.c\n'}
+[3.987260] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_camera_location_list.py\n'}
+[3.987364] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_camera_location.py\n'}
+[3.987477] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_object2d.py\n'}
+[3.987585] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/__init__.py\n'}
+[3.987686] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/__init__.py\n'}
+[4.005934] (-) TimerEvent: {}
+[4.022619] (interfaces) StdoutLine: {'line': b"Listing '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces'...\n"}
+[4.022784] (interfaces) StdoutLine: {'line': b"Compiling '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/__init__.py'...\n"}
+[4.022848] (interfaces) StdoutLine: {'line': b"Listing '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg'...\n"}
+[4.022907] (interfaces) StdoutLine: {'line': b"Compiling '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/__init__.py'...\n"}
+[4.022965] (interfaces) StdoutLine: {'line': b"Compiling '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_camera_location.py'...\n"}
+[4.023022] (interfaces) StdoutLine: {'line': b"Compiling '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_camera_location_list.py'...\n"}
+[4.023079] (interfaces) StdoutLine: {'line': b"Compiling '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_object2d.py'...\n"}
+[4.023137] (interfaces) StdoutLine: {'line': b"Compiling '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_object2d_list.py'...\n"}
+[4.026154] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.026369] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.026517] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.026764] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.026913] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.027154] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.027276] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_generator_py.so\n'}
+[4.027560] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_generator_py.so" to ""\n'}
+[4.027657] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/msg/Object2d.idl\n'}
+[4.027723] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/msg/Object2dList.idl\n'}
+[4.027834] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/msg/CameraLocation.idl\n'}
+[4.027931] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/msg/CameraLocationList.idl\n'}
+[4.027992] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/msg/Object2d.msg\n'}
+[4.028051] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/msg/Object2dList.msg\n'}
+[4.028113] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/msg/CameraLocation.msg\n'}
+[4.028208] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/msg/CameraLocationList.msg\n'}
+[4.028271] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/ament_index/resource_index/package_run_dependencies/interfaces\n'}
+[4.028333] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/ament_index/resource_index/parent_prefix_path/interfaces\n'}
+[4.028435] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/environment/ament_prefix_path.sh\n'}
+[4.028498] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/environment/ament_prefix_path.dsv\n'}
+[4.028560] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/environment/path.sh\n'}
+[4.028621] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/environment/path.dsv\n'}
+[4.028721] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/local_setup.bash\n'}
+[4.028805] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/local_setup.sh\n'}
+[4.028864] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/local_setup.zsh\n'}
+[4.028926] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/local_setup.dsv\n'}
+[4.028988] (interfaces) StdoutLine: {'line': b'-- Installing: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/package.dsv\n'}
+[4.029098] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/ament_index/resource_index/packages/interfaces\n'}
+[4.029161] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport.cmake\n'}
+[4.029225] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.029287] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[4.029349] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[4.029454] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.029542] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.029604] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport.cmake\n'}
+[4.029666] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.029729] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cppExport.cmake\n'}
+[4.029791] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[4.029916] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[4.030030] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.030094] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.030157] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[4.030219] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.030318] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport.cmake\n'}
+[4.030380] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[4.030438] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[4.030494] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.030550] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.030607] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.030663] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.030719] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.030776] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.030833] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfacesConfig.cmake\n'}
+[4.030889] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfacesConfig-version.cmake\n'}
+[4.030946] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/package.xml\n'}
+[4.031757] (interfaces) CommandEnded: {'returncode': 0}
+[4.106018] (-) TimerEvent: {}
+[4.136112] (interfaces) JobEnded: {'identifier': 'interfaces', 'rc': 0}
+[4.136655] (-) EventReactorShutdown: {}

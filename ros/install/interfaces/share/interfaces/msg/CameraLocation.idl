@@ -21,6 +21,8 @@ module interfaces {
       double ay;
 
       double az;
+
+      double scale;
     };
   };
 };

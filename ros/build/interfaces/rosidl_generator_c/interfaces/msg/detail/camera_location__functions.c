@@ -24,6 +24,7 @@ interfaces__msg__CameraLocation__init(interfaces__msg__CameraLocation * msg)
   // ax
   // ay
   // az
+  // scale
   return true;
 }
 
@@ -40,6 +41,7 @@ interfaces__msg__CameraLocation__fini(interfaces__msg__CameraLocation * msg)
   // ax
   // ay
   // az
+  // scale
 }
 
 bool
@@ -76,6 +78,10 @@ interfaces__msg__CameraLocation__are_equal(const interfaces__msg__CameraLocation
   if (lhs->az != rhs->az) {
     return false;
   }
+  // scale
+  if (lhs->scale != rhs->scale) {
+    return false;
+  }
   return true;
 }
 
@@ -101,6 +107,8 @@ interfaces__msg__CameraLocation__copy(
   output->ay = input->ay;
   // az
   output->az = input->az;
+  // scale
+  output->scale = input->scale;
   return true;
 }
 

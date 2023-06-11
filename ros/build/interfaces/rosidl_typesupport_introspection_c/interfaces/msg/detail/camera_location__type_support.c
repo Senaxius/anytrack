@@ -31,7 +31,7 @@ void interfaces__msg__CameraLocation__rosidl_typesupport_introspection_c__Camera
   interfaces__msg__CameraLocation__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember interfaces__msg__CameraLocation__rosidl_typesupport_introspection_c__CameraLocation_message_member_array[7] = {
+static rosidl_typesupport_introspection_c__MessageMember interfaces__msg__CameraLocation__rosidl_typesupport_introspection_c__CameraLocation_message_member_array[8] = {
   {
     "id",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT8,  // type
@@ -150,13 +150,30 @@ static rosidl_typesupport_introspection_c__MessageMember interfaces__msg__Camera
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "scale",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(interfaces__msg__CameraLocation, scale),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers interfaces__msg__CameraLocation__rosidl_typesupport_introspection_c__CameraLocation_message_members = {
   "interfaces__msg",  // message namespace
   "CameraLocation",  // message name
-  7,  // number of fields
+  8,  // number of fields
   sizeof(interfaces__msg__CameraLocation),
   interfaces__msg__CameraLocation__rosidl_typesupport_introspection_c__CameraLocation_message_member_array,  // message members
   interfaces__msg__CameraLocation__rosidl_typesupport_introspection_c__CameraLocation_init_function,  // function to initialize message memory (memory has to be allocated)

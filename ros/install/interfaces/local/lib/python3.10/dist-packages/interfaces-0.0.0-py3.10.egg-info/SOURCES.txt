@@ -4,3 +4,8 @@ interfaces.egg-info/PKG-INFO
 interfaces.egg-info/SOURCES.txt
 interfaces.egg-info/dependency_links.txt
 interfaces.egg-info/top_level.txt
+interfaces/msg/__init__.py
+interfaces/msg/_camera_location.py
+interfaces/msg/_camera_location_list.py
+interfaces/msg/_object2d.py
+interfaces/msg/_object2d_list.py

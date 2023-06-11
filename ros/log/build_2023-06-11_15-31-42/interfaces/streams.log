@@ -1,0 +1,298 @@
+[0.016s] Invoking command in '/home/ALEX/anytrack/ros/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/anytrack:/home/ALEX/xray/ros/install/xray:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/interfaces -- -j12 -l12
+[0.036s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.168s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.170s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.173s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.206s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.234s] -- Found std_msgs: 4.2.3 (/opt/ros/humble/share/std_msgs/cmake)
+[0.554s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.759s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.029s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.050s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.070s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.070s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.070s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.102s] -- Configuring done
+[1.135s] -- Generating done
+[1.137s] -- Build files have been written to: /home/ALEX/anytrack/ros/build/interfaces
+[1.156s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.165s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.172s] [  3%] Built target ament_cmake_python_copy_interfaces
+[1.413s] running egg_info
+[1.414s] writing interfaces.egg-info/PKG-INFO
+[1.414s] writing dependency_links to interfaces.egg-info/dependency_links.txt
+[1.414s] writing top-level names to interfaces.egg-info/top_level.txt
+[1.416s] reading manifest file 'interfaces.egg-info/SOURCES.txt'
+[1.416s] writing manifest file 'interfaces.egg-info/SOURCES.txt'
+[1.439s] [  3%] Built target ament_cmake_python_build_interfaces_egg
+[1.568s] [  3%] Built target interfaces__cpp
+[1.578s] [  7%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.578s] [  7%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.578s] [  9%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.583s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_generator_c[0m
+[1.594s] [ 14%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location__functions.c.o[0m
+[1.594s] [ 14%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/camera_location_list__functions.c.o[0m
+[1.594s] [ 14%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d_list__functions.c.o[0m
+[1.597s] [ 16%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/object2d__functions.c.o[0m
+[1.647s] [ 18%] [32m[1mLinking C shared library libinterfaces__rosidl_generator_c.so[0m
+[1.676s] [ 18%] Built target interfaces__rosidl_generator_c
+[1.684s] [ 21%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.685s] [ 21%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.685s] [ 23%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.895s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_cpp[0m
+[1.907s] [ 25%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/object2d__type_support.cpp.o[0m
+[1.909s] [ 27%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/object2d_list__type_support.cpp.o[0m
+[1.910s] [ 29%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/camera_location__type_support.cpp.o[0m
+[1.914s] [ 30%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/camera_location_list__type_support.cpp.o[0m
+[1.959s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_cpp[0m
+[1.978s] [ 32%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/object2d__type_support.cpp.o[0m
+[1.978s] [ 34%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/object2d_list__type_support.cpp.o[0m
+[1.982s] [ 36%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/camera_location__type_support.cpp.o[0m
+[1.984s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[1.990s] [ 38%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/camera_location_list__type_support.cpp.o[0m
+[2.006s] [ 40%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/object2d__type_support.cpp.o[0m
+[2.057s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_c[0m
+[2.071s] [ 41%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/object2d__type_support.cpp.o[0m
+[2.109s] [ 43%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/object2d_list__type_support.cpp.o[0m
+[2.153s] [ 45%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/camera_location__type_support.cpp.o[0m
+[2.180s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_c[0m
+[2.208s] [ 47%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/camera_location_list__type_support.cpp.o[0m
+[2.208s] [ 49%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/object2d__type_support.c.o[0m
+[2.252s] [ 50%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_c.so[0m
+[2.264s] [ 52%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/object2d_list__type_support.c.o[0m
+[2.269s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_c[0m
+[2.271s] [ 54%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/camera_location__type_support.c.o[0m
+[2.278s] [ 56%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/object2d_list__type_support.cpp.o[0m
+[2.281s] [ 58%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/camera_location__type_support.cpp.o[0m
+[2.282s] [ 60%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_cpp.so[0m
+[2.291s] [ 61%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/object2d__type_support_c.cpp.o[0m
+[2.310s] [ 61%] Built target interfaces__rosidl_typesupport_c
+[2.316s] [ 63%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/object2d_list__type_support_c.cpp.o[0m
+[2.322s] [ 65%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/camera_location__type_support_c.cpp.o[0m
+[2.328s] [ 67%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/camera_location_list__type_support.c.o[0m
+[2.341s] [ 67%] Built target interfaces__rosidl_typesupport_cpp
+[2.352s] [ 69%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/camera_location_list__type_support.cpp.o[0m
+[2.374s] [ 70%] [32m[1mLinking C shared library libinterfaces__rosidl_typesupport_introspection_c.so[0m
+[2.415s] [ 70%] Built target interfaces__rosidl_typesupport_introspection_c
+[2.427s] [ 72%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/camera_location_list__type_support_c.cpp.o[0m
+[2.608s] [ 74%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_introspection_cpp.so[0m
+[2.693s] [ 74%] Built target interfaces__rosidl_typesupport_introspection_cpp
+[2.837s] [ 76%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_c.so[0m
+[2.898s] [ 78%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.900s] [ 78%] Built target interfaces__rosidl_typesupport_fastrtps_c
+[2.961s] [ 78%] Built target interfaces__rosidl_typesupport_fastrtps_cpp
+[2.977s] [ 78%] Built target interfaces
+[2.993s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.611s] [ 80%] Built target interfaces__py
+[3.620s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_generator_py[0m
+[3.632s] [ 83%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/msg/_object2d_list_s.c.o[0m
+[3.632s] [ 83%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/msg/_object2d_s.c.o[0m
+[3.633s] [ 87%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/msg/_camera_location_list_s.c.o[0m
+[3.633s] [ 87%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/msg/_camera_location_s.c.o[0m
+[3.727s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/interfaces/libinterfaces__rosidl_generator_py.so[0m
+[3.760s] [ 89%] Built target interfaces__rosidl_generator_py
+[3.768s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[3.768s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[3.768s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_c__pyext[0m
+[3.778s] [ 92%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[3.778s] [ 94%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[3.778s] [ 94%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[3.875s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.878s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.880s] [100%] [32m[1mLinking C shared library rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.907s] [100%] Built target interfaces__rosidl_typesupport_fastrtps_c__pyext
+[3.909s] [100%] Built target interfaces__rosidl_typesupport_introspection_c__pyext
+[3.913s] [100%] Built target interfaces__rosidl_typesupport_c__pyext
+[3.922s] Invoked command in '/home/ALEX/anytrack/ros/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/anytrack:/home/ALEX/xray/ros/install/xray:/opt/ros/humble /usr/bin/cmake --build /home/ALEX/anytrack/ros/build/interfaces -- -j12 -l12
+[4.004s] Invoking command in '/home/ALEX/anytrack/ros/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/anytrack:/home/ALEX/xray/ros/install/xray:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/anytrack/ros/build/interfaces
+[4.011s] -- Install configuration: ""
+[4.011s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/ament_index/resource_index/rosidl_interfaces/interfaces
+[4.011s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces
+[4.011s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg
+[4.011s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/object2d_list.h
+[4.011s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/camera_location_list.h
+[4.011s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/rosidl_generator_c__visibility_control.h
+[4.011s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail
+[4.011s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__struct.h
+[4.011s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__functions.h
+[4.011s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__functions.h
+[4.011s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__struct.h
+[4.011s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__functions.c
+[4.011s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__functions.c
+[4.012s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__type_support.h
+[4.012s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__type_support.h
+[4.012s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__type_support.h
+[4.012s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__functions.h
+[4.012s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__type_support.h
+[4.012s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__struct.h
+[4.012s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__functions.h
+[4.012s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__functions.c
+[4.012s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__functions.c
+[4.012s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__struct.h
+[4.012s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/object2d.h
+[4.013s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/camera_location.h
+[4.013s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/environment/library_path.sh
+[4.013s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/environment/library_path.dsv
+[4.013s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_generator_c.so
+[4.013s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_generator_c.so" to ""
+[4.013s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces
+[4.013s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg
+[4.014s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.014s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail
+[4.014s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__rosidl_typesupport_fastrtps_c.h
+[4.014s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__rosidl_typesupport_fastrtps_c.h
+[4.014s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__rosidl_typesupport_fastrtps_c.h
+[4.014s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__rosidl_typesupport_fastrtps_c.h
+[4.014s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so
+[4.014s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[4.014s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces
+[4.014s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg
+[4.014s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail
+[4.015s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__rosidl_typesupport_introspection_c.h
+[4.015s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__rosidl_typesupport_introspection_c.h
+[4.015s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__rosidl_typesupport_introspection_c.h
+[4.015s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__type_support.c
+[4.015s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__type_support.c
+[4.015s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__rosidl_typesupport_introspection_c.h
+[4.015s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__type_support.c
+[4.015s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__type_support.c
+[4.015s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.015s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so
+[4.016s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so" to ""
+[4.016s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so
+[4.016s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so" to ""
+[4.016s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces
+[4.016s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg
+[4.016s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/camera_location_list.hpp
+[4.016s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail
+[4.017s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__struct.hpp
+[4.017s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__traits.hpp
+[4.017s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__builder.hpp
+[4.017s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__builder.hpp
+[4.017s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__struct.hpp
+[4.017s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__builder.hpp
+[4.017s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__struct.hpp
+[4.017s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__traits.hpp
+[4.017s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__builder.hpp
+[4.017s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__traits.hpp
+[4.017s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__traits.hpp
+[4.017s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__struct.hpp
+[4.018s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/object2d_list.hpp
+[4.018s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/camera_location.hpp
+[4.018s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/object2d.hpp
+[4.018s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces
+[4.018s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg
+[4.018s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.018s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail
+[4.018s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__rosidl_typesupport_fastrtps_cpp.hpp
+[4.018s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__rosidl_typesupport_fastrtps_cpp.hpp
+[4.018s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__rosidl_typesupport_fastrtps_cpp.hpp
+[4.018s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__rosidl_typesupport_fastrtps_cpp.hpp
+[4.018s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/dds_fastrtps
+[4.019s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so
+[4.019s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[4.019s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces
+[4.019s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg
+[4.019s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail
+[4.019s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__type_support.cpp
+[4.019s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__rosidl_typesupport_introspection_cpp.hpp
+[4.019s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__type_support.cpp
+[4.019s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__rosidl_typesupport_introspection_cpp.hpp
+[4.019s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location__rosidl_typesupport_introspection_cpp.hpp
+[4.020s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d__type_support.cpp
+[4.020s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/camera_location_list__type_support.cpp
+[4.020s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/include/interfaces/interfaces/msg/detail/object2d_list__rosidl_typesupport_introspection_cpp.hpp
+[4.020s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so
+[4.020s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[4.020s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so
+[4.021s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so" to ""
+[4.021s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/environment/pythonpath.sh
+[4.021s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/environment/pythonpath.dsv
+[4.021s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info
+[4.021s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[4.021s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[4.021s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[4.021s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[4.021s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces
+[4.021s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.021s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c
+[4.021s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.022s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.022s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.022s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/libinterfaces__rosidl_generator_py.so
+[4.022s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[4.022s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg
+[4.022s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_camera_location_list_s.c
+[4.022s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_object2d_s.c
+[4.022s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_object2d_list_s.c
+[4.022s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_object2d_list.py
+[4.023s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_camera_location_s.c
+[4.023s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_camera_location_list.py
+[4.023s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_camera_location.py
+[4.023s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_object2d.py
+[4.023s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/__init__.py
+[4.023s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/__init__.py
+[4.061s] Listing '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces'...
+[4.061s] Compiling '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/__init__.py'...
+[4.061s] Listing '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg'...
+[4.061s] Compiling '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/__init__.py'...
+[4.061s] Compiling '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_camera_location.py'...
+[4.061s] Compiling '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_camera_location_list.py'...
+[4.061s] Compiling '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_object2d.py'...
+[4.061s] Compiling '/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_object2d_list.py'...
+[4.064s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.065s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.065s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.065s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.065s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.065s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.066s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_generator_py.so
+[4.066s] -- Set runtime path of "/home/ALEX/anytrack/ros/install/interfaces/lib/libinterfaces__rosidl_generator_py.so" to ""
+[4.066s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/msg/Object2d.idl
+[4.066s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/msg/Object2dList.idl
+[4.066s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/msg/CameraLocation.idl
+[4.066s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/msg/CameraLocationList.idl
+[4.066s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/msg/Object2d.msg
+[4.066s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/msg/Object2dList.msg
+[4.067s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/msg/CameraLocation.msg
+[4.067s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/msg/CameraLocationList.msg
+[4.067s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/ament_index/resource_index/package_run_dependencies/interfaces
+[4.067s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/ament_index/resource_index/parent_prefix_path/interfaces
+[4.067s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/environment/ament_prefix_path.sh
+[4.067s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/environment/ament_prefix_path.dsv
+[4.067s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/environment/path.sh
+[4.067s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/environment/path.dsv
+[4.067s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/local_setup.bash
+[4.067s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/local_setup.sh
+[4.067s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/local_setup.zsh
+[4.067s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/local_setup.dsv
+[4.068s] -- Installing: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/package.dsv
+[4.068s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/ament_index/resource_index/packages/interfaces
+[4.068s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport.cmake
+[4.068s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport-noconfig.cmake
+[4.068s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[4.068s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[4.068s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport.cmake
+[4.068s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.068s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport.cmake
+[4.068s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[4.068s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cppExport.cmake
+[4.069s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[4.069s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[4.069s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[4.069s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.069s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport.cmake
+[4.069s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[4.069s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport.cmake
+[4.069s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[4.069s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/rosidl_cmake-extras.cmake
+[4.069s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.069s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.070s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[4.070s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[4.070s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.070s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.070s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfacesConfig.cmake
+[4.070s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/cmake/interfacesConfig-version.cmake
+[4.070s] -- Up-to-date: /home/ALEX/anytrack/ros/install/interfaces/share/interfaces/package.xml
+[4.071s] Invoked command in '/home/ALEX/anytrack/ros/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ALEX/anytrack/ros/install/anytrack:/home/ALEX/xray/ros/install/xray:/opt/ros/humble /usr/bin/cmake --install /home/ALEX/anytrack/ros/build/interfaces

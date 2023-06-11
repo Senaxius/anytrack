@@ -46,6 +46,8 @@ cdr_serialize(
   cdr << ros_message.ay;
   // Member: az
   cdr << ros_message.az;
+  // Member: scale
+  cdr << ros_message.scale;
   return true;
 }
 
@@ -75,6 +77,9 @@ cdr_deserialize(
 
   // Member: az
   cdr >> ros_message.az;
+
+  // Member: scale
+  cdr >> ros_message.scale;
 
   return true;
 }
@@ -131,6 +136,12 @@ get_serialized_size(
   // Member: az
   {
     size_t item_size = sizeof(ros_message.az);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: scale
+  {
+    size_t item_size = sizeof(ros_message.scale);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -204,6 +215,14 @@ max_serialized_size_CameraLocation(
   }
 
   // Member: az
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: scale
   {
     size_t array_size = 1;
 

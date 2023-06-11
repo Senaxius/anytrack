@@ -37,7 +37,7 @@ void CameraLocation_fini_function(void * message_memory)
   typed_message->~CameraLocation();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember CameraLocation_message_member_array[7] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember CameraLocation_message_member_array[8] = {
   {
     "id",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT8,  // type
@@ -156,13 +156,30 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember CameraLocatio
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "scale",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(interfaces::msg::CameraLocation, scale),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers CameraLocation_message_members = {
   "interfaces::msg",  // message namespace
   "CameraLocation",  // message name
-  7,  // number of fields
+  8,  // number of fields
   sizeof(interfaces::msg::CameraLocation),
   CameraLocation_message_member_array,  // message members
   CameraLocation_init_function,  // function to initialize message memory (memory has to be allocated)

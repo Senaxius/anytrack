@@ -45,6 +45,7 @@ struct CameraLocation_
       this->ax = 0.0;
       this->ay = 0.0;
       this->az = 0.0;
+      this->scale = 0.0;
     }
   }
 
@@ -61,6 +62,7 @@ struct CameraLocation_
       this->ax = 0.0;
       this->ay = 0.0;
       this->az = 0.0;
+      this->scale = 0.0;
     }
   }
 
@@ -86,6 +88,9 @@ struct CameraLocation_
   using _az_type =
     double;
   _az_type az;
+  using _scale_type =
+    double;
+  _scale_type scale;
 
   // setters for named parameter idiom
   Type & set__id(
@@ -128,6 +133,12 @@ struct CameraLocation_
     const double & _arg)
   {
     this->az = _arg;
+    return *this;
+  }
+  Type & set__scale(
+    const double & _arg)
+  {
+    this->scale = _arg;
     return *this;
   }
 
@@ -192,6 +203,9 @@ struct CameraLocation_
       return false;
     }
     if (this->az != other.az) {
+      return false;
+    }
+    if (this->scale != other.scale) {
       return false;
     }
     return true;

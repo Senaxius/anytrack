@@ -30,6 +30,7 @@ typedef struct interfaces__msg__CameraLocation
   double ax;
   double ay;
   double az;
+  double scale;
 } interfaces__msg__CameraLocation;
 
 // Struct for a sequence of interfaces__msg__CameraLocation.
