@@ -16,5 +16,9 @@ manager:
     estimator: 1
     width: 1280
     height: 720
+    # width: 1920
+    # height: 1080
     debug: 0
-    config_path: "/home/ALEX/anytrack/config/positions/default.json"
+    # config_path: "/home/ALEX/anytrack/config/positions/mz.json"
+    config_path: "/home/ALEX/anytrack/config/positions/kiese.json"
+    # config_path: "/home/ALEX/anytrack/config/positions/default.json"

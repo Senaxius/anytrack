@@ -80,7 +80,7 @@ class camera_detector(Node):
         frame = self.bridge.imgmsg_to_cv2(msg)
 
         prev_objects = self.objects
-        self.objects = trk.ball_scanner(frame, colors=[self.green_ball], min_radius=10, prev_objects=prev_objects)
+        self.objects = trk.ball_scanner(frame, colors=[self.green_ball], min_radius=2, prev_objects=prev_objects)
         if self.visualize:
             frame = trk.scanner_visulisation(frame, self.objects,line_buffer=self.line_buffer)
         # publish data

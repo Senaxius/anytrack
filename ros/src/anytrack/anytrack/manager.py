@@ -166,7 +166,7 @@ class manager(Node):
                 parameters=[
                     {"index": index},
                     {"device": device},
-                    {"multiplier": 10},
+                    {"multiplier": 20},
                     {"width": self.width},
                     {"height": self.height},
                 ]

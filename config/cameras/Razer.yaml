@@ -25,9 +25,9 @@ projection_matrix:
            0.     , 894.92706, 362.32088,   0.     ,
            0.     ,   0.     ,   1.     ,   0.     ]
 color:
-  start: [42, 140, 95]
+  start: [49, 58, 67]
   end: [68, 255, 255]
 filter:
-  contrast: 123
+  contrast: 110
   saturation: 255
 

@@ -322,6 +322,7 @@ class calibration(Node):
                         break
 
             self.marker_publisher.publish(markerarray)
+            self.write_config()
             self.destroy_node()
             return
 
@@ -455,18 +456,18 @@ class calibration(Node):
         self.publisher.publish(msg)
     
     def write_config(self):
-        for i in self.output:
-            print(i)
-            print(self.output[i])
-            print(self.scale_data[i])
-        # config = {}
-        # for i in range(self.device_count):
-        #     config.update({str(i): self.output[i]})
-        # file = json.dumps(config)
-        # name = input("Config File Name: ")
-        # with open(("/home/ALEX/anytrack/config/positions/" + name + ".json"), "w") as outfile:
-        #     outfile.write(file)
-        # print("Calibration done!")
+        # for i in self.output:
+        #     print(i)
+        #     print(self.output[i])
+        #     print(self.scale_data[i])
+        config = {}
+        for i in range(self.device_count):
+            config.update({str(i): self.output[i]})
+        file = json.dumps(config)
+        name = input("Config File Name: ")
+        with open(("/home/ALEX/anytrack/config/positions/" + name + ".json"), "w") as outfile:
+            outfile.write(file)
+        print("Calibration done!")
 
     def distanceBetweenPoints(self, a, b):
         dif = a - b

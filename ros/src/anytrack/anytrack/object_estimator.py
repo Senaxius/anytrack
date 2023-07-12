@@ -216,7 +216,7 @@ class object_estimator(Node):
                     b0 = np.array(line_2.line[0])
                     b1 = np.array(line_2.line[1])
                     _, _, dis = self.closestDistanceBetweenLines(a0,a1,b0,b1)
-                    if dis > 0.1:
+                    if dis > 0.55:
                         warnings += 1
                 if warnings > 1:
                     line.object_id = None
@@ -260,7 +260,7 @@ class object_estimator(Node):
                         # check if object already contains line from same camera
                         min = [ob_index, average]
 
-            if min[1] < 0.50 and min[0] != -1:
+            if min[1] < 1.50 and min[0] != -1:
                 # ob.add_line(copy.deepcopy(line))
                 ob = self.objects[min[0]]
                 ob.add_line(line)

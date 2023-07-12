@@ -73,7 +73,7 @@ class position_manager(Node):
 
         # main loop
         self.calibration = 0
-        self.loop = self.create_timer(1, self.loop_callback)
+        self.loop = self.create_timer(0.2, self.loop_callback)
 
     def loop_callback(self):
         if self.calibration == 0:
